@@ -16,31 +16,65 @@ typedef unsigned char uchar;
 const ushort PORT_NUM = 12345;
 const ushort DIMMAX = 150; // Taille max des tableaux
 
+
+void sending(uint ids_connect, std::string message)
+{
+    send(ids_connect, message.c_str(), message.size() + 1, 0);
+};
+
+void reciving(uint ids_connect, uint ids_connect1,std::string& message)
+{
+    char trame_lect[DIMMAX + 1];
+    std::string recive;
+
+    uint noctets = recv(ids_connect, trame_lect, DIMMAX, 0);
+    trame_lect[noctets] = '\0';
+    recive = trame_lect;
+    send(ids_connect1, recive.c_str(), recive.size() + 1, 0);
+};
+
 void communication(uint ids_connect, uint ids_connect1) {
 
+   
     char trame_lect[DIMMAX + 1];
     char trame_lect1[DIMMAX + 1];
     std::string recive;
     std::string recive1;
 
-    std::string waiting = "Serveur: wait for the other client"  ;
+    std::string waiting = "Serveur: Vous etes connecte "  ;
+
+    std::thread th1(sending, ids_connect, waiting);
+    th1.detach();
+    std::thread th2(sending, ids_connect1, waiting);
+    th2.detach();
+
+    //send(ids_connect, waiting.c_str(), waiting.size() + 1, 0);
+    //send(ids_connect1, waiting.c_str(), waiting.size() + 1, 0);
     uint noctets;
+    
+    std::thread threcv1(reciving, ids_connect,ids_connect1, std::ref(recive));
+    std::thread threcv2(reciving, ids_connect1, ids_connect, std::ref(recive1));
+
     //echange client serveur peroquet sauf pour BYE
     do
     {
-
-
-        send(ids_connect1, waiting.c_str(), waiting.size() + 1, 0);
+       // std::thread threcv1(reciving, ids_connect, ids_connect1, std::ref(recive));
+       // std::thread threcv2(reciving, ids_connect1, ids_connect, std::ref(recive1));
+        
+       // threcv1.detach();
+       // threcv2.detach();
+      
+        
         noctets = recv(ids_connect, trame_lect, DIMMAX, 0);
         trame_lect[noctets] = '\0';
         recive = trame_lect;
         send(ids_connect1, recive.c_str(), recive.size() + 1, 0);
         
-        send(ids_connect, waiting.c_str(), waiting.size() + 1, 0);
         noctets = recv(ids_connect1, trame_lect, DIMMAX, 0);
         trame_lect[noctets] = '\0';
         recive = trame_lect;
         send(ids_connect, recive.c_str(), recive.size() + 1, 0);
+        
 
     } while (recive != "BYE");
 
