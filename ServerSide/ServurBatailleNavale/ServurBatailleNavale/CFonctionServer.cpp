@@ -2,7 +2,7 @@
 
 CFonctionServer::CFonctionServer()
 {
-    nbconnec = 0;
+   // nbconnec = 0;
    //const ushort PORT_NUM = 12345;
    //const ushort DIMMAX = 150;
 
@@ -11,6 +11,7 @@ CFonctionServer::CFonctionServer()
 void CFonctionServer::initWinsock()
 {
 	WSAStartup(nVersion, &donneeWS);
+    std::cout << "Init de winsock " << std::endl; //pour le debug 
 }
 
 void CFonctionServer::creaSockEcoute()
@@ -20,6 +21,7 @@ void CFonctionServer::creaSockEcoute()
         std::cout << "Echec creation Socket ! " << std::endl;
         exit(1);
     }
+    std::cout << "creation socket ecoute " << std::endl; //pour le debug 
 }
 
 void CFonctionServer::binding()
@@ -38,6 +40,7 @@ void CFonctionServer::binding()
         std::cout << "Echec Attachement Socket ! " << std::endl;
         exit(1);
     }
+    std::cout << "bind socket ecoute sur le port : " << std::to_string(PORT_NUM) << std::endl; //pour le debug 
 }
 
 void CFonctionServer::listening()
@@ -47,34 +50,28 @@ void CFonctionServer::listening()
         std::cout << "Echec Lecture ! " << std::endl;
         exit(1);
     }
+    std::cout << "Serveur en ecoute " << std::endl; //pour le debug 
 }
 
-void CFonctionServer::accepting()
+uint CFonctionServer::accepting()
 {
-   
+
      // Acceptation d'une connexion cliente, création d'un nouveau socket qui 
         // sera utilisé pour l'émission et la réception des caractères 
         // @ inet du clietnt est récupérée
     addr_len = sizeof(adr_client);
 
     ids_connect = accept(ids_ecoute, (struct sockaddr*)&adr_client, &addr_len);
-    nbconnec++;
-
-    if (nbconnec == 1)
-    {
-        ids_connect1 = ids_connect;
-    }
-
-    if (nbconnec == 2)
-    {
-        std::thread th1(communication, ids_connect, ids_connect1);
-        th1.detach();
-        nbconnec = 0;
-    }
+    return ids_connect; 
+    std::cout << "Client accepté " << std::endl; //pour le debug 
 }
 
 void CFonctionServer::communication(uint ids_connect, uint ids_connect1)
 {
+    const ushort DIMMAX = 150; // Taille max des tableaux
+
+
+
     char trame_lect[DIMMAX + 1];
     char trame_lect1[DIMMAX + 1];
     std::string recive;
@@ -82,27 +79,18 @@ void CFonctionServer::communication(uint ids_connect, uint ids_connect1)
 
     std::string waiting = "Serveur: Vous etes connecte ";
 
-    std::thread th1(sending, ids_connect, waiting);
-    th1.detach();
-    std::thread th2(sending, ids_connect1, waiting);
-    th2.detach();
+   // std::thread th1(sending, ids_connect, waiting);
+   // th1.detach();
+   // std::thread th2(sending, ids_connect1, waiting);
+  //  th2.detach();
 
-    //send(ids_connect, waiting.c_str(), waiting.size() + 1, 0);
-    //send(ids_connect1, waiting.c_str(), waiting.size() + 1, 0);
+    send(ids_connect, waiting.c_str(), waiting.size() + 1, 0);
+    send(ids_connect1, waiting.c_str(), waiting.size() + 1, 0);
     uint noctets;
-
-    std::thread threcv1(reciving, ids_connect, ids_connect1, std::ref(recive));
-    std::thread threcv2(reciving, ids_connect1, ids_connect, std::ref(recive1));
 
     //echange client serveur peroquet sauf pour BYE
     do
     {
-        // std::thread threcv1(reciving, ids_connect, ids_connect1, std::ref(recive));
-        // std::thread threcv2(reciving, ids_connect1, ids_connect, std::ref(recive1));
-
-        // threcv1.detach();
-        // threcv2.detach();
-
 
         noctets = recv(ids_connect, trame_lect, DIMMAX, 0);
         trame_lect[noctets] = '\0';
@@ -122,15 +110,18 @@ void CFonctionServer::communication(uint ids_connect, uint ids_connect1)
     closesocket(ids_connect);
     closesocket(ids_connect1);
 
-}
+};
 
 void CFonctionServer::sending(uint ids_connect, std::string message)
 {
     send(ids_connect, message.c_str(), message.size() + 1, 0);
-}
+};
 
 void CFonctionServer::reciving(uint ids_connect, uint ids_connect1, std::string& message)
 {
+    const ushort DIMMAX = 150; // Taille max des tableaux
+
+
     char trame_lect[DIMMAX + 1];
     std::string recive;
 
@@ -138,11 +129,12 @@ void CFonctionServer::reciving(uint ids_connect, uint ids_connect1, std::string&
     trame_lect[noctets] = '\0';
     recive = trame_lect;
     send(ids_connect1, recive.c_str(), recive.size() + 1, 0);
-}
+};
 
 void CFonctionServer::FermeturWinSock()
 {
     WSACleanup();
+    std::cout << "fermeture de winsock " << std::endl; //pour le debug 
 }
 
 void CFonctionServer::fermetureSockEcoute()

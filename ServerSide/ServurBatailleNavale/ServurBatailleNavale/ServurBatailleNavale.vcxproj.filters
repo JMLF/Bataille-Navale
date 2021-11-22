@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="ServurBatailleNavale.cpp">
+    <ClCompile Include="code source du serveur %28sans class%29.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
     <ClCompile Include="CFonctionServer.cpp">

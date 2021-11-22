@@ -140,7 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CFonctionServer.cpp" />
-    <ClCompile Include="ServurBatailleNavale.cpp" />
+    <ClCompile Include="code source du serveur %28sans class%29.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>

@@ -41,7 +41,9 @@ private:
 
     uint n = 0, noctets;
 
-    int nbconnec; //on compte le nombre de connection 
+   // int nbconnec; //on compte le nombre de connection 
+
+
 
 public: 
 
@@ -62,16 +64,13 @@ public:
 
     // Acceptation d'une connexion cliente, création d'un nouveau socket qui 
     // sera utilisé pour l'émission et la réception des caractères (etape 5)
-    void accepting();
+    uint accepting();
 
-    //communication entre deux clients
     void communication(uint ids_connect, uint ids_connect1);
 
-    //envoi d'une trame vers un client
     void sending(uint ids_connect, std::string message);
 
-    //reception d'une trame et renvoi (perroquet)
-    void reciving(uint ids_connect, uint ids_connect1, std::string& message); 
+    void reciving(uint ids_connect, uint ids_connect1, std::string& message);
 
     // fermeture du socket d'écoute
     void fermetureSockEcoute();
