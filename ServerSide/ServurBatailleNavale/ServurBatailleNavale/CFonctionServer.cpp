@@ -77,7 +77,7 @@ void CFonctionServer::communication(uint ids_connect, uint ids_connect1)
     std::string recive;
     std::string recive1;
 
-    std::string waiting = "Serveur: Vous etes connecte ";
+    std::string waiting = " Serveur: Vous etes connecte ";
 
    // std::thread th1(sending, ids_connect, waiting);
    // th1.detach();
@@ -88,15 +88,19 @@ void CFonctionServer::communication(uint ids_connect, uint ids_connect1)
     send(ids_connect1, waiting.c_str(), waiting.size() + 1, 0);
     uint noctets;
 
+    std::string Avous = " Serveur: votre tour de jouer ";
+
     //echange client serveur peroquet sauf pour BYE
     do
     {
 
+        send(ids_connect, Avous.c_str(), Avous.size() + 1, 0);
         noctets = recv(ids_connect, trame_lect, DIMMAX, 0);
         trame_lect[noctets] = '\0';
         recive = trame_lect;
         send(ids_connect1, recive.c_str(), recive.size() + 1, 0);
 
+        send(ids_connect1, Avous.c_str(), Avous.size() + 1, 0);
         noctets = recv(ids_connect1, trame_lect, DIMMAX, 0);
         trame_lect[noctets] = '\0';
         recive = trame_lect;
