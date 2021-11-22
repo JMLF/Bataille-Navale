@@ -140,6 +140,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CGrille.cpp" />
+    <ClCompile Include="Sourcetest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CGrille.h" />

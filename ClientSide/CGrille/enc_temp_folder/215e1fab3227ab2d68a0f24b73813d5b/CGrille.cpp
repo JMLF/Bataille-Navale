@@ -53,15 +53,6 @@ void CGrille::afficherGrille()
                 }
                 else
                 {
-
-
-
-
-
-
-
-
-
                     //if (ligne == 2) {
 
                         std::cout << "| ";
@@ -70,11 +61,6 @@ void CGrille::afficherGrille()
                         //SetConsoleTextAttribute(hConsole, 9);
                     //}
                 }
-
-
-
-
-
                 
             }
             std::cout << "|" << std::endl;
