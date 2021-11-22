@@ -4,6 +4,7 @@
 
 int main() {
 	CGrille echoe;
+	echoe.InitGrille();
 	//echoe.getCase(1, 1);
 	echoe.afficherGrille();
 	echoe.placerBateau(1, 'A');

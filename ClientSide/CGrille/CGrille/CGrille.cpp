@@ -6,15 +6,40 @@
 
 CGrille::CGrille()
 {
-    for (int i = 0; i < ligne+1; i++) {
-        for (int f = 0; f < colonne+1; f++) {
+
+    nbPorteAvion = 1;
+    nbCroiseur = 1;
+    nbTorpilleur = 2;
+    nbSousMarin = 3;
+    colonne = 10;
+    ligne = 10;
+    //grille[9][9] = Case::VIDE;
+    for (int i = 0; i < ligne ; i++) {
+        for (int f = 0; f < colonne ; f++) {
             grille[i][f] = Case::VIDE;
-            std::cout << i << f << std::endl;
+            //if (grille[i][f] == Case::BATEAU)std::cout << "bateau";
+            //if (grille[i][f] == Case::VIDE)std::cout << "eau";
+            //std::cout << i << f << std::endl;
         }
     }
+    
+    
+    //grille[][] = Case::VIDE;
    //grille[1][1] = Case::BATEAU;
    //grille[10][4] = Case::VIDE;
 }
+
+
+
+
+
+void CGrille::InitGrille() {
+
+   
+}
+
+
+
 
 CGrille::Case CGrille::getCase(int ligne, int colonne)
 {
@@ -249,19 +274,20 @@ bool CGrille::partiePerdue()
 
 std::string CGrille::placerBateau(int ligne, char colonne)
 {
-    
+    Case grille2[11][11];
     system("CLS");
     bool selection = false;
     int k = 0;
     enum TypeBateau { PORTEAVION, CROISEUR, TORPILLEUR, SOUSMARIN };
 
 
-    while (nbCroiseur + nbPorteAvion + nbSousMarin + nbTorpilleur != 0) {
+    while ((nbCroiseur + nbPorteAvion + nbSousMarin + nbTorpilleur) > 0) {
 
-
+    //nbPorteAvion = 12;
 
 
         while (selection == false) {
+            
             system("CLS");
             if (k == 4) k = 0;
             if (GetKeyState('Z') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
@@ -271,35 +297,97 @@ std::string CGrille::placerBateau(int ligne, char colonne)
             }
             switch (k)
             {
-            case PORTEAVION: std::cout << " >Porte-Avion [][][][][]" << std::endl << "Croiseur [][][][]" << std::endl << "Torpilleur [][][]" << std::endl << "Sous-Marin [][]" << std::endl;
+            case PORTEAVION: std::cout << " >Porte-Avion [][][][][] " << nbPorteAvion << std::endl << "Croiseur [][][][]" << std::endl << "Torpilleur [][][]" << std::endl << "Sous-Marin [][]" << std::endl;
                 break;
-            case CROISEUR: std::cout << "Porte-Avion [][][][][]" << std::endl << " >Croiseur [][][][]" << std::endl << "Torpilleur [][][]" << std::endl << "Sous-Marin [][]" << std::endl;
+            case CROISEUR: std::cout << "Porte-Avion [][][][][]" << std::endl << " >Croiseur [][][][] " << nbCroiseur << std::endl << "Torpilleur [][][]" << std::endl << "Sous-Marin [][]" << std::endl;
                 break;
-            case TORPILLEUR: std::cout << "Porte-Avion [][][][][]" << std::endl << "Croiseur [][][][]" << std::endl << " >Torpilleur [][][]" << std::endl << "Sous-Marin [][]" << std::endl;
+            case TORPILLEUR: std::cout << "Porte-Avion [][][][][]" << std::endl << "Croiseur [][][][]" << std::endl << " >Torpilleur [][][] " << nbTorpilleur << std::endl << "Sous-Marin [][]" << std::endl;
                 break;
-            case SOUSMARIN: std::cout << "Porte-Avion [][][][][]" << std::endl << "Croiseur [][][][]" << std::endl << "Torpilleur [][][]" << std::endl << " >Sous-Marin [][]" << std::endl;
+            case SOUSMARIN: std::cout << "Porte-Avion [][][][][]" << std::endl << "Croiseur [][][][]" << std::endl << "Torpilleur [][][]" << std::endl << " >Sous-Marin [][] " << nbSousMarin << std::endl;
                 break;
             }
             //std::cout << k;
             Sleep(30);
             if (GetKeyState('E') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
             {
-                selection = true;
+                switch (k)
+                {
+                case PORTEAVION:
+                    k = 4;
+                    if (nbPorteAvion != 0) {
+                        selection = true;
+                        break;
+                    }
+                    else {
+                        std::cout << " Plus de bateaux de ce type a placer" << std::endl;
+                        system("pause");
+                        break;
+                    }
+                case CROISEUR:
+                    k = 3;
+                    if (nbCroiseur != 0) {
+                        selection = true;
+                        break;
+                    }
+                    else {
+                        std::cout << " Plus de bateaux de ce type a placer" << std::endl;
+                        system("pause");
+                        break;
+                    }
+                case TORPILLEUR:
+                    k = 2;
+                    if (nbTorpilleur != 0) {
+                        selection = true;
+                        break;
+                    }
+                    else {
+                        std::cout << " Plus de bateaux de ce type a placer" << std::endl;
+                        system("pause");
+                        break;
+                    }
+                case SOUSMARIN:
+                    k = 1;
+                    if (nbSousMarin != 0) {
+                        selection = true;
+                        break;
+                    }
+                    else {
+                        std::cout << " Plus de bateaux de ce type a placer" << std::endl;
+                        system("pause");
+                        break;
+                    }
+
+
+                    
+                    
+
+
+                }
             }
         }
         int coordoY = ligne / 2, coordoX = colonne / 2;
-        switch (k)
-        {
-        case PORTEAVION: k = 4; break;
-        case CROISEUR: k = 3; break;
-        case TORPILLEUR: k = 2; break;
-        case SOUSMARIN: k = 1; break;
+        
+    
+        for (int i = 0; i < ligne; i++) {
+            for (int f = 0; f < colonne; f++) {
+                grille2[i][f] = grille[i][f];
+                //if (grille[i][f] == Case::BATEAU)std::cout << "bateau";
+                //if (grille[i][f] == Case::VIDE)std::cout << "eau";
+                //std::cout << i << f << std::endl;
+            }
         }
 
+       
+
+
+
+
+
+
         //PLACEMENT DU BATEAU
-        selection = false;
+        bool selection2 = false;
         bool direction = false;
-        while (selection == false) {
+        while (selection2 == false) {
 
             if (direction == false) {
                 for (int i = 0; i < k + 1; i++) {
@@ -390,12 +478,53 @@ std::string CGrille::placerBateau(int ligne, char colonne)
                 }
                 system("CLS");
             }
+
+
+
+
+
             if (GetKeyState('E') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
             {
 
-                selection = true;
+                //EN creeaTION /!\ 
+                for (int i = 0; i < ligne; i++) {
+                    for (int f = 0; f < colonne; f++) {
+                        if (grille[i][f] == Case::BATEAU) {
+                            if (grille2[i][f] == grille[i][f]) {
+
+                            }
+                        }
+
+                        
+                        //if (grille[i][f] == Case::BATEAU)std::cout << "bateau";
+                        //if (grille[i][f] == Case::VIDE)std::cout << "eau";
+                        //std::cout << i << f << std::endl;
+                    }
+                }
+                ////////////////////////////////////////////////jusque la
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+                selection2 = true;
+                selection = false;
+                switch (k)
+                {
+                case 4: nbPorteAvion--; std::cout << nbPorteAvion; system("pause"); break;
+                case 3: nbCroiseur--; break;
+                case 2: nbTorpilleur--; break;
+                case 1: nbSousMarin--; break;
+                }
             }
         }
 

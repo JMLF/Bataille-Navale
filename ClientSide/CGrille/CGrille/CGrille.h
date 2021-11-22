@@ -12,16 +12,16 @@ public :
 	bool partiePerdue();
 	std::string placerBateau(int ligne, char colonne);
 
-
+	void InitGrille();
 
 
 
 private:
-	int colonne = 10;
-	int ligne = 10;
-	Case grille[10][10];
-	int nbPorteAvion = 1;
-	int nbCroiseur = 1; 
-	int nbTorpilleur = 2;
-	int nbSousMarin = 3;
+	int colonne;
+	int ligne;
+	Case grille[11][11];
+	int nbPorteAvion;
+	int nbCroiseur; 
+	int nbTorpilleur;
+	int nbSousMarin;
 };
