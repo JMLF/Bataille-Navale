@@ -20,7 +20,9 @@ int main(int argc, char* argv[])
     connection.connection();
 
     std::string message;
-    connection.envoi("Bonjour !");
+    //connection.envoi("Bonjour !");
+    message = connection.reception(); //on reçoit la confirmation de connection entre deux clients
+    std::cout << message << std::endl;
     do
     {
     
