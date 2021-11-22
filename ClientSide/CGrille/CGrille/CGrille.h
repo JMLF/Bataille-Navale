@@ -8,7 +8,7 @@ public :
 	Case getCase(int ligne, int colonne);
 	void setCase(int ligne, int colonne, Case type);
 	void afficherGrille();
-	std::vector<std::string> saisieJoueur();
+	std::vector<std::string> saisieJoueur(std::string abs, int ord, bool maGrille);
 	bool partiePerdue();
 private:
 	int colonne = 10;

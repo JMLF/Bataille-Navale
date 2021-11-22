@@ -1,0 +1,4 @@
+- Dimension de la grille choisie 
+- Coordonée entrée par l'émmeteur
+- Nb de bateaux restant
+
