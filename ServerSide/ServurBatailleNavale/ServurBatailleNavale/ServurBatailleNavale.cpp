@@ -16,28 +16,38 @@ typedef unsigned char uchar;
 const ushort PORT_NUM = 12345;
 const ushort DIMMAX = 150; // Taille max des tableaux
 
-void communication(uint ids_connect) {
+void communication(uint ids_connect, uint ids_connect1) {
 
     char trame_lect[DIMMAX + 1];
+    char trame_lect1[DIMMAX + 1];
     std::string recive;
+    std::string recive1;
 
+    std::string waiting = "Serveur: wait for the other client"  ;
+    uint noctets;
     //echange client serveur peroquet sauf pour BYE
     do
     {
-        uint noctets = recv(ids_connect, trame_lect, DIMMAX, 0);
+
+
+        send(ids_connect1, waiting.c_str(), waiting.size() + 1, 0);
+        noctets = recv(ids_connect, trame_lect, DIMMAX, 0);
         trame_lect[noctets] = '\0';
         recive = trame_lect;
-
-       
-            send(ids_connect, recive.c_str(), recive.size() + 1, 0);
+        send(ids_connect1, recive.c_str(), recive.size() + 1, 0);
         
-
+        send(ids_connect, waiting.c_str(), waiting.size() + 1, 0);
+        noctets = recv(ids_connect1, trame_lect, DIMMAX, 0);
+        trame_lect[noctets] = '\0';
+        recive = trame_lect;
+        send(ids_connect, recive.c_str(), recive.size() + 1, 0);
 
     } while (recive != "BYE");
 
 
     // fermeture des sockets ouverts
     closesocket(ids_connect);
+    closesocket(ids_connect1);
 
 };
 
@@ -54,7 +64,9 @@ int main()
 
     uint ids_ecoute;        // id du socket d'écoute du serveur
     uint ids_connect;       // id du socket de connection
+    uint ids_connect1;
     uint nb_car_emis;       // nb car émis par send
+
 
     int  addr_len;          // taille de l'@ internet 
 
@@ -88,12 +100,14 @@ int main()
         std::cout << "Echec Attachement Socket ! " << std::endl;
         exit(1);
     }
+
+    int nbconnec(0); //on compte le nombre de connection 
+
     while (true)
     {
 
-
-        // Mise à disposition du socket (service) (1: une connection au max)
-        if (listen(ids_ecoute, 1) == SOCKET_ERROR)
+        // Mise à disposition du socket (service) (2: deux connection au max la troisiemme est refusé immediatement)
+        if (listen(ids_ecoute, 2) == SOCKET_ERROR)
         {
             std::cout << "Echec Lecture ! " << std::endl;
             exit(1);
@@ -105,8 +119,22 @@ int main()
         addr_len = sizeof(adr_client);
 
         ids_connect = accept(ids_ecoute, (struct sockaddr*)&adr_client, &addr_len);
-        std::thread th1(communication, ids_connect);
+        nbconnec++;
+
+        if (nbconnec ==1)
+        {
+            ids_connect1 = ids_connect;
+        }
+
+        if (nbconnec ==2)
+        {
+        std::thread th1(communication, ids_connect, ids_connect1);
         th1.detach();
+        nbconnec = 0;
+        }
+
+        
+        
     }
 
     // fermeture des sockets ouverts
