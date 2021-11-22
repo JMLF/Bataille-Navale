@@ -18,12 +18,23 @@ nt main(int argc, char* argv[])
 
     CConnectionServeur connection(IP_SERVEUR, port);
     connection.initConnec();
-
+    connection.connection(); //on se connecte içi 
+    
     CGrille grille;
 
+    //grille.placerBateau();
 
+    /*
+    do
+    {
+        cin coup
+        connection.envoi(coup)
+        connection.reciv
+        maj grille
+        envoi maj grille 
 
-
+    } while (win or loose);
+    */
 
 
 }
