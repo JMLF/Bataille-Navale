@@ -139,7 +139,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CConnectionServeur.cpp" />
+    <ClCompile Include="CGrille.cpp" />
     <ClCompile Include="ClientBatailleNavale.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CConnectionServeur.h" />
+    <ClInclude Include="CGrille.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
