@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{92d386a6-bdbe-4a56-a551-691c67052e81}</ProjectGuid>
-    <RootNamespace>ServurBatailleNavale</RootNamespace>
+    <ProjectGuid>{90789ae9-2059-4873-a2d6-c1b6317332d3}</ProjectGuid>
+    <RootNamespace>CConnectionServeur</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,11 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CFonctionServer.cpp" />
+    <ClCompile Include="CConnectionServeur.cpp" />
     <ClCompile Include="Source.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CFonctionServer.h" />
+    <ClInclude Include="CConnectionServeur.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
