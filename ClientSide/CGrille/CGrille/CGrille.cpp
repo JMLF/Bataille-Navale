@@ -253,37 +253,153 @@ std::string CGrille::placerBateau(int ligne, char colonne)
     system("CLS");
     bool selection = false;
     int k = 0;
-    while (selection == false) {
-        system("CLS");
-        if (k == 4) k = 0;
-        if (GetKeyState('Z') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
-        {
+    enum TypeBateau { PORTEAVION, CROISEUR, TORPILLEUR, SOUSMARIN };
+
+
+    while (nbCroiseur + nbPorteAvion + nbSousMarin + nbTorpilleur != 0) {
+
+
+
+
+        while (selection == false) {
+            system("CLS");
             if (k == 4) k = 0;
-            else { k++; }
+            if (GetKeyState('Z') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
+            {
+                if (k == 4) k = 0;
+                else { k++; }
+            }
+            switch (k)
+            {
+            case PORTEAVION: std::cout << " >Porte-Avion [][][][][]" << std::endl << "Croiseur [][][][]" << std::endl << "Torpilleur [][][]" << std::endl << "Sous-Marin [][]" << std::endl;
+                break;
+            case CROISEUR: std::cout << "Porte-Avion [][][][][]" << std::endl << " >Croiseur [][][][]" << std::endl << "Torpilleur [][][]" << std::endl << "Sous-Marin [][]" << std::endl;
+                break;
+            case TORPILLEUR: std::cout << "Porte-Avion [][][][][]" << std::endl << "Croiseur [][][][]" << std::endl << " >Torpilleur [][][]" << std::endl << "Sous-Marin [][]" << std::endl;
+                break;
+            case SOUSMARIN: std::cout << "Porte-Avion [][][][][]" << std::endl << "Croiseur [][][][]" << std::endl << "Torpilleur [][][]" << std::endl << " >Sous-Marin [][]" << std::endl;
+                break;
+            }
+            //std::cout << k;
+            Sleep(30);
+            if (GetKeyState('E') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
+            {
+                selection = true;
+            }
         }
+        int coordoY = ligne / 2, coordoX = colonne / 2;
         switch (k)
         {
-        case 0: std::cout << " >Porte-Avion [][][][][]" << std::endl << "Croiseur [][][][]" << std::endl << "Torpilleur [][][]" << std::endl << "Sous-Marin [][]" << std::endl;
-            break;
-        case 1: std::cout << "Porte-Avion [][][][][]" << std::endl << " >Croiseur [][][][]" << std::endl << "Torpilleur [][][]" << std::endl << "Sous-Marin [][]" << std::endl;
-            break;
-        case 2: std::cout << "Porte-Avion [][][][][]" << std::endl << "Croiseur [][][][]" << std::endl << " >Torpilleur [][][]" << std::endl << "Sous-Marin [][]" << std::endl;
-            break;
-        case 3: std::cout << "Porte-Avion [][][][][]" << std::endl << "Croiseur [][][][]" << std::endl << "Torpilleur [][][]" << std::endl << " >Sous-Marin [][]" << std::endl;
-            break;
+        case PORTEAVION: k = 4; break;
+        case CROISEUR: k = 3; break;
+        case TORPILLEUR: k = 2; break;
+        case SOUSMARIN: k = 1; break;
         }
-        //std::cout << k;
-        Sleep(30);
-        if (GetKeyState('E') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
-        {
-            selection = true;
+
+        //PLACEMENT DU BATEAU
+        selection = false;
+        bool direction = false;
+        while (selection == false) {
+
+            if (direction == false) {
+                for (int i = 0; i < k + 1; i++) {
+                    grille[coordoY][coordoX + i] = Case::BATEAU;
+                }
+            }
+            else {
+                for (int i = 0; i < k + 1; i++) {
+                    grille[coordoY + i][coordoX] = Case::BATEAU;
+                }
+            }
+            afficherGrille();
+            if (GetKeyState('Z') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
+            {
+                if (direction == false) {
+                    for (int i = 0; i < k + 1; i++) {
+                        grille[coordoY][coordoX + i] = Case::VIDE;
+                    }
+                }
+                else {
+                    for (int i = 0; i < k + 1; i++) {
+                        grille[coordoY + i][coordoX] = Case::VIDE;
+                    }
+                }
+                coordoY--;
+                system("CLS");
+            }
+            if (GetKeyState('Q') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
+            {
+                if (direction == false) {
+                    for (int i = 0; i < k + 1; i++) {
+                        grille[coordoY][coordoX + i] = Case::VIDE;
+                    }
+                }
+                else {
+                    for (int i = 0; i < k + 1; i++) {
+                        grille[coordoY + i][coordoX] = Case::VIDE;
+                    }
+                }
+                coordoX--;
+                system("CLS");
+            }
+            if (GetKeyState('S') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
+            {
+                if (direction == false) {
+                    for (int i = 0; i < k + 1; i++) {
+                        grille[coordoY][coordoX + i] = Case::VIDE;
+                    }
+                }
+                else {
+                    for (int i = 0; i < k + 1; i++) {
+                        grille[coordoY + i][coordoX] = Case::VIDE;
+                    }
+                }
+                coordoY++;
+                system("CLS");
+            }
+            if (GetKeyState('D') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
+            {
+                if (direction == false) {
+                    for (int i = 0; i < k + 1; i++) {
+                        grille[coordoY][coordoX + i] = Case::VIDE;
+                    }
+                }
+                else {
+                    for (int i = 0; i < k + 1; i++) {
+                        grille[coordoY + i][coordoX] = Case::VIDE;
+                    }
+                }
+                coordoX++;
+                system("CLS");
+            }
+            Sleep(50);
+
+            if (GetKeyState('A') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
+            {
+                if (direction == false) {
+                    for (int i = 0; i < k + 1; i++) {
+                        grille[coordoY][coordoX + i] = Case::VIDE;
+                    }
+                    direction = true;
+                }
+                else {
+                    for (int i = 0; i < k + 1; i++) {
+                        grille[coordoY + i][coordoX] = Case::VIDE;
+                    }
+                    direction = false;
+                }
+                system("CLS");
+            }
+            if (GetKeyState('E') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
+            {
+
+                selection = true;
+
+
+            }
         }
+
     }
-    switch (k)
-    {
-
-
-
 
 
 
@@ -291,9 +407,7 @@ std::string CGrille::placerBateau(int ligne, char colonne)
     system("pause");
     
 
-    grille[ligne][colonne] = Case::BATEAU;
 
 
-
-    return std::string();
+    return "";
 }
