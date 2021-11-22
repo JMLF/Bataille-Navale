@@ -30,7 +30,7 @@ private:
 
 	uint n = 0, noctets;
 
-	// Particularités Windows
+	// ParticularitÃ©s Windows
 	WORD nVersion = MAKEWORD(2, 2);
 	WSADATA donneeWS;
 
@@ -53,7 +53,8 @@ public:
 
 	//bloquant : attend une trame et renvoi cette trame en string 
 	std::string reception();
-
+	
+	//bloquant : envoi un string au serveur 
 	void envoi(std::string);
 
 	void fermetureSocket();
