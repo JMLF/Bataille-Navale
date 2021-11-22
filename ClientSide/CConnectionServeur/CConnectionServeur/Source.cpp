@@ -25,8 +25,11 @@ int main(int argc, char* argv[])
     {
     
         message = connection.reception();
-        connection.envoi(message);
         std::cout << message << std::endl;
+        std::cin >> message;
+        connection.envoi(message);
+
+        
     
     } while (message != "BYE");
 
