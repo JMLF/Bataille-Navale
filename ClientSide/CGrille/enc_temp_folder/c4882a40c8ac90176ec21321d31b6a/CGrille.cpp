@@ -256,7 +256,7 @@ std::string CGrille::placerBateau(int ligne, char colonne)
     while (selection == false) {
         system("CLS");
         if (k == 4) k = 0;
-        if (GetKeyState('Z') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
+        if (GetKeyState('A') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
         {
             if (k == 4) k = 0;
             else { k++; }
@@ -274,20 +274,13 @@ std::string CGrille::placerBateau(int ligne, char colonne)
         }
         //std::cout << k;
         Sleep(30);
-        if (GetKeyState('E') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
+        if (GetKeyState('O') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
         {
             selection = true;
+
+
         }
     }
-    switch (k)
-    {
-
-
-
-
-
-
-
     system("pause");
     
 

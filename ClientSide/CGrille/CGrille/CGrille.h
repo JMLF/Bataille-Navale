@@ -10,6 +10,12 @@ public :
 	void afficherGrille();
 	std::vector<std::string> saisieJoueur(std::string abs, int ord, bool maGrille);
 	bool partiePerdue();
+	std::string placerBateau(int ligne, char colonne);
+
+
+
+
+
 private:
 	int colonne = 10;
 	int ligne = 10;
