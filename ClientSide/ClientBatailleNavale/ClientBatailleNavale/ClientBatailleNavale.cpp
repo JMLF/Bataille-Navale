@@ -40,20 +40,17 @@ int main(int argc, char* argv[])
         {
             //std::cout << "on entre dans la boucle 1" << std::endl; pour debug
             std::string discussion;
-            discussion = connection.reception();
+            discussion = connection.reception();// petit probleme sur le premier echange on reçoit a votre tour alors que non
             std::cout << discussion << std::endl;
+            discussion = connection.reception(); 
+            std::cout << discussion << std::endl; 
             std::cout << "cin" << std::endl;
             std::cin >> discussion;
             std::cout << std::endl;
             connection.envoi(discussion);
-            discussion = connection.reception();
-            std::cout << discussion << std::endl;
-          //  discussion = connection.reception(); //a tej au cas ou 
+           // discussion = connection.reception();
            // std::cout << discussion << std::endl;
-
-
-
-
+          
 
         } while (true);
     }
