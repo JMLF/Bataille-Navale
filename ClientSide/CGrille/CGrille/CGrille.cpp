@@ -515,7 +515,12 @@ std::string CGrille::placerBateau()
             if (GetKeyState('E') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
             {
 
+                if (grille[coordoY][coordoX] == grille2[coordoY][coordoX]) {
 
+                    std::cout << "Placement impossible" << std::endl;
+                    system("pause");
+                    throw("Superposition de bateaux");
+                }
 
 
 
@@ -526,7 +531,7 @@ std::string CGrille::placerBateau()
                         if (grille[i][f] == Case::BATEAU) {
                             /*if (grille2[i][f] == grille[i][f]) {
                                 std::cout << "Placement impossible" << std::endl;
-                                //system("pause");
+                                //
                                 throw("Superposition de bateaux");
                             }*/
                             //else { grille2[i][f] = grille[i][f]; }
