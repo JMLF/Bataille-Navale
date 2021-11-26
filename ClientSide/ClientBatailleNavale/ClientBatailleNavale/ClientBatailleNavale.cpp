@@ -47,14 +47,22 @@ int main(int argc, char* argv[])
             std::cout << discussion << std::endl;
             discussion = connection.reception(); 
             std::cout << discussion << std::endl; 
-            std::cout << "cin" << std::endl;
+            std::cout << "Ou voulez-vous envoyer un missile ?" << std::endl;
             std::cin >> discussion;
             std::cout << std::endl;
             connection.envoi(discussion);
-            etats = discussion;
+            //etats = discussion;
            // discussion = connection.reception();
            // std::cout << discussion << std::endl;
           
+            /*
+            if (discussion.find("Serveur: votre tour de jouer") != )
+            {
+
+            }
+            */
+
+            /*
             switch (etat)
             {
             case 0:
@@ -64,6 +72,9 @@ int main(int argc, char* argv[])
                 //trame = FIRE+coordonné
                 //on analyse pour voir si on été touché 
                 //si on a été touché on revoi touch sinon miss si tout nos bateau sont mort on renvoi WIN a l'adversaire
+                // if coordonné = coordonné d'un bateau le passer 
+               //grille.getCase();
+               //grille.setCase();
                 break;
             case 2:
                 //trame = touch+coordonné
@@ -79,7 +90,7 @@ int main(int argc, char* argv[])
                 break;
 
             }
-
+            */
 
         } while (true);
     }
@@ -93,7 +104,7 @@ int main(int argc, char* argv[])
             std::string discussion;
             discussion = connection.reception();
             std::cout << discussion << std::endl;
-            std::cout << "cin" << std::endl;
+            std::cout << "Ou voulez-vous envoyer un missile ?" << std::endl;
             std::cin >> discussion;
             std::cout << std::endl;
             connection.envoi(discussion);
