@@ -66,6 +66,8 @@ void CGrille::afficherGrille()
     SetConsoleTextAttribute(hConsole, 9); // couleur bleue
 
     bool valeurOuLigne = true; // ce booléen nous servira a verifier dans chaque ligne si il faut y mettre un charactère ou faire une ligne
+
+
     /****************************************************
 
     //################# GRILLE JOUEUR ################
@@ -129,8 +131,10 @@ void CGrille::afficherGrille()
                     }
                     else { //si on ne se trouve pas sur la premiere colonne , on fait une case vide : 
                         std::cout << "| ";
+
+
                      /*-------------------------------
-                        // GESTION DES CASES JOUEURS
+                        // GESTION DES CASES SUR LA GRILLE JOUEUR
                      -------------------------------*/
 
 
@@ -138,16 +142,16 @@ void CGrille::afficherGrille()
                         Case etat = getCase(k-1, f);
 
                         switch (etat) {
-                        case Case::BATEAU : 
+                        case Case::BATEAU : // on affiche nos bateaux
                             std::cout << "B ";
                             break;
                            
-                        case Case::TOUCHEJ :  
+                        case Case::TOUCHEJ :  // on affiche les cases ou l'ennemi a toucher nos bateaux
                             SetConsoleTextAttribute(hConsole, 13);
                             std::cout << "X ";
                             SetConsoleTextAttribute(hConsole, 9);
                             break;
-                        case Case::EAUJ:
+                        case Case::EAUJ: //on affiche les cases ou il a tirer
                             SetConsoleTextAttribute(hConsole, 9);
                             std::cout << "~ ";
                             //SetConsoleTextAttribute(hConsole, 9);
@@ -158,8 +162,7 @@ void CGrille::afficherGrille()
                         default :  std::cout << "  ";
                         
                         }
-                        //if (etat == Case::BATEAU) std::cout << "B ";
-                        //else  std::cout << "  ";
+                       
 
                     }
                 }
@@ -231,29 +234,32 @@ void CGrille::afficherGrille()
                             SetConsoleTextAttribute(hConsole, 4);
                         }
                     }
-                    else { //si on ne se trouve pas sur la premiere colonne , on fait une case vide : 
+                    else { //si on ne se trouve pas sur la premiere colonne : 
                         
+
+                        /*-------------------------------
+                        // GESTION DES CASES SUR LA GRILLE ENNEMIE
+                     -------------------------------*/
+
+
+
+
+
                         std::cout << "| ";
-                        Case etat = getCase(k - 1, f);
+                        Case etat = getCase(k - 1, f); // on affiche les cases ou le joueur a tirer
 
                         switch (etat) {
-                        //case Case::BATEAU:
-                            //std::cout << "B ";
-                            //break;
-
-                        case Case::TOUCHEE:
-                            SetConsoleTextAttribute(hConsole, 13);
+                        case Case::TOUCHEE: //si le joueur a toucher un bateau
+                            SetConsoleTextAttribute(hConsole, 13); // violet
                             std::cout << "X ";
-                            SetConsoleTextAttribute(hConsole, 4);
+                            SetConsoleTextAttribute(hConsole, 4); //rouge
                             break;
-                        case Case::EAUE:
-                            SetConsoleTextAttribute(hConsole, 9);
+                        case Case::EAUE: // si il a tirer a coté
+                            SetConsoleTextAttribute(hConsole, 9); //bleu
                             std::cout << "~ ";
-                            SetConsoleTextAttribute(hConsole, 4);
+                            SetConsoleTextAttribute(hConsole, 4); //rouge
                             break;
-
-
-                        case Case::VIDE:
+                        case Case::VIDE: // si rien n'a été fait sur la case
                         default:  std::cout << "  ";
 
                         }
@@ -284,15 +290,6 @@ void CGrille::afficherGrille()
 
 
 
-
-
-
-
-
-
-
-
-
 }
 
 std::vector<std::string> CGrille::saisieJoueur(std::string abs, int ord, bool maGrille)
@@ -310,29 +307,25 @@ bool CGrille::partiePerdue()
 
 std::string CGrille::placerBateau()
 {
-    Case grille2[11][11];
+    Case grille2[11][11]; //on déclare une grille de sauvegarde
     system("CLS");
     bool selection = false;
     int k = 0;
     enum TypeBateau { PORTEAVION, CROISEUR, TORPILLEUR, SOUSMARIN };
 
 
-    while ((nbCroiseur + nbPorteAvion + nbSousMarin + nbTorpilleur) > 0) {
-
-    //nbPorteAvion = 12;
-
-
-        while (selection == false) {
+    while ((nbCroiseur + nbPorteAvion + nbSousMarin + nbTorpilleur) > 0) { // tant que tout les bateaux n'ont pas été placer :
+        while (selection == false) { //on crée un menu pour selectionner
             
             system("CLS");
-            if (k == 4) k = 0;
-            if (GetKeyState('Z') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
+            if (k == 4) k = 0; 
+            if (GetKeyState('Z') & 0x8000) // Si la touche Z est préssée on navigue dans le menu
             {
                 if (k == 4) k = 0;
                 else { k++; }
             }
             switch (k)
-            {
+            { //en fonction de k on affiche l'objet sele
             case PORTEAVION: std::cout << " >Porte-Avion [][][][][] " << nbPorteAvion << std::endl << "Croiseur [][][][]" << std::endl << "Torpilleur [][][]" << std::endl << "Sous-Marin [][]" << std::endl;
                 break;
             case CROISEUR: std::cout << "Porte-Avion [][][][][]" << std::endl << " >Croiseur [][][][] " << nbCroiseur << std::endl << "Torpilleur [][][]" << std::endl << "Sous-Marin [][]" << std::endl;
@@ -531,12 +524,14 @@ std::string CGrille::placerBateau()
                     for (int f = 0; f < colonne; f++) {
 
                         if (grille[i][f] == Case::BATEAU) {
-                            if (grille2[i][f] == grille[i][f]) {
+                            /*if (grille2[i][f] == grille[i][f]) {
                                 std::cout << "Placement impossible" << std::endl;
                                 //system("pause");
                                 throw("Superposition de bateaux");
-                            }
-                            else { grille2[i][f] = grille[i][f]; }
+                            }*/
+                            //else { grille2[i][f] = grille[i][f]; }
+
+                            grille2[i][f] = grille[i][f];
                         }
                     }
                 }
