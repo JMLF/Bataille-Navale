@@ -39,8 +39,8 @@ int main(int argc, char* argv[])
         {
             std::cout << "on entre dans la boucle 1" << std::endl;
             std::string discussion;
-            discussion = connection.reception();
-            std::cout << discussion << std::endl;
+            //discussion = connection.reception();
+            //std::cout << discussion << std::endl;
             std::cout << "cin" << std::endl;
             std::cin >> discussion;
             std::cout << std::endl;
