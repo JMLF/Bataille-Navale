@@ -433,27 +433,27 @@ std::string CGrille::placerBateau()
             {
                 if (direction == false) {
                     for (int i = 0; i < k + 1; i++) {
-                        grille[coordoY][coordoX + i] = Case::VIDE;
+                        grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];
                     }
                 }
                 else {
                     for (int i = 0; i < k + 1; i++) {
-                        grille[coordoY + i][coordoX] = Case::VIDE;
+                        grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];
                     }
                 }
                 coordoY--;
                 system("CLS");
             }
-            if (GetKeyState('Q') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
+            if (GetKeyState('Q') & 0x8000/*Check if high-order bit is set (1 << 15)*/) 
             {
                 if (direction == false) {
                     for (int i = 0; i < k + 1; i++) {
-                        grille[coordoY][coordoX + i] = Case::VIDE;
+                        grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];
                     }
                 }
                 else {
                     for (int i = 0; i < k + 1; i++) {
-                        grille[coordoY + i][coordoX] = Case::VIDE;
+                        grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];
                     }
                 }
                 coordoX--;
@@ -463,12 +463,12 @@ std::string CGrille::placerBateau()
             {
                 if (direction == false) {
                     for (int i = 0; i < k + 1; i++) {
-                        grille[coordoY][coordoX + i] = Case::VIDE;
+                        grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];
                     }
                 }
                 else {
                     for (int i = 0; i < k + 1; i++) {
-                        grille[coordoY + i][coordoX] = Case::VIDE;
+                        grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];
                     }
                 }
                 coordoY++;
@@ -478,12 +478,12 @@ std::string CGrille::placerBateau()
             {
                 if (direction == false) {
                     for (int i = 0; i < k + 1; i++) {
-                        grille[coordoY][coordoX + i] = Case::VIDE;
+                        grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];
                     }
                 }
                 else {
                     for (int i = 0; i < k + 1; i++) {
-                        grille[coordoY + i][coordoX] = Case::VIDE;
+                        grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];
                     }
                 }
                 coordoX++;
@@ -495,13 +495,13 @@ std::string CGrille::placerBateau()
             {
                 if (direction == false) {
                     for (int i = 0; i < k + 1; i++) {
-                        grille[coordoY][coordoX + i] = Case::VIDE;
+                        grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];
                     }
                     direction = true;
                 }
                 else {
                     for (int i = 0; i < k + 1; i++) {
-                        grille[coordoY + i][coordoX] = Case::VIDE;
+                        grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];
                     }
                     direction = false;
                 }
