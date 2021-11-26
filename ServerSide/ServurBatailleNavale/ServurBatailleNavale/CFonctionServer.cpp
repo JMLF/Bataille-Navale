@@ -101,7 +101,7 @@ void CFonctionServer::communication(uint ids_connect, uint ids_connect1)
         recive = trame_lect; 
         send(ids_connect1, recive.c_str(), recive.size() + 1, 0);
 
-
+        Sleep(30);
 
         send(ids_connect1, Avous.c_str(), Avous.size() + 1, 0);
         noctets = recv(ids_connect1, trame_lect, DIMMAX, 0);

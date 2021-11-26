@@ -47,6 +47,8 @@ int main(int argc, char* argv[])
             connection.envoi(discussion);
             discussion = connection.reception();
             std::cout << discussion << std::endl;
+            discussion = connection.reception(); //a tej au cas ou 
+            std::cout << discussion << std::endl;
 
         } while (true);
     }
