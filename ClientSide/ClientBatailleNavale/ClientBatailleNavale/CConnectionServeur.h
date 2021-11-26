@@ -57,6 +57,7 @@ public:
 	//bloquant : envoi un string au serveur 
 	void envoi(std::string);
 
+	//On ferme le socket et on delete tout 
 	void fermetureSocket();
 
 };
