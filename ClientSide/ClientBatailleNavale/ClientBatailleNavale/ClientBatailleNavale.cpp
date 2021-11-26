@@ -38,7 +38,10 @@ int main(int argc, char* argv[])
     {
         do
         {
+            
             std::string discussion;
+            discussion = connection.reception();
+            std::cout << discussion << std::endl;
             std::cin >> discussion;
             std::cout << std::endl;
             connection.envoi(discussion);
