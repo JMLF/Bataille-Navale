@@ -33,7 +33,21 @@ int main(int argc, char* argv[])
 
     if (message == "Serveur: votre tour de jouer") //on previent le joueur 2 que l'on a fini de placer les bateaux 
     {
-        connection.envoi("joueur: J'ai ini de placer mes bateaux");    
+        connection.envoi("joueur: J'ai ini de placer mes bateaux"); 
+
+        do
+        {
+
+            std::string discussion;
+            discussion = connection.reception();
+            std::cout << discussion << std::endl;
+            std::cin >> discussion;
+            std::cout << std::endl;
+            connection.envoi(discussion);
+            discussion = connection.reception();
+            std::cout << discussion << std::endl;
+
+        } while (true);
     }
     if (message == "joueur: J'ai ini de placer mes bateaux") //si on reçoit le message que le joueur 2 a fini on peux envoyer une trame puisque c'est notre tour coté serveur
     {
@@ -53,19 +67,7 @@ int main(int argc, char* argv[])
 
     }
 
-    do
-    {
-
-        std::string discussion;
-        discussion = connection.reception();
-        std::cout << discussion << std::endl;
-        std::cin >> discussion;
-        std::cout << std::endl;
-        connection.envoi(discussion);
-        discussion = connection.reception();
-        std::cout << discussion << std::endl;
-
-    } while (true);
+    
   
 
     return(0);
