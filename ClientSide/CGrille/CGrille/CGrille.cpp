@@ -433,12 +433,18 @@ std::string CGrille::placerBateau()
             {
                 if (direction == false) {
                     for (int i = 0; i < k + 1; i++) {
+                        //correction verticale haute
+                        if (coordoY + i < 2) coordoY += 1;
                         grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];
+
+                        //grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];
                     }
                 }
                 else {
                     for (int i = 0; i < k + 1; i++) {
-                        grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];
+                        if (coordoY + i < 2) coordoY += 1;
+                        grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX]
+                            ;
                     }
                 }
                 coordoY--;
@@ -448,11 +454,19 @@ std::string CGrille::placerBateau()
             {
                 if (direction == false) {
                     for (int i = 0; i < k + 1; i++) {
+                       
+
+                        //correction horrizontale gauche
+                        if (coordoX + i < 2) coordoX += 1;
                         grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];
+
                     }
                 }
                 else {
                     for (int i = 0; i < k + 1; i++) {
+
+                        //correction horrizontale gauche
+                        if (coordoX + i < 2) coordoX += 1;
                         grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];
                     }
                 }
@@ -463,11 +477,13 @@ std::string CGrille::placerBateau()
             {
                 if (direction == false) {
                     for (int i = 0; i < k + 1; i++) {
+                         if (coordoY + i > 13) coordoY -= 1;
                         grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];
                     }
                 }
                 else {
                     for (int i = 0; i < k + 1; i++) {
+                        if (coordoY + i > 9) coordoY -= 1;
                         grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];
                     }
                 }
@@ -478,11 +494,15 @@ std::string CGrille::placerBateau()
             {
                 if (direction == false) {
                     for (int i = 0; i < k + 1; i++) {
+                        //correction horizontale droite bateau horizontal
+                        if (coordoX + i > 9) coordoX -= 1;
                         grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];
                     }
                 }
                 else {
                     for (int i = 0; i < k + 1; i++) {
+                        //correction horizontale droite bateau vertical
+                        if (coordoX + i > 13) coordoX -= 1;
                         grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];
                     }
                 }
@@ -585,4 +605,32 @@ std::string CGrille::placerBateau()
 
 
     
+}
+
+void CGrille::bateauToucherEnnemi(int ligne, int colonne)
+{
+    setCase(ligne, colonne, Case::TOUCHEE);
+    system("CLS");
+    afficherGrille();
+}
+
+void CGrille::bateauToucherAllier(int ligne, int colonne)
+{
+    setCase(ligne, colonne, Case::TOUCHEJ);
+    system("CLS");
+    afficherGrille();
+}
+
+void CGrille::tirLoupeJoueur(int ligne, int colonne)
+{
+    setCase(ligne, colonne, Case::EAUE);
+    system("CLS");
+    afficherGrille();
+}
+
+void CGrille::tirLoupeEnnemi(int ligne, int colonne)
+{
+    setCase(ligne, colonne, Case::EAUJ);
+    system("CLS");
+    afficherGrille();
 }

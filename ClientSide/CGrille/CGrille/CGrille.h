@@ -11,6 +11,15 @@ public :
 	std::vector<std::string> saisieJoueur(std::string abs, int ord, bool maGrille);
 	bool partiePerdue();
 	std::string placerBateau();
+	
+	void bateauToucherEnnemi(int ligne, int colonne);
+	void bateauToucherAllier(int ligne, int colonne);
+	void tirLoupeJoueur(int ligne, int colonne);
+	void tirLoupeEnnemi(int ligne, int colonne);
+	
+
+
+
 
 	void InitGrille();
 
