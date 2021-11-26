@@ -312,6 +312,24 @@ std::string CGrille::placerBateau()
     bool selection = false;
     int k = 0;
     enum TypeBateau { PORTEAVION, CROISEUR, TORPILLEUR, SOUSMARIN };
+    HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
+    SetConsoleTextAttribute(hConsole, 10);
+    std::cout << "COMMANDES :" << std::endl << std::endl;
+
+    std::cout << "		@@@@@@@@@@@@@@  @@@@@@@@@@@@@@  @@@@@@@@@@@@@" << std::endl;
+    std::cout << "		@            @  @            @  @           @" << std::endl;
+    std::cout << "		@     A      @  @     Z      @  @     E     @" << std::endl;
+    std::cout << "		@   tourner  @  @    haut    @  @   valider @" << std::endl;
+    std::cout << "		@            @  @            @  @           @" << std::endl;
+    std::cout << "		@@@@@@@@@@@@@@  @@@@@@@@@@@@@@  @@@@@@@@@@@@@" << std::endl;
+    std::cout << "		@            @  @            @  @           @" << std::endl;
+    std::cout << "		@     Q      @  @     S      @  @     D     @" << std::endl;
+    std::cout << "		@   gauche   @  @    bas     @  @  droite   @" << std::endl;
+    std::cout << "		@            @  @            @  @           @" << std::endl;
+    std::cout << "		@@@@@@@@@@@@@@  @@@@@@@@@@@@@@  @@@@@@@@@@@@@" << std::endl << std::endl;
+    SetConsoleTextAttribute(hConsole, 15);
+    system("pause");
+
 
 
     while ((nbCroiseur + nbPorteAvion + nbSousMarin + nbTorpilleur) > 0) { // tant que tout les bateaux n'ont pas été placer :
@@ -319,10 +337,15 @@ std::string CGrille::placerBateau()
             
             system("CLS");
             if (k == 4) k = 0; 
-            if (GetKeyState('Z') & 0x8000) // Si la touche Z est préssée on navigue dans le menu
+            if (GetKeyState('S') & 0x8000) // Si la touche Z est préssée on navigue dans le menu
             {
                 if (k == 4) k = 0;
                 else { k++; }
+            }
+            if (GetKeyState('Z') & 0x8000) // Si la touche Z est préssée on navigue dans le menu
+            {
+                if (k == 0) k = 4;
+                else { k--; }
             }
             switch (k)
             { //en fonction de k on affiche l'objet sele
@@ -336,7 +359,7 @@ std::string CGrille::placerBateau()
                 break;
             }
             //std::cout << k;
-            Sleep(30);
+            Sleep(200);
             if (GetKeyState('E') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
             {
                 switch (k)
@@ -416,6 +439,14 @@ std::string CGrille::placerBateau()
         //PLACEMENT DU BATEAU
         bool selection2 = false;
         bool direction = false;
+        
+
+
+
+
+
+
+
         while (selection2 == false) {
 
             if (direction == false) {

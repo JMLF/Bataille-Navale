@@ -3,18 +3,7 @@
 #include <Windows.h>
 using namespace std;
 int main() {
-
-	cout << "		@@@@@@@@@@@@@@  @@@@@@@@@@@@@@  @@@@@@@@@@@@@" << endl;
-	cout << "		@            @  @            @  @           @" << endl;
-	cout << "		@     A      @  @     Z      @  @     E     @" << endl;
-	cout << "		@   tourner  @  @    haut    @  @   valider @" << endl;
-	cout << "		@            @  @            @  @           @" << endl;
-	cout << "		@@@@@@@@@@@@@@  @@@@@@@@@@@@@@  @@@@@@@@@@@@@" << endl;
-	cout << "		@            @  @            @  @           @" << endl;
-	cout << "		@     Q      @  @     S      @  @     D     @" << endl;
-	cout << "		@   gauche   @  @    bas     @  @  droite   @" << endl;
-	cout << "		@            @  @            @  @           @" << endl;
-	cout << "		@@@@@@@@@@@@@@  @@@@@@@@@@@@@@  @@@@@@@@@@@@@" << endl;
+	
 
 
 
