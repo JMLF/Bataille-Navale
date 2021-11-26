@@ -3,7 +3,7 @@
 #include <string>
 class CGrille {
 public :
-	enum class Case { VIDE, BATEAU, TOUCHEJ,TOUCHEE, EAU, ERREUR = 99 };
+	enum class Case { VIDE, BATEAU, TOUCHEJ,TOUCHEE, EAUJ, EAUE, ERREUR = 99 };
 	CGrille();
 	Case getCase(int ligne, int colonne);
 	void setCase(int ligne, int colonne, Case type);
