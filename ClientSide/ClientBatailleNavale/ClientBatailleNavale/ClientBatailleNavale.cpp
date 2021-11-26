@@ -2,7 +2,7 @@
 #include "CGrille.h"
 #include <iostream>
 
-nt main(int argc, char* argv[])
+int main(int argc, char* argv[])
 {
     //Verif des arguments -----------------------------------------------------------------------------------------
 
@@ -19,8 +19,11 @@ nt main(int argc, char* argv[])
     CConnectionServeur connection(IP_SERVEUR, port);
     connection.initConnec();
     connection.connection(); //on se connecte içi 
-    
+    std::cout << "Connection en cour " << std::endl;
     CGrille grille;
+    std::string message;
+    message = connection.reception();
+    std::cout << message << std::endl;
 
     //grille.placerBateau();
 
@@ -36,7 +39,7 @@ nt main(int argc, char* argv[])
     } while (win or loose);
     */
 
-
+    return(0);
 }
 
 
