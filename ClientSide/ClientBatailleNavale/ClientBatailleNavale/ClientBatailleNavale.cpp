@@ -30,6 +30,7 @@ int main(int argc, char* argv[])
     message = connection.reception(); //reception du message qui dit qu'on peux parler ou que l'autre joueur place ses bateau
     std::cout << message << std::endl;
 
+
     if (message == "Serveur: votre tour de jouer") //on previent le joueur 2 que l'on a fini de placer les bateaux 
     {
         connection.envoi("joueur: J'ai ini de placer mes bateaux");    
@@ -52,6 +53,19 @@ int main(int argc, char* argv[])
 
     }
 
+    do
+    {
+
+        std::string discussion;
+        discussion = connection.reception();
+        std::cout << discussion << std::endl;
+        std::cin >> discussion;
+        std::cout << std::endl;
+        connection.envoi(discussion);
+        discussion = connection.reception();
+        std::cout << discussion << std::endl;
+
+    } while (true);
   
 
     return(0);
