@@ -141,9 +141,14 @@ void CGrille::afficherGrille()
                         case Case::BATEAU : 
                             std::cout << "B ";
                             break;
+                            //case Case::
+                            //std::cout << "B ";
+                            //break;
+
+
                         case Case::VIDE:
                         default :  std::cout << "  ";
-                   
+                        
                         }
                         //if (etat == Case::BATEAU) std::cout << "B ";
                         //else  std::cout << "  ";
@@ -273,7 +278,7 @@ bool CGrille::partiePerdue()
     return false;
 }
 
-std::string CGrille::placerBateau(int ligne, char colonne)
+std::string CGrille::placerBateau()
 {
     Case grille2[11][11];
     system("CLS");
@@ -545,9 +550,9 @@ std::string CGrille::placerBateau(int ligne, char colonne)
 
 
     system("pause");
+    return "reusite";
+
+
+
     
-
-
-
-    return "";
 }

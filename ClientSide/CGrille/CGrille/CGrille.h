@@ -3,14 +3,14 @@
 #include <string>
 class CGrille {
 public :
-	enum class Case { VIDE, BATEAU, TOUCHE, EAU, ERREUR = 99 };
+	enum class Case { VIDE, BATEAU, TOUCHEJ,TOUCHEE, EAU, ERREUR = 99 };
 	CGrille();
 	Case getCase(int ligne, int colonne);
 	void setCase(int ligne, int colonne, Case type);
 	void afficherGrille();
 	std::vector<std::string> saisieJoueur(std::string abs, int ord, bool maGrille);
 	bool partiePerdue();
-	std::string placerBateau(int ligne, char colonne);
+	std::string placerBateau();
 
 	void InitGrille();
 
