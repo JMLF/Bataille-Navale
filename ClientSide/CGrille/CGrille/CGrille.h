@@ -1,6 +1,7 @@
 #pragma once
 #include <vector>
 #include <string>
+#include <locale>
 class CGrille {
 public :
 	enum class Case { VIDE, BATEAU, TOUCHEJ,TOUCHEE, EAUJ, EAUE, ERREUR = 99 };

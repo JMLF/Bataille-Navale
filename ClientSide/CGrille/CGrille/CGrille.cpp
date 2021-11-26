@@ -1,4 +1,4 @@
-
+Ôªø
 
 #include "CGrille.h"
 #include <iostream>
@@ -60,12 +60,12 @@ void CGrille::setCase(int ligne, int colonne, Case type)
 void CGrille::afficherGrille()
 {
     
-    char colonnel = 'A'; //On Ètablit un charactere qui sera incrÈmenter a chaque colonne pour l'affichage des lettres du haut du tableau
-    int k = 0; //de meme pour les lignes, cette variable sera incrÈmentÈe a chaque ligne pour l'affichage des nombres du cotÈ du tableau
+    char colonnel = 'A'; //On √©tablit un charactere qui sera incr√©menter a chaque colonne pour l'affichage des lettres du haut du tableau
+    int k = 0; //de meme pour les lignes, cette variable sera incr√©ment√©e a chaque ligne pour l'affichage des nombres du cot√© du tableau
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE); //sert a modifier la couleur de la console
     SetConsoleTextAttribute(hConsole, 9); // couleur bleue
 
-    bool valeurOuLigne = true; // ce boolÈen nous servira a verifier dans chaque ligne si il faut y mettre un charactËre ou faire une ligne
+    bool valeurOuLigne = true; // ce bool√©en nous servira a verifier dans chaque ligne si il faut y mettre un charact√®re ou faire une ligne
 
 
     /****************************************************
@@ -74,26 +74,26 @@ void CGrille::afficherGrille()
     
     *****************************************************/
 
-    /* on fait ligne par ligne, sachant qu'une ligne se compose d'une ligne sÈparatrice, et d'une ligne ou se trouvent les valeurs. 
-    Ligne sÈparatrice : +--+--+--+--+--+--+(...)
+    /* on fait ligne par ligne, sachant qu'une ligne se compose d'une ligne s√©paratrice, et d'une ligne ou se trouvent les valeurs. 
+    Ligne s√©paratrice : +--+--+--+--+--+--+(...)
     Ligne des valeurs : |  |  |  |  |  |  |(...)
 
     D'ou la multiplication par 2.
-    On remarque que la crÈation des lignes du tableau fini par une ligne de valeur, pour que cela soit plus propre , on y ajoute une ligne
-    sÈparatrice d'ou le +1 apres la multiplication.
+    On remarque que la cr√©ation des lignes du tableau fini par une ligne de valeur, pour que cela soit plus propre , on y ajoute une ligne
+    s√©paratrice d'ou le +1 apres la multiplication.
 
     La ligne des caractere ne doit pas etre prise en compte dans le jeu , donc on y ajoute une ligne (ligne+1) pour avoir 11 lignes.
     */
     for (int i = 0; i < (ligne+1) * 2 + 1 ; i++) {  
-        if (valeurOuLigne == true) { //Si on est sur une ligne sÈparatrice ...
+        if (valeurOuLigne == true) { //Si on est sur une ligne s√©paratrice ...
             for (int f = 0; f < colonne+1; f++) {
                 std::cout << "+---";
             }
-            std::cout << "+" << std::endl; // on fini le tableau par un caratËre '+' et un retour a la ligne
+            std::cout << "+" << std::endl; // on fini le tableau par un carat√®re '+' et un retour a la ligne
             valeurOuLigne = false; // on passe le bool a faux pour que la boucle revienne sur une ligne de valeurs
         }
         else { //Si on est sur une ligne de valeur...
-            k++; // on incrÈmente les nombres du cotÈ du tableau a chaque ligne de valeurs.
+            k++; // on incr√©mente les nombres du cot√© du tableau a chaque ligne de valeurs.
             for (int f = 0; f < colonne+1; f++) { // on s'occupe maintenant du tableau dans sa largeur, en fonction du nombre de colonnes. +1 pour decaler les valeurs en raison de la case 0,0
           
                 if (i < 2 && f > 0) { // si on est sur la premiere ligne et que on se trouve pas sur la case 0,0 on affiche lettre par lettre dans chaque case
@@ -108,7 +108,7 @@ void CGrille::afficherGrille()
                     if (f == 0) { // si on est sur la premiere colonne :
                        
 
-                        if (k < 11) { // on verifie que le format du nombre a afficher dans le tableau pour eviter un dÈcalage quand on a deux chiffres 
+                        if (k < 11) { // on verifie que le format du nombre a afficher dans le tableau pour eviter un d√©calage quand on a deux chiffres 
                             if (k == 1) { // si c'est la zone 0.0 :
                                 std::cout << "| ";
                                 SetConsoleTextAttribute(hConsole, 15);
@@ -118,11 +118,11 @@ void CGrille::afficherGrille()
                             else { // si c'est les autres ( ex : 1.0 2.0 3.0 (...)
                                 std::cout << "| ";
                                 SetConsoleTextAttribute(hConsole, 15);
-                                std::cout << k-1 << " "; // on affiche le nombre de la ligne en gerant le dÈcallage de la zone 0.0
+                                std::cout << k-1 << " "; // on affiche le nombre de la ligne en gerant le d√©callage de la zone 0.0
                                 SetConsoleTextAttribute(hConsole, 9);
                             }
                         }
-                        else { //si le format du nombre est a deuyx chiffre , on prend soin d'enlever un espace dans la nottation pour eviter un dÈcallage sur le tableau
+                        else { //si le format du nombre est a deuyx chiffre , on prend soin d'enlever un espace dans la nottation pour eviter un d√©callage sur le tableau
                             std::cout << "|";
                             SetConsoleTextAttribute(hConsole, 15);
                             std::cout << k-1 << " ";
@@ -170,7 +170,7 @@ void CGrille::afficherGrille()
                 
             }
             std::cout << "|" << std::endl; // on termine le tableau par un | pour fermer le tableau
-            valeurOuLigne = true; // on repasse sur une ligne de sÈparation
+            valeurOuLigne = true; // on repasse sur une ligne de s√©paration
 
         } 
 
@@ -190,15 +190,15 @@ void CGrille::afficherGrille()
     k = 0;
     SetConsoleTextAttribute(hConsole, 4);
     for (int i = 0; i < (ligne + 1) * 2 + 1; i++) {
-        if (valeurOuLigne == true) { //Si on est sur une ligne sÈparatrice ...
+        if (valeurOuLigne == true) { //Si on est sur une ligne s√©paratrice ...
             for (int f = 0; f < colonne + 1; f++) {
                 std::cout << "+---";
             }
-            std::cout << "+" << std::endl; // on fini le tableau par un caratËre '+' et un retour a la ligne
+            std::cout << "+" << std::endl; // on fini le tableau par un carat√®re '+' et un retour a la ligne
             valeurOuLigne = false; // on passe le bool a faux pour que la boucle revienne sur une ligne de valeurs
         }
         else { //Si on est sur une ligne de valeur...
-            k++; // on incrÈmente les nombres du cotÈ du tableau a chaque ligne de valeurs.
+            k++; // on incr√©mente les nombres du cot√© du tableau a chaque ligne de valeurs.
             for (int f = 0; f < colonne + 1; f++) { // on s'occupe maintenant du tableau dans sa largeur, en fonction du nombre de colonnes. +1 pour decaler les valeurs en raison de la case 0,0
 
                 if (i < 2 && f > 0) { // si on est sur la premiere ligne et que on se trouve pas sur la case 0,0 on affiche lettre par lettre dans chaque case
@@ -213,7 +213,7 @@ void CGrille::afficherGrille()
                     if (f == 0) { // si on est sur la premiere colonne :
 
 
-                        if (k < 11) { // on verifie que le format du nombre a afficher dans le tableau pour eviter un dÈcalage quand on a deux chiffres 
+                        if (k < 11) { // on verifie que le format du nombre a afficher dans le tableau pour eviter un d√©calage quand on a deux chiffres 
                             if (k == 1) { // si c'est la zone 0.0 :
                                 std::cout << "| ";
                                 SetConsoleTextAttribute(hConsole, 15);
@@ -223,11 +223,11 @@ void CGrille::afficherGrille()
                             else { // si c'est les autres ( ex : 1.0 2.0 3.0 (...)
                                 std::cout << "| ";
                                 SetConsoleTextAttribute(hConsole, 15);
-                                std::cout << k - 1 << " "; // on affiche le nombre de la ligne en gerant le dÈcallage de la zone 0.0
+                                std::cout << k - 1 << " "; // on affiche le nombre de la ligne en gerant le d√©callage de la zone 0.0
                                 SetConsoleTextAttribute(hConsole, 4);
                             }
                         }
-                        else { //si le format du nombre est a deuyx chiffre , on prend soin d'enlever un espace dans la nottation pour eviter un dÈcallage sur le tableau
+                        else { //si le format du nombre est a deuyx chiffre , on prend soin d'enlever un espace dans la nottation pour eviter un d√©callage sur le tableau
                             std::cout << "|";
                             SetConsoleTextAttribute(hConsole, 15);
                             std::cout << k - 1 << " ";
@@ -254,12 +254,12 @@ void CGrille::afficherGrille()
                             std::cout << "X ";
                             SetConsoleTextAttribute(hConsole, 4); //rouge
                             break;
-                        case Case::EAUE: // si il a tirer a cotÈ
+                        case Case::EAUE: // si il a tirer a cot√©
                             SetConsoleTextAttribute(hConsole, 9); //bleu
                             std::cout << "~ ";
                             SetConsoleTextAttribute(hConsole, 4); //rouge
                             break;
-                        case Case::VIDE: // si rien n'a ÈtÈ fait sur la case
+                        case Case::VIDE: // si rien n'a √©t√© fait sur la case
                         default:  std::cout << "  ";
 
                         }
@@ -270,7 +270,7 @@ void CGrille::afficherGrille()
 
             }
             std::cout << "|" << std::endl; // on termine le tableau par un | pour fermer le tableau
-            valeurOuLigne = true; // on repasse sur une ligne de sÈparation
+            valeurOuLigne = true; // on repasse sur une ligne de s√©paration
 
         }
 
@@ -307,7 +307,10 @@ bool CGrille::partiePerdue()
 
 std::string CGrille::placerBateau()
 {
-    Case grille2[11][11]; //on dÈclare une grille de sauvegarde
+
+   
+    //setlocale(LC_CTYPE, "fra");
+    Case grille2[11][11]; //on d√©clare une grille de sauvegarde
     system("CLS");
     bool selection = false;
     int k = 0;
@@ -315,47 +318,81 @@ std::string CGrille::placerBateau()
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
     SetConsoleTextAttribute(hConsole, 10);
     std::cout << "COMMANDES :" << std::endl << std::endl;
-
-    std::cout << "		@@@@@@@@@@@@@@  @@@@@@@@@@@@@@  @@@@@@@@@@@@@" << std::endl;
-    std::cout << "		@            @  @            @  @           @" << std::endl;
-    std::cout << "		@     A      @  @     Z      @  @     E     @" << std::endl;
-    std::cout << "		@   tourner  @  @    haut    @  @   valider @" << std::endl;
-    std::cout << "		@            @  @            @  @           @" << std::endl;
-    std::cout << "		@@@@@@@@@@@@@@  @@@@@@@@@@@@@@  @@@@@@@@@@@@@" << std::endl;
-    std::cout << "		@            @  @            @  @           @" << std::endl;
-    std::cout << "		@     Q      @  @     S      @  @     D     @" << std::endl;
-    std::cout << "		@   gauche   @  @    bas     @  @  droite   @" << std::endl;
-    std::cout << "		@            @  @            @  @           @" << std::endl;
-    std::cout << "		@@@@@@@@@@@@@@  @@@@@@@@@@@@@@  @@@@@@@@@@@@@" << std::endl << std::endl;
+    //@@@@@@@@@@@@@@  @@@@@@@@@@@@@@  @@@@@@@@@@@@@
+    std::cout << "\xDC\xDC\xDC\xDC\xDC\xDC\xDC\xDC\xDC\xDC\xDC\xDC\xDC\xDC  \xDC\xDC\xDC\xDC\xDC\xDC\xDC\xDC\xDC\xDC\xDC\xDC\xDC\xDC  \xDC\xDC\xDC\xDC\xDC\xDC\xDC\xDC\xDC\xDC\xDC\xDC\xDC" << std::endl;
+    std::cout << "\xDB            \xDB  \xDB            \xDB  \xDB           \xDB" << std::endl;
+    std::cout << "\xDB     A      \xDB  \xDB     Z      \xDB  \xDB     E     \xDB" << std::endl;
+    std::cout << "\xDB   tourner  \xDB  \xDB    haut    \xDB  \xDB   valider \xDB" << std::endl;
+    std::cout << "\xDB            \xDB  \xDB            \xDB  \xDB           \xDB" << std::endl;
+    std::cout << "\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB  \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB  \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB" << std::endl;
+    std::cout << "\xDB            \xDB  \xDB            \xDB  \xDB           \xDB" << std::endl;
+    std::cout << "\xDB     Q      \xDB  \xDB     S      \xDB  \xDB     D     \xDB" << std::endl;
+    std::cout << "\xDB   gauche   \xDB  \xDB    bas     \xDB  \xDB  droite   \xDB" << std::endl;
+    std::cout << "\xDB            \xDB  \xDB            \xDB  \xDB           \xDB" << std::endl;
+    std::cout << "\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF  \xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF  \xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF" << std::endl << std::endl;
     SetConsoleTextAttribute(hConsole, 15);
     system("pause");
 
 
 
-    while ((nbCroiseur + nbPorteAvion + nbSousMarin + nbTorpilleur) > 0) { // tant que tout les bateaux n'ont pas ÈtÈ placer :
-        while (selection == false) { //on crÈe un menu pour selectionner
+    while ((nbCroiseur + nbPorteAvion + nbSousMarin + nbTorpilleur) > 0) { // tant que tout les bateaux n'ont pas √©t√© placer :
+        while (selection == false) { //on cr√©e un menu pour selectionner
             
             system("CLS");
             if (k == 4) k = 0; 
-            if (GetKeyState('S') & 0x8000) // Si la touche Z est prÈssÈe on navigue dans le menu
+            if (GetKeyState('S') & 0x8000) // Si la touche Z est pr√©ss√©e on navigue dans le menu
             {
                 if (k == 4) k = 0;
                 else { k++; }
             }
-            if (GetKeyState('Z') & 0x8000) // Si la touche Z est prÈssÈe on navigue dans le menu
+            if (GetKeyState('Z') & 0x8000) // Si la touche Z est pr√©ss√©e on navigue dans le menu
             {
                 if (k == 0) k = 4;
                 else { k--; }
-            }
+            }//77
             switch (k)
             { //en fonction de k on affiche l'objet sele
             case PORTEAVION: std::cout << " >Porte-Avion [][][][][] " << nbPorteAvion << std::endl << "Croiseur [][][][]" << std::endl << "Torpilleur [][][]" << std::endl << "Sous-Marin [][]" << std::endl;
+                std::cout << "              \xDB\xDB                                                                " << std::endl;
+                std::cout << "             \xDB\xDB\xDB\xDB\xDB                                                              " << std::endl;
+                std::cout << "            \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB                                                           " << std::endl;
+                std::cout << "           \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB                                                        " << std::endl;
+                std::cout << "           \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB                                                       " << std::endl;
+                std::cout << "     \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB    " << std::endl;
+                std::cout << "      \xDB\xDB\xDB\xDB\xDB\xDB\xDB       \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB      \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB U S S \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB        " << std::endl;
+                std::cout << "        \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB             " << std::endl;
+                std::cout << "            \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB                 " << std::endl;
+
+
+
+
+
                 break;
             case CROISEUR: std::cout << "Porte-Avion [][][][][]" << std::endl << " >Croiseur [][][][] " << nbCroiseur << std::endl << "Torpilleur [][][]" << std::endl << "Sous-Marin [][]" << std::endl;
                 break;
             case TORPILLEUR: std::cout << "Porte-Avion [][][][][]" << std::endl << "Croiseur [][][][]" << std::endl << " >Torpilleur [][][] " << nbTorpilleur << std::endl << "Sous-Marin [][]" << std::endl;
                 break;
             case SOUSMARIN: std::cout << "Porte-Avion [][][][][]" << std::endl << "Croiseur [][][][]" << std::endl << "Torpilleur [][][]" << std::endl << " >Sous-Marin [][] " << nbSousMarin << std::endl;
+                std::cout << "                                                \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB                      " << std::endl;
+                std::cout << "                                               \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB                      " << std::endl;
+                std::cout << "                                               \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB                      " << std::endl;
+                std::cout << "                                             \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB                      " << std::endl;
+                std::cout << "                                 \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB            " << std::endl;
+                std::cout << "     \xDB\xDB\xDB            \xDB\xDB \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB  " << std::endl;
+                std::cout << "     \xDB\xDB\xDB\xDB       \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB" << std::endl;
+                std::cout << "  \xDB\xDB \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB" << std::endl;
+                std::cout << "\xDB \xDB\xDB \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB" << std::endl;
+                std::cout << "   \xDB \xDB\xDB\xDB\xDB\xDB    \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB" << std::endl;
+                std::cout << "     \xDB\xDB\xDB            \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB  " << std::endl;
+                std::cout << "                             \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB        " << std::endl;
+
+
+
+
+
+
+
+
                 break;
             }
             //std::cout << k;
