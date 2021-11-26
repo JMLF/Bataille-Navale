@@ -141,9 +141,17 @@ void CGrille::afficherGrille()
                         case Case::BATEAU : 
                             std::cout << "B ";
                             break;
-                            //case Case::
-                            //std::cout << "B ";
-                            //break;
+                           
+                        case Case::TOUCHEJ :  
+                            SetConsoleTextAttribute(hConsole, 13);
+                            std::cout << "X ";
+                            SetConsoleTextAttribute(hConsole, 9);
+                            break;
+                        case Case::EAUJ:
+                            SetConsoleTextAttribute(hConsole, 9);
+                            std::cout << "~ ";
+                            //SetConsoleTextAttribute(hConsole, 9);
+                            break;
 
 
                         case Case::VIDE:
@@ -195,7 +203,7 @@ void CGrille::afficherGrille()
                     std::cout << "| ";
                     SetConsoleTextAttribute(hConsole, 15); // couleur blanc (F)
                     std::cout << char(colonnel + f - 1) << " "; // on affiche la lettre correspondante.
-                    SetConsoleTextAttribute(hConsole, 4); // couleur bleue
+                    SetConsoleTextAttribute(hConsole, 4); // couleur rouge
                 }
                 else // si on est pas sur la premiere ligne ou que on est sur la case 0.0 ...
                 {
@@ -226,7 +234,29 @@ void CGrille::afficherGrille()
                     else { //si on ne se trouve pas sur la premiere colonne , on fait une case vide : 
                         
                         std::cout << "| ";
-                        std::cout << "  ";
+                        Case etat = getCase(k - 1, f);
+
+                        switch (etat) {
+                        //case Case::BATEAU:
+                            //std::cout << "B ";
+                            //break;
+
+                        case Case::TOUCHEE:
+                            SetConsoleTextAttribute(hConsole, 13);
+                            std::cout << "X ";
+                            SetConsoleTextAttribute(hConsole, 4);
+                            break;
+                        case Case::EAUE:
+                            SetConsoleTextAttribute(hConsole, 9);
+                            std::cout << "~ ";
+                            SetConsoleTextAttribute(hConsole, 4);
+                            break;
+
+
+                        case Case::VIDE:
+                        default:  std::cout << "  ";
+
+                        }
 
                     }
                 }
