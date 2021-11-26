@@ -10,8 +10,8 @@ CGrille::CGrille()
 
     nbPorteAvion = 1;
     nbCroiseur = 1;
-    nbTorpilleur = 2;
-    nbSousMarin = 3;
+    nbTorpilleur = 0;
+    nbSousMarin = 0;
     colonne = 10;
     ligne = 10;
     //grille[9][9] = Case::VIDE;
@@ -433,27 +433,27 @@ std::string CGrille::placerBateau()
             {
                 if (direction == false) {
                     for (int i = 0; i < k + 1; i++) {
-                        grille[coordoY][coordoX + i] = Case::VIDE;
+                        grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];
                     }
                 }
                 else {
                     for (int i = 0; i < k + 1; i++) {
-                        grille[coordoY + i][coordoX] = Case::VIDE;
+                        grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];
                     }
                 }
                 coordoY--;
                 system("CLS");
             }
-            if (GetKeyState('Q') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
+            if (GetKeyState('Q') & 0x8000/*Check if high-order bit is set (1 << 15)*/) 
             {
                 if (direction == false) {
                     for (int i = 0; i < k + 1; i++) {
-                        grille[coordoY][coordoX + i] = Case::VIDE;
+                        grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];
                     }
                 }
                 else {
                     for (int i = 0; i < k + 1; i++) {
-                        grille[coordoY + i][coordoX] = Case::VIDE;
+                        grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];
                     }
                 }
                 coordoX--;
@@ -463,12 +463,12 @@ std::string CGrille::placerBateau()
             {
                 if (direction == false) {
                     for (int i = 0; i < k + 1; i++) {
-                        grille[coordoY][coordoX + i] = Case::VIDE;
+                        grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];
                     }
                 }
                 else {
                     for (int i = 0; i < k + 1; i++) {
-                        grille[coordoY + i][coordoX] = Case::VIDE;
+                        grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];
                     }
                 }
                 coordoY++;
@@ -478,12 +478,12 @@ std::string CGrille::placerBateau()
             {
                 if (direction == false) {
                     for (int i = 0; i < k + 1; i++) {
-                        grille[coordoY][coordoX + i] = Case::VIDE;
+                        grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];
                     }
                 }
                 else {
                     for (int i = 0; i < k + 1; i++) {
-                        grille[coordoY + i][coordoX] = Case::VIDE;
+                        grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];
                     }
                 }
                 coordoX++;
@@ -495,13 +495,13 @@ std::string CGrille::placerBateau()
             {
                 if (direction == false) {
                     for (int i = 0; i < k + 1; i++) {
-                        grille[coordoY][coordoX + i] = Case::VIDE;
+                        grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];
                     }
                     direction = true;
                 }
                 else {
                     for (int i = 0; i < k + 1; i++) {
-                        grille[coordoY + i][coordoX] = Case::VIDE;
+                        grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];
                     }
                     direction = false;
                 }
@@ -515,7 +515,12 @@ std::string CGrille::placerBateau()
             if (GetKeyState('E') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
             {
 
+                if (grille[coordoY][coordoX] == grille2[coordoY][coordoX]) {
 
+                    std::cout << "Placement impossible" << std::endl;
+                    system("pause");
+                    throw("Superposition de bateaux");
+                }
 
 
 
@@ -526,7 +531,7 @@ std::string CGrille::placerBateau()
                         if (grille[i][f] == Case::BATEAU) {
                             /*if (grille2[i][f] == grille[i][f]) {
                                 std::cout << "Placement impossible" << std::endl;
-                                //system("pause");
+                                //
                                 throw("Superposition de bateaux");
                             }*/
                             //else { grille2[i][f] = grille[i][f]; }

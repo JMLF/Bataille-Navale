@@ -26,6 +26,7 @@ int main(int argc, char* argv[])
     std::cout << message << std::endl;
     message = connection.reception(); //reception du message qui dit qu'on doit placer les bateaux
     std::cout << message << std::endl;
+    Sleep(10);
     grille.placerBateau();
     message = connection.reception(); //reception du message qui dit qu'on peux parler ou que l'autre joueur place ses bateau
     std::cout << message << std::endl;
@@ -33,28 +34,33 @@ int main(int argc, char* argv[])
 
     if (message == "Serveur: votre tour de jouer") //on previent le joueur 2 que l'on a fini de placer les bateaux 
     {
-        connection.envoi("joueur: J'ai ini de placer mes bateaux"); 
 
+        connection.envoi("joueur: J'ai ini de placer mes bateaux"); 
+        
         do
         {
-            std::cout << "on entre dans la boucle 1" << std::endl;
+            //std::cout << "on entre dans la boucle 1" << std::endl; pour debug
             std::string discussion;
-            discussion = connection.reception();
+            discussion = connection.reception();// petit probleme sur le premier echange on reçoit a votre tour alors que non
             std::cout << discussion << std::endl;
+            discussion = connection.reception(); 
+            std::cout << discussion << std::endl; 
             std::cout << "cin" << std::endl;
             std::cin >> discussion;
             std::cout << std::endl;
             connection.envoi(discussion);
-            discussion = connection.reception();
-            std::cout << discussion << std::endl;
+           // discussion = connection.reception();
+           // std::cout << discussion << std::endl;
+          
 
         } while (true);
     }
     if (message == "joueur: J'ai ini de placer mes bateaux") //si on reçoit le message que le joueur 2 a fini on peux envoyer une trame puisque c'est notre tour coté serveur
     {
+        
         do
         {
-            std::cout << "on entre dans la boucle 2" << std::endl;
+          //  std::cout << "on entre dans la boucle 2" << std::endl; pour debug
             std::string discussion;
             discussion = connection.reception();
             std::cout << discussion << std::endl;
