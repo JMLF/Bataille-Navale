@@ -31,12 +31,14 @@ int main(int argc, char* argv[])
     message = connection.reception(); //reception du message qui dit qu'on peux parler ou que l'autre joueur place ses bateau
     std::cout << message << std::endl;
 
+    enum class trame{AVOUS=0,FIRE,TOUCH,MISS,WIN=4}; //pour l'analyse des trame reçu
 
     if (message == "Serveur: votre tour de jouer") //on previent le joueur 2 que l'on a fini de placer les bateaux 
     {
 
         connection.envoi("joueur: J'ai ini de placer mes bateaux"); 
-        
+        std::string etats;
+        int etat(0);
         do
         {
             //std::cout << "on entre dans la boucle 1" << std::endl; pour debug
@@ -49,15 +51,42 @@ int main(int argc, char* argv[])
             std::cin >> discussion;
             std::cout << std::endl;
             connection.envoi(discussion);
+            etats = discussion;
            // discussion = connection.reception();
            // std::cout << discussion << std::endl;
           
+            switch (etat)
+            {
+            case 0:
+                //trame = a vous de jouer, on ne fait rien
+                break;
+            case 1:
+                //trame = FIRE+coordonné
+                //on analyse pour voir si on été touché 
+                //si on a été touché on revoi touch sinon miss si tout nos bateau sont mort on renvoi WIN a l'adversaire
+                break;
+            case 2:
+                //trame = touch+coordonné
+                //on a touché ladrversaire au coordonné reçu
+                break;
+            case 3:
+                //trame = miss+coordonné
+                //on a loupé l'adversaire
+                break;
+            case 4:
+                //trame = WIN 
+                //on a gagné
+                break;
+
+            }
+
 
         } while (true);
     }
     if (message == "joueur: J'ai ini de placer mes bateaux") //si on reçoit le message que le joueur 2 a fini on peux envoyer une trame puisque c'est notre tour coté serveur
     {
-        
+        std::string etats;
+        int etat(0);
         do
         {
           //  std::cout << "on entre dans la boucle 2" << std::endl; pour debug
@@ -70,6 +99,36 @@ int main(int argc, char* argv[])
             connection.envoi(discussion);
             discussion = connection.reception();
             std::cout << discussion << std::endl;
+            etats = discussion;
+
+
+
+
+
+            switch (etat)
+            {
+            case 0:
+            //trame = a vous de jouer, on ne fait rien
+                break;
+            case 1:
+                //trame = FIRE+coordonné
+                //on analyse pour voir si on été touché 
+                //si on a été touché on revoi touch sinon miss si tout nos bateau sont mort on renvoi WIN a l'adversaire
+                break;
+            case 2:
+                //trame = touch+coordonné
+                //on a touché ladrversaire au coordonné reçu
+                break;
+            case 3:
+                //trame = miss+coordonné
+                //on a loupé l'adversaire
+                break;
+            case 4:
+                //trame = WIN 
+                //on a gagné
+                break;
+
+            }
 
         } while (true);
 
