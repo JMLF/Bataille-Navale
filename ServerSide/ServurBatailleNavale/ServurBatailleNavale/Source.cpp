@@ -27,7 +27,7 @@ int main()
 		if (nbconnection == 1)
 		{
 			adr_1 = adr_2;
-			std::string waiting = " Serveur: En attente du deuxieme joueur ";
+			std::string waiting = "Serveur: En attente du deuxieme joueur";
 			send(adr_1, waiting.c_str(), waiting.size() + 1, 0);
 		}
 		if (nbconnection == 2)
