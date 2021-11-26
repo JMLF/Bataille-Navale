@@ -10,8 +10,8 @@ CGrille::CGrille()
 
     nbPorteAvion = 1;
     nbCroiseur = 1;
-    nbTorpilleur = 2;
-    nbSousMarin = 3;
+    nbTorpilleur = 0;
+    nbSousMarin = 0;
     colonne = 10;
     ligne = 10;
     //grille[9][9] = Case::VIDE;
