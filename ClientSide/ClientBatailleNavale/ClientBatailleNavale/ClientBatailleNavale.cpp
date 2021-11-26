@@ -29,7 +29,7 @@ int main(int argc, char* argv[])
     Sleep(10);
     grille.placerBateau();
     message = connection.reception(); //reception du message qui dit qu'on peux parler ou que l'autre joueur place ses bateau
-   
+    std::cout << message << std::endl;
 
 
     if (message == "Serveur: votre tour de jouer") //on previent le joueur 2 que l'on a fini de placer les bateaux 
@@ -57,7 +57,7 @@ int main(int argc, char* argv[])
     }
     if (message == "joueur: J'ai ini de placer mes bateaux") //si on reçoit le message que le joueur 2 a fini on peux envoyer une trame puisque c'est notre tour coté serveur
     {
-        std::cout << message << std::endl;
+        
         do
         {
           //  std::cout << "on entre dans la boucle 2" << std::endl; pour debug
