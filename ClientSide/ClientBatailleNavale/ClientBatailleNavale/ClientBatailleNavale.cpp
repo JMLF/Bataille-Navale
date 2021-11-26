@@ -51,6 +51,10 @@ int main(int argc, char* argv[])
           //  discussion = connection.reception(); //a tej au cas ou 
            // std::cout << discussion << std::endl;
 
+
+
+
+
         } while (true);
     }
     if (message == "joueur: J'ai ini de placer mes bateaux") //si on reçoit le message que le joueur 2 a fini on peux envoyer une trame puisque c'est notre tour coté serveur
