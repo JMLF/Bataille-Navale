@@ -79,10 +79,7 @@ void CFonctionServer::communication(uint ids_connect, uint ids_connect1)
 
     std::string waiting = "Serveur: Vous etes connecte";
 
-   // std::thread th1(sending, ids_connect, waiting);
-   // th1.detach();
-   // std::thread th2(sending, ids_connect1, waiting);
-  //  th2.detach();
+
 
    // send(ids_connect, waiting.c_str(), waiting.size() + 1, 0);
     send(ids_connect1, waiting.c_str(), waiting.size() + 1, 0);
