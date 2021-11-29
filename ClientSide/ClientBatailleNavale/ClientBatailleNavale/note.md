@@ -17,4 +17,4 @@ on place ses bateaux puis on envoi une trame qui dit que l'on a fini d'installer
 
 ## A faire 
 + exception et gestion d'erreurs dans les classes
-+ 
++ ajouter une fonction qui regarde si les coordonné passé par lennemi sont valide + si elle touche et envoyer une reponse en fonction

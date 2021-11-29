@@ -11,16 +11,16 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00008}\mbox{\hyperlink{class_c_grille_a90b7985f1d5d24a9ea3a2d1fb1fb4636}{00008}} \mbox{\hyperlink{class_c_grille_a90b7985f1d5d24a9ea3a2d1fb1fb4636}{CGrille::CGrille}}()}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00009}00009 \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00010}00010 }
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00011}00011     nbPorteAvion = 1;}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00012}00012     nbCroiseur = 1;}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00013}00013     nbTorpilleur = 0;}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00014}00014     nbSousMarin = 0;}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00015}00015     colonne = 10;}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00016}00016     ligne = 10;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00011}00011     \mbox{\hyperlink{class_c_grille_a49cf911ba132c27013c65c89ab2e8514}{nbPorteAvion}} = 1;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00012}00012     \mbox{\hyperlink{class_c_grille_a104c7b465307fbc6ac2152a3dc12509b}{nbCroiseur}} = 1;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00013}00013     \mbox{\hyperlink{class_c_grille_a79b5a1a4c22abf918520057701ffe283}{nbTorpilleur}} = 0;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00014}00014     \mbox{\hyperlink{class_c_grille_ad0882a57d5577827d679e407bb3e0870}{nbSousMarin}} = 0;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00015}00015     \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}} = 10;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00016}00016     \mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}} = 10;}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00017}00017     \textcolor{comment}{//grille[9][9] = Case::VIDE;}}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00018}00018     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < ligne ; i++) \{}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00019}00019         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < colonne ; f++) \{}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00020}00020             grille[i][f] = \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a4c67bb3d8f85b3a1570dd8a5a8a26338}{Case::VIDE}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00018}00018     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}} ; i++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00019}00019         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}} ; f++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00020}00020             \mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{grille}}[i][f] = \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a4c67bb3d8f85b3a1570dd8a5a8a26338}{Case::VIDE}};}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00021}00021             \textcolor{comment}{//if (grille[i][f] == Case::BATEAU)std::cout << "{}bateau"{};}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00022}00022             \textcolor{comment}{//if (grille[i][f] == Case::VIDE)std::cout << "{}eau"{};}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00023}00023             \textcolor{comment}{//std::cout << i << f << std::endl;}}
@@ -45,22 +45,22 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00042}00042 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00043}00043 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00044}00044 }
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00045}\mbox{\hyperlink{class_c_grille_aea8e46580f6a4aa1c45aedc49376e7c2}{00045}} \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{CGrille::Case}} \mbox{\hyperlink{class_c_grille_aea8e46580f6a4aa1c45aedc49376e7c2}{CGrille::getCase}}(\textcolor{keywordtype}{int} ligne, \textcolor{keywordtype}{int} colonne)}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00045}\mbox{\hyperlink{class_c_grille_aa58d985f2e1d7877de1f865dd560a482}{00045}} \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{CGrille::Case}} \mbox{\hyperlink{class_c_grille_aa58d985f2e1d7877de1f865dd560a482}{CGrille::getCase}}(\textcolor{keywordtype}{int} ligne, \textcolor{keywordtype}{int} colonne)}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00046}00046 \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00047}00047     \textcolor{comment}{//grille[1][1] = Case::BATEAU;}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00048}00048     \textcolor{comment}{//Case CaseTeste = ;}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00049}00049     \textcolor{comment}{//if (CaseTeste == Case::BATEAU)std::cout << "{}bateau"{};}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00050}00050     \textcolor{comment}{//if (CaseTeste == Case::EAU)std::cout << "{}eau"{};}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00051}00051     \textcolor{comment}{//system("{}pause"{});}}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00052}00052     \textcolor{keywordflow}{return} grille[ligne][colonne];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00052}00052     \textcolor{keywordflow}{return} \mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{grille}}[\mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}][\mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}}];}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00053}00053 \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00054}00054 }
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00055}\mbox{\hyperlink{class_c_grille_adc0746e8ec544aaced585a4388e73bd4}{00055}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_grille_adc0746e8ec544aaced585a4388e73bd4}{CGrille::setCase}}(\textcolor{keywordtype}{int} ligne, \textcolor{keywordtype}{int} colonne, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} type)}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00055}\mbox{\hyperlink{class_c_grille_a030155879bff962efc0c015f22ea9a0b}{00055}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_grille_a030155879bff962efc0c015f22ea9a0b}{CGrille::setCase}}(\textcolor{keywordtype}{int} ligne, \textcolor{keywordtype}{int} colonne, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} type)}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00056}00056 \{}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00057}00057     grille[ligne][colonne] = type;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00057}00057     \mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{grille}}[\mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}][\mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}}] = type;}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00058}00058 \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00059}00059 }
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00060}\mbox{\hyperlink{class_c_grille_aa0168c52e5e9e8ac7f6dc83b43c2a9ea}{00060}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_grille_aa0168c52e5e9e8ac7f6dc83b43c2a9ea}{CGrille::afficherGrille}}()}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00060}\mbox{\hyperlink{class_c_grille_a1367ff44fd35d490a1f4b41c573c06d9}{00060}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_grille_a1367ff44fd35d490a1f4b41c573c06d9}{CGrille::afficherGrille}}()}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00061}00061 \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00062}00062     }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00063}00063     \textcolor{keywordtype}{char} colonnel = \textcolor{charliteral}{'A'}; \textcolor{comment}{//On établit un charactere qui sera incrémenter a chaque colonne pour l'affichage des lettres du haut du tableau}}
@@ -87,9 +87,9 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00084}00084 \textcolor{comment}{}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00085}00085 \textcolor{comment}{    La ligne des caractere ne doit pas etre prise en compte dans le jeu , donc on y ajoute une ligne (ligne+1) pour avoir 11 lignes.}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00086}00086 \textcolor{comment}{    */}}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00087}00087     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < (ligne+1) * 2 + 1 ; i++) \{  }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00087}00087     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < (\mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}+1) * 2 + 1 ; i++) \{  }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00088}00088         \textcolor{keywordflow}{if} (valeurOuLigne == \textcolor{keyword}{true}) \{ \textcolor{comment}{//Si on est sur une ligne séparatrice ...}}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00089}00089             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < colonne+1; f++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00089}00089             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}}+1; f++) \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00090}00090                 std::cout << \textcolor{stringliteral}{"{}+-\/-\/-\/"{}};}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00091}00091             \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00092}00092             std::cout << \textcolor{stringliteral}{"{}+"{}} << std::endl; \textcolor{comment}{// on fini le tableau par un caratère '+' et un retour a la ligne}}
@@ -97,7 +97,7 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00094}00094         \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00095}00095         \textcolor{keywordflow}{else} \{ \textcolor{comment}{//Si on est sur une ligne de valeur...}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00096}00096             k++; \textcolor{comment}{// on incrémente les nombres du coté du tableau a chaque ligne de valeurs.}}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00097}00097             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < colonne+1; f++) \{ \textcolor{comment}{// on s'occupe maintenant du tableau dans sa largeur, en fonction du nombre de colonnes. +1 pour decaler les valeurs en raison de la case 0,0}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00097}00097             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}}+1; f++) \{ \textcolor{comment}{// on s'occupe maintenant du tableau dans sa largeur, en fonction du nombre de colonnes. +1 pour decaler les valeurs en raison de la case 0,0}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00098}00098           }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00099}00099                 \textcolor{keywordflow}{if} (i < 2 \&\& f > 0) \{ \textcolor{comment}{// si on est sur la premiere ligne et que on se trouve pas sur la case 0,0 on affiche lettre par lettre dans chaque case}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00100}00100 }
@@ -142,7 +142,7 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00139}00139 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00140}00140 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00141}00141 }
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00142}00142                         \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} etat = \mbox{\hyperlink{class_c_grille_aea8e46580f6a4aa1c45aedc49376e7c2}{getCase}}(k-\/1, f);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00142}00142                         \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} etat = \mbox{\hyperlink{class_c_grille_aa58d985f2e1d7877de1f865dd560a482}{getCase}}(k-\/1, f);}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00143}00143 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00144}00144                         \textcolor{keywordflow}{switch} (etat) \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00145}00145                         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a7d4f15a4b47f3b52030dc4553f228b4f}{Case::BATEAU}} : \textcolor{comment}{// on affiche nos bateaux}}
@@ -192,9 +192,9 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00189}00189     valeurOuLigne = \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00190}00190     k = 0;}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00191}00191     SetConsoleTextAttribute(hConsole, 4);}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00192}00192     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < (ligne + 1) * 2 + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00192}00192     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < (\mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}} + 1) * 2 + 1; i++) \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00193}00193         \textcolor{keywordflow}{if} (valeurOuLigne == \textcolor{keyword}{true}) \{ \textcolor{comment}{//Si on est sur une ligne séparatrice ...}}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00194}00194             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < colonne + 1; f++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00194}00194             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}} + 1; f++) \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00195}00195                 std::cout << \textcolor{stringliteral}{"{}+-\/-\/-\/"{}};}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00196}00196             \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00197}00197             std::cout << \textcolor{stringliteral}{"{}+"{}} << std::endl; \textcolor{comment}{// on fini le tableau par un caratère '+' et un retour a la ligne}}
@@ -202,7 +202,7 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00199}00199         \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00200}00200         \textcolor{keywordflow}{else} \{ \textcolor{comment}{//Si on est sur une ligne de valeur...}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00201}00201             k++; \textcolor{comment}{// on incrémente les nombres du coté du tableau a chaque ligne de valeurs.}}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00202}00202             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < colonne + 1; f++) \{ \textcolor{comment}{// on s'occupe maintenant du tableau dans sa largeur, en fonction du nombre de colonnes. +1 pour decaler les valeurs en raison de la case 0,0}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00202}00202             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}} + 1; f++) \{ \textcolor{comment}{// on s'occupe maintenant du tableau dans sa largeur, en fonction du nombre de colonnes. +1 pour decaler les valeurs en raison de la case 0,0}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00203}00203 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00204}00204                 \textcolor{keywordflow}{if} (i < 2 \&\& f > 0) \{ \textcolor{comment}{// si on est sur la premiere ligne et que on se trouve pas sur la case 0,0 on affiche lettre par lettre dans chaque case}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00205}00205 }
@@ -249,7 +249,7 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00246}00246 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00247}00247 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00248}00248                         std::cout << \textcolor{stringliteral}{"{}| "{}};}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00249}00249                         \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} etat = \mbox{\hyperlink{class_c_grille_aea8e46580f6a4aa1c45aedc49376e7c2}{getCase}}(k -\/ 1, f); \textcolor{comment}{// on affiche les cases ou le joueur a tirer}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00249}00249                         \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} etat = \mbox{\hyperlink{class_c_grille_aa58d985f2e1d7877de1f865dd560a482}{getCase}}(k -\/ 1, f); \textcolor{comment}{// on affiche les cases ou le joueur a tirer}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00250}00250 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00251}00251                         \textcolor{keywordflow}{switch} (etat) \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00252}00252                         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a6dcca5769e62a615a669c9c254fbcbda}{Case::TOUCHEE}}: \textcolor{comment}{//si le joueur a toucher un bateau}}
@@ -335,7 +335,7 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00332}00332 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00333}00333 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00334}00334 }
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00335}00335     \textcolor{keywordflow}{while} ((nbCroiseur + nbPorteAvion + nbSousMarin + nbTorpilleur) > 0) \{ \textcolor{comment}{// tant que tout les bateaux n'ont pas été placer :}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00335}00335     \textcolor{keywordflow}{while} ((\mbox{\hyperlink{class_c_grille_a104c7b465307fbc6ac2152a3dc12509b}{nbCroiseur}} + \mbox{\hyperlink{class_c_grille_a49cf911ba132c27013c65c89ab2e8514}{nbPorteAvion}} + \mbox{\hyperlink{class_c_grille_ad0882a57d5577827d679e407bb3e0870}{nbSousMarin}} + \mbox{\hyperlink{class_c_grille_a79b5a1a4c22abf918520057701ffe283}{nbTorpilleur}}) > 0) \{ \textcolor{comment}{// tant que tout les bateaux n'ont pas été placer :}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00336}00336         \textcolor{keywordflow}{while} (selection == \textcolor{keyword}{false}) \{ \textcolor{comment}{//on crée un menu pour selectionner}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00337}00337             }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00338}00338             system(\textcolor{stringliteral}{"{}CLS"{}});}
@@ -352,13 +352,13 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00349}00349             \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00350}00350             \textcolor{keywordflow}{switch} (k)}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00351}00351             \{ \textcolor{comment}{//en fonction de k on affiche l'objet sele}}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00352}00352             \textcolor{keywordflow}{case} PORTEAVION: std::cout << \textcolor{stringliteral}{"{} >Porte-\/Avion [][][][][] "{}} << nbPorteAvion << std::endl << \textcolor{stringliteral}{"{}Croiseur [][][][]"{}} << std::endl << \textcolor{stringliteral}{"{}Torpilleur [][][]"{}} << std::endl << \textcolor{stringliteral}{"{}Sous-\/Marin [][]"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00352}00352             \textcolor{keywordflow}{case} PORTEAVION: std::cout << \textcolor{stringliteral}{"{} >Porte-\/Avion [][][][][] "{}} << \mbox{\hyperlink{class_c_grille_a49cf911ba132c27013c65c89ab2e8514}{nbPorteAvion}} << std::endl << \textcolor{stringliteral}{"{}Croiseur [][][][]"{}} << std::endl << \textcolor{stringliteral}{"{}Torpilleur [][][]"{}} << std::endl << \textcolor{stringliteral}{"{}Sous-\/Marin [][]"{}} << std::endl;}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00353}00353                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00354}00354             \textcolor{keywordflow}{case} CROISEUR: std::cout << \textcolor{stringliteral}{"{}Porte-\/Avion [][][][][]"{}} << std::endl << \textcolor{stringliteral}{"{} >Croiseur [][][][] "{}} << nbCroiseur << std::endl << \textcolor{stringliteral}{"{}Torpilleur [][][]"{}} << std::endl << \textcolor{stringliteral}{"{}Sous-\/Marin [][]"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00354}00354             \textcolor{keywordflow}{case} CROISEUR: std::cout << \textcolor{stringliteral}{"{}Porte-\/Avion [][][][][]"{}} << std::endl << \textcolor{stringliteral}{"{} >Croiseur [][][][] "{}} << \mbox{\hyperlink{class_c_grille_a104c7b465307fbc6ac2152a3dc12509b}{nbCroiseur}} << std::endl << \textcolor{stringliteral}{"{}Torpilleur [][][]"{}} << std::endl << \textcolor{stringliteral}{"{}Sous-\/Marin [][]"{}} << std::endl;}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00355}00355                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00356}00356             \textcolor{keywordflow}{case} TORPILLEUR: std::cout << \textcolor{stringliteral}{"{}Porte-\/Avion [][][][][]"{}} << std::endl << \textcolor{stringliteral}{"{}Croiseur [][][][]"{}} << std::endl << \textcolor{stringliteral}{"{} >Torpilleur [][][] "{}} << nbTorpilleur << std::endl << \textcolor{stringliteral}{"{}Sous-\/Marin [][]"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00356}00356             \textcolor{keywordflow}{case} TORPILLEUR: std::cout << \textcolor{stringliteral}{"{}Porte-\/Avion [][][][][]"{}} << std::endl << \textcolor{stringliteral}{"{}Croiseur [][][][]"{}} << std::endl << \textcolor{stringliteral}{"{} >Torpilleur [][][] "{}} << \mbox{\hyperlink{class_c_grille_a79b5a1a4c22abf918520057701ffe283}{nbTorpilleur}} << std::endl << \textcolor{stringliteral}{"{}Sous-\/Marin [][]"{}} << std::endl;}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00357}00357                 \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00358}00358             \textcolor{keywordflow}{case} SOUSMARIN: std::cout << \textcolor{stringliteral}{"{}Porte-\/Avion [][][][][]"{}} << std::endl << \textcolor{stringliteral}{"{}Croiseur [][][][]"{}} << std::endl << \textcolor{stringliteral}{"{}Torpilleur [][][]"{}} << std::endl << \textcolor{stringliteral}{"{} >Sous-\/Marin [][] "{}} << nbSousMarin << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00358}00358             \textcolor{keywordflow}{case} SOUSMARIN: std::cout << \textcolor{stringliteral}{"{}Porte-\/Avion [][][][][]"{}} << std::endl << \textcolor{stringliteral}{"{}Croiseur [][][][]"{}} << std::endl << \textcolor{stringliteral}{"{}Torpilleur [][][]"{}} << std::endl << \textcolor{stringliteral}{"{} >Sous-\/Marin [][] "{}} << \mbox{\hyperlink{class_c_grille_ad0882a57d5577827d679e407bb3e0870}{nbSousMarin}} << std::endl;}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00359}00359                 \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00360}00360             \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00361}00361             \textcolor{comment}{//std::cout << k;}}
@@ -369,7 +369,7 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00366}00366                 \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00367}00367                 \textcolor{keywordflow}{case} PORTEAVION:}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00368}00368                     k = 4;}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00369}00369                     \textcolor{keywordflow}{if} (nbPorteAvion != 0) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00369}00369                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_c_grille_a49cf911ba132c27013c65c89ab2e8514}{nbPorteAvion}} != 0) \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00370}00370                         selection = \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00371}00371                         \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00372}00372                     \}}
@@ -380,7 +380,7 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00377}00377                     \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00378}00378                 \textcolor{keywordflow}{case} CROISEUR:}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00379}00379                     k = 3;}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00380}00380                     \textcolor{keywordflow}{if} (nbCroiseur != 0) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00380}00380                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_c_grille_a104c7b465307fbc6ac2152a3dc12509b}{nbCroiseur}} != 0) \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00381}00381                         selection = \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00382}00382                         \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00383}00383                     \}}
@@ -391,7 +391,7 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00388}00388                     \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00389}00389                 \textcolor{keywordflow}{case} TORPILLEUR:}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00390}00390                     k = 2;}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00391}00391                     \textcolor{keywordflow}{if} (nbTorpilleur != 0) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00391}00391                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_c_grille_a79b5a1a4c22abf918520057701ffe283}{nbTorpilleur}} != 0) \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00392}00392                         selection = \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00393}00393                         \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00394}00394                     \}}
@@ -402,7 +402,7 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00399}00399                     \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00400}00400                 \textcolor{keywordflow}{case} SOUSMARIN:}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00401}00401                     k = 1;}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00402}00402                     \textcolor{keywordflow}{if} (nbSousMarin != 0) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00402}00402                     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_c_grille_ad0882a57d5577827d679e407bb3e0870}{nbSousMarin}} != 0) \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00403}00403                         selection = \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00404}00404                         \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00405}00405                     \}}
@@ -420,12 +420,12 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00417}00417                 \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00418}00418             \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00419}00419         \}}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00420}00420         \textcolor{keywordtype}{int} coordoY = ligne / 2, coordoX = colonne / 2;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00420}00420         \textcolor{keywordtype}{int} coordoY = \mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}} / 2, coordoX = \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}} / 2;}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00421}00421         }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00422}00422     }
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00423}00423         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < ligne; i++) \{}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00424}00424             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < colonne; f++) \{}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00425}00425                 grille2[i][f] = grille[i][f];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00423}00423         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}; i++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00424}00424             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}}; f++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00425}00425                 grille2[i][f] = \mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{grille}}[i][f];}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00426}00426                 \textcolor{comment}{//if (grille[i][f] == Case::BATEAU)std::cout << "{}bateau"{};}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00427}00427                 \textcolor{comment}{//if (grille[i][f] == Case::VIDE)std::cout << "{}eau"{};}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00428}00428                 \textcolor{comment}{//std::cout << i << f << std::endl;}}
@@ -454,22 +454,22 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00451}00451 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00452}00452             \textcolor{keywordflow}{if} (direction == \textcolor{keyword}{false}) \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00453}00453                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < k + 1; i++) \{}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00454}00454                     grille[coordoY][coordoX + i] = \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a7d4f15a4b47f3b52030dc4553f228b4f}{Case::BATEAU}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00454}00454                     \mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{grille}}[coordoY][coordoX + i] = \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a7d4f15a4b47f3b52030dc4553f228b4f}{Case::BATEAU}};}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00455}00455                 \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00456}00456             \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00457}00457             \textcolor{keywordflow}{else} \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00458}00458                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < k + 1; i++) \{}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00459}00459                     grille[coordoY + i][coordoX] = \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a7d4f15a4b47f3b52030dc4553f228b4f}{Case::BATEAU}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00459}00459                     \mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{grille}}[coordoY + i][coordoX] = \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a7d4f15a4b47f3b52030dc4553f228b4f}{Case::BATEAU}};}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00460}00460                 \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00461}00461             \}}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00462}00462             \mbox{\hyperlink{class_c_grille_aa0168c52e5e9e8ac7f6dc83b43c2a9ea}{afficherGrille}}();}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00462}00462             \mbox{\hyperlink{class_c_grille_a1367ff44fd35d490a1f4b41c573c06d9}{afficherGrille}}();}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00463}00463             \textcolor{keywordflow}{if} (GetKeyState(\textcolor{charliteral}{'Z'}) \& 0x8000\textcolor{comment}{/*Check if high-\/order bit is set (1 << 15)*/})}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00464}00464             \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00465}00465                 \textcolor{keywordflow}{if} (direction == \textcolor{keyword}{false}) \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00466}00466                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < k + 1; i++) \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00467}00467                         \textcolor{comment}{//correction verticale haute}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00468}00468                         \textcolor{keywordflow}{if} (coordoY + i < 2) coordoY += 1;}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00469}00469                         grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00469}00469                         \mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{grille}}[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00470}00470 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00471}00471                         \textcolor{comment}{//grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00472}00472                     \}}
@@ -477,7 +477,7 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00474}00474                 \textcolor{keywordflow}{else} \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00475}00475                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < k + 1; i++) \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00476}00476                         \textcolor{keywordflow}{if} (coordoY + i < 2) coordoY += 1;}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00477}00477                         grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX]}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00477}00477                         \mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{grille}}[coordoY + i][coordoX] = grille2[coordoY + i][coordoX]}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00478}00478                             ;}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00479}00479                     \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00480}00480                 \}}
@@ -492,7 +492,7 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00489}00489 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00490}00490                         \textcolor{comment}{//correction horrizontale gauche}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00491}00491                         \textcolor{keywordflow}{if} (coordoX + i < 2) coordoX += 1;}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00492}00492                         grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00492}00492                         \mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{grille}}[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00493}00493 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00494}00494                     \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00495}00495                 \}}
@@ -501,7 +501,7 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00498}00498 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00499}00499                         \textcolor{comment}{//correction horrizontale gauche}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00500}00500                         \textcolor{keywordflow}{if} (coordoX + i < 2) coordoX += 1;}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00501}00501                         grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00501}00501                         \mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{grille}}[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00502}00502                     \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00503}00503                 \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00504}00504                 coordoX-\/-\/;}
@@ -512,13 +512,13 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00509}00509                 \textcolor{keywordflow}{if} (direction == \textcolor{keyword}{false}) \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00510}00510                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < k + 1; i++) \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00511}00511                          \textcolor{keywordflow}{if} (coordoY + i > 13) coordoY -\/= 1;}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00512}00512                         grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00512}00512                         \mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{grille}}[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00513}00513                     \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00514}00514                 \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00515}00515                 \textcolor{keywordflow}{else} \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00516}00516                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < k + 1; i++) \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00517}00517                         \textcolor{keywordflow}{if} (coordoY + i > 9) coordoY -\/= 1;}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00518}00518                         grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00518}00518                         \mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{grille}}[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00519}00519                     \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00520}00520                 \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00521}00521                 coordoY++;}
@@ -530,14 +530,14 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00527}00527                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < k + 1; i++) \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00528}00528                         \textcolor{comment}{//correction horizontale droite bateau horizontal}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00529}00529                         \textcolor{keywordflow}{if} (coordoX + i > 9) coordoX -\/= 1;}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00530}00530                         grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00530}00530                         \mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{grille}}[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00531}00531                     \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00532}00532                 \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00533}00533                 \textcolor{keywordflow}{else} \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00534}00534                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < k + 1; i++) \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00535}00535                         \textcolor{comment}{//correction horizontale droite bateau vertical}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00536}00536                         \textcolor{keywordflow}{if} (coordoX + i > 13) coordoX -\/= 1;}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00537}00537                         grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00537}00537                         \mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{grille}}[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00538}00538                     \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00539}00539                 \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00540}00540                 coordoX++;}
@@ -549,13 +549,13 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00546}00546             \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00547}00547                 \textcolor{keywordflow}{if} (direction == \textcolor{keyword}{false}) \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00548}00548                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < k + 1; i++) \{}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00549}00549                         grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00549}00549                         \mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{grille}}[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00550}00550                     \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00551}00551                     direction = \textcolor{keyword}{true};}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00552}00552                 \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00553}00553                 \textcolor{keywordflow}{else} \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00554}00554                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < k + 1; i++) \{}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00555}00555                         grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00555}00555                         \mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{grille}}[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00556}00556                     \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00557}00557                     direction = \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00558}00558                 \}}
@@ -569,7 +569,7 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00566}00566             \textcolor{keywordflow}{if} (GetKeyState(\textcolor{charliteral}{'E'}) \& 0x8000\textcolor{comment}{/*Check if high-\/order bit is set (1 << 15)*/})}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00567}00567             \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00568}00568 }
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00569}00569                 \textcolor{keywordflow}{if} (grille[coordoY][coordoX] == grille2[coordoY][coordoX]) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00569}00569                 \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{grille}}[coordoY][coordoX] == grille2[coordoY][coordoX]) \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00570}00570 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00571}00571                     std::cout << \textcolor{stringliteral}{"{}Placement impossible"{}} << std::endl;}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00572}00572                     system(\textcolor{stringliteral}{"{}pause"{}});}
@@ -579,10 +579,10 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00576}00576 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00577}00577 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00578}00578                 \textcolor{comment}{//Gestion de la superposition des bateaux }}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00579}00579                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < ligne; i++) \{}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00580}00580                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < colonne; f++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00579}00579                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}; i++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00580}00580                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}}; f++) \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00581}00581 }
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00582}00582                         \textcolor{keywordflow}{if} (grille[i][f] == \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a7d4f15a4b47f3b52030dc4553f228b4f}{Case::BATEAU}}) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00582}00582                         \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{grille}}[i][f] == \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a7d4f15a4b47f3b52030dc4553f228b4f}{Case::BATEAU}}) \{}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00583}00583                             \textcolor{comment}{/*if (grille2[i][f] == grille[i][f]) \{}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00584}00584 \textcolor{comment}{                                std::cout << "{}Placement impossible"{} << std::endl;}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00585}00585 \textcolor{comment}{                                //}}
@@ -590,7 +590,7 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00587}00587 \textcolor{comment}{                            \}*/}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00588}00588                             \textcolor{comment}{//else \{ grille2[i][f] = grille[i][f]; \}}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00589}00589 }
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00590}00590                             grille2[i][f] = grille[i][f];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00590}00590                             grille2[i][f] = \mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{grille}}[i][f];}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00591}00591                         \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00592}00592                     \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00593}00593                 \}}
@@ -600,9 +600,9 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00598}00598 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00599}00599 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00600}00600 }
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00601}00601                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < ligne; i++) \{}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00602}00602                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < colonne; f++) \{}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00603}00603                         grille[i][f] = grille2[i][f];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00601}00601                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}; i++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00602}00602                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}}; f++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00603}00603                         \mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{grille}}[i][f] = grille2[i][f];}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00604}00604                     \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00605}00605                 \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00606}00606 }
@@ -619,10 +619,10 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00617}00617                 selection = \textcolor{keyword}{false};}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00618}00618                 \textcolor{keywordflow}{switch} (k)}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00619}00619                 \{}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00620}00620                 \textcolor{keywordflow}{case} 4: nbPorteAvion-\/-\/; std::cout << nbPorteAvion; system(\textcolor{stringliteral}{"{}pause"{}}); \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00621}00621                 \textcolor{keywordflow}{case} 3: nbCroiseur-\/-\/; \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00622}00622                 \textcolor{keywordflow}{case} 2: nbTorpilleur-\/-\/; \textcolor{keywordflow}{break};}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00623}00623                 \textcolor{keywordflow}{case} 1: nbSousMarin-\/-\/; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00620}00620                 \textcolor{keywordflow}{case} 4: \mbox{\hyperlink{class_c_grille_a49cf911ba132c27013c65c89ab2e8514}{nbPorteAvion}}-\/-\/; std::cout << \mbox{\hyperlink{class_c_grille_a49cf911ba132c27013c65c89ab2e8514}{nbPorteAvion}}; system(\textcolor{stringliteral}{"{}pause"{}}); \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00621}00621                 \textcolor{keywordflow}{case} 3: \mbox{\hyperlink{class_c_grille_a104c7b465307fbc6ac2152a3dc12509b}{nbCroiseur}}-\/-\/; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00622}00622                 \textcolor{keywordflow}{case} 2: \mbox{\hyperlink{class_c_grille_a79b5a1a4c22abf918520057701ffe283}{nbTorpilleur}}-\/-\/; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00623}00623                 \textcolor{keywordflow}{case} 1: \mbox{\hyperlink{class_c_grille_ad0882a57d5577827d679e407bb3e0870}{nbSousMarin}}-\/-\/; \textcolor{keywordflow}{break};}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00624}00624                 \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00625}00625             \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00626}00626         \}}
@@ -642,30 +642,30 @@
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00640}00640 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00641}\mbox{\hyperlink{class_c_grille_a300505d5628b5ea574545db5b6532d2c}{00641}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_grille_a300505d5628b5ea574545db5b6532d2c}{CGrille::bateauToucherEnnemi}}(\textcolor{keywordtype}{int} ligne, \textcolor{keywordtype}{int} colonne)}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00642}00642 \{}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00643}00643     \mbox{\hyperlink{class_c_grille_adc0746e8ec544aaced585a4388e73bd4}{setCase}}(ligne, colonne, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a6dcca5769e62a615a669c9c254fbcbda}{Case::TOUCHEE}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00643}00643     \mbox{\hyperlink{class_c_grille_a030155879bff962efc0c015f22ea9a0b}{setCase}}(\mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}, \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}}, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a6dcca5769e62a615a669c9c254fbcbda}{Case::TOUCHEE}});}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00644}00644     system(\textcolor{stringliteral}{"{}CLS"{}});}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00645}00645     \mbox{\hyperlink{class_c_grille_aa0168c52e5e9e8ac7f6dc83b43c2a9ea}{afficherGrille}}();}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00645}00645     \mbox{\hyperlink{class_c_grille_a1367ff44fd35d490a1f4b41c573c06d9}{afficherGrille}}();}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00646}00646 \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00647}00647 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00648}\mbox{\hyperlink{class_c_grille_a18e229fc4707271f947b567151fa8d17}{00648}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_grille_a18e229fc4707271f947b567151fa8d17}{CGrille::bateauToucherAllier}}(\textcolor{keywordtype}{int} ligne, \textcolor{keywordtype}{int} colonne)}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00649}00649 \{}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00650}00650     \mbox{\hyperlink{class_c_grille_adc0746e8ec544aaced585a4388e73bd4}{setCase}}(ligne, colonne, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a990919c3791692187fff735c5e1a2f50}{Case::TOUCHEJ}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00650}00650     \mbox{\hyperlink{class_c_grille_a030155879bff962efc0c015f22ea9a0b}{setCase}}(\mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}, \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}}, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a990919c3791692187fff735c5e1a2f50}{Case::TOUCHEJ}});}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00651}00651     system(\textcolor{stringliteral}{"{}CLS"{}});}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00652}00652     \mbox{\hyperlink{class_c_grille_aa0168c52e5e9e8ac7f6dc83b43c2a9ea}{afficherGrille}}();}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00652}00652     \mbox{\hyperlink{class_c_grille_a1367ff44fd35d490a1f4b41c573c06d9}{afficherGrille}}();}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00653}00653 \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00654}00654 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00655}\mbox{\hyperlink{class_c_grille_a594f7e2993977ce72d7e655a6cfc8c7a}{00655}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_grille_a594f7e2993977ce72d7e655a6cfc8c7a}{CGrille::tirLoupeJoueur}}(\textcolor{keywordtype}{int} ligne, \textcolor{keywordtype}{int} colonne)}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00656}00656 \{}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00657}00657     \mbox{\hyperlink{class_c_grille_adc0746e8ec544aaced585a4388e73bd4}{setCase}}(ligne, colonne, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726abf8b1f7cc51bbb3aaa9d4136db1b3aea}{Case::EAUE}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00657}00657     \mbox{\hyperlink{class_c_grille_a030155879bff962efc0c015f22ea9a0b}{setCase}}(\mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}, \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}}, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726abf8b1f7cc51bbb3aaa9d4136db1b3aea}{Case::EAUE}});}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00658}00658     system(\textcolor{stringliteral}{"{}CLS"{}});}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00659}00659     \mbox{\hyperlink{class_c_grille_aa0168c52e5e9e8ac7f6dc83b43c2a9ea}{afficherGrille}}();}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00659}00659     \mbox{\hyperlink{class_c_grille_a1367ff44fd35d490a1f4b41c573c06d9}{afficherGrille}}();}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00660}00660 \}}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00661}00661 }
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00662}\mbox{\hyperlink{class_c_grille_aab5f6a5904a239fa099d71067c87d7fd}{00662}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_grille_aab5f6a5904a239fa099d71067c87d7fd}{CGrille::tirLoupeEnnemi}}(\textcolor{keywordtype}{int} ligne, \textcolor{keywordtype}{int} colonne)}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00663}00663 \{}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00664}00664     \mbox{\hyperlink{class_c_grille_adc0746e8ec544aaced585a4388e73bd4}{setCase}}(ligne, colonne, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a06a2900064de9c8ae4aefe4de1938ef6}{Case::EAUJ}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00664}00664     \mbox{\hyperlink{class_c_grille_a030155879bff962efc0c015f22ea9a0b}{setCase}}(\mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}, \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}}, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a06a2900064de9c8ae4aefe4de1938ef6}{Case::EAUJ}});}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00665}00665     system(\textcolor{stringliteral}{"{}CLS"{}});}
-\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00666}00666     \mbox{\hyperlink{class_c_grille_aa0168c52e5e9e8ac7f6dc83b43c2a9ea}{afficherGrille}}();}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00666}00666     \mbox{\hyperlink{class_c_grille_a1367ff44fd35d490a1f4b41c573c06d9}{afficherGrille}}();}
 \DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00667}00667 \}}
 
 \end{DoxyCode}

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Class CGrille: CGrille.cpp Source File</title>
+<title>Classe CGrille: CGrille.cpp Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -25,9 +25,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Class CGrille
+   <div id="projectname">Classe CGrille
    </div>
-   <div id="projectbrief">Gestion et affichage de la grille de jeu</div>
+   <div id="projectbrief">Client side: Gestion et affichage de la grille de jeu</div>
   </td>
  </tr>
  </tbody>
@@ -96,16 +96,16 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="class_c_grille.html#a90b7985f1d5d24a9ea3a2d1fb1fb4636">    8</a></span><a class="code hl_function" href="class_c_grille.html#a90b7985f1d5d24a9ea3a2d1fb1fb4636">CGrille::CGrille</a>()</div>
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span> </div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    nbPorteAvion = 1;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    nbCroiseur = 1;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    nbTorpilleur = 0;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    nbSousMarin = 0;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    colonne = 10;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    ligne = 10;</div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    <a class="code hl_variable" href="class_c_grille.html#a49cf911ba132c27013c65c89ab2e8514">nbPorteAvion</a> = 1;</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <a class="code hl_variable" href="class_c_grille.html#a104c7b465307fbc6ac2152a3dc12509b">nbCroiseur</a> = 1;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <a class="code hl_variable" href="class_c_grille.html#a79b5a1a4c22abf918520057701ffe283">nbTorpilleur</a> = 0;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <a class="code hl_variable" href="class_c_grille.html#ad0882a57d5577827d679e407bb3e0870">nbSousMarin</a> = 0;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <a class="code hl_variable" href="class_c_grille.html#a3306b32abf6529756c71a1f333c62c9b">colonne</a> = 10;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_variable" href="class_c_grille.html#a7b47cf5046757dc7f707d98de083eb0c">ligne</a> = 10;</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="comment">//grille[9][9] = Case::VIDE;</span></div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ligne ; i++) {</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f = 0; f &lt; colonne ; f++) {</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            grille[i][f] = <a class="code hl_enumvalue" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726a4c67bb3d8f85b3a1570dd8a5a8a26338">Case::VIDE</a>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_c_grille.html#a7b47cf5046757dc7f707d98de083eb0c">ligne</a> ; i++) {</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f = 0; f &lt; <a class="code hl_variable" href="class_c_grille.html#a3306b32abf6529756c71a1f333c62c9b">colonne</a> ; f++) {</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>            <a class="code hl_variable" href="class_c_grille.html#a30ec893dd29c76ee361ac4f54dd16ff2">grille</a>[i][f] = <a class="code hl_enumvalue" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726a4c67bb3d8f85b3a1570dd8a5a8a26338">Case::VIDE</a>;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>            <span class="comment">//if (grille[i][f] == Case::BATEAU)std::cout &lt;&lt; &quot;bateau&quot;;</span></div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>            <span class="comment">//if (grille[i][f] == Case::VIDE)std::cout &lt;&lt; &quot;eau&quot;;</span></div>
 <div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>            <span class="comment">//std::cout &lt;&lt; i &lt;&lt; f &lt;&lt; std::endl;</span></div>
@@ -130,22 +130,22 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
 <div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
 <div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span> </div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_c_grille.html#aea8e46580f6a4aa1c45aedc49376e7c2">   45</a></span><a class="code hl_enumeration" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726">CGrille::Case</a> <a class="code hl_function" href="class_c_grille.html#aea8e46580f6a4aa1c45aedc49376e7c2">CGrille::getCase</a>(<span class="keywordtype">int</span> ligne, <span class="keywordtype">int</span> colonne)</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno"><a class="line" href="class_c_grille.html#aa58d985f2e1d7877de1f865dd560a482">   45</a></span><a class="code hl_enumeration" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726">CGrille::Case</a> <a class="code hl_function" href="class_c_grille.html#aa58d985f2e1d7877de1f865dd560a482">CGrille::getCase</a>(<span class="keywordtype">int</span> ligne, <span class="keywordtype">int</span> colonne)</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>{</div>
 <div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    <span class="comment">//grille[1][1] = Case::BATEAU;</span></div>
 <div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <span class="comment">//Case CaseTeste = ;</span></div>
 <div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <span class="comment">//if (CaseTeste == Case::BATEAU)std::cout &lt;&lt; &quot;bateau&quot;;</span></div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <span class="comment">//if (CaseTeste == Case::EAU)std::cout &lt;&lt; &quot;eau&quot;;</span></div>
 <div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    <span class="comment">//system(&quot;pause&quot;);</span></div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">return</span> grille[ligne][colonne];</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>    <span class="keywordflow">return</span> <a class="code hl_variable" href="class_c_grille.html#a30ec893dd29c76ee361ac4f54dd16ff2">grille</a>[<a class="code hl_variable" href="class_c_grille.html#a7b47cf5046757dc7f707d98de083eb0c">ligne</a>][<a class="code hl_variable" href="class_c_grille.html#a3306b32abf6529756c71a1f333c62c9b">colonne</a>];</div>
 <div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>}</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_c_grille.html#adc0746e8ec544aaced585a4388e73bd4">   55</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_c_grille.html#adc0746e8ec544aaced585a4388e73bd4">CGrille::setCase</a>(<span class="keywordtype">int</span> ligne, <span class="keywordtype">int</span> colonne, <a class="code hl_enumeration" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726">Case</a> type)</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno"><a class="line" href="class_c_grille.html#a030155879bff962efc0c015f22ea9a0b">   55</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_c_grille.html#a030155879bff962efc0c015f22ea9a0b">CGrille::setCase</a>(<span class="keywordtype">int</span> ligne, <span class="keywordtype">int</span> colonne, <a class="code hl_enumeration" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726">Case</a> type)</div>
 <div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>{</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    grille[ligne][colonne] = type;</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>    <a class="code hl_variable" href="class_c_grille.html#a30ec893dd29c76ee361ac4f54dd16ff2">grille</a>[<a class="code hl_variable" href="class_c_grille.html#a7b47cf5046757dc7f707d98de083eb0c">ligne</a>][<a class="code hl_variable" href="class_c_grille.html#a3306b32abf6529756c71a1f333c62c9b">colonne</a>] = type;</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>}</div>
 <div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_c_grille.html#aa0168c52e5e9e8ac7f6dc83b43c2a9ea">   60</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_c_grille.html#aa0168c52e5e9e8ac7f6dc83b43c2a9ea">CGrille::afficherGrille</a>()</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno"><a class="line" href="class_c_grille.html#a1367ff44fd35d490a1f4b41c573c06d9">   60</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_c_grille.html#a1367ff44fd35d490a1f4b41c573c06d9">CGrille::afficherGrille</a>()</div>
 <div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>{</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    </div>
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">char</span> colonnel = <span class="charliteral">&#39;A&#39;</span>; <span class="comment">//On établit un charactere qui sera incrémenter a chaque colonne pour l&#39;affichage des lettres du haut du tableau</span></div>
@@ -172,9 +172,9 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="comment"></span> </div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span><span class="comment">    La ligne des caractere ne doit pas etre prise en compte dans le jeu , donc on y ajoute une ligne (ligne+1) pour avoir 11 lignes.</span></div>
 <div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="comment">    */</span></div>
-<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; (ligne+1) * 2 + 1 ; i++) {  </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; (<a class="code hl_variable" href="class_c_grille.html#a7b47cf5046757dc7f707d98de083eb0c">ligne</a>+1) * 2 + 1 ; i++) {  </div>
 <div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span>        <span class="keywordflow">if</span> (valeurOuLigne == <span class="keyword">true</span>) { <span class="comment">//Si on est sur une ligne séparatrice ...</span></div>
-<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f = 0; f &lt; colonne+1; f++) {</div>
+<div class="line"><a id="l00089" name="l00089"></a><span class="lineno">   89</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f = 0; f &lt; <a class="code hl_variable" href="class_c_grille.html#a3306b32abf6529756c71a1f333c62c9b">colonne</a>+1; f++) {</div>
 <div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;+---&quot;</span>;</div>
 <div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>            }</div>
 <div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;+&quot;</span> &lt;&lt; std::endl; <span class="comment">// on fini le tableau par un caratère &#39;+&#39; et un retour a la ligne</span></div>
@@ -182,7 +182,7 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>        }</div>
 <div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>        <span class="keywordflow">else</span> { <span class="comment">//Si on est sur une ligne de valeur...</span></div>
 <div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>            k++; <span class="comment">// on incrémente les nombres du coté du tableau a chaque ligne de valeurs.</span></div>
-<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f = 0; f &lt; colonne+1; f++) { <span class="comment">// on s&#39;occupe maintenant du tableau dans sa largeur, en fonction du nombre de colonnes. +1 pour decaler les valeurs en raison de la case 0,0</span></div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f = 0; f &lt; <a class="code hl_variable" href="class_c_grille.html#a3306b32abf6529756c71a1f333c62c9b">colonne</a>+1; f++) { <span class="comment">// on s&#39;occupe maintenant du tableau dans sa largeur, en fonction du nombre de colonnes. +1 pour decaler les valeurs en raison de la case 0,0</span></div>
 <div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>          </div>
 <div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>                <span class="keywordflow">if</span> (i &lt; 2 &amp;&amp; f &gt; 0) { <span class="comment">// si on est sur la premiere ligne et que on se trouve pas sur la case 0,0 on affiche lettre par lettre dans chaque case</span></div>
 <div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span> </div>
@@ -227,7 +227,7 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00139" name="l00139"></a><span class="lineno">  139</span> </div>
 <div class="line"><a id="l00140" name="l00140"></a><span class="lineno">  140</span> </div>
 <div class="line"><a id="l00141" name="l00141"></a><span class="lineno">  141</span> </div>
-<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                        <a class="code hl_enumeration" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726">Case</a> etat = <a class="code hl_function" href="class_c_grille.html#aea8e46580f6a4aa1c45aedc49376e7c2">getCase</a>(k-1, f);</div>
+<div class="line"><a id="l00142" name="l00142"></a><span class="lineno">  142</span>                        <a class="code hl_enumeration" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726">Case</a> etat = <a class="code hl_function" href="class_c_grille.html#aa58d985f2e1d7877de1f865dd560a482">getCase</a>(k-1, f);</div>
 <div class="line"><a id="l00143" name="l00143"></a><span class="lineno">  143</span> </div>
 <div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>                        <span class="keywordflow">switch</span> (etat) {</div>
 <div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>                        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726a7d4f15a4b47f3b52030dc4553f228b4f">Case::BATEAU</a> : <span class="comment">// on affiche nos bateaux</span></div>
@@ -277,9 +277,9 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>    valeurOuLigne = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>    k = 0;</div>
 <div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>    SetConsoleTextAttribute(hConsole, 4);</div>
-<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; (ligne + 1) * 2 + 1; i++) {</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; (<a class="code hl_variable" href="class_c_grille.html#a7b47cf5046757dc7f707d98de083eb0c">ligne</a> + 1) * 2 + 1; i++) {</div>
 <div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        <span class="keywordflow">if</span> (valeurOuLigne == <span class="keyword">true</span>) { <span class="comment">//Si on est sur une ligne séparatrice ...</span></div>
-<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f = 0; f &lt; colonne + 1; f++) {</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f = 0; f &lt; <a class="code hl_variable" href="class_c_grille.html#a3306b32abf6529756c71a1f333c62c9b">colonne</a> + 1; f++) {</div>
 <div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>                std::cout &lt;&lt; <span class="stringliteral">&quot;+---&quot;</span>;</div>
 <div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            }</div>
 <div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>            std::cout &lt;&lt; <span class="stringliteral">&quot;+&quot;</span> &lt;&lt; std::endl; <span class="comment">// on fini le tableau par un caratère &#39;+&#39; et un retour a la ligne</span></div>
@@ -287,7 +287,7 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        }</div>
 <div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>        <span class="keywordflow">else</span> { <span class="comment">//Si on est sur une ligne de valeur...</span></div>
 <div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>            k++; <span class="comment">// on incrémente les nombres du coté du tableau a chaque ligne de valeurs.</span></div>
-<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f = 0; f &lt; colonne + 1; f++) { <span class="comment">// on s&#39;occupe maintenant du tableau dans sa largeur, en fonction du nombre de colonnes. +1 pour decaler les valeurs en raison de la case 0,0</span></div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f = 0; f &lt; <a class="code hl_variable" href="class_c_grille.html#a3306b32abf6529756c71a1f333c62c9b">colonne</a> + 1; f++) { <span class="comment">// on s&#39;occupe maintenant du tableau dans sa largeur, en fonction du nombre de colonnes. +1 pour decaler les valeurs en raison de la case 0,0</span></div>
 <div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span> </div>
 <div class="line"><a id="l00204" name="l00204"></a><span class="lineno">  204</span>                <span class="keywordflow">if</span> (i &lt; 2 &amp;&amp; f &gt; 0) { <span class="comment">// si on est sur la premiere ligne et que on se trouve pas sur la case 0,0 on affiche lettre par lettre dans chaque case</span></div>
 <div class="line"><a id="l00205" name="l00205"></a><span class="lineno">  205</span> </div>
@@ -334,7 +334,7 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span> </div>
 <div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span> </div>
 <div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>                        std::cout &lt;&lt; <span class="stringliteral">&quot;| &quot;</span>;</div>
-<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                        <a class="code hl_enumeration" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726">Case</a> etat = <a class="code hl_function" href="class_c_grille.html#aea8e46580f6a4aa1c45aedc49376e7c2">getCase</a>(k - 1, f); <span class="comment">// on affiche les cases ou le joueur a tirer</span></div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span>                        <a class="code hl_enumeration" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726">Case</a> etat = <a class="code hl_function" href="class_c_grille.html#aa58d985f2e1d7877de1f865dd560a482">getCase</a>(k - 1, f); <span class="comment">// on affiche les cases ou le joueur a tirer</span></div>
 <div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span> </div>
 <div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>                        <span class="keywordflow">switch</span> (etat) {</div>
 <div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>                        <span class="keywordflow">case</span> <a class="code hl_enumvalue" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726a6dcca5769e62a615a669c9c254fbcbda">Case::TOUCHEE</a>: <span class="comment">//si le joueur a toucher un bateau</span></div>
@@ -420,7 +420,7 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span> </div>
 <div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span> </div>
 <div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
-<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    <span class="keywordflow">while</span> ((nbCroiseur + nbPorteAvion + nbSousMarin + nbTorpilleur) &gt; 0) { <span class="comment">// tant que tout les bateaux n&#39;ont pas été placer :</span></div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    <span class="keywordflow">while</span> ((<a class="code hl_variable" href="class_c_grille.html#a104c7b465307fbc6ac2152a3dc12509b">nbCroiseur</a> + <a class="code hl_variable" href="class_c_grille.html#a49cf911ba132c27013c65c89ab2e8514">nbPorteAvion</a> + <a class="code hl_variable" href="class_c_grille.html#ad0882a57d5577827d679e407bb3e0870">nbSousMarin</a> + <a class="code hl_variable" href="class_c_grille.html#a79b5a1a4c22abf918520057701ffe283">nbTorpilleur</a>) &gt; 0) { <span class="comment">// tant que tout les bateaux n&#39;ont pas été placer :</span></div>
 <div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>        <span class="keywordflow">while</span> (selection == <span class="keyword">false</span>) { <span class="comment">//on crée un menu pour selectionner</span></div>
 <div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span>            </div>
 <div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>            system(<span class="stringliteral">&quot;CLS&quot;</span>);</div>
@@ -437,13 +437,13 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>            }</div>
 <div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>            <span class="keywordflow">switch</span> (k)</div>
 <div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>            { <span class="comment">//en fonction de k on affiche l&#39;objet sele</span></div>
-<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>            <span class="keywordflow">case</span> PORTEAVION: std::cout &lt;&lt; <span class="stringliteral">&quot; &gt;Porte-Avion [][][][][] &quot;</span> &lt;&lt; nbPorteAvion &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;Croiseur [][][][]&quot;</span> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;Torpilleur [][][]&quot;</span> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;Sous-Marin [][]&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>            <span class="keywordflow">case</span> PORTEAVION: std::cout &lt;&lt; <span class="stringliteral">&quot; &gt;Porte-Avion [][][][][] &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_c_grille.html#a49cf911ba132c27013c65c89ab2e8514">nbPorteAvion</a> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;Croiseur [][][][]&quot;</span> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;Torpilleur [][][]&quot;</span> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;Sous-Marin [][]&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>            <span class="keywordflow">case</span> CROISEUR: std::cout &lt;&lt; <span class="stringliteral">&quot;Porte-Avion [][][][][]&quot;</span> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot; &gt;Croiseur [][][][] &quot;</span> &lt;&lt; nbCroiseur &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;Torpilleur [][][]&quot;</span> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;Sous-Marin [][]&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>            <span class="keywordflow">case</span> CROISEUR: std::cout &lt;&lt; <span class="stringliteral">&quot;Porte-Avion [][][][][]&quot;</span> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot; &gt;Croiseur [][][][] &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_c_grille.html#a104c7b465307fbc6ac2152a3dc12509b">nbCroiseur</a> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;Torpilleur [][][]&quot;</span> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;Sous-Marin [][]&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>            <span class="keywordflow">case</span> TORPILLEUR: std::cout &lt;&lt; <span class="stringliteral">&quot;Porte-Avion [][][][][]&quot;</span> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;Croiseur [][][][]&quot;</span> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot; &gt;Torpilleur [][][] &quot;</span> &lt;&lt; nbTorpilleur &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;Sous-Marin [][]&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span>            <span class="keywordflow">case</span> TORPILLEUR: std::cout &lt;&lt; <span class="stringliteral">&quot;Porte-Avion [][][][][]&quot;</span> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;Croiseur [][][][]&quot;</span> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot; &gt;Torpilleur [][][] &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_c_grille.html#a79b5a1a4c22abf918520057701ffe283">nbTorpilleur</a> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;Sous-Marin [][]&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>                <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>            <span class="keywordflow">case</span> SOUSMARIN: std::cout &lt;&lt; <span class="stringliteral">&quot;Porte-Avion [][][][][]&quot;</span> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;Croiseur [][][][]&quot;</span> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;Torpilleur [][][]&quot;</span> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot; &gt;Sous-Marin [][] &quot;</span> &lt;&lt; nbSousMarin &lt;&lt; std::endl;</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>            <span class="keywordflow">case</span> SOUSMARIN: std::cout &lt;&lt; <span class="stringliteral">&quot;Porte-Avion [][][][][]&quot;</span> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;Croiseur [][][][]&quot;</span> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot;Torpilleur [][][]&quot;</span> &lt;&lt; std::endl &lt;&lt; <span class="stringliteral">&quot; &gt;Sous-Marin [][] &quot;</span> &lt;&lt; <a class="code hl_variable" href="class_c_grille.html#ad0882a57d5577827d679e407bb3e0870">nbSousMarin</a> &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>                <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>            }</div>
 <div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span>            <span class="comment">//std::cout &lt;&lt; k;</span></div>
@@ -454,7 +454,7 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>                {</div>
 <div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>                <span class="keywordflow">case</span> PORTEAVION:</div>
 <div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>                    k = 4;</div>
-<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>                    <span class="keywordflow">if</span> (nbPorteAvion != 0) {</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_c_grille.html#a49cf911ba132c27013c65c89ab2e8514">nbPorteAvion</a> != 0) {</div>
 <div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>                        selection = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>                        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>                    }</div>
@@ -465,7 +465,7 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00377" name="l00377"></a><span class="lineno">  377</span>                    }</div>
 <div class="line"><a id="l00378" name="l00378"></a><span class="lineno">  378</span>                <span class="keywordflow">case</span> CROISEUR:</div>
 <div class="line"><a id="l00379" name="l00379"></a><span class="lineno">  379</span>                    k = 3;</div>
-<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>                    <span class="keywordflow">if</span> (nbCroiseur != 0) {</div>
+<div class="line"><a id="l00380" name="l00380"></a><span class="lineno">  380</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_c_grille.html#a104c7b465307fbc6ac2152a3dc12509b">nbCroiseur</a> != 0) {</div>
 <div class="line"><a id="l00381" name="l00381"></a><span class="lineno">  381</span>                        selection = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00382" name="l00382"></a><span class="lineno">  382</span>                        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>                    }</div>
@@ -476,7 +476,7 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00388" name="l00388"></a><span class="lineno">  388</span>                    }</div>
 <div class="line"><a id="l00389" name="l00389"></a><span class="lineno">  389</span>                <span class="keywordflow">case</span> TORPILLEUR:</div>
 <div class="line"><a id="l00390" name="l00390"></a><span class="lineno">  390</span>                    k = 2;</div>
-<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>                    <span class="keywordflow">if</span> (nbTorpilleur != 0) {</div>
+<div class="line"><a id="l00391" name="l00391"></a><span class="lineno">  391</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_c_grille.html#a79b5a1a4c22abf918520057701ffe283">nbTorpilleur</a> != 0) {</div>
 <div class="line"><a id="l00392" name="l00392"></a><span class="lineno">  392</span>                        selection = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00393" name="l00393"></a><span class="lineno">  393</span>                        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00394" name="l00394"></a><span class="lineno">  394</span>                    }</div>
@@ -487,7 +487,7 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00399" name="l00399"></a><span class="lineno">  399</span>                    }</div>
 <div class="line"><a id="l00400" name="l00400"></a><span class="lineno">  400</span>                <span class="keywordflow">case</span> SOUSMARIN:</div>
 <div class="line"><a id="l00401" name="l00401"></a><span class="lineno">  401</span>                    k = 1;</div>
-<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>                    <span class="keywordflow">if</span> (nbSousMarin != 0) {</div>
+<div class="line"><a id="l00402" name="l00402"></a><span class="lineno">  402</span>                    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_c_grille.html#ad0882a57d5577827d679e407bb3e0870">nbSousMarin</a> != 0) {</div>
 <div class="line"><a id="l00403" name="l00403"></a><span class="lineno">  403</span>                        selection = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00404" name="l00404"></a><span class="lineno">  404</span>                        <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00405" name="l00405"></a><span class="lineno">  405</span>                    }</div>
@@ -505,12 +505,12 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>                }</div>
 <div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>            }</div>
 <div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>        }</div>
-<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>        <span class="keywordtype">int</span> coordoY = ligne / 2, coordoX = colonne / 2;</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>        <span class="keywordtype">int</span> coordoY = <a class="code hl_variable" href="class_c_grille.html#a7b47cf5046757dc7f707d98de083eb0c">ligne</a> / 2, coordoX = <a class="code hl_variable" href="class_c_grille.html#a3306b32abf6529756c71a1f333c62c9b">colonne</a> / 2;</div>
 <div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>        </div>
 <div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>    </div>
-<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ligne; i++) {</div>
-<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f = 0; f &lt; colonne; f++) {</div>
-<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>                grille2[i][f] = grille[i][f];</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_c_grille.html#a7b47cf5046757dc7f707d98de083eb0c">ligne</a>; i++) {</div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f = 0; f &lt; <a class="code hl_variable" href="class_c_grille.html#a3306b32abf6529756c71a1f333c62c9b">colonne</a>; f++) {</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>                grille2[i][f] = <a class="code hl_variable" href="class_c_grille.html#a30ec893dd29c76ee361ac4f54dd16ff2">grille</a>[i][f];</div>
 <div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>                <span class="comment">//if (grille[i][f] == Case::BATEAU)std::cout &lt;&lt; &quot;bateau&quot;;</span></div>
 <div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>                <span class="comment">//if (grille[i][f] == Case::VIDE)std::cout &lt;&lt; &quot;eau&quot;;</span></div>
 <div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>                <span class="comment">//std::cout &lt;&lt; i &lt;&lt; f &lt;&lt; std::endl;</span></div>
@@ -539,22 +539,22 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span> </div>
 <div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span>            <span class="keywordflow">if</span> (direction == <span class="keyword">false</span>) {</div>
 <div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; k + 1; i++) {</div>
-<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>                    grille[coordoY][coordoX + i] = <a class="code hl_enumvalue" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726a7d4f15a4b47f3b52030dc4553f228b4f">Case::BATEAU</a>;</div>
+<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>                    <a class="code hl_variable" href="class_c_grille.html#a30ec893dd29c76ee361ac4f54dd16ff2">grille</a>[coordoY][coordoX + i] = <a class="code hl_enumvalue" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726a7d4f15a4b47f3b52030dc4553f228b4f">Case::BATEAU</a>;</div>
 <div class="line"><a id="l00455" name="l00455"></a><span class="lineno">  455</span>                }</div>
 <div class="line"><a id="l00456" name="l00456"></a><span class="lineno">  456</span>            }</div>
 <div class="line"><a id="l00457" name="l00457"></a><span class="lineno">  457</span>            <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00458" name="l00458"></a><span class="lineno">  458</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; k + 1; i++) {</div>
-<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>                    grille[coordoY + i][coordoX] = <a class="code hl_enumvalue" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726a7d4f15a4b47f3b52030dc4553f228b4f">Case::BATEAU</a>;</div>
+<div class="line"><a id="l00459" name="l00459"></a><span class="lineno">  459</span>                    <a class="code hl_variable" href="class_c_grille.html#a30ec893dd29c76ee361ac4f54dd16ff2">grille</a>[coordoY + i][coordoX] = <a class="code hl_enumvalue" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726a7d4f15a4b47f3b52030dc4553f228b4f">Case::BATEAU</a>;</div>
 <div class="line"><a id="l00460" name="l00460"></a><span class="lineno">  460</span>                }</div>
 <div class="line"><a id="l00461" name="l00461"></a><span class="lineno">  461</span>            }</div>
-<div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>            <a class="code hl_function" href="class_c_grille.html#aa0168c52e5e9e8ac7f6dc83b43c2a9ea">afficherGrille</a>();</div>
+<div class="line"><a id="l00462" name="l00462"></a><span class="lineno">  462</span>            <a class="code hl_function" href="class_c_grille.html#a1367ff44fd35d490a1f4b41c573c06d9">afficherGrille</a>();</div>
 <div class="line"><a id="l00463" name="l00463"></a><span class="lineno">  463</span>            <span class="keywordflow">if</span> (GetKeyState(<span class="charliteral">&#39;Z&#39;</span>) &amp; 0x8000<span class="comment">/*Check if high-order bit is set (1 &lt;&lt; 15)*/</span>)</div>
 <div class="line"><a id="l00464" name="l00464"></a><span class="lineno">  464</span>            {</div>
 <div class="line"><a id="l00465" name="l00465"></a><span class="lineno">  465</span>                <span class="keywordflow">if</span> (direction == <span class="keyword">false</span>) {</div>
 <div class="line"><a id="l00466" name="l00466"></a><span class="lineno">  466</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; k + 1; i++) {</div>
 <div class="line"><a id="l00467" name="l00467"></a><span class="lineno">  467</span>                        <span class="comment">//correction verticale haute</span></div>
 <div class="line"><a id="l00468" name="l00468"></a><span class="lineno">  468</span>                        <span class="keywordflow">if</span> (coordoY + i &lt; 2) coordoY += 1;</div>
-<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span>                        grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];</div>
+<div class="line"><a id="l00469" name="l00469"></a><span class="lineno">  469</span>                        <a class="code hl_variable" href="class_c_grille.html#a30ec893dd29c76ee361ac4f54dd16ff2">grille</a>[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];</div>
 <div class="line"><a id="l00470" name="l00470"></a><span class="lineno">  470</span> </div>
 <div class="line"><a id="l00471" name="l00471"></a><span class="lineno">  471</span>                        <span class="comment">//grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];</span></div>
 <div class="line"><a id="l00472" name="l00472"></a><span class="lineno">  472</span>                    }</div>
@@ -562,7 +562,7 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00474" name="l00474"></a><span class="lineno">  474</span>                <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00475" name="l00475"></a><span class="lineno">  475</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; k + 1; i++) {</div>
 <div class="line"><a id="l00476" name="l00476"></a><span class="lineno">  476</span>                        <span class="keywordflow">if</span> (coordoY + i &lt; 2) coordoY += 1;</div>
-<div class="line"><a id="l00477" name="l00477"></a><span class="lineno">  477</span>                        grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX]</div>
+<div class="line"><a id="l00477" name="l00477"></a><span class="lineno">  477</span>                        <a class="code hl_variable" href="class_c_grille.html#a30ec893dd29c76ee361ac4f54dd16ff2">grille</a>[coordoY + i][coordoX] = grille2[coordoY + i][coordoX]</div>
 <div class="line"><a id="l00478" name="l00478"></a><span class="lineno">  478</span>                            ;</div>
 <div class="line"><a id="l00479" name="l00479"></a><span class="lineno">  479</span>                    }</div>
 <div class="line"><a id="l00480" name="l00480"></a><span class="lineno">  480</span>                }</div>
@@ -577,7 +577,7 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00489" name="l00489"></a><span class="lineno">  489</span> </div>
 <div class="line"><a id="l00490" name="l00490"></a><span class="lineno">  490</span>                        <span class="comment">//correction horrizontale gauche</span></div>
 <div class="line"><a id="l00491" name="l00491"></a><span class="lineno">  491</span>                        <span class="keywordflow">if</span> (coordoX + i &lt; 2) coordoX += 1;</div>
-<div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span>                        grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];</div>
+<div class="line"><a id="l00492" name="l00492"></a><span class="lineno">  492</span>                        <a class="code hl_variable" href="class_c_grille.html#a30ec893dd29c76ee361ac4f54dd16ff2">grille</a>[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];</div>
 <div class="line"><a id="l00493" name="l00493"></a><span class="lineno">  493</span> </div>
 <div class="line"><a id="l00494" name="l00494"></a><span class="lineno">  494</span>                    }</div>
 <div class="line"><a id="l00495" name="l00495"></a><span class="lineno">  495</span>                }</div>
@@ -586,7 +586,7 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00498" name="l00498"></a><span class="lineno">  498</span> </div>
 <div class="line"><a id="l00499" name="l00499"></a><span class="lineno">  499</span>                        <span class="comment">//correction horrizontale gauche</span></div>
 <div class="line"><a id="l00500" name="l00500"></a><span class="lineno">  500</span>                        <span class="keywordflow">if</span> (coordoX + i &lt; 2) coordoX += 1;</div>
-<div class="line"><a id="l00501" name="l00501"></a><span class="lineno">  501</span>                        grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];</div>
+<div class="line"><a id="l00501" name="l00501"></a><span class="lineno">  501</span>                        <a class="code hl_variable" href="class_c_grille.html#a30ec893dd29c76ee361ac4f54dd16ff2">grille</a>[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];</div>
 <div class="line"><a id="l00502" name="l00502"></a><span class="lineno">  502</span>                    }</div>
 <div class="line"><a id="l00503" name="l00503"></a><span class="lineno">  503</span>                }</div>
 <div class="line"><a id="l00504" name="l00504"></a><span class="lineno">  504</span>                coordoX--;</div>
@@ -597,13 +597,13 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00509" name="l00509"></a><span class="lineno">  509</span>                <span class="keywordflow">if</span> (direction == <span class="keyword">false</span>) {</div>
 <div class="line"><a id="l00510" name="l00510"></a><span class="lineno">  510</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; k + 1; i++) {</div>
 <div class="line"><a id="l00511" name="l00511"></a><span class="lineno">  511</span>                         <span class="keywordflow">if</span> (coordoY + i &gt; 13) coordoY -= 1;</div>
-<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>                        grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];</div>
+<div class="line"><a id="l00512" name="l00512"></a><span class="lineno">  512</span>                        <a class="code hl_variable" href="class_c_grille.html#a30ec893dd29c76ee361ac4f54dd16ff2">grille</a>[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];</div>
 <div class="line"><a id="l00513" name="l00513"></a><span class="lineno">  513</span>                    }</div>
 <div class="line"><a id="l00514" name="l00514"></a><span class="lineno">  514</span>                }</div>
 <div class="line"><a id="l00515" name="l00515"></a><span class="lineno">  515</span>                <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00516" name="l00516"></a><span class="lineno">  516</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; k + 1; i++) {</div>
 <div class="line"><a id="l00517" name="l00517"></a><span class="lineno">  517</span>                        <span class="keywordflow">if</span> (coordoY + i &gt; 9) coordoY -= 1;</div>
-<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>                        grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];</div>
+<div class="line"><a id="l00518" name="l00518"></a><span class="lineno">  518</span>                        <a class="code hl_variable" href="class_c_grille.html#a30ec893dd29c76ee361ac4f54dd16ff2">grille</a>[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];</div>
 <div class="line"><a id="l00519" name="l00519"></a><span class="lineno">  519</span>                    }</div>
 <div class="line"><a id="l00520" name="l00520"></a><span class="lineno">  520</span>                }</div>
 <div class="line"><a id="l00521" name="l00521"></a><span class="lineno">  521</span>                coordoY++;</div>
@@ -615,14 +615,14 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00527" name="l00527"></a><span class="lineno">  527</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; k + 1; i++) {</div>
 <div class="line"><a id="l00528" name="l00528"></a><span class="lineno">  528</span>                        <span class="comment">//correction horizontale droite bateau horizontal</span></div>
 <div class="line"><a id="l00529" name="l00529"></a><span class="lineno">  529</span>                        <span class="keywordflow">if</span> (coordoX + i &gt; 9) coordoX -= 1;</div>
-<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>                        grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];</div>
+<div class="line"><a id="l00530" name="l00530"></a><span class="lineno">  530</span>                        <a class="code hl_variable" href="class_c_grille.html#a30ec893dd29c76ee361ac4f54dd16ff2">grille</a>[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];</div>
 <div class="line"><a id="l00531" name="l00531"></a><span class="lineno">  531</span>                    }</div>
 <div class="line"><a id="l00532" name="l00532"></a><span class="lineno">  532</span>                }</div>
 <div class="line"><a id="l00533" name="l00533"></a><span class="lineno">  533</span>                <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00534" name="l00534"></a><span class="lineno">  534</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; k + 1; i++) {</div>
 <div class="line"><a id="l00535" name="l00535"></a><span class="lineno">  535</span>                        <span class="comment">//correction horizontale droite bateau vertical</span></div>
 <div class="line"><a id="l00536" name="l00536"></a><span class="lineno">  536</span>                        <span class="keywordflow">if</span> (coordoX + i &gt; 13) coordoX -= 1;</div>
-<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>                        grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];</div>
+<div class="line"><a id="l00537" name="l00537"></a><span class="lineno">  537</span>                        <a class="code hl_variable" href="class_c_grille.html#a30ec893dd29c76ee361ac4f54dd16ff2">grille</a>[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];</div>
 <div class="line"><a id="l00538" name="l00538"></a><span class="lineno">  538</span>                    }</div>
 <div class="line"><a id="l00539" name="l00539"></a><span class="lineno">  539</span>                }</div>
 <div class="line"><a id="l00540" name="l00540"></a><span class="lineno">  540</span>                coordoX++;</div>
@@ -634,13 +634,13 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00546" name="l00546"></a><span class="lineno">  546</span>            {</div>
 <div class="line"><a id="l00547" name="l00547"></a><span class="lineno">  547</span>                <span class="keywordflow">if</span> (direction == <span class="keyword">false</span>) {</div>
 <div class="line"><a id="l00548" name="l00548"></a><span class="lineno">  548</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; k + 1; i++) {</div>
-<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>                        grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];</div>
+<div class="line"><a id="l00549" name="l00549"></a><span class="lineno">  549</span>                        <a class="code hl_variable" href="class_c_grille.html#a30ec893dd29c76ee361ac4f54dd16ff2">grille</a>[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];</div>
 <div class="line"><a id="l00550" name="l00550"></a><span class="lineno">  550</span>                    }</div>
 <div class="line"><a id="l00551" name="l00551"></a><span class="lineno">  551</span>                    direction = <span class="keyword">true</span>;</div>
 <div class="line"><a id="l00552" name="l00552"></a><span class="lineno">  552</span>                }</div>
 <div class="line"><a id="l00553" name="l00553"></a><span class="lineno">  553</span>                <span class="keywordflow">else</span> {</div>
 <div class="line"><a id="l00554" name="l00554"></a><span class="lineno">  554</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; k + 1; i++) {</div>
-<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>                        grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];</div>
+<div class="line"><a id="l00555" name="l00555"></a><span class="lineno">  555</span>                        <a class="code hl_variable" href="class_c_grille.html#a30ec893dd29c76ee361ac4f54dd16ff2">grille</a>[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];</div>
 <div class="line"><a id="l00556" name="l00556"></a><span class="lineno">  556</span>                    }</div>
 <div class="line"><a id="l00557" name="l00557"></a><span class="lineno">  557</span>                    direction = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00558" name="l00558"></a><span class="lineno">  558</span>                }</div>
@@ -654,7 +654,7 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00566" name="l00566"></a><span class="lineno">  566</span>            <span class="keywordflow">if</span> (GetKeyState(<span class="charliteral">&#39;E&#39;</span>) &amp; 0x8000<span class="comment">/*Check if high-order bit is set (1 &lt;&lt; 15)*/</span>)</div>
 <div class="line"><a id="l00567" name="l00567"></a><span class="lineno">  567</span>            {</div>
 <div class="line"><a id="l00568" name="l00568"></a><span class="lineno">  568</span> </div>
-<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>                <span class="keywordflow">if</span> (grille[coordoY][coordoX] == grille2[coordoY][coordoX]) {</div>
+<div class="line"><a id="l00569" name="l00569"></a><span class="lineno">  569</span>                <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_c_grille.html#a30ec893dd29c76ee361ac4f54dd16ff2">grille</a>[coordoY][coordoX] == grille2[coordoY][coordoX]) {</div>
 <div class="line"><a id="l00570" name="l00570"></a><span class="lineno">  570</span> </div>
 <div class="line"><a id="l00571" name="l00571"></a><span class="lineno">  571</span>                    std::cout &lt;&lt; <span class="stringliteral">&quot;Placement impossible&quot;</span> &lt;&lt; std::endl;</div>
 <div class="line"><a id="l00572" name="l00572"></a><span class="lineno">  572</span>                    system(<span class="stringliteral">&quot;pause&quot;</span>);</div>
@@ -664,10 +664,10 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00576" name="l00576"></a><span class="lineno">  576</span> </div>
 <div class="line"><a id="l00577" name="l00577"></a><span class="lineno">  577</span> </div>
 <div class="line"><a id="l00578" name="l00578"></a><span class="lineno">  578</span>                <span class="comment">//Gestion de la superposition des bateaux </span></div>
-<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ligne; i++) {</div>
-<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f = 0; f &lt; colonne; f++) {</div>
+<div class="line"><a id="l00579" name="l00579"></a><span class="lineno">  579</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_c_grille.html#a7b47cf5046757dc7f707d98de083eb0c">ligne</a>; i++) {</div>
+<div class="line"><a id="l00580" name="l00580"></a><span class="lineno">  580</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f = 0; f &lt; <a class="code hl_variable" href="class_c_grille.html#a3306b32abf6529756c71a1f333c62c9b">colonne</a>; f++) {</div>
 <div class="line"><a id="l00581" name="l00581"></a><span class="lineno">  581</span> </div>
-<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>                        <span class="keywordflow">if</span> (grille[i][f] == <a class="code hl_enumvalue" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726a7d4f15a4b47f3b52030dc4553f228b4f">Case::BATEAU</a>) {</div>
+<div class="line"><a id="l00582" name="l00582"></a><span class="lineno">  582</span>                        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_c_grille.html#a30ec893dd29c76ee361ac4f54dd16ff2">grille</a>[i][f] == <a class="code hl_enumvalue" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726a7d4f15a4b47f3b52030dc4553f228b4f">Case::BATEAU</a>) {</div>
 <div class="line"><a id="l00583" name="l00583"></a><span class="lineno">  583</span>                            <span class="comment">/*if (grille2[i][f] == grille[i][f]) {</span></div>
 <div class="line"><a id="l00584" name="l00584"></a><span class="lineno">  584</span><span class="comment">                                std::cout &lt;&lt; &quot;Placement impossible&quot; &lt;&lt; std::endl;</span></div>
 <div class="line"><a id="l00585" name="l00585"></a><span class="lineno">  585</span><span class="comment">                                //</span></div>
@@ -675,7 +675,7 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00587" name="l00587"></a><span class="lineno">  587</span><span class="comment">                            }*/</span></div>
 <div class="line"><a id="l00588" name="l00588"></a><span class="lineno">  588</span>                            <span class="comment">//else { grille2[i][f] = grille[i][f]; }</span></div>
 <div class="line"><a id="l00589" name="l00589"></a><span class="lineno">  589</span> </div>
-<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>                            grille2[i][f] = grille[i][f];</div>
+<div class="line"><a id="l00590" name="l00590"></a><span class="lineno">  590</span>                            grille2[i][f] = <a class="code hl_variable" href="class_c_grille.html#a30ec893dd29c76ee361ac4f54dd16ff2">grille</a>[i][f];</div>
 <div class="line"><a id="l00591" name="l00591"></a><span class="lineno">  591</span>                        }</div>
 <div class="line"><a id="l00592" name="l00592"></a><span class="lineno">  592</span>                    }</div>
 <div class="line"><a id="l00593" name="l00593"></a><span class="lineno">  593</span>                }</div>
@@ -685,9 +685,9 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00598" name="l00598"></a><span class="lineno">  598</span> </div>
 <div class="line"><a id="l00599" name="l00599"></a><span class="lineno">  599</span> </div>
 <div class="line"><a id="l00600" name="l00600"></a><span class="lineno">  600</span> </div>
-<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; ligne; i++) {</div>
-<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f = 0; f &lt; colonne; f++) {</div>
-<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>                        grille[i][f] = grille2[i][f];</div>
+<div class="line"><a id="l00601" name="l00601"></a><span class="lineno">  601</span>                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code hl_variable" href="class_c_grille.html#a7b47cf5046757dc7f707d98de083eb0c">ligne</a>; i++) {</div>
+<div class="line"><a id="l00602" name="l00602"></a><span class="lineno">  602</span>                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> f = 0; f &lt; <a class="code hl_variable" href="class_c_grille.html#a3306b32abf6529756c71a1f333c62c9b">colonne</a>; f++) {</div>
+<div class="line"><a id="l00603" name="l00603"></a><span class="lineno">  603</span>                        <a class="code hl_variable" href="class_c_grille.html#a30ec893dd29c76ee361ac4f54dd16ff2">grille</a>[i][f] = grille2[i][f];</div>
 <div class="line"><a id="l00604" name="l00604"></a><span class="lineno">  604</span>                    }</div>
 <div class="line"><a id="l00605" name="l00605"></a><span class="lineno">  605</span>                }</div>
 <div class="line"><a id="l00606" name="l00606"></a><span class="lineno">  606</span> </div>
@@ -704,10 +704,10 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00617" name="l00617"></a><span class="lineno">  617</span>                selection = <span class="keyword">false</span>;</div>
 <div class="line"><a id="l00618" name="l00618"></a><span class="lineno">  618</span>                <span class="keywordflow">switch</span> (k)</div>
 <div class="line"><a id="l00619" name="l00619"></a><span class="lineno">  619</span>                {</div>
-<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>                <span class="keywordflow">case</span> 4: nbPorteAvion--; std::cout &lt;&lt; nbPorteAvion; system(<span class="stringliteral">&quot;pause&quot;</span>); <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>                <span class="keywordflow">case</span> 3: nbCroiseur--; <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>                <span class="keywordflow">case</span> 2: nbTorpilleur--; <span class="keywordflow">break</span>;</div>
-<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>                <span class="keywordflow">case</span> 1: nbSousMarin--; <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00620" name="l00620"></a><span class="lineno">  620</span>                <span class="keywordflow">case</span> 4: <a class="code hl_variable" href="class_c_grille.html#a49cf911ba132c27013c65c89ab2e8514">nbPorteAvion</a>--; std::cout &lt;&lt; <a class="code hl_variable" href="class_c_grille.html#a49cf911ba132c27013c65c89ab2e8514">nbPorteAvion</a>; system(<span class="stringliteral">&quot;pause&quot;</span>); <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00621" name="l00621"></a><span class="lineno">  621</span>                <span class="keywordflow">case</span> 3: <a class="code hl_variable" href="class_c_grille.html#a104c7b465307fbc6ac2152a3dc12509b">nbCroiseur</a>--; <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00622" name="l00622"></a><span class="lineno">  622</span>                <span class="keywordflow">case</span> 2: <a class="code hl_variable" href="class_c_grille.html#a79b5a1a4c22abf918520057701ffe283">nbTorpilleur</a>--; <span class="keywordflow">break</span>;</div>
+<div class="line"><a id="l00623" name="l00623"></a><span class="lineno">  623</span>                <span class="keywordflow">case</span> 1: <a class="code hl_variable" href="class_c_grille.html#ad0882a57d5577827d679e407bb3e0870">nbSousMarin</a>--; <span class="keywordflow">break</span>;</div>
 <div class="line"><a id="l00624" name="l00624"></a><span class="lineno">  624</span>                }</div>
 <div class="line"><a id="l00625" name="l00625"></a><span class="lineno">  625</span>            }</div>
 <div class="line"><a id="l00626" name="l00626"></a><span class="lineno">  626</span>        }</div>
@@ -727,36 +727,42 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="line"><a id="l00640" name="l00640"></a><span class="lineno">  640</span> </div>
 <div class="line"><a id="l00641" name="l00641"></a><span class="lineno"><a class="line" href="class_c_grille.html#a300505d5628b5ea574545db5b6532d2c">  641</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_c_grille.html#a300505d5628b5ea574545db5b6532d2c">CGrille::bateauToucherEnnemi</a>(<span class="keywordtype">int</span> ligne, <span class="keywordtype">int</span> colonne)</div>
 <div class="line"><a id="l00642" name="l00642"></a><span class="lineno">  642</span>{</div>
-<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>    <a class="code hl_function" href="class_c_grille.html#adc0746e8ec544aaced585a4388e73bd4">setCase</a>(ligne, colonne, <a class="code hl_enumvalue" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726a6dcca5769e62a615a669c9c254fbcbda">Case::TOUCHEE</a>);</div>
+<div class="line"><a id="l00643" name="l00643"></a><span class="lineno">  643</span>    <a class="code hl_function" href="class_c_grille.html#a030155879bff962efc0c015f22ea9a0b">setCase</a>(<a class="code hl_variable" href="class_c_grille.html#a7b47cf5046757dc7f707d98de083eb0c">ligne</a>, <a class="code hl_variable" href="class_c_grille.html#a3306b32abf6529756c71a1f333c62c9b">colonne</a>, <a class="code hl_enumvalue" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726a6dcca5769e62a615a669c9c254fbcbda">Case::TOUCHEE</a>);</div>
 <div class="line"><a id="l00644" name="l00644"></a><span class="lineno">  644</span>    system(<span class="stringliteral">&quot;CLS&quot;</span>);</div>
-<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>    <a class="code hl_function" href="class_c_grille.html#aa0168c52e5e9e8ac7f6dc83b43c2a9ea">afficherGrille</a>();</div>
+<div class="line"><a id="l00645" name="l00645"></a><span class="lineno">  645</span>    <a class="code hl_function" href="class_c_grille.html#a1367ff44fd35d490a1f4b41c573c06d9">afficherGrille</a>();</div>
 <div class="line"><a id="l00646" name="l00646"></a><span class="lineno">  646</span>}</div>
 <div class="line"><a id="l00647" name="l00647"></a><span class="lineno">  647</span> </div>
 <div class="line"><a id="l00648" name="l00648"></a><span class="lineno"><a class="line" href="class_c_grille.html#a18e229fc4707271f947b567151fa8d17">  648</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_c_grille.html#a18e229fc4707271f947b567151fa8d17">CGrille::bateauToucherAllier</a>(<span class="keywordtype">int</span> ligne, <span class="keywordtype">int</span> colonne)</div>
 <div class="line"><a id="l00649" name="l00649"></a><span class="lineno">  649</span>{</div>
-<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>    <a class="code hl_function" href="class_c_grille.html#adc0746e8ec544aaced585a4388e73bd4">setCase</a>(ligne, colonne, <a class="code hl_enumvalue" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726a990919c3791692187fff735c5e1a2f50">Case::TOUCHEJ</a>);</div>
+<div class="line"><a id="l00650" name="l00650"></a><span class="lineno">  650</span>    <a class="code hl_function" href="class_c_grille.html#a030155879bff962efc0c015f22ea9a0b">setCase</a>(<a class="code hl_variable" href="class_c_grille.html#a7b47cf5046757dc7f707d98de083eb0c">ligne</a>, <a class="code hl_variable" href="class_c_grille.html#a3306b32abf6529756c71a1f333c62c9b">colonne</a>, <a class="code hl_enumvalue" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726a990919c3791692187fff735c5e1a2f50">Case::TOUCHEJ</a>);</div>
 <div class="line"><a id="l00651" name="l00651"></a><span class="lineno">  651</span>    system(<span class="stringliteral">&quot;CLS&quot;</span>);</div>
-<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>    <a class="code hl_function" href="class_c_grille.html#aa0168c52e5e9e8ac7f6dc83b43c2a9ea">afficherGrille</a>();</div>
+<div class="line"><a id="l00652" name="l00652"></a><span class="lineno">  652</span>    <a class="code hl_function" href="class_c_grille.html#a1367ff44fd35d490a1f4b41c573c06d9">afficherGrille</a>();</div>
 <div class="line"><a id="l00653" name="l00653"></a><span class="lineno">  653</span>}</div>
 <div class="line"><a id="l00654" name="l00654"></a><span class="lineno">  654</span> </div>
 <div class="line"><a id="l00655" name="l00655"></a><span class="lineno"><a class="line" href="class_c_grille.html#a594f7e2993977ce72d7e655a6cfc8c7a">  655</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_c_grille.html#a594f7e2993977ce72d7e655a6cfc8c7a">CGrille::tirLoupeJoueur</a>(<span class="keywordtype">int</span> ligne, <span class="keywordtype">int</span> colonne)</div>
 <div class="line"><a id="l00656" name="l00656"></a><span class="lineno">  656</span>{</div>
-<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>    <a class="code hl_function" href="class_c_grille.html#adc0746e8ec544aaced585a4388e73bd4">setCase</a>(ligne, colonne, <a class="code hl_enumvalue" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726abf8b1f7cc51bbb3aaa9d4136db1b3aea">Case::EAUE</a>);</div>
+<div class="line"><a id="l00657" name="l00657"></a><span class="lineno">  657</span>    <a class="code hl_function" href="class_c_grille.html#a030155879bff962efc0c015f22ea9a0b">setCase</a>(<a class="code hl_variable" href="class_c_grille.html#a7b47cf5046757dc7f707d98de083eb0c">ligne</a>, <a class="code hl_variable" href="class_c_grille.html#a3306b32abf6529756c71a1f333c62c9b">colonne</a>, <a class="code hl_enumvalue" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726abf8b1f7cc51bbb3aaa9d4136db1b3aea">Case::EAUE</a>);</div>
 <div class="line"><a id="l00658" name="l00658"></a><span class="lineno">  658</span>    system(<span class="stringliteral">&quot;CLS&quot;</span>);</div>
-<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>    <a class="code hl_function" href="class_c_grille.html#aa0168c52e5e9e8ac7f6dc83b43c2a9ea">afficherGrille</a>();</div>
+<div class="line"><a id="l00659" name="l00659"></a><span class="lineno">  659</span>    <a class="code hl_function" href="class_c_grille.html#a1367ff44fd35d490a1f4b41c573c06d9">afficherGrille</a>();</div>
 <div class="line"><a id="l00660" name="l00660"></a><span class="lineno">  660</span>}</div>
 <div class="line"><a id="l00661" name="l00661"></a><span class="lineno">  661</span> </div>
 <div class="line"><a id="l00662" name="l00662"></a><span class="lineno"><a class="line" href="class_c_grille.html#aab5f6a5904a239fa099d71067c87d7fd">  662</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_c_grille.html#aab5f6a5904a239fa099d71067c87d7fd">CGrille::tirLoupeEnnemi</a>(<span class="keywordtype">int</span> ligne, <span class="keywordtype">int</span> colonne)</div>
 <div class="line"><a id="l00663" name="l00663"></a><span class="lineno">  663</span>{</div>
-<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>    <a class="code hl_function" href="class_c_grille.html#adc0746e8ec544aaced585a4388e73bd4">setCase</a>(ligne, colonne, <a class="code hl_enumvalue" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726a06a2900064de9c8ae4aefe4de1938ef6">Case::EAUJ</a>);</div>
+<div class="line"><a id="l00664" name="l00664"></a><span class="lineno">  664</span>    <a class="code hl_function" href="class_c_grille.html#a030155879bff962efc0c015f22ea9a0b">setCase</a>(<a class="code hl_variable" href="class_c_grille.html#a7b47cf5046757dc7f707d98de083eb0c">ligne</a>, <a class="code hl_variable" href="class_c_grille.html#a3306b32abf6529756c71a1f333c62c9b">colonne</a>, <a class="code hl_enumvalue" href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726a06a2900064de9c8ae4aefe4de1938ef6">Case::EAUJ</a>);</div>
 <div class="line"><a id="l00665" name="l00665"></a><span class="lineno">  665</span>    system(<span class="stringliteral">&quot;CLS&quot;</span>);</div>
-<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>    <a class="code hl_function" href="class_c_grille.html#aa0168c52e5e9e8ac7f6dc83b43c2a9ea">afficherGrille</a>();</div>
+<div class="line"><a id="l00666" name="l00666"></a><span class="lineno">  666</span>    <a class="code hl_function" href="class_c_grille.html#a1367ff44fd35d490a1f4b41c573c06d9">afficherGrille</a>();</div>
 <div class="line"><a id="l00667" name="l00667"></a><span class="lineno">  667</span>}</div>
-<div class="ttc" id="a_c_grille_8h_html"><div class="ttname"><a href="_c_grille_8h.html">CGrille.h</a></div></div>
+<div class="ttc" id="a_c_grille_8h_html"><div class="ttname"><a href="_c_grille_8h.html">CGrille.h</a></div><div class="ttdoc">Fichier de définition de la classe CGrille</div></div>
+<div class="ttc" id="aclass_c_grille_html_a030155879bff962efc0c015f22ea9a0b"><div class="ttname"><a href="class_c_grille.html#a030155879bff962efc0c015f22ea9a0b">CGrille::setCase</a></div><div class="ttdeci">void setCase(int ligne, int colonne, Case type)</div><div class="ttdoc">met une case a un etat</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8cpp_source.html#l00055">CGrille.cpp:55</a></div></div>
 <div class="ttc" id="aclass_c_grille_html_a0473dd214cf06719b347df84a0518a3a"><div class="ttname"><a href="class_c_grille.html#a0473dd214cf06719b347df84a0518a3a">CGrille::saisieJoueur</a></div><div class="ttdeci">std::vector&lt; std::string &gt; saisieJoueur(std::string abs, int ord, bool maGrille)</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8cpp_source.html#l00295">CGrille.cpp:295</a></div></div>
+<div class="ttc" id="aclass_c_grille_html_a104c7b465307fbc6ac2152a3dc12509b"><div class="ttname"><a href="class_c_grille.html#a104c7b465307fbc6ac2152a3dc12509b">CGrille::nbCroiseur</a></div><div class="ttdeci">int nbCroiseur</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8h_source.html#l00071">CGrille.h:71</a></div></div>
+<div class="ttc" id="aclass_c_grille_html_a1367ff44fd35d490a1f4b41c573c06d9"><div class="ttname"><a href="class_c_grille.html#a1367ff44fd35d490a1f4b41c573c06d9">CGrille::afficherGrille</a></div><div class="ttdeci">void afficherGrille()</div><div class="ttdoc">affiche la grille mise a jour</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8cpp_source.html#l00060">CGrille.cpp:60</a></div></div>
 <div class="ttc" id="aclass_c_grille_html_a18e229fc4707271f947b567151fa8d17"><div class="ttname"><a href="class_c_grille.html#a18e229fc4707271f947b567151fa8d17">CGrille::bateauToucherAllier</a></div><div class="ttdeci">void bateauToucherAllier(int ligne, int colonne)</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8cpp_source.html#l00648">CGrille.cpp:648</a></div></div>
 <div class="ttc" id="aclass_c_grille_html_a300505d5628b5ea574545db5b6532d2c"><div class="ttname"><a href="class_c_grille.html#a300505d5628b5ea574545db5b6532d2c">CGrille::bateauToucherEnnemi</a></div><div class="ttdeci">void bateauToucherEnnemi(int ligne, int colonne)</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8cpp_source.html#l00641">CGrille.cpp:641</a></div></div>
-<div class="ttc" id="aclass_c_grille_html_a5439ba363e1d290ec175df8544a30726"><div class="ttname"><a href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726">CGrille::Case</a></div><div class="ttdeci">Case</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8h_source.html#l00011">CGrille.h:11</a></div></div>
+<div class="ttc" id="aclass_c_grille_html_a30ec893dd29c76ee361ac4f54dd16ff2"><div class="ttname"><a href="class_c_grille.html#a30ec893dd29c76ee361ac4f54dd16ff2">CGrille::grille</a></div><div class="ttdeci">Case grille[11][11]</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8h_source.html#l00067">CGrille.h:67</a></div></div>
+<div class="ttc" id="aclass_c_grille_html_a3306b32abf6529756c71a1f333c62c9b"><div class="ttname"><a href="class_c_grille.html#a3306b32abf6529756c71a1f333c62c9b">CGrille::colonne</a></div><div class="ttdeci">int colonne</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8h_source.html#l00063">CGrille.h:63</a></div></div>
+<div class="ttc" id="aclass_c_grille_html_a49cf911ba132c27013c65c89ab2e8514"><div class="ttname"><a href="class_c_grille.html#a49cf911ba132c27013c65c89ab2e8514">CGrille::nbPorteAvion</a></div><div class="ttdeci">int nbPorteAvion</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8h_source.html#l00069">CGrille.h:69</a></div></div>
+<div class="ttc" id="aclass_c_grille_html_a5439ba363e1d290ec175df8544a30726"><div class="ttname"><a href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726">CGrille::Case</a></div><div class="ttdeci">Case</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8h_source.html#l00020">CGrille.h:20</a></div></div>
 <div class="ttc" id="aclass_c_grille_html_a5439ba363e1d290ec175df8544a30726a06a2900064de9c8ae4aefe4de1938ef6"><div class="ttname"><a href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726a06a2900064de9c8ae4aefe4de1938ef6">CGrille::Case::EAUJ</a></div><div class="ttdeci">@ EAUJ</div></div>
 <div class="ttc" id="aclass_c_grille_html_a5439ba363e1d290ec175df8544a30726a4c67bb3d8f85b3a1570dd8a5a8a26338"><div class="ttname"><a href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726a4c67bb3d8f85b3a1570dd8a5a8a26338">CGrille::Case::VIDE</a></div><div class="ttdeci">@ VIDE</div></div>
 <div class="ttc" id="aclass_c_grille_html_a5439ba363e1d290ec175df8544a30726a6dcca5769e62a615a669c9c254fbcbda"><div class="ttname"><a href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726a6dcca5769e62a615a669c9c254fbcbda">CGrille::Case::TOUCHEE</a></div><div class="ttdeci">@ TOUCHEE</div></div>
@@ -765,13 +771,14 @@ $(document).ready(function(){initNavTree('_c_grille_8cpp_source.html',''); initR
 <div class="ttc" id="aclass_c_grille_html_a5439ba363e1d290ec175df8544a30726abf8b1f7cc51bbb3aaa9d4136db1b3aea"><div class="ttname"><a href="class_c_grille.html#a5439ba363e1d290ec175df8544a30726abf8b1f7cc51bbb3aaa9d4136db1b3aea">CGrille::Case::EAUE</a></div><div class="ttdeci">@ EAUE</div></div>
 <div class="ttc" id="aclass_c_grille_html_a594f7e2993977ce72d7e655a6cfc8c7a"><div class="ttname"><a href="class_c_grille.html#a594f7e2993977ce72d7e655a6cfc8c7a">CGrille::tirLoupeJoueur</a></div><div class="ttdeci">void tirLoupeJoueur(int ligne, int colonne)</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8cpp_source.html#l00655">CGrille.cpp:655</a></div></div>
 <div class="ttc" id="aclass_c_grille_html_a686c651626080947dddcbad60979d881"><div class="ttname"><a href="class_c_grille.html#a686c651626080947dddcbad60979d881">CGrille::placerBateau</a></div><div class="ttdeci">std::string placerBateau()</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8cpp_source.html#l00308">CGrille.cpp:308</a></div></div>
-<div class="ttc" id="aclass_c_grille_html_a90b7985f1d5d24a9ea3a2d1fb1fb4636"><div class="ttname"><a href="class_c_grille.html#a90b7985f1d5d24a9ea3a2d1fb1fb4636">CGrille::CGrille</a></div><div class="ttdeci">CGrille()</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8cpp_source.html#l00008">CGrille.cpp:8</a></div></div>
-<div class="ttc" id="aclass_c_grille_html_aa0168c52e5e9e8ac7f6dc83b43c2a9ea"><div class="ttname"><a href="class_c_grille.html#aa0168c52e5e9e8ac7f6dc83b43c2a9ea">CGrille::afficherGrille</a></div><div class="ttdeci">void afficherGrille()</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8cpp_source.html#l00060">CGrille.cpp:60</a></div></div>
+<div class="ttc" id="aclass_c_grille_html_a79b5a1a4c22abf918520057701ffe283"><div class="ttname"><a href="class_c_grille.html#a79b5a1a4c22abf918520057701ffe283">CGrille::nbTorpilleur</a></div><div class="ttdeci">int nbTorpilleur</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8h_source.html#l00073">CGrille.h:73</a></div></div>
+<div class="ttc" id="aclass_c_grille_html_a7b47cf5046757dc7f707d98de083eb0c"><div class="ttname"><a href="class_c_grille.html#a7b47cf5046757dc7f707d98de083eb0c">CGrille::ligne</a></div><div class="ttdeci">int ligne</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8h_source.html#l00065">CGrille.h:65</a></div></div>
+<div class="ttc" id="aclass_c_grille_html_a90b7985f1d5d24a9ea3a2d1fb1fb4636"><div class="ttname"><a href="class_c_grille.html#a90b7985f1d5d24a9ea3a2d1fb1fb4636">CGrille::CGrille</a></div><div class="ttdeci">CGrille()</div><div class="ttdoc">constructeur de la classe</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8cpp_source.html#l00008">CGrille.cpp:8</a></div></div>
+<div class="ttc" id="aclass_c_grille_html_aa58d985f2e1d7877de1f865dd560a482"><div class="ttname"><a href="class_c_grille.html#aa58d985f2e1d7877de1f865dd560a482">CGrille::getCase</a></div><div class="ttdeci">Case getCase(int ligne, int colonne)</div><div class="ttdoc">retourne l'etat d'une case</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8cpp_source.html#l00045">CGrille.cpp:45</a></div></div>
 <div class="ttc" id="aclass_c_grille_html_aab5f6a5904a239fa099d71067c87d7fd"><div class="ttname"><a href="class_c_grille.html#aab5f6a5904a239fa099d71067c87d7fd">CGrille::tirLoupeEnnemi</a></div><div class="ttdeci">void tirLoupeEnnemi(int ligne, int colonne)</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8cpp_source.html#l00662">CGrille.cpp:662</a></div></div>
+<div class="ttc" id="aclass_c_grille_html_ad0882a57d5577827d679e407bb3e0870"><div class="ttname"><a href="class_c_grille.html#ad0882a57d5577827d679e407bb3e0870">CGrille::nbSousMarin</a></div><div class="ttdeci">int nbSousMarin</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8h_source.html#l00075">CGrille.h:75</a></div></div>
 <div class="ttc" id="aclass_c_grille_html_ad6986ededbf76ce7c278f3ac23abe715"><div class="ttname"><a href="class_c_grille.html#ad6986ededbf76ce7c278f3ac23abe715">CGrille::partiePerdue</a></div><div class="ttdeci">bool partiePerdue()</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8cpp_source.html#l00303">CGrille.cpp:303</a></div></div>
-<div class="ttc" id="aclass_c_grille_html_adc0746e8ec544aaced585a4388e73bd4"><div class="ttname"><a href="class_c_grille.html#adc0746e8ec544aaced585a4388e73bd4">CGrille::setCase</a></div><div class="ttdeci">void setCase(int ligne, int colonne, Case type)</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8cpp_source.html#l00055">CGrille.cpp:55</a></div></div>
 <div class="ttc" id="aclass_c_grille_html_ae8555219e7204345a91c9e051f48779b"><div class="ttname"><a href="class_c_grille.html#ae8555219e7204345a91c9e051f48779b">CGrille::InitGrille</a></div><div class="ttdeci">void InitGrille()</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8cpp_source.html#l00037">CGrille.cpp:37</a></div></div>
-<div class="ttc" id="aclass_c_grille_html_aea8e46580f6a4aa1c45aedc49376e7c2"><div class="ttname"><a href="class_c_grille.html#aea8e46580f6a4aa1c45aedc49376e7c2">CGrille::getCase</a></div><div class="ttdeci">Case getCase(int ligne, int colonne)</div><div class="ttdef"><b>Definition:</b> <a href="_c_grille_8cpp_source.html#l00045">CGrille.cpp:45</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

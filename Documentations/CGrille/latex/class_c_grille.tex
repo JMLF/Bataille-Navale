@@ -22,35 +22,53 @@ enum class \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Ca
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_c_grille_a90b7985f1d5d24a9ea3a2d1fb1fb4636}{CGrille}} ()
-\item 
-\mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} \mbox{\hyperlink{class_c_grille_aea8e46580f6a4aa1c45aedc49376e7c2}{get\+Case}} (int ligne, int colonne)
-\item 
-void \mbox{\hyperlink{class_c_grille_adc0746e8ec544aaced585a4388e73bd4}{set\+Case}} (int ligne, int colonne, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} type)
-\item 
-void \mbox{\hyperlink{class_c_grille_aa0168c52e5e9e8ac7f6dc83b43c2a9ea}{afficher\+Grille}} ()
-\item 
+\begin{DoxyCompactList}\small\item\em constructeur de la classe ~\newline
+ \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} \mbox{\hyperlink{class_c_grille_aa58d985f2e1d7877de1f865dd560a482}{get\+Case}} (int \mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}, int \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}})
+\begin{DoxyCompactList}\small\item\em retourne l\textquotesingle{}etat d\textquotesingle{}une case \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_grille_a030155879bff962efc0c015f22ea9a0b}{set\+Case}} (int \mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}, int \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}}, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} type)
+\begin{DoxyCompactList}\small\item\em met une case a un etat \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_grille_a1367ff44fd35d490a1f4b41c573c06d9}{afficher\+Grille}} ()
+\begin{DoxyCompactList}\small\item\em affiche la grille mise a jour \end{DoxyCompactList}\item 
 std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_c_grille_a0473dd214cf06719b347df84a0518a3a}{saisie\+Joueur}} (std\+::string abs, int ord, bool ma\+Grille)
 \item 
 bool \mbox{\hyperlink{class_c_grille_ad6986ededbf76ce7c278f3ac23abe715}{partie\+Perdue}} ()
 \item 
 std\+::string \mbox{\hyperlink{class_c_grille_a686c651626080947dddcbad60979d881}{placer\+Bateau}} ()
 \item 
-void \mbox{\hyperlink{class_c_grille_a300505d5628b5ea574545db5b6532d2c}{bateau\+Toucher\+Ennemi}} (int ligne, int colonne)
+void \mbox{\hyperlink{class_c_grille_a300505d5628b5ea574545db5b6532d2c}{bateau\+Toucher\+Ennemi}} (int \mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}, int \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}})
 \item 
-void \mbox{\hyperlink{class_c_grille_a18e229fc4707271f947b567151fa8d17}{bateau\+Toucher\+Allier}} (int ligne, int colonne)
+void \mbox{\hyperlink{class_c_grille_a18e229fc4707271f947b567151fa8d17}{bateau\+Toucher\+Allier}} (int \mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}, int \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}})
 \item 
-void \mbox{\hyperlink{class_c_grille_a594f7e2993977ce72d7e655a6cfc8c7a}{tir\+Loupe\+Joueur}} (int ligne, int colonne)
+void \mbox{\hyperlink{class_c_grille_a594f7e2993977ce72d7e655a6cfc8c7a}{tir\+Loupe\+Joueur}} (int \mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}, int \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}})
 \item 
-void \mbox{\hyperlink{class_c_grille_aab5f6a5904a239fa099d71067c87d7fd}{tir\+Loupe\+Ennemi}} (int ligne, int colonne)
+void \mbox{\hyperlink{class_c_grille_aab5f6a5904a239fa099d71067c87d7fd}{tir\+Loupe\+Ennemi}} (int \mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}, int \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}})
 \item 
 void \mbox{\hyperlink{class_c_grille_ae8555219e7204345a91c9e051f48779b}{Init\+Grille}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}}
+\item 
+int \mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}
+\item 
+\mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} \mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{grille}} \mbox{[}11\mbox{]}\mbox{[}11\mbox{]}
+\item 
+int \mbox{\hyperlink{class_c_grille_a49cf911ba132c27013c65c89ab2e8514}{nb\+Porte\+Avion}}
+\item 
+int \mbox{\hyperlink{class_c_grille_a104c7b465307fbc6ac2152a3dc12509b}{nb\+Croiseur}}
+\item 
+int \mbox{\hyperlink{class_c_grille_a79b5a1a4c22abf918520057701ffe283}{nb\+Torpilleur}}
+\item 
+int \mbox{\hyperlink{class_c_grille_ad0882a57d5577827d679e407bb3e0870}{nb\+Sous\+Marin}}
 \end{DoxyCompactItemize}
 
 
 \doxysubsection{Detailed Description}
 
 
-Definition at line \mbox{\hyperlink{_c_grille_8h_source_l00009}{9}} of file \mbox{\hyperlink{_c_grille_8h_source}{CGrille.\+h}}.
+Definition at line \mbox{\hyperlink{_c_grille_8h_source_l00014}{14}} of file \mbox{\hyperlink{_c_grille_8h_source}{CGrille.\+h}}.
 
 
 
@@ -61,7 +79,8 @@ Definition at line \mbox{\hyperlink{_c_grille_8h_source_l00009}{9}} of file \mbo
 \doxysubsubsection{\texorpdfstring{Case}{Case}}
 {\footnotesize\ttfamily enum class \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{CGrille\+::\+Case}}\hspace{0.3cm}{\ttfamily [strong]}}
 
-\begin{DoxyEnumFields}{Enumerator}
+Les differents type de case ~\newline
+ \begin{DoxyEnumFields}{Enumerator}
 \raisebox{\heightof{T}}[0pt][0pt]{\index{VIDE@{VIDE}!CGrille@{CGrille}}\index{CGrille@{CGrille}!VIDE@{VIDE}}}\mbox{\Hypertarget{class_c_grille_a5439ba363e1d290ec175df8544a30726a4c67bb3d8f85b3a1570dd8a5a8a26338}\label{class_c_grille_a5439ba363e1d290ec175df8544a30726a4c67bb3d8f85b3a1570dd8a5a8a26338}} 
 VIDE&\\
 \hline
@@ -93,7 +112,7 @@ ERREUR&\\
 \end{DoxyEnumFields}
 
 
-Definition at line \mbox{\hyperlink{_c_grille_8h_source_l00011}{11}} of file \mbox{\hyperlink{_c_grille_8h_source}{CGrille.\+h}}.
+Definition at line \mbox{\hyperlink{_c_grille_8h_source_l00020}{20}} of file \mbox{\hyperlink{_c_grille_8h_source}{CGrille.\+h}}.
 
 
 
@@ -106,17 +125,29 @@ Definition at line \mbox{\hyperlink{_c_grille_8h_source_l00011}{11}} of file \mb
 
 
 
+constructeur de la classe ~\newline
+ 
+
+
+
 Definition at line \mbox{\hyperlink{_c_grille_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{_c_grille_8cpp_source}{CGrille.\+cpp}}.
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_c_grille_aa0168c52e5e9e8ac7f6dc83b43c2a9ea}\label{class_c_grille_aa0168c52e5e9e8ac7f6dc83b43c2a9ea}} 
+\mbox{\Hypertarget{class_c_grille_a1367ff44fd35d490a1f4b41c573c06d9}\label{class_c_grille_a1367ff44fd35d490a1f4b41c573c06d9}} 
 \index{CGrille@{CGrille}!afficherGrille@{afficherGrille}}
 \index{afficherGrille@{afficherGrille}!CGrille@{CGrille}}
 \doxysubsubsection{\texorpdfstring{afficherGrille()}{afficherGrille()}}
-{\footnotesize\ttfamily void CGrille\+::afficher\+Grille (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily CGrille\+::afficher\+Grille (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+affiche la grille mise a jour 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 
 
 Definition at line \mbox{\hyperlink{_c_grille_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{_c_grille_8cpp_source}{CGrille.\+cpp}}.
@@ -149,12 +180,25 @@ Definition at line \mbox{\hyperlink{_c_grille_8cpp_source_l00641}{641}} of file 
 
 Here is the call graph for this function\+:
 % FIG 3
-\mbox{\Hypertarget{class_c_grille_aea8e46580f6a4aa1c45aedc49376e7c2}\label{class_c_grille_aea8e46580f6a4aa1c45aedc49376e7c2}} 
+\mbox{\Hypertarget{class_c_grille_aa58d985f2e1d7877de1f865dd560a482}\label{class_c_grille_aa58d985f2e1d7877de1f865dd560a482}} 
 \index{CGrille@{CGrille}!getCase@{getCase}}
 \index{getCase@{getCase}!CGrille@{CGrille}}
 \doxysubsubsection{\texorpdfstring{getCase()}{getCase()}}
-{\footnotesize\ttfamily \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{CGrille\+::\+Case}} CGrille\+::get\+Case (\begin{DoxyParamCaption}\item[{int}]{ligne,  }\item[{int}]{colonne }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily CGrille\+::get\+Case (\begin{DoxyParamCaption}\item[{int}]{ligne,  }\item[{int}]{colonne }\end{DoxyParamCaption})}
 
+
+
+retourne l\textquotesingle{}etat d\textquotesingle{}une case 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ligne} & \+: int, colonne \+: int \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Case \+: enum ~\newline
+ 
+\end{DoxyReturn}
 
 
 Definition at line \mbox{\hyperlink{_c_grille_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{_c_grille_8cpp_source}{CGrille.\+cpp}}.
@@ -203,12 +247,24 @@ Here is the call graph for this function\+:
 
 Definition at line \mbox{\hyperlink{_c_grille_8cpp_source_l00295}{295}} of file \mbox{\hyperlink{_c_grille_8cpp_source}{CGrille.\+cpp}}.
 
-\mbox{\Hypertarget{class_c_grille_adc0746e8ec544aaced585a4388e73bd4}\label{class_c_grille_adc0746e8ec544aaced585a4388e73bd4}} 
+\mbox{\Hypertarget{class_c_grille_a030155879bff962efc0c015f22ea9a0b}\label{class_c_grille_a030155879bff962efc0c015f22ea9a0b}} 
 \index{CGrille@{CGrille}!setCase@{setCase}}
 \index{setCase@{setCase}!CGrille@{CGrille}}
 \doxysubsubsection{\texorpdfstring{setCase()}{setCase()}}
-{\footnotesize\ttfamily void CGrille\+::set\+Case (\begin{DoxyParamCaption}\item[{int}]{ligne,  }\item[{int}]{colonne,  }\item[{\mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}}}]{type }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily CGrille\+::set\+Case (\begin{DoxyParamCaption}\item[{int}]{ligne,  }\item[{int}]{colonne,  }\item[{\mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}}}]{type }\end{DoxyParamCaption})}
 
+
+
+met une case a un etat 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ligne} & \+: int, colonne \+: int, type \+: Case (enum) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
 
 
 Definition at line \mbox{\hyperlink{_c_grille_8cpp_source_l00055}{55}} of file \mbox{\hyperlink{_c_grille_8cpp_source}{CGrille.\+cpp}}.
@@ -239,6 +295,79 @@ Definition at line \mbox{\hyperlink{_c_grille_8cpp_source_l00655}{655}} of file 
 
 Here is the call graph for this function\+:
 % FIG 8
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}\label{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}} 
+\index{CGrille@{CGrille}!colonne@{colonne}}
+\index{colonne@{colonne}!CGrille@{CGrille}}
+\doxysubsubsection{\texorpdfstring{colonne}{colonne}}
+{\footnotesize\ttfamily int CGrille\+::colonne\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_c_grille_8h_source_l00063}{63}} of file \mbox{\hyperlink{_c_grille_8h_source}{CGrille.\+h}}.
+
+\mbox{\Hypertarget{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}\label{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}} 
+\index{CGrille@{CGrille}!grille@{grille}}
+\index{grille@{grille}!CGrille@{CGrille}}
+\doxysubsubsection{\texorpdfstring{grille}{grille}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} CGrille\+::grille\mbox{[}11\mbox{]}\mbox{[}11\mbox{]}\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_c_grille_8h_source_l00067}{67}} of file \mbox{\hyperlink{_c_grille_8h_source}{CGrille.\+h}}.
+
+\mbox{\Hypertarget{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}\label{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}} 
+\index{CGrille@{CGrille}!ligne@{ligne}}
+\index{ligne@{ligne}!CGrille@{CGrille}}
+\doxysubsubsection{\texorpdfstring{ligne}{ligne}}
+{\footnotesize\ttfamily int CGrille\+::ligne\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_c_grille_8h_source_l00065}{65}} of file \mbox{\hyperlink{_c_grille_8h_source}{CGrille.\+h}}.
+
+\mbox{\Hypertarget{class_c_grille_a104c7b465307fbc6ac2152a3dc12509b}\label{class_c_grille_a104c7b465307fbc6ac2152a3dc12509b}} 
+\index{CGrille@{CGrille}!nbCroiseur@{nbCroiseur}}
+\index{nbCroiseur@{nbCroiseur}!CGrille@{CGrille}}
+\doxysubsubsection{\texorpdfstring{nbCroiseur}{nbCroiseur}}
+{\footnotesize\ttfamily int CGrille\+::nb\+Croiseur\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_c_grille_8h_source_l00071}{71}} of file \mbox{\hyperlink{_c_grille_8h_source}{CGrille.\+h}}.
+
+\mbox{\Hypertarget{class_c_grille_a49cf911ba132c27013c65c89ab2e8514}\label{class_c_grille_a49cf911ba132c27013c65c89ab2e8514}} 
+\index{CGrille@{CGrille}!nbPorteAvion@{nbPorteAvion}}
+\index{nbPorteAvion@{nbPorteAvion}!CGrille@{CGrille}}
+\doxysubsubsection{\texorpdfstring{nbPorteAvion}{nbPorteAvion}}
+{\footnotesize\ttfamily int CGrille\+::nb\+Porte\+Avion\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_c_grille_8h_source_l00069}{69}} of file \mbox{\hyperlink{_c_grille_8h_source}{CGrille.\+h}}.
+
+\mbox{\Hypertarget{class_c_grille_ad0882a57d5577827d679e407bb3e0870}\label{class_c_grille_ad0882a57d5577827d679e407bb3e0870}} 
+\index{CGrille@{CGrille}!nbSousMarin@{nbSousMarin}}
+\index{nbSousMarin@{nbSousMarin}!CGrille@{CGrille}}
+\doxysubsubsection{\texorpdfstring{nbSousMarin}{nbSousMarin}}
+{\footnotesize\ttfamily int CGrille\+::nb\+Sous\+Marin\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_c_grille_8h_source_l00075}{75}} of file \mbox{\hyperlink{_c_grille_8h_source}{CGrille.\+h}}.
+
+\mbox{\Hypertarget{class_c_grille_a79b5a1a4c22abf918520057701ffe283}\label{class_c_grille_a79b5a1a4c22abf918520057701ffe283}} 
+\index{CGrille@{CGrille}!nbTorpilleur@{nbTorpilleur}}
+\index{nbTorpilleur@{nbTorpilleur}!CGrille@{CGrille}}
+\doxysubsubsection{\texorpdfstring{nbTorpilleur}{nbTorpilleur}}
+{\footnotesize\ttfamily int CGrille\+::nb\+Torpilleur\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_c_grille_8h_source_l00073}{73}} of file \mbox{\hyperlink{_c_grille_8h_source}{CGrille.\+h}}.
+
 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}

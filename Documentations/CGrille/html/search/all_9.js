@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['vide_0',['VIDE',['../class_c_grille.html#a5439ba363e1d290ec175df8544a30726a4c67bb3d8f85b3a1570dd8a5a8a26338',1,'CGrille']]]
+  ['saisiejoueur_0',['saisieJoueur',['../class_c_grille.html#a0473dd214cf06719b347df84a0518a3a',1,'CGrille']]],
+  ['setcase_1',['setCase',['../class_c_grille.html#a030155879bff962efc0c015f22ea9a0b',1,'CGrille']]]
 ];
