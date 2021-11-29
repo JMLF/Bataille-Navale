@@ -2,23 +2,29 @@
 \label{class_c_connection_serveur}\index{CConnectionServeur@{CConnectionServeur}}
 
 
+Methode de connection, d\textquotesingle{}envoi et reception de message avec le serveur de jeu.  
+
+
+
+
 {\ttfamily \#include $<$CConnection\+Serveur.\+h$>$}
 
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\hyperlink{class_c_connection_serveur_a321ae6d07dc33f7b155bd504c4be34fe}{CConnection\+Serveur}} (std\+::string \mbox{\hyperlink{class_c_connection_serveur_aefd09c8de27d5073ae129c1fef06639c}{IP\+\_\+\+SERVEUR}}, std\+::string \mbox{\hyperlink{class_c_connection_serveur_afeff92024665ba247c940facab6c72e6}{port}})
-\item 
-void \mbox{\hyperlink{class_c_connection_serveur_a035df74f5bec72610f2dcb535215854d}{init\+Connec}} ()
-\item 
-void \mbox{\hyperlink{class_c_connection_serveur_a62fe3035e61b87d4b06a54501f8102d7}{connection}} ()
-\item 
-std\+::string \mbox{\hyperlink{class_c_connection_serveur_a908567135caaeb7db97cacea7d08b00f}{reception}} ()
-\item 
-void \mbox{\hyperlink{class_c_connection_serveur_a39f85dab92764d4357fe2b48b87d058d}{envoi}} (std\+::string)
-\item 
-void \mbox{\hyperlink{class_c_connection_serveur_ac85db18d0cf06cbdfb5c907a9d9ac023}{fermeture\+Socket}} ()
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe avec parametre en entrée. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_connection_serveur_a5ceacc7b580f728f91dbcd83d869cf00}{init\+Connec}} ()
+\begin{DoxyCompactList}\small\item\em Initialise tout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_connection_serveur_ac4ce884ec12b543873245ce5db3051aa}{connection}} ()
+\begin{DoxyCompactList}\small\item\em se connection au serveur entrée en parametre dans le constructeur ~\newline
+ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_c_connection_serveur_aca8fa4df208c7eac287b440beaab2c56}{reception}} ()
+\begin{DoxyCompactList}\small\item\em attend de recevoir une trame du serveur (!bloquant) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_connection_serveur_a23b9a2b972b5fd096e3ea2490f838a0f}{envoi}} (std\+::string)
+\begin{DoxyCompactList}\small\item\em envoi une trame au serveur (!bloquant) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_connection_serveur_a5faeca745411602b5f92b9a7913c2fb3}{fermeture\+Socket}} ()
+\begin{DoxyCompactList}\small\item\em on ferme le socket et la communication avec le serveur \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
@@ -47,9 +53,9 @@ struct sockaddr\+\_\+in \mbox{\hyperlink{class_c_connection_serveur_af487246e4b0
 
 
 \doxysubsection{Detailed Description}
+Methode de connection, d\textquotesingle{}envoi et reception de message avec le serveur de jeu. 
 
-
-Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00022}{22}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00031}{31}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
 
 
 
@@ -62,60 +68,116 @@ Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00022}{22}}
 
 
 
-Definition at line \mbox{\hyperlink{_c_connection_serveur_8cpp_source_l00003}{3}} of file \mbox{\hyperlink{_c_connection_serveur_8cpp_source}{CConnection\+Serveur.\+cpp}}.
+Constructeur de la classe avec parametre en entrée. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em IP\+\_\+\+SERVEUR\+:string} & et port\+:string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{_c_connection_serveur_8cpp_source}{CConnection\+Serveur.\+cpp}}.
 
 
 
 \doxysubsection{Member Function Documentation}
-\mbox{\Hypertarget{class_c_connection_serveur_a62fe3035e61b87d4b06a54501f8102d7}\label{class_c_connection_serveur_a62fe3035e61b87d4b06a54501f8102d7}} 
+\mbox{\Hypertarget{class_c_connection_serveur_ac4ce884ec12b543873245ce5db3051aa}\label{class_c_connection_serveur_ac4ce884ec12b543873245ce5db3051aa}} 
 \index{CConnectionServeur@{CConnectionServeur}!connection@{connection}}
 \index{connection@{connection}!CConnectionServeur@{CConnectionServeur}}
 \doxysubsubsection{\texorpdfstring{connection()}{connection()}}
-{\footnotesize\ttfamily void CConnection\+Serveur\+::connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily CConnection\+Serveur\+::connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{_c_connection_serveur_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{_c_connection_serveur_8cpp_source}{CConnection\+Serveur.\+cpp}}.
+se connection au serveur entrée en parametre dans le constructeur ~\newline
+ 
 
-\mbox{\Hypertarget{class_c_connection_serveur_a39f85dab92764d4357fe2b48b87d058d}\label{class_c_connection_serveur_a39f85dab92764d4357fe2b48b87d058d}} 
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8cpp_source_l00049}{49}} of file \mbox{\hyperlink{_c_connection_serveur_8cpp_source}{CConnection\+Serveur.\+cpp}}.
+
+\mbox{\Hypertarget{class_c_connection_serveur_a23b9a2b972b5fd096e3ea2490f838a0f}\label{class_c_connection_serveur_a23b9a2b972b5fd096e3ea2490f838a0f}} 
 \index{CConnectionServeur@{CConnectionServeur}!envoi@{envoi}}
 \index{envoi@{envoi}!CConnectionServeur@{CConnectionServeur}}
 \doxysubsubsection{\texorpdfstring{envoi()}{envoi()}}
-{\footnotesize\ttfamily void CConnection\+Serveur\+::envoi (\begin{DoxyParamCaption}\item[{std\+::string}]{requete }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily CConnection\+Serveur\+::envoi (\begin{DoxyParamCaption}\item[{std\+::string}]{requete }\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{_c_connection_serveur_8cpp_source_l00067}{67}} of file \mbox{\hyperlink{_c_connection_serveur_8cpp_source}{CConnection\+Serveur.\+cpp}}.
+envoi une trame au serveur (!bloquant) 
 
-\mbox{\Hypertarget{class_c_connection_serveur_ac85db18d0cf06cbdfb5c907a9d9ac023}\label{class_c_connection_serveur_ac85db18d0cf06cbdfb5c907a9d9ac023}} 
+\begin{DoxyWarning}{Warning}
+BLOQUANT 
+\end{DoxyWarning}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em trame} & a envoyer \+: string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8cpp_source_l00071}{71}} of file \mbox{\hyperlink{_c_connection_serveur_8cpp_source}{CConnection\+Serveur.\+cpp}}.
+
+\mbox{\Hypertarget{class_c_connection_serveur_a5faeca745411602b5f92b9a7913c2fb3}\label{class_c_connection_serveur_a5faeca745411602b5f92b9a7913c2fb3}} 
 \index{CConnectionServeur@{CConnectionServeur}!fermetureSocket@{fermetureSocket}}
 \index{fermetureSocket@{fermetureSocket}!CConnectionServeur@{CConnectionServeur}}
 \doxysubsubsection{\texorpdfstring{fermetureSocket()}{fermetureSocket()}}
-{\footnotesize\ttfamily void CConnection\+Serveur\+::fermeture\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily CConnection\+Serveur\+::fermeture\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{_c_connection_serveur_8cpp_source_l00072}{72}} of file \mbox{\hyperlink{_c_connection_serveur_8cpp_source}{CConnection\+Serveur.\+cpp}}.
+on ferme le socket et la communication avec le serveur 
 
-\mbox{\Hypertarget{class_c_connection_serveur_a035df74f5bec72610f2dcb535215854d}\label{class_c_connection_serveur_a035df74f5bec72610f2dcb535215854d}} 
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8cpp_source_l00076}{76}} of file \mbox{\hyperlink{_c_connection_serveur_8cpp_source}{CConnection\+Serveur.\+cpp}}.
+
+\mbox{\Hypertarget{class_c_connection_serveur_a5ceacc7b580f728f91dbcd83d869cf00}\label{class_c_connection_serveur_a5ceacc7b580f728f91dbcd83d869cf00}} 
 \index{CConnectionServeur@{CConnectionServeur}!initConnec@{initConnec}}
 \index{initConnec@{initConnec}!CConnectionServeur@{CConnectionServeur}}
 \doxysubsubsection{\texorpdfstring{initConnec()}{initConnec()}}
-{\footnotesize\ttfamily void CConnection\+Serveur\+::init\+Connec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily CConnection\+Serveur\+::init\+Connec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{_c_connection_serveur_8cpp_source_l00026}{26}} of file \mbox{\hyperlink{_c_connection_serveur_8cpp_source}{CConnection\+Serveur.\+cpp}}.
+Initialise tout. 
 
-\mbox{\Hypertarget{class_c_connection_serveur_a908567135caaeb7db97cacea7d08b00f}\label{class_c_connection_serveur_a908567135caaeb7db97cacea7d08b00f}} 
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{_c_connection_serveur_8cpp_source}{CConnection\+Serveur.\+cpp}}.
+
+\mbox{\Hypertarget{class_c_connection_serveur_aca8fa4df208c7eac287b440beaab2c56}\label{class_c_connection_serveur_aca8fa4df208c7eac287b440beaab2c56}} 
 \index{CConnectionServeur@{CConnectionServeur}!reception@{reception}}
 \index{reception@{reception}!CConnectionServeur@{CConnectionServeur}}
 \doxysubsubsection{\texorpdfstring{reception()}{reception()}}
-{\footnotesize\ttfamily std\+::string CConnection\+Serveur\+::reception (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+{\footnotesize\ttfamily CConnection\+Serveur\+::reception (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
 
 
-Definition at line \mbox{\hyperlink{_c_connection_serveur_8cpp_source_l00054}{54}} of file \mbox{\hyperlink{_c_connection_serveur_8cpp_source}{CConnection\+Serveur.\+cpp}}.
+attend de recevoir une trame du serveur (!bloquant) 
+
+\begin{DoxyWarning}{Warning}
+BLOQUANT 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8cpp_source_l00058}{58}} of file \mbox{\hyperlink{_c_connection_serveur_8cpp_source}{CConnection\+Serveur.\+cpp}}.
 
 
 
@@ -128,7 +190,7 @@ Definition at line \mbox{\hyperlink{_c_connection_serveur_8cpp_source_l00054}{54
 
 
 
-Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00040}{40}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00049}{49}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
 
 \mbox{\Hypertarget{class_c_connection_serveur_a507c1c1dcdf547fdec39e908fd47c991}\label{class_c_connection_serveur_a507c1c1dcdf547fdec39e908fd47c991}} 
 \index{CConnectionServeur@{CConnectionServeur}!DIMMAX@{DIMMAX}}
@@ -138,7 +200,7 @@ Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00040}{40}}
 
 
 
-Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00027}{27}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00036}{36}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
 
 \mbox{\Hypertarget{class_c_connection_serveur_ac7935d555d2719030dd3579d77c00cd7}\label{class_c_connection_serveur_ac7935d555d2719030dd3579d77c00cd7}} 
 \index{CConnectionServeur@{CConnectionServeur}!donneeWS@{donneeWS}}
@@ -148,7 +210,7 @@ Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00027}{27}}
 
 
 
-Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00038}{38}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00047}{47}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
 
 \mbox{\Hypertarget{class_c_connection_serveur_a589e851e43b64fd111bc858640ea5246}\label{class_c_connection_serveur_a589e851e43b64fd111bc858640ea5246}} 
 \index{CConnectionServeur@{CConnectionServeur}!ids\_client@{ids\_client}}
@@ -158,7 +220,7 @@ Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00038}{38}}
 
 
 
-Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00042}{42}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00051}{51}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
 
 \mbox{\Hypertarget{class_c_connection_serveur_aefd09c8de27d5073ae129c1fef06639c}\label{class_c_connection_serveur_aefd09c8de27d5073ae129c1fef06639c}} 
 \index{CConnectionServeur@{CConnectionServeur}!IP\_SERVEUR@{IP\_SERVEUR}}
@@ -168,7 +230,7 @@ Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00042}{42}}
 
 
 
-Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00029}{29}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00038}{38}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
 
 \mbox{\Hypertarget{class_c_connection_serveur_a61c03e6610dc228cd326ab80f49eb59e}\label{class_c_connection_serveur_a61c03e6610dc228cd326ab80f49eb59e}} 
 \index{CConnectionServeur@{CConnectionServeur}!n@{n}}
@@ -178,7 +240,7 @@ Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00029}{29}}
 
 
 
-Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00034}{34}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00043}{43}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
 
 \mbox{\Hypertarget{class_c_connection_serveur_a5143fb0f8240d7c2c224cca893f74b59}\label{class_c_connection_serveur_a5143fb0f8240d7c2c224cca893f74b59}} 
 \index{CConnectionServeur@{CConnectionServeur}!noctets@{noctets}}
@@ -188,7 +250,7 @@ Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00034}{34}}
 
 
 
-Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00034}{34}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00043}{43}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
 
 \mbox{\Hypertarget{class_c_connection_serveur_abc03bde79119a3987d67c1e29ed7d6c7}\label{class_c_connection_serveur_abc03bde79119a3987d67c1e29ed7d6c7}} 
 \index{CConnectionServeur@{CConnectionServeur}!NUM\_PORT@{NUM\_PORT}}
@@ -198,7 +260,7 @@ Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00034}{34}}
 
 
 
-Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00032}{32}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00041}{41}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
 
 \mbox{\Hypertarget{class_c_connection_serveur_a60a38919d37203cbeec8f2f97ebf8456}\label{class_c_connection_serveur_a60a38919d37203cbeec8f2f97ebf8456}} 
 \index{CConnectionServeur@{CConnectionServeur}!nVersion@{nVersion}}
@@ -208,7 +270,7 @@ Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00032}{32}}
 
 
 
-Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00037}{37}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00046}{46}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
 
 \mbox{\Hypertarget{class_c_connection_serveur_afeff92024665ba247c940facab6c72e6}\label{class_c_connection_serveur_afeff92024665ba247c940facab6c72e6}} 
 \index{CConnectionServeur@{CConnectionServeur}!port@{port}}
@@ -218,7 +280,7 @@ Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00037}{37}}
 
 
 
-Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00030}{30}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00039}{39}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
 
 \mbox{\Hypertarget{class_c_connection_serveur_a54ab8e385f023c5c6152c2e0c343e78a}\label{class_c_connection_serveur_a54ab8e385f023c5c6152c2e0c343e78a}} 
 \index{CConnectionServeur@{CConnectionServeur}!requete@{requete}}
@@ -228,7 +290,7 @@ Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00030}{30}}
 
 
 
-Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00031}{31}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00040}{40}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
 
 
 

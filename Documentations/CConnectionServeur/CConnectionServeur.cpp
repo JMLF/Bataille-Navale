@@ -1,5 +1,9 @@
 #include "CConnectionServeur.h"
 
+///\file CConnectionServeur.cpp
+///\brief Fichier de definition de la classe CConnectionServeur
+///\version 1
+
 CConnectionServeur::CConnectionServeur(std::string IP_SERVEUR, std::string port)
 {
    
