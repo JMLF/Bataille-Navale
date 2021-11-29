@@ -47,6 +47,7 @@ int main(int argc, char* argv[])
             std::cout << discussion << std::endl;
             discussion = connection.reception(); 
             std::cout << discussion << std::endl; 
+            //ajouter une fonction de mise a jour de la map 
             std::cout << "Ou voulez-vous envoyer un missile ?" << std::endl;
             std::cin >> discussion;
             std::cout << std::endl;
@@ -113,9 +114,7 @@ int main(int argc, char* argv[])
             etats = discussion;
 
 
-
-
-
+            /*
             switch (etat)
             {
             case 0:
@@ -140,6 +139,7 @@ int main(int argc, char* argv[])
                 break;
 
             }
+            */
 
         } while (true);
 

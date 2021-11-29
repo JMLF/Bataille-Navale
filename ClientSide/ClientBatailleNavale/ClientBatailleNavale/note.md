@@ -13,6 +13,7 @@ on place ses bateaux puis on envoi une trame qui dit que l'on a fini d'installer
 + En attente du joueur 2 = trame envoyer par le serveur au premier client connecté pour lui signifier qu'il attend un second joueur.
 + A vous de jouer = trame envoyé depuis le serveur a l'un au l'autre client qui 
  signifie que le serveur est prés a recevoir une trame du client.
++ OK = l'autre client répond qu'il a bien pris en compte les informatin et que c'est a vous de jouer.
 
 ## A faire 
 + exception et gestion d'erreurs dans les classes
