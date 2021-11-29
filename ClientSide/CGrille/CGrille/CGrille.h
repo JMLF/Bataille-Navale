@@ -6,7 +6,9 @@ public :
 	enum class Case { VIDE, BATEAU, TOUCHEJ,TOUCHEE, EAUJ, EAUE, ERREUR = 99 };
 	CGrille();
 	Case getCase(int ligne, int colonne);
+	Case getCaseE(int ligne, int colonne);
 	void setCase(int ligne, int colonne, Case type);
+	void setCaseE(int ligne, int colonne, Case type);
 	void afficherGrille();
 	std::vector<std::string> saisieJoueur(std::string abs, int ord, bool maGrille);
 	bool partiePerdue();
@@ -29,6 +31,7 @@ private:
 	int colonne;
 	int ligne;
 	Case grille[11][11];
+	Case grilleE[11][11];
 	int nbPorteAvion;
 	int nbCroiseur; 
 	int nbTorpilleur;

@@ -52,16 +52,26 @@ CGrille::Case CGrille::getCase(int ligne, int colonne)
     return grille[ligne][colonne];
 }
 
+CGrille::Case CGrille::getCaseE(int ligne, int colonne)
+{
+    return grilleE[ligne][colonne];
+}
+
 void CGrille::setCase(int ligne, int colonne, Case type)
 {
     grille[ligne][colonne] = type;
+}
+
+void CGrille::setCaseE(int ligne, int colonne, Case type)
+{
+    grilleE[ligne][colonne] = type;
 }
 
 void CGrille::afficherGrille()
 {
     
     char colonnel = 'A'; //On Ètablit un charactere qui sera incrÈmenter a chaque colonne pour l'affichage des lettres du haut du tableau
-    int k = 0; //de meme pour les lignes, cette variable sera incrÈmentÈe a chaque ligne pour l'affichage des nombres du cotÈ du tableau
+    int k = 0; //de meme pour les lignes, cette variable sera incrÈmentÈe a chaque ligne pour l'affichage des nombres du cotÅEdu tableau
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE); //sert a modifier la couleur de la console
     SetConsoleTextAttribute(hConsole, 9); // couleur bleue
 
@@ -93,7 +103,7 @@ void CGrille::afficherGrille()
             valeurOuLigne = false; // on passe le bool a faux pour que la boucle revienne sur une ligne de valeurs
         }
         else { //Si on est sur une ligne de valeur...
-            k++; // on incrÈmente les nombres du cotÈ du tableau a chaque ligne de valeurs.
+            k++; // on incrÈmente les nombres du cotÅEdu tableau a chaque ligne de valeurs.
             for (int f = 0; f < colonne+1; f++) { // on s'occupe maintenant du tableau dans sa largeur, en fonction du nombre de colonnes. +1 pour decaler les valeurs en raison de la case 0,0
           
                 if (i < 2 && f > 0) { // si on est sur la premiere ligne et que on se trouve pas sur la case 0,0 on affiche lettre par lettre dans chaque case
@@ -198,7 +208,7 @@ void CGrille::afficherGrille()
             valeurOuLigne = false; // on passe le bool a faux pour que la boucle revienne sur une ligne de valeurs
         }
         else { //Si on est sur une ligne de valeur...
-            k++; // on incrÈmente les nombres du cotÈ du tableau a chaque ligne de valeurs.
+            k++; // on incrÈmente les nombres du cotÅEdu tableau a chaque ligne de valeurs.
             for (int f = 0; f < colonne + 1; f++) { // on s'occupe maintenant du tableau dans sa largeur, en fonction du nombre de colonnes. +1 pour decaler les valeurs en raison de la case 0,0
 
                 if (i < 2 && f > 0) { // si on est sur la premiere ligne et que on se trouve pas sur la case 0,0 on affiche lettre par lettre dans chaque case
@@ -246,7 +256,7 @@ void CGrille::afficherGrille()
 
 
                         std::cout << "| ";
-                        Case etat = getCase(k - 1, f); // on affiche les cases ou le joueur a tirer
+                        Case etat = getCaseE(k - 1, f); // on affiche les cases ou le joueur a tirer
 
                         switch (etat) {
                         case Case::TOUCHEE: //si le joueur a toucher un bateau
@@ -254,12 +264,12 @@ void CGrille::afficherGrille()
                             std::cout << "X ";
                             SetConsoleTextAttribute(hConsole, 4); //rouge
                             break;
-                        case Case::EAUE: // si il a tirer a cotÈ
+                        case Case::EAUE: // si il a tirer a cotÅE
                             SetConsoleTextAttribute(hConsole, 9); //bleu
                             std::cout << "~ ";
                             SetConsoleTextAttribute(hConsole, 4); //rouge
                             break;
-                        case Case::VIDE: // si rien n'a ÈtÈ fait sur la case
+                        case Case::VIDE: // si rien n'a ÈtÅEfait sur la case
                         default:  std::cout << "  ";
 
                         }
@@ -332,7 +342,7 @@ std::string CGrille::placerBateau()
 
 
 
-    while ((nbCroiseur + nbPorteAvion + nbSousMarin + nbTorpilleur) > 0) { // tant que tout les bateaux n'ont pas ÈtÈ placer :
+    while ((nbCroiseur + nbPorteAvion + nbSousMarin + nbTorpilleur) > 0) { // tant que tout les bateaux n'ont pas ÈtÅEplacer :
         while (selection == false) { //on crÈe un menu pour selectionner
             
             system("CLS");
@@ -640,7 +650,7 @@ std::string CGrille::placerBateau()
 
 void CGrille::bateauToucherEnnemi(int ligne, int colonne)
 {
-    setCase(ligne, colonne, Case::TOUCHEE);
+    setCaseE(ligne, colonne, Case::TOUCHEE);
     system("CLS");
     afficherGrille();
 }
@@ -654,7 +664,7 @@ void CGrille::bateauToucherAllier(int ligne, int colonne)
 
 void CGrille::tirLoupeJoueur(int ligne, int colonne)
 {
-    setCase(ligne, colonne, Case::EAUE);
+    setCaseE(ligne, colonne, Case::EAUE);
     system("CLS");
     afficherGrille();
 }
