@@ -1,0 +1,88 @@
+\hypertarget{_c_fonction_server_8h_source}{}\doxysection{CFonction\+Server.\+h}
+\mbox{\hyperlink{_c_fonction_server_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00006}\mbox{\hyperlink{_c_fonction_server_8h_af08ec37a8c99d747fb60fa15bc28678b}{00006}} \textcolor{preprocessor}{\#define \_CRT\_SECURE\_NO\_WARNINGS}}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00013}00013 \textcolor{preprocessor}{\#include <winsock2.h>}}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00014}00014 \textcolor{preprocessor}{\#include <time.h>}}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00015}00015 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00016}00016 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00017}00017 \textcolor{preprocessor}{\#include <random>}}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00018}00018 \textcolor{preprocessor}{\#include <thread>}}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00020}00020 \textcolor{preprocessor}{\#pragma comment(lib, "{}ws2\_32.lib"{}})}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00022}\mbox{\hyperlink{_c_fonction_server_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{00022}} \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{_c_fonction_server_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}};}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00023}\mbox{\hyperlink{_c_fonction_server_8h_ab95f123a6c9bcfee6a343170ef8c5f69}{00023}} \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \mbox{\hyperlink{_c_fonction_server_8h_ab95f123a6c9bcfee6a343170ef8c5f69}{ushort}};}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00024}\mbox{\hyperlink{_c_fonction_server_8h_a65f85814a8290f9797005d3b28e7e5fc}{00024}} \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{_c_fonction_server_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar}};}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00027}00027 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00028}\mbox{\hyperlink{class_c_fonction_server}{00028}} \textcolor{keyword}{class }\mbox{\hyperlink{class_c_fonction_server}{CFonctionServer}}}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00029}00029 \{}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00031}00031 \textcolor{keyword}{private}: }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00036}\mbox{\hyperlink{class_c_fonction_server_a875fef903bc7b782db2186f6023bd830}{00036}}     \textcolor{keyword}{const} \mbox{\hyperlink{_c_fonction_server_8h_ab95f123a6c9bcfee6a343170ef8c5f69}{ushort}} \mbox{\hyperlink{class_c_fonction_server_a875fef903bc7b782db2186f6023bd830}{PORT\_NUM}} = 12345;;}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00040}\mbox{\hyperlink{class_c_fonction_server_a55ac9ccdcf4081d228fb8f4e633f893a}{00040}}     \textcolor{keyword}{const} \mbox{\hyperlink{_c_fonction_server_8h_ab95f123a6c9bcfee6a343170ef8c5f69}{ushort}} \mbox{\hyperlink{class_c_fonction_server_a55ac9ccdcf4081d228fb8f4e633f893a}{DIMMAX}} = 150; \textcolor{comment}{// Taille max des tableaux}}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00042}\mbox{\hyperlink{class_c_fonction_server_a0659095e530d18b574c17c85b27e0320}{00042}}     WORD \mbox{\hyperlink{class_c_fonction_server_a0659095e530d18b574c17c85b27e0320}{nVersion}} = MAKEWORD(2, 2);}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00043}\mbox{\hyperlink{class_c_fonction_server_a56fb1354744833750af02333e7c75b8b}{00043}}     WSADATA \mbox{\hyperlink{class_c_fonction_server_a56fb1354744833750af02333e7c75b8b}{donneeWS}};}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00045}\mbox{\hyperlink{class_c_fonction_server_abdb45b5ea476aad84fa9884da5a1f1a7}{00045}}     \textcolor{keyword}{struct }sockaddr\_in   \mbox{\hyperlink{class_c_fonction_server_abdb45b5ea476aad84fa9884da5a1f1a7}{adr\_serveur}};       \textcolor{comment}{// @ internet du serveur}}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00046}\mbox{\hyperlink{class_c_fonction_server_a54f2383b8b48af8288a835e273dfbfa7}{00046}}     \textcolor{keyword}{struct }sockaddr\_in   \mbox{\hyperlink{class_c_fonction_server_a54f2383b8b48af8288a835e273dfbfa7}{adr\_client}};        \textcolor{comment}{// @ internet du client}}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00048}\mbox{\hyperlink{class_c_fonction_server_ac09fb8572cdfd9b5f57c84f7b69327d3}{00048}}     \mbox{\hyperlink{_c_fonction_server_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} \mbox{\hyperlink{class_c_fonction_server_ac09fb8572cdfd9b5f57c84f7b69327d3}{ids\_ecoute}};        \textcolor{comment}{// id du socket d'écoute du serveur}}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00049}\mbox{\hyperlink{class_c_fonction_server_a31b1a03bca62ca426f7d98e34ed9e496}{00049}}     \mbox{\hyperlink{_c_fonction_server_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} \mbox{\hyperlink{class_c_fonction_server_a31b1a03bca62ca426f7d98e34ed9e496}{ids\_connect}};       \textcolor{comment}{// id du socket de connection}}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00050}\mbox{\hyperlink{class_c_fonction_server_ac6b682d33f038a956da36c862ffc1484}{00050}}     \mbox{\hyperlink{_c_fonction_server_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} \mbox{\hyperlink{class_c_fonction_server_ac6b682d33f038a956da36c862ffc1484}{ids\_connect1}};}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00051}\mbox{\hyperlink{class_c_fonction_server_af9c912fb975f6e1f57f3a75064bc17dc}{00051}}     \mbox{\hyperlink{_c_fonction_server_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} \mbox{\hyperlink{class_c_fonction_server_af9c912fb975f6e1f57f3a75064bc17dc}{nb\_car\_emis}};       \textcolor{comment}{// nb car émis par send}}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00054}\mbox{\hyperlink{class_c_fonction_server_a9f199f44afc4fd9ceb90279f4a43f08f}{00054}}     \textcolor{keywordtype}{int}  \mbox{\hyperlink{class_c_fonction_server_a9f199f44afc4fd9ceb90279f4a43f08f}{addr\_len}};          \textcolor{comment}{// taille de l'@ internet }}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00055}00055 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00056}\mbox{\hyperlink{class_c_fonction_server_a06d60bdc62fb165e8375c32d749b71b1}{00056}}     \mbox{\hyperlink{_c_fonction_server_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} \mbox{\hyperlink{class_c_fonction_server_a06d60bdc62fb165e8375c32d749b71b1}{n}} = 0, \mbox{\hyperlink{class_c_fonction_server_ab4c97b4812403ad526b3cfe6709190af}{noctets}};}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00058}00058    \textcolor{comment}{// int nbconnec; //on compte le nombre de connection }}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00061}00061 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00062}00062 \textcolor{keyword}{public}: }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00063}00063 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00067}00067     \mbox{\hyperlink{class_c_fonction_server_a6db10a5881ee63fe1030df3c8bcc3c70}{CFonctionServer}}();}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00072}00072     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_fonction_server_a2d9dd1ad5524b3d139c02001506aafa3}{initWinsock}}(); }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00073}00073 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00074}00074     \textcolor{comment}{// Création du socket d'écoute (etape 2)}}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00079}00079 \textcolor{comment}{}    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_fonction_server_a5cb26ce3652ce4e03d0359e5059f956e}{creaSockEcoute}}(); }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00080}00080 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00081}00081     \textcolor{comment}{//Bind du socket (etape 3)}}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00085}00085 \textcolor{comment}{}    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_fonction_server_a3e3d7fb72aa5d87d5a923183ed5b29b5}{binding}}();}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00086}00086 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00087}00087     \textcolor{comment}{//écoute du socket (etape 4)}}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00091}00091 \textcolor{comment}{}    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_fonction_server_a9a126acc793ba7a3832d26673ddff03e}{listening}}();}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00092}00092 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00093}00093     \textcolor{comment}{// Acceptation d'une connexion cliente, création d'un nouveau socket qui }}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00094}00094     \textcolor{comment}{// sera utilisé pour l'émission et la réception des caractères (etape 5)}}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00099}00099 \textcolor{comment}{}    \mbox{\hyperlink{_c_fonction_server_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} \mbox{\hyperlink{class_c_fonction_server_a6e26293df5d978d9dfe7275e310e023a}{accepting}}();}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00106}00106     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_fonction_server_aa3471ed0745eebf4255fb8ec74aff8a3}{communication}}(\mbox{\hyperlink{_c_fonction_server_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} \mbox{\hyperlink{class_c_fonction_server_a31b1a03bca62ca426f7d98e34ed9e496}{ids\_connect}}, \mbox{\hyperlink{_c_fonction_server_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} \mbox{\hyperlink{class_c_fonction_server_ac6b682d33f038a956da36c862ffc1484}{ids\_connect1}});}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00107}00107 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00113}00113     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_fonction_server_ae4104e1e6b084c0ba4888bb47d98b71e}{sending}}(\mbox{\hyperlink{_c_fonction_server_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} \mbox{\hyperlink{class_c_fonction_server_a31b1a03bca62ca426f7d98e34ed9e496}{ids\_connect}}, std::string message);}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00114}00114 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00120}00120     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_fonction_server_aee716e6d8c645ecc19a200bf533ad077}{reciving}}(\mbox{\hyperlink{_c_fonction_server_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} \mbox{\hyperlink{class_c_fonction_server_a31b1a03bca62ca426f7d98e34ed9e496}{ids\_connect}}, \mbox{\hyperlink{_c_fonction_server_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} \mbox{\hyperlink{class_c_fonction_server_ac6b682d33f038a956da36c862ffc1484}{ids\_connect1}}, std::string\& message);}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00121}00121 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00122}00122     \textcolor{comment}{// fermeture du socket d'écoute}}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00126}00126 \textcolor{comment}{}    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_fonction_server_a7f98e72cecf07e48e2c45dda024ac2fd}{fermetureSockEcoute}}();}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00127}00127 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00128}00128     \textcolor{comment}{// Fermeture de winsock}}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00133}00133 \textcolor{comment}{}    \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_fonction_server_a69d35c2463d07ff939bbd6a3d34d7bba}{FermeturWinSock}}();}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00134}00134 }
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00135}00135 \};}
+\DoxyCodeLine{\Hypertarget{_c_fonction_server_8h_source_l00136}00136 }
+
+\end{DoxyCode}

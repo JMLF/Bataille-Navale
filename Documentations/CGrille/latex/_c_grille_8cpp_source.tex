@@ -1,0 +1,671 @@
+\hypertarget{_c_grille_8cpp_source}{}\doxysection{CGrille.\+cpp}
+\mbox{\hyperlink{_c_grille_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00001}00001 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_c_grille_8h}{CGrille.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00004}00004 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00005}00005 \textcolor{preprocessor}{\#include <windows.h>}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00007}00007 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00008}\mbox{\hyperlink{class_c_grille_a90b7985f1d5d24a9ea3a2d1fb1fb4636}{00008}} \mbox{\hyperlink{class_c_grille_a90b7985f1d5d24a9ea3a2d1fb1fb4636}{CGrille::CGrille}}()}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00010}00010 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00011}00011     nbPorteAvion = 1;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00012}00012     nbCroiseur = 1;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00013}00013     nbTorpilleur = 0;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00014}00014     nbSousMarin = 0;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00015}00015     colonne = 10;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00016}00016     ligne = 10;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00017}00017     \textcolor{comment}{//grille[9][9] = Case::VIDE;}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00018}00018     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < ligne ; i++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00019}00019         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < colonne ; f++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00020}00020             grille[i][f] = \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a4c67bb3d8f85b3a1570dd8a5a8a26338}{Case::VIDE}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00021}00021             \textcolor{comment}{//if (grille[i][f] == Case::BATEAU)std::cout << "{}bateau"{};}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00022}00022             \textcolor{comment}{//if (grille[i][f] == Case::VIDE)std::cout << "{}eau"{};}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00023}00023             \textcolor{comment}{//std::cout << i << f << std::endl;}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00024}00024         \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00025}00025     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00026}00026     }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00027}00027     }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00028}00028     \textcolor{comment}{//grille[][] = Case::VIDE;}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00029}00029    \textcolor{comment}{//grille[1][1] = Case::BATEAU;}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00030}00030    \textcolor{comment}{//grille[10][4] = Case::VIDE;}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00031}00031 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00034}00034 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00036}00036 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00037}\mbox{\hyperlink{class_c_grille_ae8555219e7204345a91c9e051f48779b}{00037}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_grille_ae8555219e7204345a91c9e051f48779b}{CGrille::InitGrille}}() \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00038}00038 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00039}00039    }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00040}00040 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00043}00043 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00045}\mbox{\hyperlink{class_c_grille_aea8e46580f6a4aa1c45aedc49376e7c2}{00045}} \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{CGrille::Case}} \mbox{\hyperlink{class_c_grille_aea8e46580f6a4aa1c45aedc49376e7c2}{CGrille::getCase}}(\textcolor{keywordtype}{int} ligne, \textcolor{keywordtype}{int} colonne)}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00046}00046 \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00047}00047     \textcolor{comment}{//grille[1][1] = Case::BATEAU;}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00048}00048     \textcolor{comment}{//Case CaseTeste = ;}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00049}00049     \textcolor{comment}{//if (CaseTeste == Case::BATEAU)std::cout << "{}bateau"{};}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00050}00050     \textcolor{comment}{//if (CaseTeste == Case::EAU)std::cout << "{}eau"{};}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00051}00051     \textcolor{comment}{//system("{}pause"{});}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00052}00052     \textcolor{keywordflow}{return} grille[ligne][colonne];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00053}00053 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00054}00054 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00055}\mbox{\hyperlink{class_c_grille_adc0746e8ec544aaced585a4388e73bd4}{00055}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_grille_adc0746e8ec544aaced585a4388e73bd4}{CGrille::setCase}}(\textcolor{keywordtype}{int} ligne, \textcolor{keywordtype}{int} colonne, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} type)}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00056}00056 \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00057}00057     grille[ligne][colonne] = type;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00058}00058 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00060}\mbox{\hyperlink{class_c_grille_aa0168c52e5e9e8ac7f6dc83b43c2a9ea}{00060}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_grille_aa0168c52e5e9e8ac7f6dc83b43c2a9ea}{CGrille::afficherGrille}}()}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00061}00061 \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00062}00062     }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00063}00063     \textcolor{keywordtype}{char} colonnel = \textcolor{charliteral}{'A'}; \textcolor{comment}{//On établit un charactere qui sera incrémenter a chaque colonne pour l'affichage des lettres du haut du tableau}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00064}00064     \textcolor{keywordtype}{int} k = 0; \textcolor{comment}{//de meme pour les lignes, cette variable sera incrémentée a chaque ligne pour l'affichage des nombres du coté du tableau}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00065}00065     HANDLE hConsole = GetStdHandle(STD\_OUTPUT\_HANDLE); \textcolor{comment}{//sert a modifier la couleur de la console}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00066}00066     SetConsoleTextAttribute(hConsole, 9); \textcolor{comment}{// couleur bleue}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00067}00067 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00068}00068     \textcolor{keywordtype}{bool} valeurOuLigne = \textcolor{keyword}{true}; \textcolor{comment}{// ce booléen nous servira a verifier dans chaque ligne si il faut y mettre un charactère ou faire une ligne}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00069}00069 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00071}00071 \textcolor{comment}{    /****************************************************}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00072}00072 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00073}00073 \textcolor{comment}{    //\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# GRILLE JOUEUR \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00074}00074 \textcolor{comment}{    }}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00075}00075 \textcolor{comment}{    *****************************************************/}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00077}00077     \textcolor{comment}{/* on fait ligne par ligne, sachant qu'une ligne se compose d'une ligne séparatrice, et d'une ligne ou se trouvent les valeurs. }}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00078}00078 \textcolor{comment}{    Ligne séparatrice : +-\/-\/+-\/-\/+-\/-\/+-\/-\/+-\/-\/+-\/-\/+(...)}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00079}00079 \textcolor{comment}{    Ligne des valeurs : |  |  |  |  |  |  |(...)}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00080}00080 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00081}00081 \textcolor{comment}{    D'ou la multiplication par 2.}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00082}00082 \textcolor{comment}{    On remarque que la création des lignes du tableau fini par une ligne de valeur, pour que cela soit plus propre , on y ajoute une ligne}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00083}00083 \textcolor{comment}{    séparatrice d'ou le +1 apres la multiplication.}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00084}00084 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00085}00085 \textcolor{comment}{    La ligne des caractere ne doit pas etre prise en compte dans le jeu , donc on y ajoute une ligne (ligne+1) pour avoir 11 lignes.}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00086}00086 \textcolor{comment}{    */}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00087}00087     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < (ligne+1) * 2 + 1 ; i++) \{  }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00088}00088         \textcolor{keywordflow}{if} (valeurOuLigne == \textcolor{keyword}{true}) \{ \textcolor{comment}{//Si on est sur une ligne séparatrice ...}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00089}00089             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < colonne+1; f++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00090}00090                 std::cout << \textcolor{stringliteral}{"{}+-\/-\/-\/"{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00091}00091             \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00092}00092             std::cout << \textcolor{stringliteral}{"{}+"{}} << std::endl; \textcolor{comment}{// on fini le tableau par un caratère '+' et un retour a la ligne}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00093}00093             valeurOuLigne = \textcolor{keyword}{false}; \textcolor{comment}{// on passe le bool a faux pour que la boucle revienne sur une ligne de valeurs}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00094}00094         \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00095}00095         \textcolor{keywordflow}{else} \{ \textcolor{comment}{//Si on est sur une ligne de valeur...}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00096}00096             k++; \textcolor{comment}{// on incrémente les nombres du coté du tableau a chaque ligne de valeurs.}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00097}00097             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < colonne+1; f++) \{ \textcolor{comment}{// on s'occupe maintenant du tableau dans sa largeur, en fonction du nombre de colonnes. +1 pour decaler les valeurs en raison de la case 0,0}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00098}00098           }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00099}00099                 \textcolor{keywordflow}{if} (i < 2 \&\& f > 0) \{ \textcolor{comment}{// si on est sur la premiere ligne et que on se trouve pas sur la case 0,0 on affiche lettre par lettre dans chaque case}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00100}00100 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00101}00101                     std::cout << \textcolor{stringliteral}{"{}| "{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00102}00102                     SetConsoleTextAttribute(hConsole, 15); \textcolor{comment}{// couleur blanc (F)}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00103}00103                     std::cout << char(colonnel + f-\/1) << \textcolor{stringliteral}{"{} "{}}; \textcolor{comment}{// on affiche la lettre correspondante.}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00104}00104                     SetConsoleTextAttribute(hConsole, 9); \textcolor{comment}{// couleur bleue}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00105}00105                 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00106}00106                 \textcolor{keywordflow}{else} \textcolor{comment}{// si on est pas sur la premiere ligne ou que on est sur la case 0.0 ...}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00107}00107                 \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00108}00108                     \textcolor{keywordflow}{if} (f == 0) \{ \textcolor{comment}{// si on est sur la premiere colonne :}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00109}00109                        }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00110}00110 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00111}00111                         \textcolor{keywordflow}{if} (k < 11) \{ \textcolor{comment}{// on verifie que le format du nombre a afficher dans le tableau pour eviter un décalage quand on a deux chiffres }}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00112}00112                             \textcolor{keywordflow}{if} (k == 1) \{ \textcolor{comment}{// si c'est la zone 0.0 :}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00113}00113                                 std::cout << \textcolor{stringliteral}{"{}| "{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00114}00114                                 SetConsoleTextAttribute(hConsole, 15);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00115}00115                                 std::cout << \textcolor{stringliteral}{"{}  "{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00116}00116                                 SetConsoleTextAttribute(hConsole, 9);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00117}00117                             \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00118}00118                             \textcolor{keywordflow}{else} \{ \textcolor{comment}{// si c'est les autres ( ex : 1.0 2.0 3.0 (...)}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00119}00119                                 std::cout << \textcolor{stringliteral}{"{}| "{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00120}00120                                 SetConsoleTextAttribute(hConsole, 15);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00121}00121                                 std::cout << k-\/1 << \textcolor{stringliteral}{"{} "{}}; \textcolor{comment}{// on affiche le nombre de la ligne en gerant le décallage de la zone 0.0}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00122}00122                                 SetConsoleTextAttribute(hConsole, 9);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00123}00123                             \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00124}00124                         \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00125}00125                         \textcolor{keywordflow}{else} \{ \textcolor{comment}{//si le format du nombre est a deuyx chiffre , on prend soin d'enlever un espace dans la nottation pour eviter un décallage sur le tableau}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00126}00126                             std::cout << \textcolor{stringliteral}{"{}|"{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00127}00127                             SetConsoleTextAttribute(hConsole, 15);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00128}00128                             std::cout << k-\/1 << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00129}00129                             SetConsoleTextAttribute(hConsole, 9);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00130}00130                         \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00131}00131                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00132}00132                     \textcolor{keywordflow}{else} \{ \textcolor{comment}{//si on ne se trouve pas sur la premiere colonne , on fait une case vide : }}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00133}00133                         std::cout << \textcolor{stringliteral}{"{}| "{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00134}00134 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00135}00135 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00136}00136                      \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00137}00137 \textcolor{comment}{                        // GESTION DES CASES SUR LA GRILLE JOUEUR}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00138}00138 \textcolor{comment}{                     -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00139}00139 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00140}00140 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00141}00141 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00142}00142                         \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} etat = \mbox{\hyperlink{class_c_grille_aea8e46580f6a4aa1c45aedc49376e7c2}{getCase}}(k-\/1, f);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00143}00143 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00144}00144                         \textcolor{keywordflow}{switch} (etat) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00145}00145                         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a7d4f15a4b47f3b52030dc4553f228b4f}{Case::BATEAU}} : \textcolor{comment}{// on affiche nos bateaux}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00146}00146                             std::cout << \textcolor{stringliteral}{"{}B "{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00147}00147                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00148}00148                            }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00149}00149                         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a990919c3791692187fff735c5e1a2f50}{Case::TOUCHEJ}} :  \textcolor{comment}{// on affiche les cases ou l'ennemi a toucher nos bateaux}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00150}00150                             SetConsoleTextAttribute(hConsole, 13);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00151}00151                             std::cout << \textcolor{stringliteral}{"{}X "{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00152}00152                             SetConsoleTextAttribute(hConsole, 9);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00153}00153                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00154}00154                         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a06a2900064de9c8ae4aefe4de1938ef6}{Case::EAUJ}}: \textcolor{comment}{//on affiche les cases ou il a tirer}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00155}00155                             SetConsoleTextAttribute(hConsole, 9);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00156}00156                             std::cout << \textcolor{stringliteral}{"{}\string~ "{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00157}00157                             \textcolor{comment}{//SetConsoleTextAttribute(hConsole, 9);}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00158}00158                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00159}00159 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00160}00160 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00161}00161                         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a4c67bb3d8f85b3a1570dd8a5a8a26338}{Case::VIDE}}:}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00162}00162                         default :  std::cout << \textcolor{stringliteral}{"{}  "{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00163}00163                         }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00164}00164                         \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00165}00165                        }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00166}00166 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00167}00167                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00168}00168                 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00169}00169 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00170}00170                 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00171}00171             \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00172}00172             std::cout << \textcolor{stringliteral}{"{}|"{}} << std::endl; \textcolor{comment}{// on termine le tableau par un | pour fermer le tableau}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00173}00173             valeurOuLigne = \textcolor{keyword}{true}; \textcolor{comment}{// on repasse sur une ligne de séparation}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00174}00174 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00175}00175         \} }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00176}00176 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00177}00177 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00178}00178 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00179}00179 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00180}00180     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00181}00181 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00182}00182 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00183}00183 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00184}00184 \textcolor{comment}{    /****************************************************}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00185}00185 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00186}00186 \textcolor{comment}{   //\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\# GRILLE ENNEMIE \#\#\#\#\#\#\#\#\#\#\#\#\#\#\#\#}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00187}00187 \textcolor{comment}{}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00188}00188 \textcolor{comment}{   *****************************************************/}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00189}00189     valeurOuLigne = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00190}00190     k = 0;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00191}00191     SetConsoleTextAttribute(hConsole, 4);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00192}00192     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < (ligne + 1) * 2 + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00193}00193         \textcolor{keywordflow}{if} (valeurOuLigne == \textcolor{keyword}{true}) \{ \textcolor{comment}{//Si on est sur une ligne séparatrice ...}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00194}00194             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < colonne + 1; f++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00195}00195                 std::cout << \textcolor{stringliteral}{"{}+-\/-\/-\/"{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00196}00196             \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00197}00197             std::cout << \textcolor{stringliteral}{"{}+"{}} << std::endl; \textcolor{comment}{// on fini le tableau par un caratère '+' et un retour a la ligne}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00198}00198             valeurOuLigne = \textcolor{keyword}{false}; \textcolor{comment}{// on passe le bool a faux pour que la boucle revienne sur une ligne de valeurs}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00199}00199         \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00200}00200         \textcolor{keywordflow}{else} \{ \textcolor{comment}{//Si on est sur une ligne de valeur...}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00201}00201             k++; \textcolor{comment}{// on incrémente les nombres du coté du tableau a chaque ligne de valeurs.}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00202}00202             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < colonne + 1; f++) \{ \textcolor{comment}{// on s'occupe maintenant du tableau dans sa largeur, en fonction du nombre de colonnes. +1 pour decaler les valeurs en raison de la case 0,0}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00203}00203 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00204}00204                 \textcolor{keywordflow}{if} (i < 2 \&\& f > 0) \{ \textcolor{comment}{// si on est sur la premiere ligne et que on se trouve pas sur la case 0,0 on affiche lettre par lettre dans chaque case}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00205}00205 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00206}00206                     std::cout << \textcolor{stringliteral}{"{}| "{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00207}00207                     SetConsoleTextAttribute(hConsole, 15); \textcolor{comment}{// couleur blanc (F)}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00208}00208                     std::cout << char(colonnel + f -\/ 1) << \textcolor{stringliteral}{"{} "{}}; \textcolor{comment}{// on affiche la lettre correspondante.}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00209}00209                     SetConsoleTextAttribute(hConsole, 4); \textcolor{comment}{// couleur rouge}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00210}00210                 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00211}00211                 \textcolor{keywordflow}{else} \textcolor{comment}{// si on est pas sur la premiere ligne ou que on est sur la case 0.0 ...}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00212}00212                 \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00213}00213                     \textcolor{keywordflow}{if} (f == 0) \{ \textcolor{comment}{// si on est sur la premiere colonne :}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00214}00214 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00215}00215 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00216}00216                         \textcolor{keywordflow}{if} (k < 11) \{ \textcolor{comment}{// on verifie que le format du nombre a afficher dans le tableau pour eviter un décalage quand on a deux chiffres }}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00217}00217                             \textcolor{keywordflow}{if} (k == 1) \{ \textcolor{comment}{// si c'est la zone 0.0 :}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00218}00218                                 std::cout << \textcolor{stringliteral}{"{}| "{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00219}00219                                 SetConsoleTextAttribute(hConsole, 15);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00220}00220                                 std::cout << \textcolor{stringliteral}{"{}  "{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00221}00221                                 SetConsoleTextAttribute(hConsole, 4);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00222}00222                             \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00223}00223                             \textcolor{keywordflow}{else} \{ \textcolor{comment}{// si c'est les autres ( ex : 1.0 2.0 3.0 (...)}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00224}00224                                 std::cout << \textcolor{stringliteral}{"{}| "{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00225}00225                                 SetConsoleTextAttribute(hConsole, 15);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00226}00226                                 std::cout << k -\/ 1 << \textcolor{stringliteral}{"{} "{}}; \textcolor{comment}{// on affiche le nombre de la ligne en gerant le décallage de la zone 0.0}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00227}00227                                 SetConsoleTextAttribute(hConsole, 4);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00228}00228                             \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00229}00229                         \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00230}00230                         \textcolor{keywordflow}{else} \{ \textcolor{comment}{//si le format du nombre est a deuyx chiffre , on prend soin d'enlever un espace dans la nottation pour eviter un décallage sur le tableau}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00231}00231                             std::cout << \textcolor{stringliteral}{"{}|"{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00232}00232                             SetConsoleTextAttribute(hConsole, 15);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00233}00233                             std::cout << k -\/ 1 << \textcolor{stringliteral}{"{} "{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00234}00234                             SetConsoleTextAttribute(hConsole, 4);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00235}00235                         \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00236}00236                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00237}00237                     \textcolor{keywordflow}{else} \{ \textcolor{comment}{//si on ne se trouve pas sur la premiere colonne : }}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00238}00238                         }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00239}00239 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00240}00240                         \textcolor{comment}{/*-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00241}00241 \textcolor{comment}{                        // GESTION DES CASES SUR LA GRILLE ENNEMIE}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00242}00242 \textcolor{comment}{                     -\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/-\/*/}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00243}00243 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00244}00244 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00245}00245 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00246}00246 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00247}00247 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00248}00248                         std::cout << \textcolor{stringliteral}{"{}| "{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00249}00249                         \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} etat = \mbox{\hyperlink{class_c_grille_aea8e46580f6a4aa1c45aedc49376e7c2}{getCase}}(k -\/ 1, f); \textcolor{comment}{// on affiche les cases ou le joueur a tirer}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00250}00250 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00251}00251                         \textcolor{keywordflow}{switch} (etat) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00252}00252                         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a6dcca5769e62a615a669c9c254fbcbda}{Case::TOUCHEE}}: \textcolor{comment}{//si le joueur a toucher un bateau}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00253}00253                             SetConsoleTextAttribute(hConsole, 13); \textcolor{comment}{// violet}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00254}00254                             std::cout << \textcolor{stringliteral}{"{}X "{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00255}00255                             SetConsoleTextAttribute(hConsole, 4); \textcolor{comment}{//rouge}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00256}00256                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00257}00257                         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726abf8b1f7cc51bbb3aaa9d4136db1b3aea}{Case::EAUE}}: \textcolor{comment}{// si il a tirer a coté}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00258}00258                             SetConsoleTextAttribute(hConsole, 9); \textcolor{comment}{//bleu}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00259}00259                             std::cout << \textcolor{stringliteral}{"{}\string~ "{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00260}00260                             SetConsoleTextAttribute(hConsole, 4); \textcolor{comment}{//rouge}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00261}00261                             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00262}00262                         \textcolor{keywordflow}{case} \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a4c67bb3d8f85b3a1570dd8a5a8a26338}{Case::VIDE}}: \textcolor{comment}{// si rien n'a été fait sur la case}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00263}00263                         \textcolor{keywordflow}{default}:  std::cout << \textcolor{stringliteral}{"{}  "{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00264}00264 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00265}00265                         \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00266}00266 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00267}00267                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00268}00268                 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00269}00269 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00270}00270 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00271}00271             \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00272}00272             std::cout << \textcolor{stringliteral}{"{}|"{}} << std::endl; \textcolor{comment}{// on termine le tableau par un | pour fermer le tableau}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00273}00273             valeurOuLigne = \textcolor{keyword}{true}; \textcolor{comment}{// on repasse sur une ligne de séparation}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00274}00274 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00275}00275         \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00276}00276 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00277}00277 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00278}00278 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00279}00279 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00280}00280     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00281}00281 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00282}00282 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00283}00283 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00284}00284 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00285}00285     }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00286}00286     \textcolor{comment}{// et on reboucle jusqu'a la finalisation du tableau.}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00287}00287     system(\textcolor{stringliteral}{"{}pause"{}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00288}00288     SetConsoleTextAttribute(hConsole, 15);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00289}00289 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00290}00290 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00291}00291 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00292}00292 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00293}00293 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00294}00294 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00295}\mbox{\hyperlink{class_c_grille_a0473dd214cf06719b347df84a0518a3a}{00295}} std::vector<std::string> \mbox{\hyperlink{class_c_grille_a0473dd214cf06719b347df84a0518a3a}{CGrille::saisieJoueur}}(std::string abs, \textcolor{keywordtype}{int} ord, \textcolor{keywordtype}{bool} maGrille)}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00296}00296 \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00297}00297 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00298}00298     std::vector<std::string> Coordonee;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00299}00299     \textcolor{keywordflow}{return} Coordonee;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00300}00300    }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00301}00301 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00302}00302 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00303}\mbox{\hyperlink{class_c_grille_ad6986ededbf76ce7c278f3ac23abe715}{00303}} \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_c_grille_ad6986ededbf76ce7c278f3ac23abe715}{CGrille::partiePerdue}}()}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00304}00304 \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00305}00305     \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00306}00306 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00307}00307 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00308}\mbox{\hyperlink{class_c_grille_a686c651626080947dddcbad60979d881}{00308}} std::string \mbox{\hyperlink{class_c_grille_a686c651626080947dddcbad60979d881}{CGrille::placerBateau}}()}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00309}00309 \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00310}00310     \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} grille2[11][11]; \textcolor{comment}{//on déclare une grille de sauvegarde}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00311}00311     system(\textcolor{stringliteral}{"{}CLS"{}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00312}00312     \textcolor{keywordtype}{bool} selection = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00313}00313     \textcolor{keywordtype}{int} k = 0;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00314}00314     \textcolor{keyword}{enum} TypeBateau \{ PORTEAVION, CROISEUR, TORPILLEUR, SOUSMARIN \};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00315}00315     HANDLE hConsole = GetStdHandle(STD\_OUTPUT\_HANDLE);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00316}00316     SetConsoleTextAttribute(hConsole, 10);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00317}00317     std::cout << \textcolor{stringliteral}{"{}COMMANDES :"{}} << std::endl << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00318}00318 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00319}00319     std::cout << \textcolor{stringliteral}{"{}      @@@@@@@@@@@@@@  @@@@@@@@@@@@@@  @@@@@@@@@@@@@"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00320}00320     std::cout << \textcolor{stringliteral}{"{}      @            @  @            @  @           @"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00321}00321     std::cout << \textcolor{stringliteral}{"{}      @     A      @  @     Z      @  @     E     @"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00322}00322     std::cout << \textcolor{stringliteral}{"{}      @   tourner  @  @    haut    @  @   valider @"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00323}00323     std::cout << \textcolor{stringliteral}{"{}      @            @  @            @  @           @"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00324}00324     std::cout << \textcolor{stringliteral}{"{}      @@@@@@@@@@@@@@  @@@@@@@@@@@@@@  @@@@@@@@@@@@@"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00325}00325     std::cout << \textcolor{stringliteral}{"{}      @            @  @            @  @           @"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00326}00326     std::cout << \textcolor{stringliteral}{"{}      @     Q      @  @     S      @  @     D     @"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00327}00327     std::cout << \textcolor{stringliteral}{"{}      @   gauche   @  @    bas     @  @  droite   @"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00328}00328     std::cout << \textcolor{stringliteral}{"{}      @            @  @            @  @           @"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00329}00329     std::cout << \textcolor{stringliteral}{"{}      @@@@@@@@@@@@@@  @@@@@@@@@@@@@@  @@@@@@@@@@@@@"{}} << std::endl << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00330}00330     SetConsoleTextAttribute(hConsole, 15);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00331}00331     system(\textcolor{stringliteral}{"{}pause"{}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00332}00332 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00333}00333 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00334}00334 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00335}00335     \textcolor{keywordflow}{while} ((nbCroiseur + nbPorteAvion + nbSousMarin + nbTorpilleur) > 0) \{ \textcolor{comment}{// tant que tout les bateaux n'ont pas été placer :}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00336}00336         \textcolor{keywordflow}{while} (selection == \textcolor{keyword}{false}) \{ \textcolor{comment}{//on crée un menu pour selectionner}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00337}00337             }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00338}00338             system(\textcolor{stringliteral}{"{}CLS"{}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00339}00339             \textcolor{keywordflow}{if} (k == 4) k = 0; }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00340}00340             \textcolor{keywordflow}{if} (GetKeyState(\textcolor{charliteral}{'S'}) \& 0x8000) \textcolor{comment}{// Si la touche Z est préssée on navigue dans le menu}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00341}00341             \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00342}00342                 \textcolor{keywordflow}{if} (k == 4) k = 0;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00343}00343                 \textcolor{keywordflow}{else} \{ k++; \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00344}00344             \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00345}00345             \textcolor{keywordflow}{if} (GetKeyState(\textcolor{charliteral}{'Z'}) \& 0x8000) \textcolor{comment}{// Si la touche Z est préssée on navigue dans le menu}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00346}00346             \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00347}00347                 \textcolor{keywordflow}{if} (k == 0) k = 4;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00348}00348                 \textcolor{keywordflow}{else} \{ k-\/-\/; \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00349}00349             \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00350}00350             \textcolor{keywordflow}{switch} (k)}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00351}00351             \{ \textcolor{comment}{//en fonction de k on affiche l'objet sele}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00352}00352             \textcolor{keywordflow}{case} PORTEAVION: std::cout << \textcolor{stringliteral}{"{} >Porte-\/Avion [][][][][] "{}} << nbPorteAvion << std::endl << \textcolor{stringliteral}{"{}Croiseur [][][][]"{}} << std::endl << \textcolor{stringliteral}{"{}Torpilleur [][][]"{}} << std::endl << \textcolor{stringliteral}{"{}Sous-\/Marin [][]"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00353}00353                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00354}00354             \textcolor{keywordflow}{case} CROISEUR: std::cout << \textcolor{stringliteral}{"{}Porte-\/Avion [][][][][]"{}} << std::endl << \textcolor{stringliteral}{"{} >Croiseur [][][][] "{}} << nbCroiseur << std::endl << \textcolor{stringliteral}{"{}Torpilleur [][][]"{}} << std::endl << \textcolor{stringliteral}{"{}Sous-\/Marin [][]"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00355}00355                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00356}00356             \textcolor{keywordflow}{case} TORPILLEUR: std::cout << \textcolor{stringliteral}{"{}Porte-\/Avion [][][][][]"{}} << std::endl << \textcolor{stringliteral}{"{}Croiseur [][][][]"{}} << std::endl << \textcolor{stringliteral}{"{} >Torpilleur [][][] "{}} << nbTorpilleur << std::endl << \textcolor{stringliteral}{"{}Sous-\/Marin [][]"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00357}00357                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00358}00358             \textcolor{keywordflow}{case} SOUSMARIN: std::cout << \textcolor{stringliteral}{"{}Porte-\/Avion [][][][][]"{}} << std::endl << \textcolor{stringliteral}{"{}Croiseur [][][][]"{}} << std::endl << \textcolor{stringliteral}{"{}Torpilleur [][][]"{}} << std::endl << \textcolor{stringliteral}{"{} >Sous-\/Marin [][] "{}} << nbSousMarin << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00359}00359                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00360}00360             \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00361}00361             \textcolor{comment}{//std::cout << k;}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00362}00362             Sleep(200);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00363}00363             \textcolor{keywordflow}{if} (GetKeyState(\textcolor{charliteral}{'E'}) \& 0x8000\textcolor{comment}{/*Check if high-\/order bit is set (1 << 15)*/})}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00364}00364             \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00365}00365                 \textcolor{keywordflow}{switch} (k)}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00366}00366                 \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00367}00367                 \textcolor{keywordflow}{case} PORTEAVION:}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00368}00368                     k = 4;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00369}00369                     \textcolor{keywordflow}{if} (nbPorteAvion != 0) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00370}00370                         selection = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00371}00371                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00372}00372                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00373}00373                     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00374}00374                         std::cout << \textcolor{stringliteral}{"{} Plus de bateaux de ce type a placer"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00375}00375                         system(\textcolor{stringliteral}{"{}pause"{}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00376}00376                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00377}00377                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00378}00378                 \textcolor{keywordflow}{case} CROISEUR:}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00379}00379                     k = 3;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00380}00380                     \textcolor{keywordflow}{if} (nbCroiseur != 0) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00381}00381                         selection = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00382}00382                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00383}00383                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00384}00384                     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00385}00385                         std::cout << \textcolor{stringliteral}{"{} Plus de bateaux de ce type a placer"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00386}00386                         system(\textcolor{stringliteral}{"{}pause"{}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00387}00387                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00388}00388                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00389}00389                 \textcolor{keywordflow}{case} TORPILLEUR:}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00390}00390                     k = 2;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00391}00391                     \textcolor{keywordflow}{if} (nbTorpilleur != 0) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00392}00392                         selection = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00393}00393                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00394}00394                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00395}00395                     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00396}00396                         std::cout << \textcolor{stringliteral}{"{} Plus de bateaux de ce type a placer"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00397}00397                         system(\textcolor{stringliteral}{"{}pause"{}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00398}00398                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00399}00399                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00400}00400                 \textcolor{keywordflow}{case} SOUSMARIN:}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00401}00401                     k = 1;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00402}00402                     \textcolor{keywordflow}{if} (nbSousMarin != 0) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00403}00403                         selection = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00404}00404                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00405}00405                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00406}00406                     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00407}00407                         std::cout << \textcolor{stringliteral}{"{} Plus de bateaux de ce type a placer"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00408}00408                         system(\textcolor{stringliteral}{"{}pause"{}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00409}00409                         \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00410}00410                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00411}00411 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00412}00412 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00413}00413                     }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00414}00414                     }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00415}00415 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00416}00416 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00417}00417                 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00418}00418             \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00419}00419         \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00420}00420         \textcolor{keywordtype}{int} coordoY = ligne / 2, coordoX = colonne / 2;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00421}00421         }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00422}00422     }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00423}00423         \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < ligne; i++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00424}00424             \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < colonne; f++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00425}00425                 grille2[i][f] = grille[i][f];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00426}00426                 \textcolor{comment}{//if (grille[i][f] == Case::BATEAU)std::cout << "{}bateau"{};}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00427}00427                 \textcolor{comment}{//if (grille[i][f] == Case::VIDE)std::cout << "{}eau"{};}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00428}00428                 \textcolor{comment}{//std::cout << i << f << std::endl;}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00429}00429             \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00430}00430         \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00431}00431 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00432}00432        }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00433}00433 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00434}00434 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00435}00435 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00436}00436 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00437}00437 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00438}00438 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00439}00439         \textcolor{comment}{//PLACEMENT DU BATEAU}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00440}00440         \textcolor{keywordtype}{bool} selection2 = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00441}00441         \textcolor{keywordtype}{bool} direction = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00442}00442         }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00443}00443 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00444}00444 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00445}00445 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00446}00446 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00447}00447 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00448}00448 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00449}00449 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00450}00450         \textcolor{keywordflow}{while} (selection2 == \textcolor{keyword}{false}) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00451}00451 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00452}00452             \textcolor{keywordflow}{if} (direction == \textcolor{keyword}{false}) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00453}00453                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < k + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00454}00454                     grille[coordoY][coordoX + i] = \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a7d4f15a4b47f3b52030dc4553f228b4f}{Case::BATEAU}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00455}00455                 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00456}00456             \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00457}00457             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00458}00458                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < k + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00459}00459                     grille[coordoY + i][coordoX] = \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a7d4f15a4b47f3b52030dc4553f228b4f}{Case::BATEAU}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00460}00460                 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00461}00461             \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00462}00462             \mbox{\hyperlink{class_c_grille_aa0168c52e5e9e8ac7f6dc83b43c2a9ea}{afficherGrille}}();}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00463}00463             \textcolor{keywordflow}{if} (GetKeyState(\textcolor{charliteral}{'Z'}) \& 0x8000\textcolor{comment}{/*Check if high-\/order bit is set (1 << 15)*/})}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00464}00464             \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00465}00465                 \textcolor{keywordflow}{if} (direction == \textcolor{keyword}{false}) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00466}00466                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < k + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00467}00467                         \textcolor{comment}{//correction verticale haute}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00468}00468                         \textcolor{keywordflow}{if} (coordoY + i < 2) coordoY += 1;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00469}00469                         grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00470}00470 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00471}00471                         \textcolor{comment}{//grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00472}00472                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00473}00473                 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00474}00474                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00475}00475                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < k + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00476}00476                         \textcolor{keywordflow}{if} (coordoY + i < 2) coordoY += 1;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00477}00477                         grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX]}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00478}00478                             ;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00479}00479                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00480}00480                 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00481}00481                 coordoY-\/-\/;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00482}00482                 system(\textcolor{stringliteral}{"{}CLS"{}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00483}00483             \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00484}00484             \textcolor{keywordflow}{if} (GetKeyState(\textcolor{charliteral}{'Q'}) \& 0x8000\textcolor{comment}{/*Check if high-\/order bit is set (1 << 15)*/}) }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00485}00485             \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00486}00486                 \textcolor{keywordflow}{if} (direction == \textcolor{keyword}{false}) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00487}00487                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < k + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00488}00488                        }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00489}00489 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00490}00490                         \textcolor{comment}{//correction horrizontale gauche}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00491}00491                         \textcolor{keywordflow}{if} (coordoX + i < 2) coordoX += 1;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00492}00492                         grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00493}00493 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00494}00494                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00495}00495                 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00496}00496                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00497}00497                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < k + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00498}00498 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00499}00499                         \textcolor{comment}{//correction horrizontale gauche}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00500}00500                         \textcolor{keywordflow}{if} (coordoX + i < 2) coordoX += 1;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00501}00501                         grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00502}00502                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00503}00503                 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00504}00504                 coordoX-\/-\/;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00505}00505                 system(\textcolor{stringliteral}{"{}CLS"{}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00506}00506             \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00507}00507             \textcolor{keywordflow}{if} (GetKeyState(\textcolor{charliteral}{'S'}) \& 0x8000\textcolor{comment}{/*Check if high-\/order bit is set (1 << 15)*/})}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00508}00508             \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00509}00509                 \textcolor{keywordflow}{if} (direction == \textcolor{keyword}{false}) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00510}00510                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < k + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00511}00511                          \textcolor{keywordflow}{if} (coordoY + i > 13) coordoY -\/= 1;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00512}00512                         grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00513}00513                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00514}00514                 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00515}00515                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00516}00516                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < k + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00517}00517                         \textcolor{keywordflow}{if} (coordoY + i > 9) coordoY -\/= 1;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00518}00518                         grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00519}00519                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00520}00520                 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00521}00521                 coordoY++;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00522}00522                 system(\textcolor{stringliteral}{"{}CLS"{}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00523}00523             \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00524}00524             \textcolor{keywordflow}{if} (GetKeyState(\textcolor{charliteral}{'D'}) \& 0x8000\textcolor{comment}{/*Check if high-\/order bit is set (1 << 15)*/})}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00525}00525             \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00526}00526                 \textcolor{keywordflow}{if} (direction == \textcolor{keyword}{false}) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00527}00527                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < k + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00528}00528                         \textcolor{comment}{//correction horizontale droite bateau horizontal}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00529}00529                         \textcolor{keywordflow}{if} (coordoX + i > 9) coordoX -\/= 1;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00530}00530                         grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00531}00531                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00532}00532                 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00533}00533                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00534}00534                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < k + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00535}00535                         \textcolor{comment}{//correction horizontale droite bateau vertical}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00536}00536                         \textcolor{keywordflow}{if} (coordoX + i > 13) coordoX -\/= 1;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00537}00537                         grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00538}00538                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00539}00539                 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00540}00540                 coordoX++;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00541}00541                 system(\textcolor{stringliteral}{"{}CLS"{}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00542}00542             \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00543}00543             Sleep(50);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00544}00544 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00545}00545             \textcolor{keywordflow}{if} (GetKeyState(\textcolor{charliteral}{'A'}) \& 0x8000\textcolor{comment}{/*Check if high-\/order bit is set (1 << 15)*/})}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00546}00546             \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00547}00547                 \textcolor{keywordflow}{if} (direction == \textcolor{keyword}{false}) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00548}00548                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < k + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00549}00549                         grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00550}00550                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00551}00551                     direction = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00552}00552                 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00553}00553                 \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00554}00554                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < k + 1; i++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00555}00555                         grille[coordoY + i][coordoX] = grille2[coordoY + i][coordoX];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00556}00556                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00557}00557                     direction = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00558}00558                 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00559}00559                 system(\textcolor{stringliteral}{"{}CLS"{}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00560}00560             \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00561}00561 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00562}00562 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00563}00563 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00564}00564 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00565}00565 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00566}00566             \textcolor{keywordflow}{if} (GetKeyState(\textcolor{charliteral}{'E'}) \& 0x8000\textcolor{comment}{/*Check if high-\/order bit is set (1 << 15)*/})}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00567}00567             \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00568}00568 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00569}00569                 \textcolor{keywordflow}{if} (grille[coordoY][coordoX] == grille2[coordoY][coordoX]) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00570}00570 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00571}00571                     std::cout << \textcolor{stringliteral}{"{}Placement impossible"{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00572}00572                     system(\textcolor{stringliteral}{"{}pause"{}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00573}00573                     \textcolor{keywordflow}{throw}(\textcolor{stringliteral}{"{}Superposition de bateaux"{}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00574}00574                 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00575}00575 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00576}00576 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00577}00577 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00578}00578                 \textcolor{comment}{//Gestion de la superposition des bateaux }}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00579}00579                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < ligne; i++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00580}00580                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < colonne; f++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00581}00581 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00582}00582                         \textcolor{keywordflow}{if} (grille[i][f] == \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a7d4f15a4b47f3b52030dc4553f228b4f}{Case::BATEAU}}) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00583}00583                             \textcolor{comment}{/*if (grille2[i][f] == grille[i][f]) \{}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00584}00584 \textcolor{comment}{                                std::cout << "{}Placement impossible"{} << std::endl;}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00585}00585 \textcolor{comment}{                                //}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00586}00586 \textcolor{comment}{                                throw("{}Superposition de bateaux"{});}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00587}00587 \textcolor{comment}{                            \}*/}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00588}00588                             \textcolor{comment}{//else \{ grille2[i][f] = grille[i][f]; \}}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00589}00589 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00590}00590                             grille2[i][f] = grille[i][f];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00591}00591                         \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00592}00592                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00593}00593                 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00595}00595 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00596}00596 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00597}00597 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00598}00598 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00599}00599 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00600}00600 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00601}00601                 \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} i = 0; i < ligne; i++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00602}00602                     \textcolor{keywordflow}{for} (\textcolor{keywordtype}{int} f = 0; f < colonne; f++) \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00603}00603                         grille[i][f] = grille2[i][f];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00604}00604                     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00605}00605                 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00606}00606 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00607}00607 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00608}00608 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00609}00609 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00610}00610 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00611}00611 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00612}00612 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00613}00613 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00614}00614 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00615}00615 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00616}00616                 selection2 = \textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00617}00617                 selection = \textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00618}00618                 \textcolor{keywordflow}{switch} (k)}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00619}00619                 \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00620}00620                 \textcolor{keywordflow}{case} 4: nbPorteAvion-\/-\/; std::cout << nbPorteAvion; system(\textcolor{stringliteral}{"{}pause"{}}); \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00621}00621                 \textcolor{keywordflow}{case} 3: nbCroiseur-\/-\/; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00622}00622                 \textcolor{keywordflow}{case} 2: nbTorpilleur-\/-\/; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00623}00623                 \textcolor{keywordflow}{case} 1: nbSousMarin-\/-\/; \textcolor{keywordflow}{break};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00624}00624                 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00625}00625             \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00626}00626         \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00627}00627 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00628}00628     \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00629}00629 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00630}00630 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00631}00631 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00632}00632 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00633}00633     system(\textcolor{stringliteral}{"{}pause"{}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00634}00634     \textcolor{keywordflow}{return} \textcolor{stringliteral}{"{}reusite"{}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00635}00635 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00636}00636 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00637}00637 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00638}00638     }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00639}00639 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00640}00640 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00641}\mbox{\hyperlink{class_c_grille_a300505d5628b5ea574545db5b6532d2c}{00641}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_grille_a300505d5628b5ea574545db5b6532d2c}{CGrille::bateauToucherEnnemi}}(\textcolor{keywordtype}{int} ligne, \textcolor{keywordtype}{int} colonne)}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00642}00642 \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00643}00643     \mbox{\hyperlink{class_c_grille_adc0746e8ec544aaced585a4388e73bd4}{setCase}}(ligne, colonne, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a6dcca5769e62a615a669c9c254fbcbda}{Case::TOUCHEE}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00644}00644     system(\textcolor{stringliteral}{"{}CLS"{}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00645}00645     \mbox{\hyperlink{class_c_grille_aa0168c52e5e9e8ac7f6dc83b43c2a9ea}{afficherGrille}}();}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00646}00646 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00647}00647 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00648}\mbox{\hyperlink{class_c_grille_a18e229fc4707271f947b567151fa8d17}{00648}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_grille_a18e229fc4707271f947b567151fa8d17}{CGrille::bateauToucherAllier}}(\textcolor{keywordtype}{int} ligne, \textcolor{keywordtype}{int} colonne)}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00649}00649 \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00650}00650     \mbox{\hyperlink{class_c_grille_adc0746e8ec544aaced585a4388e73bd4}{setCase}}(ligne, colonne, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a990919c3791692187fff735c5e1a2f50}{Case::TOUCHEJ}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00651}00651     system(\textcolor{stringliteral}{"{}CLS"{}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00652}00652     \mbox{\hyperlink{class_c_grille_aa0168c52e5e9e8ac7f6dc83b43c2a9ea}{afficherGrille}}();}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00653}00653 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00654}00654 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00655}\mbox{\hyperlink{class_c_grille_a594f7e2993977ce72d7e655a6cfc8c7a}{00655}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_grille_a594f7e2993977ce72d7e655a6cfc8c7a}{CGrille::tirLoupeJoueur}}(\textcolor{keywordtype}{int} ligne, \textcolor{keywordtype}{int} colonne)}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00656}00656 \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00657}00657     \mbox{\hyperlink{class_c_grille_adc0746e8ec544aaced585a4388e73bd4}{setCase}}(ligne, colonne, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726abf8b1f7cc51bbb3aaa9d4136db1b3aea}{Case::EAUE}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00658}00658     system(\textcolor{stringliteral}{"{}CLS"{}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00659}00659     \mbox{\hyperlink{class_c_grille_aa0168c52e5e9e8ac7f6dc83b43c2a9ea}{afficherGrille}}();}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00660}00660 \}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00661}00661 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00662}\mbox{\hyperlink{class_c_grille_aab5f6a5904a239fa099d71067c87d7fd}{00662}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_grille_aab5f6a5904a239fa099d71067c87d7fd}{CGrille::tirLoupeEnnemi}}(\textcolor{keywordtype}{int} ligne, \textcolor{keywordtype}{int} colonne)}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00663}00663 \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00664}00664     \mbox{\hyperlink{class_c_grille_adc0746e8ec544aaced585a4388e73bd4}{setCase}}(ligne, colonne, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a06a2900064de9c8ae4aefe4de1938ef6}{Case::EAUJ}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00665}00665     system(\textcolor{stringliteral}{"{}CLS"{}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00666}00666     \mbox{\hyperlink{class_c_grille_aa0168c52e5e9e8ac7f6dc83b43c2a9ea}{afficherGrille}}();}
+\DoxyCodeLine{\Hypertarget{_c_grille_8cpp_source_l00667}00667 \}}
+
+\end{DoxyCode}

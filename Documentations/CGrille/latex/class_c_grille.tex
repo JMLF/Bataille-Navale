@@ -1,0 +1,247 @@
+\hypertarget{class_c_grille}{}\doxysection{CGrille Class Reference}
+\label{class_c_grille}\index{CGrille@{CGrille}}
+
+
+{\ttfamily \#include $<$CGrille.\+h$>$}
+
+\doxysubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum class \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} \{ \newline
+\mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a4c67bb3d8f85b3a1570dd8a5a8a26338}{VIDE}}
+, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a7d4f15a4b47f3b52030dc4553f228b4f}{BATEAU}}
+, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a990919c3791692187fff735c5e1a2f50}{TOUCHEJ}}
+, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a6dcca5769e62a615a669c9c254fbcbda}{TOUCHEE}}
+, \newline
+\mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a06a2900064de9c8ae4aefe4de1938ef6}{EAUJ}}
+, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726abf8b1f7cc51bbb3aaa9d4136db1b3aea}{EAUE}}
+, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a9e3d205f680cc8f738a52b40735ff28e}{ERREUR}} = 99
+ \}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_grille_a90b7985f1d5d24a9ea3a2d1fb1fb4636}{CGrille}} ()
+\item 
+\mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} \mbox{\hyperlink{class_c_grille_aea8e46580f6a4aa1c45aedc49376e7c2}{get\+Case}} (int ligne, int colonne)
+\item 
+void \mbox{\hyperlink{class_c_grille_adc0746e8ec544aaced585a4388e73bd4}{set\+Case}} (int ligne, int colonne, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} type)
+\item 
+void \mbox{\hyperlink{class_c_grille_aa0168c52e5e9e8ac7f6dc83b43c2a9ea}{afficher\+Grille}} ()
+\item 
+std\+::vector$<$ std\+::string $>$ \mbox{\hyperlink{class_c_grille_a0473dd214cf06719b347df84a0518a3a}{saisie\+Joueur}} (std\+::string abs, int ord, bool ma\+Grille)
+\item 
+bool \mbox{\hyperlink{class_c_grille_ad6986ededbf76ce7c278f3ac23abe715}{partie\+Perdue}} ()
+\item 
+std\+::string \mbox{\hyperlink{class_c_grille_a686c651626080947dddcbad60979d881}{placer\+Bateau}} ()
+\item 
+void \mbox{\hyperlink{class_c_grille_a300505d5628b5ea574545db5b6532d2c}{bateau\+Toucher\+Ennemi}} (int ligne, int colonne)
+\item 
+void \mbox{\hyperlink{class_c_grille_a18e229fc4707271f947b567151fa8d17}{bateau\+Toucher\+Allier}} (int ligne, int colonne)
+\item 
+void \mbox{\hyperlink{class_c_grille_a594f7e2993977ce72d7e655a6cfc8c7a}{tir\+Loupe\+Joueur}} (int ligne, int colonne)
+\item 
+void \mbox{\hyperlink{class_c_grille_aab5f6a5904a239fa099d71067c87d7fd}{tir\+Loupe\+Ennemi}} (int ligne, int colonne)
+\item 
+void \mbox{\hyperlink{class_c_grille_ae8555219e7204345a91c9e051f48779b}{Init\+Grille}} ()
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{_c_grille_8h_source_l00009}{9}} of file \mbox{\hyperlink{_c_grille_8h_source}{CGrille.\+h}}.
+
+
+
+\doxysubsection{Member Enumeration Documentation}
+\mbox{\Hypertarget{class_c_grille_a5439ba363e1d290ec175df8544a30726}\label{class_c_grille_a5439ba363e1d290ec175df8544a30726}} 
+\index{CGrille@{CGrille}!Case@{Case}}
+\index{Case@{Case}!CGrille@{CGrille}}
+\doxysubsubsection{\texorpdfstring{Case}{Case}}
+{\footnotesize\ttfamily enum class \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{CGrille\+::\+Case}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{VIDE@{VIDE}!CGrille@{CGrille}}\index{CGrille@{CGrille}!VIDE@{VIDE}}}\mbox{\Hypertarget{class_c_grille_a5439ba363e1d290ec175df8544a30726a4c67bb3d8f85b3a1570dd8a5a8a26338}\label{class_c_grille_a5439ba363e1d290ec175df8544a30726a4c67bb3d8f85b3a1570dd8a5a8a26338}} 
+VIDE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{BATEAU@{BATEAU}!CGrille@{CGrille}}\index{CGrille@{CGrille}!BATEAU@{BATEAU}}}\mbox{\Hypertarget{class_c_grille_a5439ba363e1d290ec175df8544a30726a7d4f15a4b47f3b52030dc4553f228b4f}\label{class_c_grille_a5439ba363e1d290ec175df8544a30726a7d4f15a4b47f3b52030dc4553f228b4f}} 
+BATEAU&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOUCHEJ@{TOUCHEJ}!CGrille@{CGrille}}\index{CGrille@{CGrille}!TOUCHEJ@{TOUCHEJ}}}\mbox{\Hypertarget{class_c_grille_a5439ba363e1d290ec175df8544a30726a990919c3791692187fff735c5e1a2f50}\label{class_c_grille_a5439ba363e1d290ec175df8544a30726a990919c3791692187fff735c5e1a2f50}} 
+TOUCHEJ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{TOUCHEE@{TOUCHEE}!CGrille@{CGrille}}\index{CGrille@{CGrille}!TOUCHEE@{TOUCHEE}}}\mbox{\Hypertarget{class_c_grille_a5439ba363e1d290ec175df8544a30726a6dcca5769e62a615a669c9c254fbcbda}\label{class_c_grille_a5439ba363e1d290ec175df8544a30726a6dcca5769e62a615a669c9c254fbcbda}} 
+TOUCHEE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EAUJ@{EAUJ}!CGrille@{CGrille}}\index{CGrille@{CGrille}!EAUJ@{EAUJ}}}\mbox{\Hypertarget{class_c_grille_a5439ba363e1d290ec175df8544a30726a06a2900064de9c8ae4aefe4de1938ef6}\label{class_c_grille_a5439ba363e1d290ec175df8544a30726a06a2900064de9c8ae4aefe4de1938ef6}} 
+EAUJ&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{EAUE@{EAUE}!CGrille@{CGrille}}\index{CGrille@{CGrille}!EAUE@{EAUE}}}\mbox{\Hypertarget{class_c_grille_a5439ba363e1d290ec175df8544a30726abf8b1f7cc51bbb3aaa9d4136db1b3aea}\label{class_c_grille_a5439ba363e1d290ec175df8544a30726abf8b1f7cc51bbb3aaa9d4136db1b3aea}} 
+EAUE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ERREUR@{ERREUR}!CGrille@{CGrille}}\index{CGrille@{CGrille}!ERREUR@{ERREUR}}}\mbox{\Hypertarget{class_c_grille_a5439ba363e1d290ec175df8544a30726a9e3d205f680cc8f738a52b40735ff28e}\label{class_c_grille_a5439ba363e1d290ec175df8544a30726a9e3d205f680cc8f738a52b40735ff28e}} 
+ERREUR&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+Definition at line \mbox{\hyperlink{_c_grille_8h_source_l00011}{11}} of file \mbox{\hyperlink{_c_grille_8h_source}{CGrille.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_grille_a90b7985f1d5d24a9ea3a2d1fb1fb4636}\label{class_c_grille_a90b7985f1d5d24a9ea3a2d1fb1fb4636}} 
+\index{CGrille@{CGrille}!CGrille@{CGrille}}
+\index{CGrille@{CGrille}!CGrille@{CGrille}}
+\doxysubsubsection{\texorpdfstring{CGrille()}{CGrille()}}
+{\footnotesize\ttfamily CGrille\+::\+CGrille (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_c_grille_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{_c_grille_8cpp_source}{CGrille.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_grille_aa0168c52e5e9e8ac7f6dc83b43c2a9ea}\label{class_c_grille_aa0168c52e5e9e8ac7f6dc83b43c2a9ea}} 
+\index{CGrille@{CGrille}!afficherGrille@{afficherGrille}}
+\index{afficherGrille@{afficherGrille}!CGrille@{CGrille}}
+\doxysubsubsection{\texorpdfstring{afficherGrille()}{afficherGrille()}}
+{\footnotesize\ttfamily void CGrille\+::afficher\+Grille (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_c_grille_8cpp_source_l00060}{60}} of file \mbox{\hyperlink{_c_grille_8cpp_source}{CGrille.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 0
+Here is the caller graph for this function\+:
+% FIG 1
+\mbox{\Hypertarget{class_c_grille_a18e229fc4707271f947b567151fa8d17}\label{class_c_grille_a18e229fc4707271f947b567151fa8d17}} 
+\index{CGrille@{CGrille}!bateauToucherAllier@{bateauToucherAllier}}
+\index{bateauToucherAllier@{bateauToucherAllier}!CGrille@{CGrille}}
+\doxysubsubsection{\texorpdfstring{bateauToucherAllier()}{bateauToucherAllier()}}
+{\footnotesize\ttfamily void CGrille\+::bateau\+Toucher\+Allier (\begin{DoxyParamCaption}\item[{int}]{ligne,  }\item[{int}]{colonne }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_c_grille_8cpp_source_l00648}{648}} of file \mbox{\hyperlink{_c_grille_8cpp_source}{CGrille.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 2
+\mbox{\Hypertarget{class_c_grille_a300505d5628b5ea574545db5b6532d2c}\label{class_c_grille_a300505d5628b5ea574545db5b6532d2c}} 
+\index{CGrille@{CGrille}!bateauToucherEnnemi@{bateauToucherEnnemi}}
+\index{bateauToucherEnnemi@{bateauToucherEnnemi}!CGrille@{CGrille}}
+\doxysubsubsection{\texorpdfstring{bateauToucherEnnemi()}{bateauToucherEnnemi()}}
+{\footnotesize\ttfamily void CGrille\+::bateau\+Toucher\+Ennemi (\begin{DoxyParamCaption}\item[{int}]{ligne,  }\item[{int}]{colonne }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_c_grille_8cpp_source_l00641}{641}} of file \mbox{\hyperlink{_c_grille_8cpp_source}{CGrille.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 3
+\mbox{\Hypertarget{class_c_grille_aea8e46580f6a4aa1c45aedc49376e7c2}\label{class_c_grille_aea8e46580f6a4aa1c45aedc49376e7c2}} 
+\index{CGrille@{CGrille}!getCase@{getCase}}
+\index{getCase@{getCase}!CGrille@{CGrille}}
+\doxysubsubsection{\texorpdfstring{getCase()}{getCase()}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{CGrille\+::\+Case}} CGrille\+::get\+Case (\begin{DoxyParamCaption}\item[{int}]{ligne,  }\item[{int}]{colonne }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_c_grille_8cpp_source_l00045}{45}} of file \mbox{\hyperlink{_c_grille_8cpp_source}{CGrille.\+cpp}}.
+
+Here is the caller graph for this function\+:
+% FIG 4
+\mbox{\Hypertarget{class_c_grille_ae8555219e7204345a91c9e051f48779b}\label{class_c_grille_ae8555219e7204345a91c9e051f48779b}} 
+\index{CGrille@{CGrille}!InitGrille@{InitGrille}}
+\index{InitGrille@{InitGrille}!CGrille@{CGrille}}
+\doxysubsubsection{\texorpdfstring{InitGrille()}{InitGrille()}}
+{\footnotesize\ttfamily void CGrille\+::\+Init\+Grille (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_c_grille_8cpp_source_l00037}{37}} of file \mbox{\hyperlink{_c_grille_8cpp_source}{CGrille.\+cpp}}.
+
+\mbox{\Hypertarget{class_c_grille_ad6986ededbf76ce7c278f3ac23abe715}\label{class_c_grille_ad6986ededbf76ce7c278f3ac23abe715}} 
+\index{CGrille@{CGrille}!partiePerdue@{partiePerdue}}
+\index{partiePerdue@{partiePerdue}!CGrille@{CGrille}}
+\doxysubsubsection{\texorpdfstring{partiePerdue()}{partiePerdue()}}
+{\footnotesize\ttfamily bool CGrille\+::partie\+Perdue (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_c_grille_8cpp_source_l00303}{303}} of file \mbox{\hyperlink{_c_grille_8cpp_source}{CGrille.\+cpp}}.
+
+\mbox{\Hypertarget{class_c_grille_a686c651626080947dddcbad60979d881}\label{class_c_grille_a686c651626080947dddcbad60979d881}} 
+\index{CGrille@{CGrille}!placerBateau@{placerBateau}}
+\index{placerBateau@{placerBateau}!CGrille@{CGrille}}
+\doxysubsubsection{\texorpdfstring{placerBateau()}{placerBateau()}}
+{\footnotesize\ttfamily std\+::string CGrille\+::placer\+Bateau (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_c_grille_8cpp_source_l00308}{308}} of file \mbox{\hyperlink{_c_grille_8cpp_source}{CGrille.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 5
+\mbox{\Hypertarget{class_c_grille_a0473dd214cf06719b347df84a0518a3a}\label{class_c_grille_a0473dd214cf06719b347df84a0518a3a}} 
+\index{CGrille@{CGrille}!saisieJoueur@{saisieJoueur}}
+\index{saisieJoueur@{saisieJoueur}!CGrille@{CGrille}}
+\doxysubsubsection{\texorpdfstring{saisieJoueur()}{saisieJoueur()}}
+{\footnotesize\ttfamily std\+::vector$<$ std\+::string $>$ CGrille\+::saisie\+Joueur (\begin{DoxyParamCaption}\item[{std\+::string}]{abs,  }\item[{int}]{ord,  }\item[{bool}]{ma\+Grille }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_c_grille_8cpp_source_l00295}{295}} of file \mbox{\hyperlink{_c_grille_8cpp_source}{CGrille.\+cpp}}.
+
+\mbox{\Hypertarget{class_c_grille_adc0746e8ec544aaced585a4388e73bd4}\label{class_c_grille_adc0746e8ec544aaced585a4388e73bd4}} 
+\index{CGrille@{CGrille}!setCase@{setCase}}
+\index{setCase@{setCase}!CGrille@{CGrille}}
+\doxysubsubsection{\texorpdfstring{setCase()}{setCase()}}
+{\footnotesize\ttfamily void CGrille\+::set\+Case (\begin{DoxyParamCaption}\item[{int}]{ligne,  }\item[{int}]{colonne,  }\item[{\mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}}}]{type }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_c_grille_8cpp_source_l00055}{55}} of file \mbox{\hyperlink{_c_grille_8cpp_source}{CGrille.\+cpp}}.
+
+Here is the caller graph for this function\+:
+% FIG 6
+\mbox{\Hypertarget{class_c_grille_aab5f6a5904a239fa099d71067c87d7fd}\label{class_c_grille_aab5f6a5904a239fa099d71067c87d7fd}} 
+\index{CGrille@{CGrille}!tirLoupeEnnemi@{tirLoupeEnnemi}}
+\index{tirLoupeEnnemi@{tirLoupeEnnemi}!CGrille@{CGrille}}
+\doxysubsubsection{\texorpdfstring{tirLoupeEnnemi()}{tirLoupeEnnemi()}}
+{\footnotesize\ttfamily void CGrille\+::tir\+Loupe\+Ennemi (\begin{DoxyParamCaption}\item[{int}]{ligne,  }\item[{int}]{colonne }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_c_grille_8cpp_source_l00662}{662}} of file \mbox{\hyperlink{_c_grille_8cpp_source}{CGrille.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 7
+\mbox{\Hypertarget{class_c_grille_a594f7e2993977ce72d7e655a6cfc8c7a}\label{class_c_grille_a594f7e2993977ce72d7e655a6cfc8c7a}} 
+\index{CGrille@{CGrille}!tirLoupeJoueur@{tirLoupeJoueur}}
+\index{tirLoupeJoueur@{tirLoupeJoueur}!CGrille@{CGrille}}
+\doxysubsubsection{\texorpdfstring{tirLoupeJoueur()}{tirLoupeJoueur()}}
+{\footnotesize\ttfamily void CGrille\+::tir\+Loupe\+Joueur (\begin{DoxyParamCaption}\item[{int}]{ligne,  }\item[{int}]{colonne }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{_c_grille_8cpp_source_l00655}{655}} of file \mbox{\hyperlink{_c_grille_8cpp_source}{CGrille.\+cpp}}.
+
+Here is the call graph for this function\+:
+% FIG 8
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_grille_8h}{CGrille.\+h}}\item 
+\mbox{\hyperlink{_c_grille_8cpp}{CGrille.\+cpp}}\end{DoxyCompactItemize}
