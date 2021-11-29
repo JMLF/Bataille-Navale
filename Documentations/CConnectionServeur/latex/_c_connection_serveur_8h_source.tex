@@ -1,0 +1,70 @@
+\hypertarget{_c_connection_serveur_8h_source}{}\doxysection{CConnection\+Serveur.\+h}
+\mbox{\hyperlink{_c_connection_serveur_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00006}00006 \textcolor{preprocessor}{\#include <winsock2.h>}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00007}00007 \textcolor{preprocessor}{\#include <WS2tcpip.h>}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <iostream>}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00009}00009 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00010}00010 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00011}00011 \textcolor{preprocessor}{\#include <sstream>}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00014}00014 \textcolor{preprocessor}{\#pragma comment(lib, "{}ws2\_32.lib"{}}) \textcolor{comment}{//pour ajouter la lib manquante }}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00016}\mbox{\hyperlink{_c_connection_serveur_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{00016}} \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{int} \mbox{\hyperlink{_c_connection_serveur_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}};}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00017}\mbox{\hyperlink{_c_connection_serveur_8h_ab95f123a6c9bcfee6a343170ef8c5f69}{00017}} \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{short} \mbox{\hyperlink{_c_connection_serveur_8h_ab95f123a6c9bcfee6a343170ef8c5f69}{ushort}};}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00018}\mbox{\hyperlink{_c_connection_serveur_8h_a65f85814a8290f9797005d3b28e7e5fc}{00018}} \textcolor{keyword}{typedef} \textcolor{keywordtype}{unsigned} \textcolor{keywordtype}{char} \mbox{\hyperlink{_c_connection_serveur_8h_a65f85814a8290f9797005d3b28e7e5fc}{uchar}};}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00019}00019 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00020}00020 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00021}00021 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00022}\mbox{\hyperlink{class_c_connection_serveur}{00022}} \textcolor{keyword}{class }\mbox{\hyperlink{class_c_connection_serveur}{CConnectionServeur}}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00023}00023 \{}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00024}00024 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00025}00025 \textcolor{keyword}{private}: }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00027}\mbox{\hyperlink{class_c_connection_serveur_a507c1c1dcdf547fdec39e908fd47c991}{00027}}     \textcolor{keyword}{const} \mbox{\hyperlink{_c_connection_serveur_8h_ab95f123a6c9bcfee6a343170ef8c5f69}{ushort}} \mbox{\hyperlink{class_c_connection_serveur_a507c1c1dcdf547fdec39e908fd47c991}{DIMMAX}} = 150; \textcolor{comment}{// Taille max des tableaux}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00029}\mbox{\hyperlink{class_c_connection_serveur_aefd09c8de27d5073ae129c1fef06639c}{00029}}     std::string \mbox{\hyperlink{class_c_connection_serveur_aefd09c8de27d5073ae129c1fef06639c}{IP\_SERVEUR}};}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00030}\mbox{\hyperlink{class_c_connection_serveur_afeff92024665ba247c940facab6c72e6}{00030}}     std::string \mbox{\hyperlink{class_c_connection_serveur_afeff92024665ba247c940facab6c72e6}{port}};}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00031}\mbox{\hyperlink{class_c_connection_serveur_a54ab8e385f023c5c6152c2e0c343e78a}{00031}}     std::string \mbox{\hyperlink{class_c_connection_serveur_a54ab8e385f023c5c6152c2e0c343e78a}{requete}};}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00032}\mbox{\hyperlink{class_c_connection_serveur_abc03bde79119a3987d67c1e29ed7d6c7}{00032}}     \mbox{\hyperlink{_c_connection_serveur_8h_ab95f123a6c9bcfee6a343170ef8c5f69}{ushort}} \mbox{\hyperlink{class_c_connection_serveur_abc03bde79119a3987d67c1e29ed7d6c7}{NUM\_PORT}};}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00033}00033 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00034}\mbox{\hyperlink{class_c_connection_serveur_a61c03e6610dc228cd326ab80f49eb59e}{00034}}     \mbox{\hyperlink{_c_connection_serveur_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} \mbox{\hyperlink{class_c_connection_serveur_a61c03e6610dc228cd326ab80f49eb59e}{n}} = 0, \mbox{\hyperlink{class_c_connection_serveur_a5143fb0f8240d7c2c224cca893f74b59}{noctets}};}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00036}00036     \textcolor{comment}{// Particularités Windows}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00037}\mbox{\hyperlink{class_c_connection_serveur_a60a38919d37203cbeec8f2f97ebf8456}{00037}}     WORD \mbox{\hyperlink{class_c_connection_serveur_a60a38919d37203cbeec8f2f97ebf8456}{nVersion}} = MAKEWORD(2, 2);}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00038}\mbox{\hyperlink{class_c_connection_serveur_ac7935d555d2719030dd3579d77c00cd7}{00038}}     WSADATA \mbox{\hyperlink{class_c_connection_serveur_ac7935d555d2719030dd3579d77c00cd7}{donneeWS}};}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00039}00039 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00040}\mbox{\hyperlink{class_c_connection_serveur_af487246e4b01d96b28ebf6b1c57645f6}{00040}}     \textcolor{keyword}{struct }sockaddr\_in  \mbox{\hyperlink{class_c_connection_serveur_af487246e4b01d96b28ebf6b1c57645f6}{adr\_serveur}}; \textcolor{comment}{// @ internet du serveur}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00042}\mbox{\hyperlink{class_c_connection_serveur_a589e851e43b64fd111bc858640ea5246}{00042}}     \mbox{\hyperlink{_c_connection_serveur_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}}  \mbox{\hyperlink{class_c_connection_serveur_a589e851e43b64fd111bc858640ea5246}{ids\_client}};   \textcolor{comment}{// id du socket client                  }}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00043}00043     }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00045}00045 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00046}00046 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00047}00047 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00048}00048     \textcolor{comment}{//constructeur de la class}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00049}00049     \mbox{\hyperlink{class_c_connection_serveur_a321ae6d07dc33f7b155bd504c4be34fe}{CConnectionServeur}}(std::string \mbox{\hyperlink{class_c_connection_serveur_aefd09c8de27d5073ae129c1fef06639c}{IP\_SERVEUR}}, std::string \mbox{\hyperlink{class_c_connection_serveur_afeff92024665ba247c940facab6c72e6}{port}});}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00050}00050 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00051}00051     \textcolor{comment}{//initialise tout ce qu'il faut}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00052}00052     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_connection_serveur_a035df74f5bec72610f2dcb535215854d}{initConnec}}();}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00054}00054     \textcolor{comment}{//se connecte au serveur }}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00055}00055     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_connection_serveur_a62fe3035e61b87d4b06a54501f8102d7}{connection}}();}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00056}00056 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00057}00057     \textcolor{comment}{//bloquant : attend une trame et renvoi cette trame en string }}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00058}00058     std::string \mbox{\hyperlink{class_c_connection_serveur_a908567135caaeb7db97cacea7d08b00f}{reception}}();}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00059}00059     }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00060}00060     \textcolor{comment}{//bloquant : envoi un string au serveur }}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00061}00061     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_connection_serveur_a39f85dab92764d4357fe2b48b87d058d}{envoi}}(std::string);}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00063}00063     \textcolor{comment}{//On ferme le socket et on delete tout }}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00064}00064     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_connection_serveur_ac85db18d0cf06cbdfb5c907a9d9ac023}{fermetureSocket}}();}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00065}00065 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00066}00066 \};}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8h_source_l00067}00067 }
+
+\end{DoxyCode}

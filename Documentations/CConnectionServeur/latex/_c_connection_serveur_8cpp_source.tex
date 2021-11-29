@@ -1,0 +1,84 @@
+\hypertarget{_c_connection_serveur_8cpp_source}{}\doxysection{CConnection\+Serveur.\+cpp}
+\mbox{\hyperlink{_c_connection_serveur_8cpp}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_c_connection_serveur_8h}{CConnectionServeur.h}}"{}}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00003}\mbox{\hyperlink{class_c_connection_serveur_a321ae6d07dc33f7b155bd504c4be34fe}{00003}} \mbox{\hyperlink{class_c_connection_serveur_a321ae6d07dc33f7b155bd504c4be34fe}{CConnectionServeur::CConnectionServeur}}(std::string IP\_SERVEUR, std::string port)}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00004}00004 \{}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00005}00005    }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00006}00006     \textcolor{keywordflow}{try}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00007}00007     \{}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00008}00008        this-\/> IP\_SERVEUR = \mbox{\hyperlink{class_c_connection_serveur_aefd09c8de27d5073ae129c1fef06639c}{IP\_SERVEUR}};}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00009}00009        \textcolor{keyword}{this} -\/> \mbox{\hyperlink{class_c_connection_serveur_afeff92024665ba247c940facab6c72e6}{port}} = \mbox{\hyperlink{class_c_connection_serveur_afeff92024665ba247c940facab6c72e6}{port}};}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00010}00010        \textcolor{keyword}{this} -\/>   \mbox{\hyperlink{class_c_connection_serveur_abc03bde79119a3987d67c1e29ed7d6c7}{NUM\_PORT}} = stoi(\mbox{\hyperlink{class_c_connection_serveur_afeff92024665ba247c940facab6c72e6}{port}});}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00011}00011     \}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00012}00012     \textcolor{keywordflow}{catch} (...)}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00013}00013     \{}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00014}00014         std::cout << \textcolor{stringliteral}{"{} Mauvais format du port "{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00015}00015         \textcolor{comment}{//throw }}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00016}00016     \}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00017}00017 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00018}00018     \textcolor{keywordflow}{if} (\mbox{\hyperlink{class_c_connection_serveur_abc03bde79119a3987d67c1e29ed7d6c7}{NUM\_PORT}} <= 0)}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00019}00019     \{}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00020}00020         std::cout << \textcolor{stringliteral}{"{} format invalide du port "{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00021}00021         \textcolor{comment}{//throw}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00022}00022     \}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00023}00023 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00024}00024 \}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00026}\mbox{\hyperlink{class_c_connection_serveur_a035df74f5bec72610f2dcb535215854d}{00026}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_connection_serveur_a035df74f5bec72610f2dcb535215854d}{CConnectionServeur::initConnec}}()}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00027}00027 \{}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00028}00028     \textcolor{comment}{// initialisation du winsock}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00029}00029     WSAStartup(\mbox{\hyperlink{class_c_connection_serveur_a60a38919d37203cbeec8f2f97ebf8456}{nVersion}}, \&\mbox{\hyperlink{class_c_connection_serveur_ac7935d555d2719030dd3579d77c00cd7}{donneeWS}});}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00030}00030 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00031}00031     \textcolor{comment}{// Création du socket client}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00032}00032     \textcolor{keywordflow}{if} ((\mbox{\hyperlink{class_c_connection_serveur_a589e851e43b64fd111bc858640ea5246}{ids\_client}} = socket(AF\_INET, SOCK\_STREAM, 0)) == INVALID\_SOCKET)}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00033}00033     \{}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00034}00034         std::cout << \textcolor{stringliteral}{"{}Echec creation Socket ! "{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00035}00035         exit(1);}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00036}00036     \}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00038}00038     \textcolor{comment}{// Mise en place de l'@ inet et demande de connexion au serveur }}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00039}00039     \mbox{\hyperlink{class_c_connection_serveur_af487246e4b01d96b28ebf6b1c57645f6}{adr\_serveur}}.sin\_family = AF\_INET;                  \textcolor{comment}{// Domaine d'@ }}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00040}00040     \mbox{\hyperlink{class_c_connection_serveur_af487246e4b01d96b28ebf6b1c57645f6}{adr\_serveur}}.sin\_port = htons(\mbox{\hyperlink{class_c_connection_serveur_abc03bde79119a3987d67c1e29ed7d6c7}{NUM\_PORT}});          \textcolor{comment}{// N° du port }}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00041}00041     inet\_pton(AF\_INET, \mbox{\hyperlink{class_c_connection_serveur_aefd09c8de27d5073ae129c1fef06639c}{IP\_SERVEUR}}.c\_str(), \&\mbox{\hyperlink{class_c_connection_serveur_af487246e4b01d96b28ebf6b1c57645f6}{adr\_serveur}}.sin\_addr.s\_addr); \textcolor{comment}{//IP du serv}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00043}00043 \}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00045}\mbox{\hyperlink{class_c_connection_serveur_a62fe3035e61b87d4b06a54501f8102d7}{00045}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_connection_serveur_a62fe3035e61b87d4b06a54501f8102d7}{CConnectionServeur::connection}}()}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00046}00046 \{}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00047}00047     \textcolor{keywordflow}{if} (connect(\mbox{\hyperlink{class_c_connection_serveur_a589e851e43b64fd111bc858640ea5246}{ids\_client}}, (\textcolor{keyword}{struct} sockaddr*)\&\mbox{\hyperlink{class_c_connection_serveur_af487246e4b01d96b28ebf6b1c57645f6}{adr\_serveur}}, \textcolor{keyword}{sizeof}(\mbox{\hyperlink{class_c_connection_serveur_af487246e4b01d96b28ebf6b1c57645f6}{adr\_serveur}})) < 0)}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00048}00048     \{}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00049}00049         std::cout << \textcolor{stringliteral}{"{}Echec connexion ! "{}} << std::endl;}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00050}00050         exit(1);}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00051}00051     \}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00052}00052 \}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00053}00053 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00054}\mbox{\hyperlink{class_c_connection_serveur_a908567135caaeb7db97cacea7d08b00f}{00054}} std::string \mbox{\hyperlink{class_c_connection_serveur_a908567135caaeb7db97cacea7d08b00f}{CConnectionServeur::reception}}()}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00055}00055 \{}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00056}00056     \textcolor{keyword}{const} \mbox{\hyperlink{_c_connection_serveur_8h_ab95f123a6c9bcfee6a343170ef8c5f69}{ushort}} \mbox{\hyperlink{class_c_connection_serveur_a507c1c1dcdf547fdec39e908fd47c991}{DIMMAX}} = 150; \textcolor{comment}{// Taille max des tableaux}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00057}00057 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00058}00058     \textcolor{keywordtype}{char} trame\_lect[\mbox{\hyperlink{class_c_connection_serveur_a507c1c1dcdf547fdec39e908fd47c991}{DIMMAX}} + 1];}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00060}00060     \textcolor{comment}{// Reçoit la reponse du serveur}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00061}00061     \mbox{\hyperlink{class_c_connection_serveur_a5143fb0f8240d7c2c224cca893f74b59}{noctets}} = recv(\mbox{\hyperlink{class_c_connection_serveur_a589e851e43b64fd111bc858640ea5246}{ids\_client}}, trame\_lect, \mbox{\hyperlink{class_c_connection_serveur_a507c1c1dcdf547fdec39e908fd47c991}{DIMMAX}}, 0);}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00062}00062     trame\_lect[\mbox{\hyperlink{class_c_connection_serveur_a5143fb0f8240d7c2c224cca893f74b59}{noctets}}] = \textcolor{charliteral}{'\(\backslash\)0'};}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00063}00063     \textcolor{keywordflow}{return} trame\_lect; }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00065}00065 \}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00067}\mbox{\hyperlink{class_c_connection_serveur_a39f85dab92764d4357fe2b48b87d058d}{00067}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_connection_serveur_a39f85dab92764d4357fe2b48b87d058d}{CConnectionServeur::envoi}}(std::string requete)}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00068}00068 \{}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00069}00069     send(\mbox{\hyperlink{class_c_connection_serveur_a589e851e43b64fd111bc858640ea5246}{ids\_client}}, \mbox{\hyperlink{class_c_connection_serveur_a54ab8e385f023c5c6152c2e0c343e78a}{requete}}.c\_str(), \mbox{\hyperlink{class_c_connection_serveur_a507c1c1dcdf547fdec39e908fd47c991}{DIMMAX}}, 0);}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00070}00070 \}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00071}00071 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00072}\mbox{\hyperlink{class_c_connection_serveur_ac85db18d0cf06cbdfb5c907a9d9ac023}{00072}} \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_connection_serveur_ac85db18d0cf06cbdfb5c907a9d9ac023}{CConnectionServeur::fermetureSocket}}()}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00073}00073 \{}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00074}00074     \textcolor{comment}{// fermeture le socket ouvert}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00075}00075     closesocket(\mbox{\hyperlink{class_c_connection_serveur_a589e851e43b64fd111bc858640ea5246}{ids\_client}}); \textcolor{comment}{// à la place de close() sous Linux}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00077}00077     \textcolor{comment}{// Fermeture de winsock}}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00078}00078     WSACleanup();}
+\DoxyCodeLine{\Hypertarget{_c_connection_serveur_8cpp_source_l00079}00079 \}}
+
+\end{DoxyCode}
