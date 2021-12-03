@@ -1,0 +1,300 @@
+\hypertarget{class_c_connection_serveur}{}\doxysection{CConnection\+Serveur Class Reference}
+\label{class_c_connection_serveur}\index{CConnectionServeur@{CConnectionServeur}}
+
+
+Methode de connection, d\textquotesingle{}envoi et reception de message avec le serveur de jeu.  
+
+
+
+
+{\ttfamily \#include $<$CConnection\+Serveur.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_c_connection_serveur_a321ae6d07dc33f7b155bd504c4be34fe}{CConnection\+Serveur}} (std\+::string \mbox{\hyperlink{class_c_connection_serveur_aefd09c8de27d5073ae129c1fef06639c}{IP\+\_\+\+SERVEUR}}, std\+::string \mbox{\hyperlink{class_c_connection_serveur_afeff92024665ba247c940facab6c72e6}{port}})
+\begin{DoxyCompactList}\small\item\em Constructeur de la classe avec parametre en entrée. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_connection_serveur_a5ceacc7b580f728f91dbcd83d869cf00}{init\+Connec}} ()
+\begin{DoxyCompactList}\small\item\em Initialise tout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_connection_serveur_ac4ce884ec12b543873245ce5db3051aa}{connection}} ()
+\begin{DoxyCompactList}\small\item\em se connection au serveur entrée en parametre dans le constructeur ~\newline
+ \end{DoxyCompactList}\item 
+std\+::string \mbox{\hyperlink{class_c_connection_serveur_aca8fa4df208c7eac287b440beaab2c56}{reception}} ()
+\begin{DoxyCompactList}\small\item\em attend de recevoir une trame du serveur (!bloquant) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_connection_serveur_a23b9a2b972b5fd096e3ea2490f838a0f}{envoi}} (std\+::string)
+\begin{DoxyCompactList}\small\item\em envoi une trame au serveur (!bloquant) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_c_connection_serveur_a5faeca745411602b5f92b9a7913c2fb3}{fermeture\+Socket}} ()
+\begin{DoxyCompactList}\small\item\em on ferme le socket et la communication avec le serveur \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+const \mbox{\hyperlink{_c_connection_serveur_8h_ab95f123a6c9bcfee6a343170ef8c5f69}{ushort}} \mbox{\hyperlink{class_c_connection_serveur_a507c1c1dcdf547fdec39e908fd47c991}{DIMMAX}} = 150
+\item 
+std\+::string \mbox{\hyperlink{class_c_connection_serveur_aefd09c8de27d5073ae129c1fef06639c}{IP\+\_\+\+SERVEUR}}
+\item 
+std\+::string \mbox{\hyperlink{class_c_connection_serveur_afeff92024665ba247c940facab6c72e6}{port}}
+\item 
+std\+::string \mbox{\hyperlink{class_c_connection_serveur_a54ab8e385f023c5c6152c2e0c343e78a}{requete}}
+\item 
+\mbox{\hyperlink{_c_connection_serveur_8h_ab95f123a6c9bcfee6a343170ef8c5f69}{ushort}} \mbox{\hyperlink{class_c_connection_serveur_abc03bde79119a3987d67c1e29ed7d6c7}{NUM\+\_\+\+PORT}}
+\item 
+\mbox{\hyperlink{_c_connection_serveur_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} \mbox{\hyperlink{class_c_connection_serveur_a61c03e6610dc228cd326ab80f49eb59e}{n}} = 0
+\item 
+\mbox{\hyperlink{_c_connection_serveur_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} \mbox{\hyperlink{class_c_connection_serveur_a5143fb0f8240d7c2c224cca893f74b59}{noctets}}
+\item 
+WORD \mbox{\hyperlink{class_c_connection_serveur_a60a38919d37203cbeec8f2f97ebf8456}{n\+Version}} = MAKEWORD(2, 2)
+\item 
+WSADATA \mbox{\hyperlink{class_c_connection_serveur_ac7935d555d2719030dd3579d77c00cd7}{donnee\+WS}}
+\item 
+struct sockaddr\+\_\+in \mbox{\hyperlink{class_c_connection_serveur_af487246e4b01d96b28ebf6b1c57645f6}{adr\+\_\+serveur}}
+\item 
+\mbox{\hyperlink{_c_connection_serveur_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} \mbox{\hyperlink{class_c_connection_serveur_a589e851e43b64fd111bc858640ea5246}{ids\+\_\+client}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Methode de connection, d\textquotesingle{}envoi et reception de message avec le serveur de jeu. 
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00031}{31}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_c_connection_serveur_a321ae6d07dc33f7b155bd504c4be34fe}\label{class_c_connection_serveur_a321ae6d07dc33f7b155bd504c4be34fe}} 
+\index{CConnectionServeur@{CConnectionServeur}!CConnectionServeur@{CConnectionServeur}}
+\index{CConnectionServeur@{CConnectionServeur}!CConnectionServeur@{CConnectionServeur}}
+\doxysubsubsection{\texorpdfstring{CConnectionServeur()}{CConnectionServeur()}}
+{\footnotesize\ttfamily CConnection\+Serveur\+::\+CConnection\+Serveur (\begin{DoxyParamCaption}\item[{std\+::string}]{IP\+\_\+\+SERVEUR,  }\item[{std\+::string}]{port }\end{DoxyParamCaption})}
+
+
+
+Constructeur de la classe avec parametre en entrée. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em IP\+\_\+\+SERVEUR\+:string} & et port\+:string \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{_c_connection_serveur_8cpp_source}{CConnection\+Serveur.\+cpp}}.
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_c_connection_serveur_ac4ce884ec12b543873245ce5db3051aa}\label{class_c_connection_serveur_ac4ce884ec12b543873245ce5db3051aa}} 
+\index{CConnectionServeur@{CConnectionServeur}!connection@{connection}}
+\index{connection@{connection}!CConnectionServeur@{CConnectionServeur}}
+\doxysubsubsection{\texorpdfstring{connection()}{connection()}}
+{\footnotesize\ttfamily CConnection\+Serveur\+::connection (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+se connection au serveur entrée en parametre dans le constructeur ~\newline
+ 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8cpp_source_l00049}{49}} of file \mbox{\hyperlink{_c_connection_serveur_8cpp_source}{CConnection\+Serveur.\+cpp}}.
+
+\mbox{\Hypertarget{class_c_connection_serveur_a23b9a2b972b5fd096e3ea2490f838a0f}\label{class_c_connection_serveur_a23b9a2b972b5fd096e3ea2490f838a0f}} 
+\index{CConnectionServeur@{CConnectionServeur}!envoi@{envoi}}
+\index{envoi@{envoi}!CConnectionServeur@{CConnectionServeur}}
+\doxysubsubsection{\texorpdfstring{envoi()}{envoi()}}
+{\footnotesize\ttfamily CConnection\+Serveur\+::envoi (\begin{DoxyParamCaption}\item[{std\+::string}]{requete }\end{DoxyParamCaption})}
+
+
+
+envoi une trame au serveur (!bloquant) 
+
+\begin{DoxyWarning}{Warning}
+BLOQUANT 
+\end{DoxyWarning}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em trame} & a envoyer \+: string \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8cpp_source_l00071}{71}} of file \mbox{\hyperlink{_c_connection_serveur_8cpp_source}{CConnection\+Serveur.\+cpp}}.
+
+\mbox{\Hypertarget{class_c_connection_serveur_a5faeca745411602b5f92b9a7913c2fb3}\label{class_c_connection_serveur_a5faeca745411602b5f92b9a7913c2fb3}} 
+\index{CConnectionServeur@{CConnectionServeur}!fermetureSocket@{fermetureSocket}}
+\index{fermetureSocket@{fermetureSocket}!CConnectionServeur@{CConnectionServeur}}
+\doxysubsubsection{\texorpdfstring{fermetureSocket()}{fermetureSocket()}}
+{\footnotesize\ttfamily CConnection\+Serveur\+::fermeture\+Socket (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+on ferme le socket et la communication avec le serveur 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8cpp_source_l00076}{76}} of file \mbox{\hyperlink{_c_connection_serveur_8cpp_source}{CConnection\+Serveur.\+cpp}}.
+
+\mbox{\Hypertarget{class_c_connection_serveur_a5ceacc7b580f728f91dbcd83d869cf00}\label{class_c_connection_serveur_a5ceacc7b580f728f91dbcd83d869cf00}} 
+\index{CConnectionServeur@{CConnectionServeur}!initConnec@{initConnec}}
+\index{initConnec@{initConnec}!CConnectionServeur@{CConnectionServeur}}
+\doxysubsubsection{\texorpdfstring{initConnec()}{initConnec()}}
+{\footnotesize\ttfamily CConnection\+Serveur\+::init\+Connec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Initialise tout. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8cpp_source_l00030}{30}} of file \mbox{\hyperlink{_c_connection_serveur_8cpp_source}{CConnection\+Serveur.\+cpp}}.
+
+\mbox{\Hypertarget{class_c_connection_serveur_aca8fa4df208c7eac287b440beaab2c56}\label{class_c_connection_serveur_aca8fa4df208c7eac287b440beaab2c56}} 
+\index{CConnectionServeur@{CConnectionServeur}!reception@{reception}}
+\index{reception@{reception}!CConnectionServeur@{CConnectionServeur}}
+\doxysubsubsection{\texorpdfstring{reception()}{reception()}}
+{\footnotesize\ttfamily CConnection\+Serveur\+::reception (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+attend de recevoir une trame du serveur (!bloquant) 
+
+\begin{DoxyWarning}{Warning}
+BLOQUANT 
+\end{DoxyWarning}
+\begin{DoxyReturn}{Returns}
+string 
+\end{DoxyReturn}
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8cpp_source_l00058}{58}} of file \mbox{\hyperlink{_c_connection_serveur_8cpp_source}{CConnection\+Serveur.\+cpp}}.
+
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_c_connection_serveur_af487246e4b01d96b28ebf6b1c57645f6}\label{class_c_connection_serveur_af487246e4b01d96b28ebf6b1c57645f6}} 
+\index{CConnectionServeur@{CConnectionServeur}!adr\_serveur@{adr\_serveur}}
+\index{adr\_serveur@{adr\_serveur}!CConnectionServeur@{CConnectionServeur}}
+\doxysubsubsection{\texorpdfstring{adr\_serveur}{adr\_serveur}}
+{\footnotesize\ttfamily struct sockaddr\+\_\+in CConnection\+Serveur\+::adr\+\_\+serveur\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00049}{49}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+
+\mbox{\Hypertarget{class_c_connection_serveur_a507c1c1dcdf547fdec39e908fd47c991}\label{class_c_connection_serveur_a507c1c1dcdf547fdec39e908fd47c991}} 
+\index{CConnectionServeur@{CConnectionServeur}!DIMMAX@{DIMMAX}}
+\index{DIMMAX@{DIMMAX}!CConnectionServeur@{CConnectionServeur}}
+\doxysubsubsection{\texorpdfstring{DIMMAX}{DIMMAX}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{_c_connection_serveur_8h_ab95f123a6c9bcfee6a343170ef8c5f69}{ushort}} CConnection\+Serveur\+::\+DIMMAX = 150\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00036}{36}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+
+\mbox{\Hypertarget{class_c_connection_serveur_ac7935d555d2719030dd3579d77c00cd7}\label{class_c_connection_serveur_ac7935d555d2719030dd3579d77c00cd7}} 
+\index{CConnectionServeur@{CConnectionServeur}!donneeWS@{donneeWS}}
+\index{donneeWS@{donneeWS}!CConnectionServeur@{CConnectionServeur}}
+\doxysubsubsection{\texorpdfstring{donneeWS}{donneeWS}}
+{\footnotesize\ttfamily WSADATA CConnection\+Serveur\+::donnee\+WS\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00047}{47}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+
+\mbox{\Hypertarget{class_c_connection_serveur_a589e851e43b64fd111bc858640ea5246}\label{class_c_connection_serveur_a589e851e43b64fd111bc858640ea5246}} 
+\index{CConnectionServeur@{CConnectionServeur}!ids\_client@{ids\_client}}
+\index{ids\_client@{ids\_client}!CConnectionServeur@{CConnectionServeur}}
+\doxysubsubsection{\texorpdfstring{ids\_client}{ids\_client}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_connection_serveur_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} CConnection\+Serveur\+::ids\+\_\+client\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00051}{51}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+
+\mbox{\Hypertarget{class_c_connection_serveur_aefd09c8de27d5073ae129c1fef06639c}\label{class_c_connection_serveur_aefd09c8de27d5073ae129c1fef06639c}} 
+\index{CConnectionServeur@{CConnectionServeur}!IP\_SERVEUR@{IP\_SERVEUR}}
+\index{IP\_SERVEUR@{IP\_SERVEUR}!CConnectionServeur@{CConnectionServeur}}
+\doxysubsubsection{\texorpdfstring{IP\_SERVEUR}{IP\_SERVEUR}}
+{\footnotesize\ttfamily std\+::string CConnection\+Serveur\+::\+IP\+\_\+\+SERVEUR\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00038}{38}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+
+\mbox{\Hypertarget{class_c_connection_serveur_a61c03e6610dc228cd326ab80f49eb59e}\label{class_c_connection_serveur_a61c03e6610dc228cd326ab80f49eb59e}} 
+\index{CConnectionServeur@{CConnectionServeur}!n@{n}}
+\index{n@{n}!CConnectionServeur@{CConnectionServeur}}
+\doxysubsubsection{\texorpdfstring{n}{n}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_connection_serveur_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} CConnection\+Serveur\+::n = 0\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00043}{43}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+
+\mbox{\Hypertarget{class_c_connection_serveur_a5143fb0f8240d7c2c224cca893f74b59}\label{class_c_connection_serveur_a5143fb0f8240d7c2c224cca893f74b59}} 
+\index{CConnectionServeur@{CConnectionServeur}!noctets@{noctets}}
+\index{noctets@{noctets}!CConnectionServeur@{CConnectionServeur}}
+\doxysubsubsection{\texorpdfstring{noctets}{noctets}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_connection_serveur_8h_a91ad9478d81a7aaf2593e8d9c3d06a14}{uint}} CConnection\+Serveur\+::noctets\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00043}{43}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+
+\mbox{\Hypertarget{class_c_connection_serveur_abc03bde79119a3987d67c1e29ed7d6c7}\label{class_c_connection_serveur_abc03bde79119a3987d67c1e29ed7d6c7}} 
+\index{CConnectionServeur@{CConnectionServeur}!NUM\_PORT@{NUM\_PORT}}
+\index{NUM\_PORT@{NUM\_PORT}!CConnectionServeur@{CConnectionServeur}}
+\doxysubsubsection{\texorpdfstring{NUM\_PORT}{NUM\_PORT}}
+{\footnotesize\ttfamily \mbox{\hyperlink{_c_connection_serveur_8h_ab95f123a6c9bcfee6a343170ef8c5f69}{ushort}} CConnection\+Serveur\+::\+NUM\+\_\+\+PORT\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00041}{41}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+
+\mbox{\Hypertarget{class_c_connection_serveur_a60a38919d37203cbeec8f2f97ebf8456}\label{class_c_connection_serveur_a60a38919d37203cbeec8f2f97ebf8456}} 
+\index{CConnectionServeur@{CConnectionServeur}!nVersion@{nVersion}}
+\index{nVersion@{nVersion}!CConnectionServeur@{CConnectionServeur}}
+\doxysubsubsection{\texorpdfstring{nVersion}{nVersion}}
+{\footnotesize\ttfamily WORD CConnection\+Serveur\+::n\+Version = MAKEWORD(2, 2)\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00046}{46}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+
+\mbox{\Hypertarget{class_c_connection_serveur_afeff92024665ba247c940facab6c72e6}\label{class_c_connection_serveur_afeff92024665ba247c940facab6c72e6}} 
+\index{CConnectionServeur@{CConnectionServeur}!port@{port}}
+\index{port@{port}!CConnectionServeur@{CConnectionServeur}}
+\doxysubsubsection{\texorpdfstring{port}{port}}
+{\footnotesize\ttfamily std\+::string CConnection\+Serveur\+::port\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00039}{39}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+
+\mbox{\Hypertarget{class_c_connection_serveur_a54ab8e385f023c5c6152c2e0c343e78a}\label{class_c_connection_serveur_a54ab8e385f023c5c6152c2e0c343e78a}} 
+\index{CConnectionServeur@{CConnectionServeur}!requete@{requete}}
+\index{requete@{requete}!CConnectionServeur@{CConnectionServeur}}
+\doxysubsubsection{\texorpdfstring{requete}{requete}}
+{\footnotesize\ttfamily std\+::string CConnection\+Serveur\+::requete\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Definition at line \mbox{\hyperlink{_c_connection_serveur_8h_source_l00040}{40}} of file \mbox{\hyperlink{_c_connection_serveur_8h_source}{CConnection\+Serveur.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_c_connection_serveur_8h}{CConnection\+Serveur.\+h}}\item 
+\mbox{\hyperlink{_c_connection_serveur_8cpp}{CConnection\+Serveur.\+cpp}}\end{DoxyCompactItemize}

@@ -1,7 +1,15 @@
+
+///\mainpage 
+///\file ClientBatailleNavale.cpp
+///\brief Fichier main du client, utilise les classes CGrille et CConnectionServeur
+
+
 #include "CConnectionServeur.h"
 #include "CGrille.h"
 #include <iostream>
 
+///\fn main
+///\brief fonction main, prend des argument en ligne de commande 
 int main(int argc, char* argv[])
 {
     //Verif des arguments -----------------------------------------------------------------------------------------
@@ -41,26 +49,18 @@ int main(int argc, char* argv[])
         int etat(0);
         do
         {
-            //std::cout << "on entre dans la boucle 1" << std::endl; pour debug
+            
             std::string discussion;
-            discussion = connection.reception();// petit probleme sur le premier echange on reçoit a votre tour alors que non
+            discussion = connection.reception();
             std::cout << discussion << std::endl;
             discussion = connection.reception(); 
             std::cout << discussion << std::endl; 
+            //ajouter une fonction de mise a jour de la map (fonction de serialisation)
             std::cout << "Ou voulez-vous envoyer un missile ?" << std::endl;
             std::cin >> discussion;
             std::cout << std::endl;
             connection.envoi(discussion);
-            //etats = discussion;
-           // discussion = connection.reception();
-           // std::cout << discussion << std::endl;
-          
-            /*
-            if (discussion.find("Serveur: votre tour de jouer") != )
-            {
-
-            }
-            */
+            
 
             /*
             switch (etat)
@@ -100,10 +100,11 @@ int main(int argc, char* argv[])
         int etat(0);
         do
         {
-          //  std::cout << "on entre dans la boucle 2" << std::endl; pour debug
+          
             std::string discussion;
             discussion = connection.reception();
             std::cout << discussion << std::endl;
+            //ajouter une fonction de mise a jour de la map (fonction de serialisation)
             std::cout << "Ou voulez-vous envoyer un missile ?" << std::endl;
             std::cin >> discussion;
             std::cout << std::endl;
@@ -113,9 +114,7 @@ int main(int argc, char* argv[])
             etats = discussion;
 
 
-
-
-
+            /*
             switch (etat)
             {
             case 0:
@@ -140,6 +139,7 @@ int main(int argc, char* argv[])
                 break;
 
             }
+            */
 
         } while (true);
 

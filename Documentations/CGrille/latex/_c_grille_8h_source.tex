@@ -1,0 +1,62 @@
+\hypertarget{_c_grille_8h_source}{}\doxysection{CGrille.\+h}
+\mbox{\hyperlink{_c_grille_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00001}00001 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00007}00007 \textcolor{preprocessor}{\#include <vector>}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00008}00008 \textcolor{preprocessor}{\#include <string>}}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00012}00012 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00014}\mbox{\hyperlink{class_c_grille}{00014}} \textcolor{keyword}{class }\mbox{\hyperlink{class_c_grille}{CGrille}} \{}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00016}00016 public :}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00017}00017     }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00020}\mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{00020}}     \textcolor{keyword}{enum class} \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} \{ \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a4c67bb3d8f85b3a1570dd8a5a8a26338}{VIDE}}, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a7d4f15a4b47f3b52030dc4553f228b4f}{BATEAU}}, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a990919c3791692187fff735c5e1a2f50}{TOUCHEJ}},\mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a6dcca5769e62a615a669c9c254fbcbda}{TOUCHEE}}, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a06a2900064de9c8ae4aefe4de1938ef6}{EAUJ}}, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726abf8b1f7cc51bbb3aaa9d4136db1b3aea}{EAUE}}, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726a9e3d205f680cc8f738a52b40735ff28e}{ERREUR}} = 99 \};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00021}00021     }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00024}00024     \mbox{\hyperlink{class_c_grille_a90b7985f1d5d24a9ea3a2d1fb1fb4636}{CGrille}}();}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00025}00025     }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00030}00030     \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} \mbox{\hyperlink{class_c_grille_aa58d985f2e1d7877de1f865dd560a482}{getCase}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00031}00031     }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00036}00036     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_grille_a030155879bff962efc0c015f22ea9a0b}{setCase}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}}, \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} type);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00037}00037     }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00041}00041     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_grille_a1367ff44fd35d490a1f4b41c573c06d9}{afficherGrille}}();}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00042}00042     }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00043}00043     std::vector<std::string> \mbox{\hyperlink{class_c_grille_a0473dd214cf06719b347df84a0518a3a}{saisieJoueur}}(std::string abs, \textcolor{keywordtype}{int} ord, \textcolor{keywordtype}{bool} maGrille);}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00044}00044     }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00045}00045     \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_c_grille_ad6986ededbf76ce7c278f3ac23abe715}{partiePerdue}}();}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00046}00046     }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00047}00047     std::string \mbox{\hyperlink{class_c_grille_a686c651626080947dddcbad60979d881}{placerBateau}}();}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00048}00048 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00049}00049     }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00050}00050     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_grille_a300505d5628b5ea574545db5b6532d2c}{bateauToucherEnnemi}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00051}00051     }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00052}00052     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_grille_a18e229fc4707271f947b567151fa8d17}{bateauToucherAllier}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00053}00053     }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00054}00054     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_grille_a594f7e2993977ce72d7e655a6cfc8c7a}{tirLoupeJoueur}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00055}00055     }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00056}00056     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_grille_aab5f6a5904a239fa099d71067c87d7fd}{tirLoupeEnnemi}}(\textcolor{keywordtype}{int} \mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}}, \textcolor{keywordtype}{int} \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}});}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00057}00057     }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00058}00058     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_c_grille_ae8555219e7204345a91c9e051f48779b}{InitGrille}}();}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00059}00059 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00061}00061 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00062}00062 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00063}\mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{00063}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_c_grille_a3306b32abf6529756c71a1f333c62c9b}{colonne}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00064}00064 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00065}\mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{00065}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_c_grille_a7b47cf5046757dc7f707d98de083eb0c}{ligne}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00066}00066 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00067}\mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{00067}}     \mbox{\hyperlink{class_c_grille_a5439ba363e1d290ec175df8544a30726}{Case}} \mbox{\hyperlink{class_c_grille_a30ec893dd29c76ee361ac4f54dd16ff2}{grille}}[11][11];}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00068}00068 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00069}\mbox{\hyperlink{class_c_grille_a49cf911ba132c27013c65c89ab2e8514}{00069}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_c_grille_a49cf911ba132c27013c65c89ab2e8514}{nbPorteAvion}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00070}00070 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00071}\mbox{\hyperlink{class_c_grille_a104c7b465307fbc6ac2152a3dc12509b}{00071}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_c_grille_a104c7b465307fbc6ac2152a3dc12509b}{nbCroiseur}}; }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00072}00072 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00073}\mbox{\hyperlink{class_c_grille_a79b5a1a4c22abf918520057701ffe283}{00073}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_c_grille_a79b5a1a4c22abf918520057701ffe283}{nbTorpilleur}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00074}00074 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00075}\mbox{\hyperlink{class_c_grille_ad0882a57d5577827d679e407bb3e0870}{00075}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{class_c_grille_ad0882a57d5577827d679e407bb3e0870}{nbSousMarin}};}
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00076}00076 }
+\DoxyCodeLine{\Hypertarget{_c_grille_8h_source_l00077}00077 \};}
+
+\end{DoxyCode}

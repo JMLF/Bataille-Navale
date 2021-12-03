@@ -12,9 +12,6 @@ int main()
 	serveur.binding();
 	serveur.listening();
 
-
-	
-
 	while (true)
 	{
 		
