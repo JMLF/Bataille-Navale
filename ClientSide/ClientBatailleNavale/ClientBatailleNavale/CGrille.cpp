@@ -359,7 +359,7 @@ void CGrille::afficherGrille()
 
     
     // et on reboucle jusqu'a la finalisation du tableau.
-    system("pause");
+   // system("pause");
     SetConsoleTextAttribute(hConsole, 15);
 
 
@@ -406,7 +406,7 @@ std::string CGrille::placerBateau()
     std::cout << "\xDB            \xDB  \xDB            \xDB  \xDB           \xDB" << std::endl;
     std::cout << "\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF  \xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF  \xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF" << std::endl << std::endl;
     SetConsoleTextAttribute(hConsole, 15);
-    system("pause");
+ //   system("pause");
 
 
 
@@ -742,7 +742,7 @@ std::string CGrille::placerBateau()
 
 
 
-    system("pause");
+   // system("pause");
     return "reusite";
 
 
