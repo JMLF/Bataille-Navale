@@ -39,7 +39,7 @@ int main(int argc, char* argv[])
     message = connection.reception(); //reception du message qui dit qu'on peux parler ou que l'autre joueur place ses bateau
     std::cout << message << std::endl;
 
-    enum class trame{AVOUS=0,FIRE,TOUCH,MISS,WIN=4}; //pour l'analyse des trame reçu
+  //  enum class trame{AVOUS=0,FIRE,TOUCH,MISS,WIN=4}; //pour l'analyse des trame reçu
 
     if (message == "Serveur: votre tour de jouer") //on previent le joueur 2 que l'on a fini de placer les bateaux 
     {
@@ -47,64 +47,155 @@ int main(int argc, char* argv[])
         connection.envoi("joueur: J'ai ini de placer mes bateaux"); 
         std::string etats;
         int etat(0);
+        int xTemp;
+        int yTemp;
         do
         {
             
             std::string discussion;
+            std::string messageEnnemi;
+            messageEnnemi = connection.reception();
+            std::cout <<  messageEnnemi << std::endl;
+            
+            //analyse de la trame recu ---------------------------------------------------          
+            int x;
+            int y;
+            CGrille::resultat lettre;
+            CGrille::resultat lettreAenvouyer;
+            CGrille::Case Case;
+            grille.serialisation(x,y,discussion,lettre);
+            //mettre a jour la map de l'ennemi avec les coordonné CoordonneTemp + lettre 
+           
+            if (lettre == CGrille::resultat::F)
+            {
+                Case = grille.getCase(x, y);
+                if (Case == CGrille::Case::BATEAU)
+                {
+                    grille.bateauToucherAllier(x, y);
+                    lettreAenvouyer = CGrille::resultat::T;
+                }
+                if (Case == CGrille::Case::VIDE)
+                {
+                    grille.tirLoupeEnnemi(x, y);
+                    lettreAenvouyer = CGrille::resultat::L;
+                }
+            }
+
+            if (lettre == CGrille::resultat::T)
+            {
+                grille.bateauToucherEnnemi(xTemp, yTemp);
+
+                Case = grille.getCase(x, y);
+                if (Case == CGrille::Case::BATEAU)
+                {
+                    grille.bateauToucherAllier(x, y);
+                    lettreAenvouyer = CGrille::resultat::T;
+                }
+                if (Case == CGrille::Case::VIDE)
+                {
+                    grille.tirLoupeEnnemi(x, y);
+                    lettreAenvouyer = CGrille::resultat::L;
+                }
+
+            }
+            if (lettre == CGrille::resultat::L)
+            {
+                grille.tirLoupeJoueur(xTemp, yTemp);
+
+                Case = grille.getCase(x, y);
+                if (Case == CGrille::Case::BATEAU)
+                {
+                    grille.bateauToucherAllier(x, y);
+                    lettreAenvouyer = CGrille::resultat::T;
+                }
+                if (Case == CGrille::Case::VIDE)
+                {
+                    grille.tirLoupeEnnemi(x, y);
+                    lettreAenvouyer = CGrille::resultat::L;
+                }
+            }
+            if (lettre == CGrille::resultat::P)
+            {
+                //partie remporté 
+                std::cout<< " Victoire";
+                return 0;
+            }
+            
+           
+
+            //fin analyse trame -------------------------------------------------------
             discussion = connection.reception();
             std::cout << discussion << std::endl;
-            discussion = connection.reception(); 
-            std::cout << discussion << std::endl; 
-            //analyse de la trame recu           
-            std::string coordonne;
-            CGrille::alphabet lettre; 
-            grille.serialisation(coordonne,discussion,lettre);
-            //ajouter une fonction de mise a jour de la map (fonction de serialisation)
-            
-            switch (lettre)
-            {
-            case CGrille::alphabet::F :
-
-                break;
-            }
-
-
-
             std::cout << "Ou voulez-vous envoyer un missile ?" << std::endl;
             std::cin >> discussion;
+            xTemp = std::stoi(std::to_string(discussion.at(0)));
+           
+            if (discussion.at(1) == 'A')
+            {
+                yTemp = 1;
+            }
+            if (discussion.at(1) == 'B')
+            {
+                yTemp = 2;
+            }
+            if (discussion.at(1) == 'C')
+            {
+                yTemp = 3;
+            }
+            if (discussion.at(1) == 'D')
+            {
+                yTemp = 4;
+            }
+            if (discussion.at(1) == 'E')
+            {
+                yTemp = 5;
+            }
+            if (discussion.at(1) == 'F')
+            {
+                yTemp = 6;
+            }
+            if (discussion.at(1) == 'G')
+            {
+                yTemp = 7;
+            }
+            if (discussion.at(1) == 'H')
+            {
+                yTemp = 8;
+            }
+            if (discussion.at(1) == 'I')
+            {
+                yTemp = 9;
+            }
+            if (discussion.at(1) == 'J')
+            {
+                yTemp = 10;
+            }
             std::cout << std::endl;
+           
+            switch (lettreAenvouyer)
+            {
+            case CGrille::resultat::F:
+                discussion = "F:" + discussion;
+                break;
+            case CGrille::resultat::T:
+                discussion = "T:" + discussion;
+                break;
+            case CGrille::resultat::L:
+                discussion = "L:" + discussion;
+                break;
+            case CGrille::resultat::G:
+                discussion = "G:" + discussion;
+                break;
+            case CGrille::resultat::P:
+                discussion = "F:" + discussion;
+                break;
+            
+            }
             connection.envoi(discussion);
+            grille.afficherGrille();
             
 
-            /*
-            switch (etat)
-            {
-            case 0:
-                //trame = a vous de jouer, on ne fait rien
-                break;
-            case 1:
-                //trame = FIRE+coordonné
-                //on analyse pour voir si on été touché 
-                //si on a été touché on revoi touch sinon miss si tout nos bateau sont mort on renvoi WIN a l'adversaire
-                // if coordonné = coordonné d'un bateau le passer 
-               //grille.getCase();
-               //grille.setCase();
-                break;
-            case 2:
-                //trame = touch+coordonné
-                //on a touché ladrversaire au coordonné reçu
-                break;
-            case 3:
-                //trame = miss+coordonné
-                //on a loupé l'adversaire
-                break;
-            case 4:
-                //trame = WIN 
-                //on a gagné
-                break;
-
-            }
-            */
+          
 
         } while (true);
     }
@@ -112,48 +203,156 @@ int main(int argc, char* argv[])
     {
         std::string etats;
         int etat(0);
+        int xTemp;
+        int yTemp;
         do
         {
           
+            
+
+            std::string messageEnnemi = connection.reception();
+            std::cout << messageEnnemi << std::endl;
+            //ajouter une fonction de mise a jour de la map (fonction de serialisation)
+       //analyse de la trame recu ---------------------------------------------------          
+            int x;
+            int y;
+            CGrille::resultat lettre;
+            CGrille::resultat lettreAenvouyer;
+            CGrille::Case Case;
+            grille.serialisation(x, y, messageEnnemi, lettre);
+            //mettre a jour la map de l'ennemi avec les coordonné CoordonneTemp + lettre 
+
+            if (lettre == CGrille::resultat::F)
+            {
+                Case = grille.getCase(x, y);
+                if (Case == CGrille::Case::BATEAU)
+                {
+                    grille.bateauToucherAllier(x, y);
+                    lettreAenvouyer = CGrille::resultat::T;
+                }
+                if (Case == CGrille::Case::VIDE)
+                {
+                    grille.tirLoupeEnnemi(x, y);
+                    lettreAenvouyer = CGrille::resultat::L;
+                }
+            }
+
+            if (lettre == CGrille::resultat::T)
+            {
+                grille.bateauToucherEnnemi(xTemp, yTemp);
+
+                Case = grille.getCase(x, y);
+                if (Case == CGrille::Case::BATEAU)
+                {
+                    grille.bateauToucherAllier(x, y);
+                    lettreAenvouyer = CGrille::resultat::T;
+                }
+                if (Case == CGrille::Case::VIDE)
+                {
+                    grille.tirLoupeEnnemi(x, y);
+                    lettreAenvouyer = CGrille::resultat::L;
+                }
+
+            }
+            if (lettre == CGrille::resultat::L)
+            {
+                grille.tirLoupeJoueur(xTemp, yTemp);
+
+                Case = grille.getCase(x, y);
+                if (Case == CGrille::Case::BATEAU)
+                {
+                    grille.bateauToucherAllier(x, y);
+                    lettreAenvouyer = CGrille::resultat::T;
+                }
+                if (Case == CGrille::Case::VIDE)
+                {
+                    grille.tirLoupeEnnemi(x, y);
+                    lettreAenvouyer = CGrille::resultat::L;
+                }
+            }
+            if (lettre == CGrille::resultat::P)
+            {
+                //partie remporté 
+                std::cout << " Victoire";
+                return 0;
+            }
+
+            //fin analyse trame -------------------------------------------------------
+
             std::string discussion;
             discussion = connection.reception();
             std::cout << discussion << std::endl;
-            //ajouter une fonction de mise a jour de la map (fonction de serialisation)
+
             std::cout << "Ou voulez-vous envoyer un missile ?" << std::endl;
             std::cin >> discussion;
             std::cout << std::endl;
-            connection.envoi(discussion);
-            discussion = connection.reception();
-            std::cout << discussion << std::endl;
-            etats = discussion;
+            xTemp = std::stoi(std::to_string(discussion.at(0)));
 
-
-            /*
-            switch (etat)
+            if (discussion.at(1) == 'A')
             {
-            case 0:
-            //trame = a vous de jouer, on ne fait rien
+                yTemp = 1;
+            }
+            if (discussion.at(1) == 'B')
+            {
+                yTemp = 2;
+            }
+            if (discussion.at(1) == 'C')
+            {
+                yTemp = 3;
+            }
+            if (discussion.at(1) == 'D')
+            {
+                yTemp = 4;
+            }
+            if (discussion.at(1) == 'E')
+            {
+                yTemp = 5;
+            }
+            if (discussion.at(1) == 'F')
+            {
+                yTemp = 6;
+            }
+            if (discussion.at(1) == 'G')
+            {
+                yTemp = 7;
+            }
+            if (discussion.at(1) == 'H')
+            {
+                yTemp = 8;
+            }
+            if (discussion.at(1) == 'I')
+            {
+                yTemp = 9;
+            }
+            if (discussion.at(1) == 'J')
+            {
+                yTemp = 10;
+            }
+            std::cout << std::endl;
+
+            switch (lettreAenvouyer)
+            {
+            case CGrille::resultat::F:
+                discussion = "F:" + discussion;
                 break;
-            case 1:
-                //trame = FIRE+coordonné
-                //on analyse pour voir si on été touché 
-                //si on a été touché on revoi touch sinon miss si tout nos bateau sont mort on renvoi WIN a l'adversaire
+            case CGrille::resultat::T:
+                discussion = "T:" + discussion;
                 break;
-            case 2:
-                //trame = touch+coordonné
-                //on a touché ladrversaire au coordonné reçu
+            case CGrille::resultat::L:
+                discussion = "L:" + discussion;
                 break;
-            case 3:
-                //trame = miss+coordonné
-                //on a loupé l'adversaire
+            case CGrille::resultat::G:
+                discussion = "G:" + discussion;
                 break;
-            case 4:
-                //trame = WIN 
-                //on a gagné
+            case CGrille::resultat::P:
+                discussion = "F:" + discussion;
                 break;
 
             }
-            */
+            connection.envoi(discussion);
+            grille.afficherGrille();
+
+           
 
         } while (true);
 

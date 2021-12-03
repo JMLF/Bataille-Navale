@@ -40,76 +40,79 @@ void CGrille::InitGrille() {
    
 }
 
-void CGrille::serialisation(int &x, int &y, std::string trame, alphabet& lettre)
+
+void CGrille::serialisation(int& x, int& y, std::string trame, resultat& lettre)
 {
     if (trame.at(0) == 'F')
     {
-        lettre = alphabet::F;
+        lettre = resultat::F;
     }
     if (trame.at(0) == 'T')
     {
-       // lettre = alphabet::T;
-    }
-    if (trame.at(0) == 'L')
-    {
-      //  lettre = alphabet::L;
-    }
-    if (trame.at(0) == 'G')
-    {
-        lettre = alphabet::G;
-    }
-    if (trame.at(0) == 'P')
-    {
-       // lettre = alphabet::P;
-    }
-
-    std::string temp = trame.substr(2, 2);
-
-    if (temp.at(1)=='A')
-    {
+        lettre = resultat::T;
 
     }
-    if (temp.at(1) == 'B')
-    {
+        if (trame.at(0) == 'L')
+        {
+            lettre = resultat::L;
+        }
+        if (trame.at(0) == 'G')
+        {
+            lettre = resultat::G;
+        }
+        if (trame.at(0) == 'P')
+        {
+            lettre = resultat::P;
+        }
 
-    }
-    if (temp.at(1) == 'C')
-    {
+        std::string temp = trame.substr(2, 2);
 
-    }
-    if (temp.at(1) == 'D')
-    {
+        if (temp.at(1) == 'A')
+        {
+            y = 1;
+        }
+        if (temp.at(1) == 'B')
+        {
+            y = 2;
+        }
+        if (temp.at(1) == 'C')
+        {
+            y = 3;
+        }
+        if (temp.at(1) == 'D')
+        {
+            y = 4;
+        }
+        if (temp.at(1) == 'E')
+        {
+            y = 5;
+        }
+        if (temp.at(1) == 'F')
+        {
+            y = 6;
+        }
+        if (temp.at(1) == 'G')
+        {
+            y = 7;
+        }
+        if (temp.at(1) == 'H')
+        {
+            y = 8;
+        }
+        if (temp.at(1) == 'I')
+        {
+            y = 9;
+        }
+        if (temp.at(1) == 'J')
+        {
+            y = 10;
+        }
 
-    }
-    if (temp.at(1) == 'E')
-    {
-
-    }
-    if (temp.at(1) == 'F')
-    {
-
-    }
-    if (temp.at(1) == 'G')
-    {
-
-    }
-    if (temp.at(1) == 'H')
-    {
-
-    }
-    if (temp.at(1) == 'I')
-    {
-
-    }
-    if (temp.at(1) == 'J')
-    {
-
-    }
-
-
-   
-
+        std::string xs = std::to_string(temp.at(0));
+        x = std::stoi(xs); //ça faut que ça marche 
 }
+
+
 
                                                       
 
@@ -131,7 +134,7 @@ void CGrille::setCase(int ligne, int colonne, Case type)
 
 void CGrille::afficherGrille()
 {
-    
+    system("mode con LINES=70 COLS=100");
     char colonnel = 'A'; //On établit un charactere qui sera incrémenter a chaque colonne pour l'affichage des lettres du haut du tableau
     int k = 0; //de meme pour les lignes, cette variable sera incrémentée a chaque ligne pour l'affichage des nombres du coté du tableau
     HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE); //sert a modifier la couleur de la console

@@ -16,7 +16,7 @@ class CGrille {
 public :
 	
 	enum class alphabet {A=0,B,C,D,E,F,G,H,I,J,T,L,P}; //a verifier 
-
+	
 	///\enum Case 
 	/// Les differents type de case 
 	enum class Case { VIDE, BATEAU, TOUCHEJ,TOUCHEE, EAUJ, EAUE, ERREUR = 99 };
