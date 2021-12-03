@@ -55,7 +55,21 @@ int main(int argc, char* argv[])
             std::cout << discussion << std::endl;
             discussion = connection.reception(); 
             std::cout << discussion << std::endl; 
+            //analyse de la trame recu           
+            std::string coordonne;
+            CGrille::alphabet lettre; 
+            grille.serialisation(coordonne,discussion,lettre);
             //ajouter une fonction de mise a jour de la map (fonction de serialisation)
+            
+            switch (lettre)
+            {
+            case CGrille::alphabet::F :
+
+                break;
+            }
+
+
+
             std::cout << "Ou voulez-vous envoyer un missile ?" << std::endl;
             std::cin >> discussion;
             std::cout << std::endl;

@@ -15,8 +15,7 @@ class CGrille {
 
 public :
 	
-	enum class alphabet {A=0,B,C,D,E,F,G,H,I,J=9}; //a verifier 
-
+	enum class alphabet {A=0,B,C,D,E,F,G,H,I,J,T,L,P}; //a verifier 
 
 	///\enum Case 
 	/// Les differents type de case 
@@ -60,7 +59,7 @@ public :
 	
 	void InitGrille();
 
-	void serialisation(std:::string trame, alphabet &lettre, std::string &coordonne);
+	void serialisation(int &x, int &y, std::string trame, alphabet& lettre);
 
 private:
 
