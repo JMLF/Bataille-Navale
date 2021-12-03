@@ -39,7 +39,7 @@ int main(int argc, char* argv[])
     message = connection.reception(); //reception du message qui dit qu'on peux parler ou que l'autre joueur place ses bateau
     std::cout << message << std::endl;
 
-  //  enum class trame{AVOUS=0,FIRE,TOUCH,MISS,WIN=4}; //pour l'analyse des trame reçu
+  //  enum class trame{AVOUS=0,FIRE,TOUCH,MISS,WIN=4}; //plus utilisé
 
     if (message == "Serveur: votre tour de jouer") //on previent le joueur 2 que l'on a fini de placer les bateaux 
     {
@@ -205,80 +205,11 @@ int main(int argc, char* argv[])
         int etat(0);
         int xTemp;
         int yTemp;
+        CGrille::resultat lettreAenvouyer;
+        lettreAenvouyer = CGrille::resultat::F;
         do
         {
-          
             
-
-            std::string messageEnnemi = connection.reception();
-            std::cout << messageEnnemi << std::endl;
-            //ajouter une fonction de mise a jour de la map (fonction de serialisation)
-       //analyse de la trame recu ---------------------------------------------------          
-            int x;
-            int y;
-            CGrille::resultat lettre;
-            CGrille::resultat lettreAenvouyer;
-            CGrille::Case Case;
-            grille.serialisation(x, y, messageEnnemi, lettre);
-            //mettre a jour la map de l'ennemi avec les coordonné CoordonneTemp + lettre 
-
-            if (lettre == CGrille::resultat::F)
-            {
-                Case = grille.getCase(x, y);
-                if (Case == CGrille::Case::BATEAU)
-                {
-                    grille.bateauToucherAllier(x, y);
-                    lettreAenvouyer = CGrille::resultat::T;
-                }
-                if (Case == CGrille::Case::VIDE)
-                {
-                    grille.tirLoupeEnnemi(x, y);
-                    lettreAenvouyer = CGrille::resultat::L;
-                }
-            }
-
-            if (lettre == CGrille::resultat::T)
-            {
-                grille.bateauToucherEnnemi(xTemp, yTemp);
-
-                Case = grille.getCase(x, y);
-                if (Case == CGrille::Case::BATEAU)
-                {
-                    grille.bateauToucherAllier(x, y);
-                    lettreAenvouyer = CGrille::resultat::T;
-                }
-                if (Case == CGrille::Case::VIDE)
-                {
-                    grille.tirLoupeEnnemi(x, y);
-                    lettreAenvouyer = CGrille::resultat::L;
-                }
-
-            }
-            if (lettre == CGrille::resultat::L)
-            {
-                grille.tirLoupeJoueur(xTemp, yTemp);
-
-                Case = grille.getCase(x, y);
-                if (Case == CGrille::Case::BATEAU)
-                {
-                    grille.bateauToucherAllier(x, y);
-                    lettreAenvouyer = CGrille::resultat::T;
-                }
-                if (Case == CGrille::Case::VIDE)
-                {
-                    grille.tirLoupeEnnemi(x, y);
-                    lettreAenvouyer = CGrille::resultat::L;
-                }
-            }
-            if (lettre == CGrille::resultat::P)
-            {
-                //partie remporté 
-                std::cout << " Victoire";
-                return 0;
-            }
-
-            //fin analyse trame -------------------------------------------------------
-
             std::string discussion;
             discussion = connection.reception();
             std::cout << discussion << std::endl;
@@ -350,6 +281,77 @@ int main(int argc, char* argv[])
 
             }
             connection.envoi(discussion);
+
+            std::string messageEnnemi = connection.reception();
+            std::cout << messageEnnemi << std::endl;
+            //ajouter une fonction de mise a jour de la map (fonction de serialisation)
+       //analyse de la trame recu ---------------------------------------------------          
+            int x;
+            int y;
+            CGrille::resultat lettre;
+            //CGrille::resultat lettreAenvouyer; inschallah
+            CGrille::Case Case;
+            grille.serialisation(x, y, messageEnnemi, lettre);
+            //mettre a jour la map de l'ennemi avec les coordonné CoordonneTemp + lettre 
+
+            if (lettre == CGrille::resultat::F)
+            {
+                Case = grille.getCase(x, y);
+                if (Case == CGrille::Case::BATEAU)
+                {
+                    grille.bateauToucherAllier(x, y);
+                    lettreAenvouyer = CGrille::resultat::T;
+                }
+                if (Case == CGrille::Case::VIDE)
+                {
+                    grille.tirLoupeEnnemi(x, y);
+                    lettreAenvouyer = CGrille::resultat::L;
+                }
+            }
+
+            if (lettre == CGrille::resultat::T)
+            {
+                grille.bateauToucherEnnemi(xTemp, yTemp);
+
+                Case = grille.getCase(x, y);
+                if (Case == CGrille::Case::BATEAU)
+                {
+                    grille.bateauToucherAllier(x, y);
+                    lettreAenvouyer = CGrille::resultat::T;
+                }
+                if (Case == CGrille::Case::VIDE)
+                {
+                    grille.tirLoupeEnnemi(x, y);
+                    lettreAenvouyer = CGrille::resultat::L;
+                }
+
+            }
+            if (lettre == CGrille::resultat::L)
+            {
+                grille.tirLoupeJoueur(xTemp, yTemp);
+
+                Case = grille.getCase(x, y);
+                if (Case == CGrille::Case::BATEAU)
+                {
+                    grille.bateauToucherAllier(x, y);
+                    lettreAenvouyer = CGrille::resultat::T;
+                }
+                if (Case == CGrille::Case::VIDE)
+                {
+                    grille.tirLoupeEnnemi(x, y);
+                    lettreAenvouyer = CGrille::resultat::L;
+                }
+            }
+            if (lettre == CGrille::resultat::P)
+            {
+                //partie remporté 
+                std::cout << " Victoire";
+                return 0;
+            }
+
+            //fin analyse trame -------------------------------------------------------
+
+           
             grille.afficherGrille();
 
            
