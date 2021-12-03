@@ -702,3 +702,10 @@ void CGrille::tirLoupeEnnemi(int ligne, int colonne)
     system("CLS");
     afficherGrille();
 }
+
+void serialisation(std:::string trame, alphabet& lettre, std::string& coordonne) {
+    lettre = trame.at(0);
+    //coordonne = sub_str(trame, 2,3); 
+
+
+}
