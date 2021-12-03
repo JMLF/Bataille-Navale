@@ -63,7 +63,7 @@ int main(int argc, char* argv[])
             CGrille::resultat lettre;
             CGrille::resultat lettreAenvouyer;
             CGrille::Case Case;
-            grille.serialisation(x,y,discussion,lettre);
+            grille.serialisation(x,y,messageEnnemi,lettre);
             //mettre a jour la map de l'ennemi avec les coordonné CoordonneTemp + lettre 
            
             if (lettre == CGrille::resultat::F)
