@@ -63,25 +63,19 @@ int main(int argc, char* argv[])
             messageEnnemi = connection.reception();
             std::cout << messageEnnemi << std::endl;
              
-            // declaration --------------------------------------
+            // declaration --------------------------------------------------------------
             int x;
             int y;
             CGrille::resultat lettre;
             CGrille::resultat lettreAenvouyer = CGrille::resultat::F;
             CGrille::Case Case;
-            //  --------------------------------------
-
-
-            
-
-
+            // ---------------------------------------------------------------------------
 
 
             //analyse de la trame recu ---------------------------------------------------  
+            //mettre a jour la map de l'ennemi avec les coordonné CoordonneTemp + lettre
             grille.serialisation(x, y, messageEnnemi, lettre);
-              
-            //mettre a jour la map de l'ennemi avec les coordonné CoordonneTemp + lettre 
-
+     
             if (lettre == CGrille::resultat::F)
             {
                
@@ -104,7 +98,7 @@ int main(int argc, char* argv[])
             if (lettre == CGrille::resultat::T)
             {
                 grille.XGrilleEnnemie(xTemp, yTemp);
-                std::cout << "valeur xtzmp et y temp " << xTemp << yTemp << std::endl;
+                std::cout << "valeur xtzmp et y temp " << xTemp << " " << yTemp << std::endl;
                 system("pause");
 
 

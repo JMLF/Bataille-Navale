@@ -1,10 +1,7 @@
 ﻿
-
-
 #include "CGrille.h"
 #include <iostream>
 #include <windows.h>
-
 
 CGrille::CGrille()
 {
@@ -31,10 +28,6 @@ CGrille::CGrille()
    //grille[10][4] = Case::VIDE;
 }
 
-
-
-
-
 void CGrille::InitGrille() {
 
    
@@ -43,147 +36,193 @@ void CGrille::InitGrille() {
 
 void CGrille::serialisation(int& x, int& y, std::string trame, resultat& lettre)
 {
+
+    //trame type : F:3D ou F:10D
+
+    //analyse du premier charactère --------------------------------------------
     if (trame.at(0) == 'F')
     {
-        lettre = resultat::F;
+    lettre = resultat::F;
     }
     if (trame.at(0) == 'T')
     {
-        lettre = resultat::T;
+    lettre = resultat::T;
+    }
+    if (trame.at(0) == 'L')
+    {
+    lettre = resultat::L;
+    }
+    if (trame.at(0) == 'G')
+    {
+    lettre = resultat::G;
+    }
+    if (trame.at(0) == 'P')
+    {
+    lettre = resultat::P;
+    }
+    // --------------------------------------------------------------------------
+
+
+    int taille = trame.size(); //si la trame est sup a 4 x fait 2 chiffres
+    int cas(0);
+    std::string temp; // = trame.substr(2, 2);
+    
+    if (trame.substr(2,1) != "1") //dasn le cas ou ce n'est pas égal a 1 donc 10 ou 1 
+    {
+        temp = trame.substr(2, 2);
+
+        if (temp.at(1) == 'A')
+        {
+            y = 1;
+        }
+        if (temp.at(1) == 'B')
+        {
+            y = 2;
+        }
+        if (temp.at(1) == 'C')
+        {
+            y = 3;
+        }
+        if (temp.at(1) == 'D')
+        {
+            y = 4;
+        }
+        if (temp.at(1) == 'E')
+        {
+            y = 5;
+        }
+        if (temp.at(1) == 'F')
+        {
+            y = 6;
+        }
+        if (temp.at(1) == 'G')
+        {
+            y = 7;
+        }
+        if (temp.at(1) == 'H')
+        {
+            y = 8;
+        }
+        if (temp.at(1) == 'I')
+        {
+            y = 9;
+        }
+        if (temp.at(1) == 'J')
+        {
+            y = 10;
+        }
+
+        std::string xs = temp.substr(0, 1);
+        x = std::stoi(xs); 
+        
+    }
+    else
+    {
+        if (trame.substr(1, 1) != "0") //dans ce cas le chiffre est 1
+        {
+            temp = trame.substr(2, 2);
+
+            if (temp.at(1) == 'A')
+            {
+                y = 1;
+            }
+            if (temp.at(1) == 'B')
+            {
+                y = 2;
+            }
+            if (temp.at(1) == 'C')
+            {
+                y = 3;
+            }
+            if (temp.at(1) == 'D')
+            {
+                y = 4;
+            }
+            if (temp.at(1) == 'E')
+            {
+                y = 5;
+            }
+            if (temp.at(1) == 'F')
+            {
+                y = 6;
+            }
+            if (temp.at(1) == 'G')
+            {
+                y = 7;
+            }
+            if (temp.at(1) == 'H')
+            {
+                y = 8;
+            }
+            if (temp.at(1) == 'I')
+            {
+                y = 9;
+            }
+            if (temp.at(1) == 'J')
+            {
+                y = 10;
+            }
+
+            std::string xs = temp.substr(0, 1);
+            x = std::stoi(xs);
+        }
+        else //dans ce cas le chiffre est focement 10 
+        {
+            temp = trame.substr(2, 3);
+            std::string xs = temp.substr(0, 2);
+            x = std::stoi(xs); 
+           
+            if (temp.at(2) == 'A')
+            {
+                y = 1;
+            }
+            if (temp.at(2) == 'B')
+            {
+                y = 2;
+            }
+            if (temp.at(2) == 'C')
+            {
+                y = 3;
+            }
+            if (temp.at(2) == 'D')
+            {
+                y = 4;
+            }
+            if (temp.at(2) == 'E')
+            {
+                y = 5;
+            }
+            if (temp.at(2) == 'F')
+            {
+                y = 6;
+            }
+            if (temp.at(2) == 'G')
+            {
+                y = 7;
+            }
+            if (temp.at(2) == 'H')
+            {
+                y = 8;
+            }
+            if (temp.at(2) == 'I')
+            {
+                y = 9;
+            }
+            if (temp.at(2) == 'J')
+            {
+                y = 10;
+            }
+
+        }
 
     }
-        if (trame.at(0) == 'L')
-        {
-            lettre = resultat::L;
-        }
-        if (trame.at(0) == 'G')
-        {
-            lettre = resultat::G;
-        }
-        if (trame.at(0) == 'P')
-        {
-            lettre = resultat::P;
-        }
-
-        int taille = trame.size(); //si la trame est sup a 4 x fait 2 chiffres
-        std::string temp; // = trame.substr(2, 2);
-        
-        //std::string temp;
-        if (taille > 4)
-        {
-         temp = trame.substr(2, 3);
-
-         if (temp.at(2) == 'A')
-         {
-             y = 1;
-         }
-         if (temp.at(2) == 'B')
-         {
-             y = 2;
-         }
-         if (temp.at(2) == 'C')
-         {
-             y = 3;
-         }
-         if (temp.at(2) == 'D')
-         {
-             y = 4;
-         }
-         if (temp.at(2) == 'E')
-         {
-             y = 5;
-         }
-         if (temp.at(2) == 'F')
-         {
-             y = 6;
-         }
-         if (temp.at(2) == 'G')
-         {
-             y = 7;
-         }
-         if (temp.at(2) == 'H')
-         {
-             y = 8;
-         }
-         if (temp.at(2) == 'I')
-         {
-             y = 9;
-         }
-         if (temp.at(2) == 'J')
-         {
-             y = 10;
-         }
-
-         std::string xs = temp.substr(0, 2);
-         x = std::stoi(xs); //a verif quand x > 10 
-         std::cout << " xs>10 = " << x;
-        }
-        else
-        {
-         temp = trame.substr(2, 2);
-
-         if (temp.at(1) == 'A')
-         {
-             y = 1;
-         }
-         if (temp.at(1) == 'B')
-         {
-             y = 2;
-         }
-         if (temp.at(1) == 'C')
-         {
-             y = 3;
-         }
-         if (temp.at(1) == 'D')
-         {
-             y = 4;
-         }
-         if (temp.at(1) == 'E')
-         {
-             y = 5;
-         }
-         if (temp.at(1) == 'F')
-         {
-             y = 6;
-         }
-         if (temp.at(1) == 'G')
-         {
-             y = 7;
-         }
-         if (temp.at(1) == 'H')
-         {
-             y = 8;
-         }
-         if (temp.at(1) == 'I')
-         {
-             y = 9;
-         }
-         if (temp.at(1) == 'J')
-         {
-             y = 10;
-         }
-
-         std::string xs = temp.substr(0, 1);
-         x = std::stoi(xs); //fonctionne quand x < 10
-         std::cout << " xs<10 = " << x;
-        }
-        
-        
 
        
 
         //std::string xs = temp.substr(0, 1);
-        //x = std::stoi(xs); //fonctionne quand x < 10
-       
-
-        
+        //x = std::stoi(xs); //fonctionne quand x < 10  
         
 }
-
-
-
-                                                      
-
 
 CGrille::Case CGrille::getCase(int ligne, int colonne)
 {
