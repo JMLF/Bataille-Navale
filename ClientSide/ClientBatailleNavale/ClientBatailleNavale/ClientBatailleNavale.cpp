@@ -79,15 +79,13 @@ int main(int argc, char* argv[])
             if (lettre == CGrille::resultat::T)
             {
                 grille.XGrilleEnnemie(xTemp, yTemp);
-                std::cout << "valeur xtzmp et y temp " << xTemp << " " << yTemp << std::endl;
-                system("pause");
+                
             }
               
             if (lettre == CGrille::resultat::L)
             {
                 grille.TildGrilleEnnemie(xTemp, yTemp);
-                std::cout << "valeur xtzmp et y temp " << xTemp << yTemp << std::endl;
-                system("pause");
+          
             }
               
             if (lettre == CGrille::resultat::P)
@@ -239,7 +237,7 @@ int main(int argc, char* argv[])
             std::cout << discussion << std::endl;
             connection.envoi(discussion);
              
-            grille.afficherGrille();
+           // grille.afficherGrille();
               
         } while (true);
     }
@@ -380,16 +378,15 @@ int main(int argc, char* argv[])
 
             }
             connection.envoi(discussion);
-             //5
+             
             std::string messageEnnemi = connection.reception();
             std::cout << messageEnnemi << std::endl;
-             //6
-            //ajouter une fonction de mise a jour de la map (fonction de serialisation)
-       //analyse de la trame recu ---------------------------------------------------          
+             
+            
+            //analyse de la trame recu ---------------------------------------------------          
             int x;
             int y;
             CGrille::resultat lettre;
-            //CGrille::resultat lettreAenvouyer; inschallah
             CGrille::Case Case;
             grille.serialisation(x, y, messageEnnemi, lettre);
              
@@ -398,15 +395,13 @@ int main(int argc, char* argv[])
                 if (lettre == CGrille::resultat::T)
                 {
                     grille.XGrilleEnnemie(xTemp, yTemp);
-                    std::cout << "valeur xtzmp et y temp " << xTemp << yTemp << std::endl;
-                    system("pause");
+                    
                 }
 
                 if (lettre == CGrille::resultat::L)
                 {
                     grille.TildGrilleEnnemie(xTemp, yTemp);
-                    std::cout << "valeur xtzmp et y temp " << xTemp << yTemp << std::endl;
-                    system("pause");
+                    
                 }
 
                 if (lettre == CGrille::resultat::P)
@@ -431,7 +426,7 @@ int main(int argc, char* argv[])
                 //fin analyse trame -------------------------------------------------------
 
                  
-                grille.afficherGrille();
+               // grille.afficherGrille();
 
             } while (true);
         }
