@@ -72,12 +72,14 @@ void CGrille::serialisation(int& x, int& y, std::string trame, resultat& lettre)
          temp = trame.substr(2, 3);
          std::string xs = temp.substr(0, 2);
          x = std::stoi(xs); //a verif quand x > 10 
+         std::cout << " xs>10 = " << x;
         }
         else
         {
          temp = trame.substr(2, 2);
          std::string xs = temp.substr(0, 1);
          x = std::stoi(xs); //fonctionne quand x < 10
+         std::cout << " xs<10 = " << x;
         }
         
         
@@ -400,7 +402,7 @@ std::string CGrille::placerBateau()
 
    
     //setlocale(LC_CTYPE, "fra");
-    Case grille2[11][11]; //on déclare une grille de sauvegarde
+    Case grille2[TAILLEGRILLE][TAILLEGRILLE]; //on déclare une grille de sauvegarde
     system("CLS");
     bool selection = false;
     int k = 0;

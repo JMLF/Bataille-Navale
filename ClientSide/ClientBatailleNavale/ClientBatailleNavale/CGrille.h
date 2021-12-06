@@ -64,12 +64,12 @@ public :
 	
 
 private:
-
+	static int const TAILLEGRILLE = 10;
 	int colonne;
 
 	int ligne;
 
-	Case grille[11][11];
+	Case grille[TAILLEGRILLE][TAILLEGRILLE];
 
 	int nbPorteAvion;
 
