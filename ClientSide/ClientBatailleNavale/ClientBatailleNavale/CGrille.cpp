@@ -72,6 +72,48 @@ void CGrille::serialisation(int& x, int& y, std::string trame, resultat& lettre)
         if (taille > 4)
         {
          temp = trame.substr(2, 3);
+
+         if (temp.at(2) == 'A')
+         {
+             y = 1;
+         }
+         if (temp.at(2) == 'B')
+         {
+             y = 2;
+         }
+         if (temp.at(2) == 'C')
+         {
+             y = 3;
+         }
+         if (temp.at(2) == 'D')
+         {
+             y = 4;
+         }
+         if (temp.at(2) == 'E')
+         {
+             y = 5;
+         }
+         if (temp.at(2) == 'F')
+         {
+             y = 6;
+         }
+         if (temp.at(2) == 'G')
+         {
+             y = 7;
+         }
+         if (temp.at(2) == 'H')
+         {
+             y = 8;
+         }
+         if (temp.at(2) == 'I')
+         {
+             y = 9;
+         }
+         if (temp.at(2) == 'J')
+         {
+             y = 10;
+         }
+
          std::string xs = temp.substr(0, 2);
          x = std::stoi(xs); //a verif quand x > 10 
          std::cout << " xs>10 = " << x;
@@ -79,6 +121,48 @@ void CGrille::serialisation(int& x, int& y, std::string trame, resultat& lettre)
         else
         {
          temp = trame.substr(2, 2);
+
+         if (temp.at(1) == 'A')
+         {
+             y = 1;
+         }
+         if (temp.at(1) == 'B')
+         {
+             y = 2;
+         }
+         if (temp.at(1) == 'C')
+         {
+             y = 3;
+         }
+         if (temp.at(1) == 'D')
+         {
+             y = 4;
+         }
+         if (temp.at(1) == 'E')
+         {
+             y = 5;
+         }
+         if (temp.at(1) == 'F')
+         {
+             y = 6;
+         }
+         if (temp.at(1) == 'G')
+         {
+             y = 7;
+         }
+         if (temp.at(1) == 'H')
+         {
+             y = 8;
+         }
+         if (temp.at(1) == 'I')
+         {
+             y = 9;
+         }
+         if (temp.at(1) == 'J')
+         {
+             y = 10;
+         }
+
          std::string xs = temp.substr(0, 1);
          x = std::stoi(xs); //fonctionne quand x < 10
          std::cout << " xs<10 = " << x;
@@ -86,46 +170,7 @@ void CGrille::serialisation(int& x, int& y, std::string trame, resultat& lettre)
         
         
 
-        if (temp.at(1) == 'A')
-        {
-            y = 1;
-        }
-        if (temp.at(1) == 'B')
-        {
-            y = 2;
-        }
-        if (temp.at(1) == 'C')
-        {
-            y = 3;
-        }
-        if (temp.at(1) == 'D')
-        {
-            y = 4;
-        }
-        if (temp.at(1) == 'E')
-        {
-            y = 5;
-        }
-        if (temp.at(1) == 'F')
-        {
-            y = 6;
-        }
-        if (temp.at(1) == 'G')
-        {
-            y = 7;
-        }
-        if (temp.at(1) == 'H')
-        {
-            y = 8;
-        }
-        if (temp.at(1) == 'I')
-        {
-            y = 9;
-        }
-        if (temp.at(1) == 'J')
-        {
-            y = 10;
-        }
+       
 
         //std::string xs = temp.substr(0, 1);
         //x = std::stoi(xs); //fonctionne quand x < 10
