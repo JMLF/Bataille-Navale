@@ -157,8 +157,22 @@ int main(int argc, char* argv[])
               
             std::cout << "Ou voulez-vous envoyer un missile ?" << std::endl;
             std::cin >> discussion;
-            xTemp =std::stoi(discussion.substr(0, 1)); //le bug 51
-          //  xTemp = std::stoi(std::to_string(discussion.at(0)));
+
+            int taille = discussion.size(); //si la trame est sup a 2, x fait 2 chiffres
+           
+            if (taille > 2)
+            {
+                xTemp = std::stoi(discussion.substr(0, 1)); 
+            }
+            else
+            {
+                xTemp = std::stoi(discussion.substr(0, 2)); 
+            }
+
+
+
+       //     xTemp =std::stoi(discussion.substr(0, 1)); //le bug 51 (gerer quand c'est 10 ou J)
+          
               
             if (discussion.at(1) == 'A')
             {
@@ -251,8 +265,20 @@ int main(int argc, char* argv[])
             std::cout << "Ou voulez-vous envoyer un missile ?" << std::endl;
             std::cin >> discussion;
             std::cout << std::endl;
-            xTemp = std::stoi(discussion.substr(0, 1));//correction bug a tester
-           // xTemp = std::stoi(std::to_string(discussion.at(0)));
+            
+            int taille = discussion.size(); //si la trame est sup a 2, x fait 2 chiffres
+
+            if (taille > 2)
+            {
+                xTemp = std::stoi(discussion.substr(0, 1));
+            }
+            else
+            {
+                xTemp = std::stoi(discussion.substr(0, 2));
+            }
+
+       //     xTemp = std::stoi(discussion.substr(0, 1));//correction bug a tester
+          
              
             if (discussion.at(1) == 'A')
             {

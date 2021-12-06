@@ -65,7 +65,21 @@ void CGrille::serialisation(int& x, int& y, std::string trame, resultat& lettre)
             lettre = resultat::P;
         }
 
-        std::string temp = trame.substr(2, 2);
+        int taille = trame.size(); //si la trame est sup a 4 x fait 2 chiffres
+        std::string temp;
+        if (taille > 4)
+        {
+         temp = trame.substr(2, 3);
+         std::string xs = temp.substr(0, 2);
+         x = std::stoi(xs); //a verif quand x > 10 
+        }
+        else
+        {
+         temp = trame.substr(2, 2);
+         std::string xs = temp.substr(0, 1);
+         x = std::stoi(xs); //fonctionne quand x < 10
+        }
+        
         
 
         if (temp.at(1) == 'A')
@@ -109,8 +123,7 @@ void CGrille::serialisation(int& x, int& y, std::string trame, resultat& lettre)
             y = 10;
         }
 
-        std::string xs = temp.substr(0, 1);
-        x = std::stoi(xs); //ça faut que ça marche 
+        
         
 }
 
