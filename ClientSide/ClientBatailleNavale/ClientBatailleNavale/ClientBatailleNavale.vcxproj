@@ -146,6 +146,7 @@
   <ItemGroup>
     <ClInclude Include="CConnectionServeur.h" />
     <ClInclude Include="CGrille.h" />
+    <ClInclude Include="ClientBatailleNavale.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="note.md" />

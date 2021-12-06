@@ -39,7 +39,7 @@ int main(int argc, char* argv[])
     message = connection.reception(); //reception du message qui dit qu'on doit placer les bateaux
     std::cout << message << std::endl;
     Sleep(10);
-    grille.placerBateau();
+    //grille.placerBateau();
     message = connection.reception(); //reception du message qui dit qu'on peux parler ou que l'autre joueur place ses bateau
     std::cout << message << std::endl;
 
@@ -49,14 +49,21 @@ int main(int argc, char* argv[])
     if (message == "Serveur: votre tour de jouer") //on previent le joueur 2 que l'on a fini de placer les bateaux 
     {
 
-        connection.envoi("joueur: J'ai ini de placer mes bateaux");
-        std::string etats;
-        int etat(0);
-        int xTemp = 0;
-        int yTemp = 0;
-        do
-        {
-              
+        connection.envoi("tu est le 1er");
+        
+        //std::string etats;
+        //int etat(0);
+        
+        std::string messageEnnemi = connection.reception();
+        std::cout << messageEnnemi << std::endl;
+
+
+
+
+
+
+
+             /*
             std::string discussion;
             std::string messageEnnemi;
               
@@ -228,21 +235,70 @@ int main(int argc, char* argv[])
             connection.envoi(discussion);
              
             grille.afficherGrille();
-              
-        } while (true);
+              */
+        //} while (true);
     }
 
-    if (message == "joueur: J'ai ini de placer mes bateaux") //si on reçoit le message que le joueur 2 a fini on peux envoyer une trame puisque c'est notre tour coté serveur
+    if (message == "tu est le 1er") //si on reçoit le message que le joueur 2 a fini on peux envoyer une trame puisque c'est notre tour coté serveur
     {
-        std::string etats;
-        int etat(0);
+
+
+
         int xTemp = 0;
         int yTemp = 0;
-        CGrille::resultat lettreAenvouyer;
-        lettreAenvouyer = CGrille::resultat::F;
+        std::string ScoordE = "F:11";
+        int ligne = 1;
+        int colonne = 65;
+        char etat = 'F';
+
+            
+           
+                
+
+
+
+
+
+
+
+
+
+        //std::string etats;
+        //int etat(0);
+        //int xTemp = 0;
+        //int yTemp = 0;
+        //CGrille::resultat lettreAenvouyer;
+        //lettreAenvouyer = CGrille::resultat::F;
         do
         {
-              
+            std::cout << "Entrez ligne : " << std::endl;
+            std::cin >> ligne;
+            std::cout << "Entrez colonne : " << std::endl;
+            std::cin >> colonne;
+            //colonne = colonne - 64;
+            xTemp = ligne;
+            yTemp = colonne;
+            if (etat == 'F') {
+                std::cout << "egal a F" << std::endl;
+                //colonne = 1;
+                connection.envoi("F:X=" +  std::to_string(ligne) + "Y=" + std::to_string(colonne));
+            }
+            else {
+                std::cout << "Pas egal a F" << std::endl;
+
+
+
+
+
+            }
+
+            std::string messageEnnemi = connection.reception();
+            std::cout << messageEnnemi << std::endl;
+
+
+
+
+              /*
             std::string discussion;
             discussion = connection.reception();
              
@@ -400,7 +456,7 @@ int main(int argc, char* argv[])
                 grille.afficherGrille();
 
 
-
+                */
             } while (true);
 
         }
