@@ -237,14 +237,14 @@ int main(int argc, char* argv[])
             std::cout << discussion << std::endl;
             connection.envoi(discussion);
              
-           // grille.afficherGrille();
+          
               
         } while (true);
     }
 
     if (message == "joueur: J'ai ini de placer mes bateaux") //si on reçoit le message que le joueur 2 a fini on peux envoyer une trame puisque c'est notre tour coté serveur
     {
-        std::string etats;
+      
         int etat(0);
         int xTemp = 0;
         int yTemp = 0;
@@ -424,9 +424,6 @@ int main(int argc, char* argv[])
                 }
 
                 //fin analyse trame -------------------------------------------------------
-
-                 
-               // grille.afficherGrille();
 
             } while (true);
         }

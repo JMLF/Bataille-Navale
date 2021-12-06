@@ -65,6 +65,7 @@ public :
 
 private:
 	static int const TAILLEGRILLE = 11;
+
 	int colonne;
 
 	int ligne;

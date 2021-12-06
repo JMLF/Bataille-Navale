@@ -215,12 +215,7 @@ void CGrille::serialisation(int& x, int& y, std::string trame, resultat& lettre)
 
         }
 
-    }
-
-       
-
-        //std::string xs = temp.substr(0, 1);
-        //x = std::stoi(xs); //fonctionne quand x < 10  
+    } 
         
 }
 
