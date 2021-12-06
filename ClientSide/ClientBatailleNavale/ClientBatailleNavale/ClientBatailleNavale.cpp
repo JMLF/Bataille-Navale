@@ -75,7 +75,36 @@ int main(int argc, char* argv[])
             //analyse de la trame recu ---------------------------------------------------  
             //mettre a jour la map de l'ennemi avec les coordonné CoordonneTemp + lettre
             grille.serialisation(x, y, messageEnnemi, lettre);
-     
+            //debug ----------------------------------------------------------------------
+            std::cout << "serialisation,  x et y " << x << " " << y << std::endl;
+            switch (lettre)
+            {
+            case CGrille::resultat::F:
+                std::cout << "lettre = F" << std::endl;
+
+                break;
+            case CGrille::resultat::T:
+                std::cout << "lettre = T" << std::endl;
+
+                break;
+            case CGrille::resultat::L:
+                std::cout << "lettre = L" << std::endl;
+
+                break;
+            case CGrille::resultat::G:
+                std::cout << "lettre = G" << std::endl;
+
+                break;
+            case CGrille::resultat::P:
+                std::cout << "lettre = P" << std::endl;
+
+                break;
+
+            }
+            system("pause");
+            // fin debug ---------------------------------------------------------------------- 
+           
+            
             if (lettre == CGrille::resultat::T)
             {
                 grille.XGrilleEnnemie(xTemp, yTemp);
@@ -388,9 +417,35 @@ int main(int argc, char* argv[])
             CGrille::resultat lettre;
             CGrille::Case Case;
             grille.serialisation(x, y, messageEnnemi, lettre);
-             
-            //mettre a jour la map de l'ennemi avec les coordonné CoordonneTemp + lettre
-                
+           
+            //debug ----------------------------------------------------------------------
+            std::cout << "serialisation,  x et y " << x << " " << y << std::endl;
+            switch (lettre)
+            {
+            case CGrille::resultat::F:
+                std::cout << "lettre = F" << std::endl;
+
+                break;
+            case CGrille::resultat::T:
+                std::cout << "lettre = T" << std::endl;
+
+                break;
+            case CGrille::resultat::L:
+                std::cout << "lettre = L" << std::endl;
+
+                break;
+            case CGrille::resultat::G:
+                std::cout << "lettre = G" << std::endl;
+
+                break;
+            case CGrille::resultat::P:
+                std::cout << "lettre = P" << std::endl;
+
+                break;
+
+            }
+            system("pause");
+            // fin debug ----------------------------------------------------------------------    
                 if (lettre == CGrille::resultat::T)
                 {
                     grille.XGrilleEnnemie(xTemp, yTemp);

@@ -118,7 +118,7 @@ void CGrille::serialisation(int& x, int& y, std::string trame, resultat& lettre)
     }
     else
     {
-        if (trame.substr(1, 1) != "0") //dans ce cas le chiffre est 1
+        if (trame.substr(3, 1) != "0") //dans ce cas le chiffre est 1
         {
             temp = trame.substr(2, 2);
 
