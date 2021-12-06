@@ -143,9 +143,8 @@ int main(int argc, char* argv[])
                 return 0;
             }
               
-
-
             //fin analyse trame -------------------------------------------------------
+            
             discussion = connection.reception();
             std::cout << discussion << std::endl;
               
@@ -154,64 +153,103 @@ int main(int argc, char* argv[])
 
             int taille = discussion.size(); //si la trame est sup a 2, x fait 2 chiffres
            
-            if (taille > 2)
+            if (taille > 2) //donc le chiffre est 10
             {
                 xTemp = std::stoi(discussion.substr(0, 2)); 
+
+                if (discussion.at(2) == 'A')
+                {
+                    yTemp = 1;
+                }
+                if (discussion.at(2) == 'B')
+                {
+                    yTemp = 2;
+                }
+                if (discussion.at(2) == 'C')
+                {
+                    yTemp = 3;
+                }
+                if (discussion.at(2) == 'D')
+                {
+                    yTemp = 4;
+                }
+                if (discussion.at(2) == 'E')
+                {
+                    yTemp = 5;
+                }
+                if (discussion.at(2) == 'F')
+                {
+                    yTemp = 6;
+                }
+                if (discussion.at(2) == 'G')
+                {
+                    yTemp = 7;
+                }
+                if (discussion.at(2) == 'H')
+                {
+                    yTemp = 8;
+                }
+                if (discussion.at(2) == 'I')
+                {
+                    yTemp = 9;
+                }
+                if (discussion.at(2) == 'J')
+                {
+                    yTemp = 10;
+                }
             }
             else
             {
-                xTemp = std::stoi(discussion.substr(0, 1)); 
+                xTemp = std::stoi(discussion.substr(0, 1)); //le chiffre n'est pas 10
+
+                if (discussion.at(1) == 'A')
+                {
+                    yTemp = 1;
+                }
+                if (discussion.at(1) == 'B')
+                {
+                    yTemp = 2;
+                }
+                if (discussion.at(1) == 'C')
+                {
+                    yTemp = 3;
+                }
+                if (discussion.at(1) == 'D')
+                {
+                    yTemp = 4;
+                }
+                if (discussion.at(1) == 'E')
+                {
+                    yTemp = 5;
+                }
+                if (discussion.at(1) == 'F')
+                {
+                    yTemp = 6;
+                }
+                if (discussion.at(1) == 'G')
+                {
+                    yTemp = 7;
+                }
+                if (discussion.at(1) == 'H')
+                {
+                    yTemp = 8;
+                }
+                if (discussion.at(1) == 'I')
+                {
+                    yTemp = 9;
+                }
+                if (discussion.at(1) == 'J')
+                {
+                    yTemp = 10;
+                }
             }
-
-
-
-       //     xTemp =std::stoi(discussion.substr(0, 1)); //le bug 51 (gerer quand c'est 10 ou J)
           
               
-            if (discussion.at(1) == 'A')
-            {
-                yTemp = 1;
-            }
-            if (discussion.at(1) == 'B')
-            {
-                yTemp = 2;
-            }
-            if (discussion.at(1) == 'C')
-            {
-                yTemp = 3;
-            }
-            if (discussion.at(1) == 'D')
-            {
-                yTemp = 4;
-            }
-            if (discussion.at(1) == 'E')
-            {
-                yTemp = 5;
-            }
-            if (discussion.at(1) == 'F')
-            {
-                yTemp = 6;
-            }
-            if (discussion.at(1) == 'G')
-            {
-                yTemp = 7;
-            }
-            if (discussion.at(1) == 'H')
-            {
-                yTemp = 8;
-            }
-            if (discussion.at(1) == 'I')
-            {
-                yTemp = 9;
-            }
-            if (discussion.at(1) == 'J')
-            {
-                yTemp = 10;
-            }
+           
             std::cout << std::endl;
             std::cout << discussion << std::endl;
             
-            lettreAenvouyer = CGrille::resultat::T; //debug a enlever
+            
             switch (lettreAenvouyer)
             {
             case CGrille::resultat::F:
@@ -262,60 +300,100 @@ int main(int argc, char* argv[])
             
             int taille = discussion.size(); //si la trame est sup a 2, x fait 2 chiffres
 
-            if (taille > 2)
+            if (taille > 2) //donc le chiffre est 10
             {
                 xTemp = std::stoi(discussion.substr(0, 2));
+
+                if (discussion.at(2) == 'A')
+                {
+                    yTemp = 1;
+                }
+                if (discussion.at(2) == 'B')
+                {
+                    yTemp = 2;
+                }
+                if (discussion.at(2) == 'C')
+                {
+                    yTemp = 3;
+                }
+                if (discussion.at(2) == 'D')
+                {
+                    yTemp = 4;
+                }
+                if (discussion.at(2) == 'E')
+                {
+                    yTemp = 5;
+                }
+                if (discussion.at(2) == 'F')
+                {
+                    yTemp = 6;
+                }
+                if (discussion.at(2) == 'G')
+                {
+                    yTemp = 7;
+                }
+                if (discussion.at(2) == 'H')
+                {
+                    yTemp = 8;
+                }
+                if (discussion.at(2) == 'I')
+                {
+                    yTemp = 9;
+                }
+                if (discussion.at(2) == 'J')
+                {
+                    yTemp = 10;
+                }
             }
             else
             {
-                xTemp = std::stoi(discussion.substr(0, 1));
-            }
+                xTemp = std::stoi(discussion.substr(0, 1)); //le chiffre n'est pas 10
 
-       //     xTemp = std::stoi(discussion.substr(0, 1));//correction bug a tester
+                if (discussion.at(1) == 'A')
+                {
+                    yTemp = 1;
+                }
+                if (discussion.at(1) == 'B')
+                {
+                    yTemp = 2;
+                }
+                if (discussion.at(1) == 'C')
+                {
+                    yTemp = 3;
+                }
+                if (discussion.at(1) == 'D')
+                {
+                    yTemp = 4;
+                }
+                if (discussion.at(1) == 'E')
+                {
+                    yTemp = 5;
+                }
+                if (discussion.at(1) == 'F')
+                {
+                    yTemp = 6;
+                }
+                if (discussion.at(1) == 'G')
+                {
+                    yTemp = 7;
+                }
+                if (discussion.at(1) == 'H')
+                {
+                    yTemp = 8;
+                }
+                if (discussion.at(1) == 'I')
+                {
+                    yTemp = 9;
+                }
+                if (discussion.at(1) == 'J')
+                {
+                    yTemp = 10;
+                }
+            }
           
-             
-            if (discussion.at(1) == 'A')
-            {
-                yTemp = 1;
-            }
-            if (discussion.at(1) == 'B')
-            {
-                yTemp = 2;
-            }
-            if (discussion.at(1) == 'C')
-            {
-                yTemp = 3;
-            }
-            if (discussion.at(1) == 'D')
-            {
-                yTemp = 4;
-            }
-            if (discussion.at(1) == 'E')
-            {
-                yTemp = 5;
-            }
-            if (discussion.at(1) == 'F')
-            {
-                yTemp = 6;
-            }
-            if (discussion.at(1) == 'G')
-            {
-                yTemp = 7;
-            }
-            if (discussion.at(1) == 'H')
-            {
-                yTemp = 8;
-            }
-            if (discussion.at(1) == 'I')
-            {
-                yTemp = 9;
-            }
-            if (discussion.at(1) == 'J')
-            {
-                yTemp = 10;
-            }
             std::cout << std::endl;
-             //4
+            std::cout << discussion << std::endl;
+          
             switch (lettreAenvouyer)
             {
             case CGrille::resultat::F:
