@@ -16,16 +16,10 @@ CGrille::CGrille()
     for (int i = 0; i < ligne ; i++) {
         for (int f = 0; f < colonne ; f++) {
             grille[i][f] = Case::VIDE;
-            //if (grille[i][f] == Case::BATEAU)std::cout << "bateau";
-            //if (grille[i][f] == Case::VIDE)std::cout << "eau";
-            //std::cout << i << f << std::endl;
+     
         }
     }
-    
-    
-    //grille[][] = Case::VIDE;
-   //grille[1][1] = Case::BATEAU;
-   //grille[10][4] = Case::VIDE;
+   
 }
 
 void CGrille::InitGrille() {
@@ -221,11 +215,6 @@ void CGrille::serialisation(int& x, int& y, std::string trame, resultat& lettre)
 
 CGrille::Case CGrille::getCase(int ligne, int colonne)
 {
-    //grille[1][1] = Case::BATEAU;
-    //Case CaseTeste = ;
-    //if (CaseTeste == Case::BATEAU)std::cout << "bateau";
-    //if (CaseTeste == Case::EAU)std::cout << "eau";
-    //system("pause");
     return grille[ligne][colonne];
 }
 
@@ -412,15 +401,11 @@ void CGrille::afficherGrille()
                         }
                     }
                     else { //si on ne se trouve pas sur la premiere colonne : 
-                        
+
 
                         /*-------------------------------
                         // GESTION DES CASES SUR LA GRILLE ENNEMIE
                      -------------------------------*/
-
-
-
-
 
                         std::cout << "| ";
                         Case etat = getCase(k - 1, f); // on affiche les cases ou le joueur a tirer
@@ -451,21 +436,11 @@ void CGrille::afficherGrille()
 
         }
 
-
-
-
     }
 
-
-
-
-    
     // et on reboucle jusqu'a la finalisation du tableau.
-   // system("pause");
+   
     SetConsoleTextAttribute(hConsole, 15);
-
-
-
 
 }
 
@@ -508,9 +483,7 @@ std::string CGrille::placerBateau()
     std::cout << "\xDB            \xDB  \xDB            \xDB  \xDB           \xDB" << std::endl;
     std::cout << "\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF  \xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF  \xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF\xDF" << std::endl << std::endl;
     SetConsoleTextAttribute(hConsole, 15);
- //   system("pause");
-
-
+ 
 
     while ((nbCroiseur + nbPorteAvion + nbSousMarin + nbTorpilleur) > 0) { // tant que tout les bateaux n'ont pas été placer :
         while (selection == false) { //on crée un menu pour selectionner
@@ -542,8 +515,6 @@ std::string CGrille::placerBateau()
 
 
 
-
-
                 break;
             case CROISEUR: std::cout << "Porte-Avion [][][][][]" << std::endl << " >Croiseur [][][][] " << nbCroiseur << std::endl << "Torpilleur [][][]" << std::endl << "Sous-Marin [][]" << std::endl;
                 break;
@@ -563,16 +534,9 @@ std::string CGrille::placerBateau()
                 std::cout << "     \xDB\xDB\xDB            \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB  " << std::endl;
                 std::cout << "                             \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB        " << std::endl;
 
-
-
-
-
-
-
-
                 break;
             }
-            //std::cout << k;
+           
             Sleep(200);
             if (GetKeyState('E') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
             {
@@ -613,54 +577,32 @@ std::string CGrille::placerBateau()
                     }
                 case SOUSMARIN:
                     k = 1;
-                    if (nbSousMarin != 0) {
+                    if (nbSousMarin != 0) 
+                    {
                         selection = true;
                         break;
                     }
-                    else {
+                    else 
+                    {
                         std::cout << " Plus de bateaux de ce type a placer" << std::endl;
                         system("pause");
                         break;
                     }
-
-
-                    
-                    
-
-
                 }
             }
         }
         int coordoY = ligne / 2, coordoX = colonne / 2;
-        
-    
+            
         for (int i = 0; i < ligne; i++) {
             for (int f = 0; f < colonne; f++) {
                 grille2[i][f] = grille[i][f];
-                //if (grille[i][f] == Case::BATEAU)std::cout << "bateau";
-                //if (grille[i][f] == Case::VIDE)std::cout << "eau";
-                //std::cout << i << f << std::endl;
             }
         }
-
-       
-
-
-
-
-
 
         //PLACEMENT DU BATEAU
         bool selection2 = false;
         bool direction = false;
         
-
-
-
-
-
-
-
         while (selection2 == false) {
 
             if (direction == false) {
@@ -695,11 +637,11 @@ std::string CGrille::placerBateau()
                 coordoY--;
                 system("CLS");
             }
-            if (GetKeyState('Q') & 0x8000/*Check if high-order bit is set (1 << 15)*/) 
+            if (GetKeyState('Q') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
             {
                 if (direction == false) {
                     for (int i = 0; i < k + 1; i++) {
-                       
+
 
                         //correction horrizontale gauche
                         if (coordoX + i < 2) coordoX += 1;
@@ -722,7 +664,7 @@ std::string CGrille::placerBateau()
             {
                 if (direction == false) {
                     for (int i = 0; i < k + 1; i++) {
-                         if (coordoY + i > 13) coordoY -= 1;
+                        if (coordoY + i > 13) coordoY -= 1;
                         grille[coordoY][coordoX + i] = grille2[coordoY][coordoX + i];
                     }
                 }
@@ -773,10 +715,6 @@ std::string CGrille::placerBateau()
                 system("CLS");
             }
 
-
-
-
-
             if (GetKeyState('E') & 0x8000/*Check if high-order bit is set (1 << 15)*/)
             {
 
@@ -786,8 +724,6 @@ std::string CGrille::placerBateau()
                     system("pause");
                     throw("Superposition de bateaux");
                 }
-
-
 
                 //Gestion de la superposition des bateaux 
                 for (int i = 0; i < ligne; i++) {
@@ -807,25 +743,11 @@ std::string CGrille::placerBateau()
                 }
                 ////////////////////////////////////////////////
 
-
-
-
-
-
                 for (int i = 0; i < ligne; i++) {
                     for (int f = 0; f < colonne; f++) {
                         grille[i][f] = grille2[i][f];
                     }
                 }
-
-
-
-
-
-
-
-
-
 
                 selection2 = true;
                 selection = false;
@@ -838,18 +760,8 @@ std::string CGrille::placerBateau()
                 }
             }
         }
-
     }
-
-
-
-
-   // system("pause");
-    return "reusite";
-
-
-
-    
+    return "reusite";    
 }
 
 void CGrille::XGrilleEnnemie(int ligne, int colonne)
