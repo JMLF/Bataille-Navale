@@ -235,9 +235,7 @@ int main(int argc, char* argv[])
             }
               
             std::cout << discussion << std::endl;
-            connection.envoi(discussion);
-             
-          
+            connection.envoi(discussion); 
               
         } while (true);
     }
@@ -377,6 +375,7 @@ int main(int argc, char* argv[])
                 break;
 
             }
+
             connection.envoi(discussion);
              
             std::string messageEnnemi = connection.reception();
