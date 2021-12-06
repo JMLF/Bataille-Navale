@@ -64,7 +64,7 @@ public :
 	
 
 private:
-	static int const TAILLEGRILLE = 11; //essayer avec 10 
+	static int const TAILLEGRILLE = 11; //on fait un tableau de 11 et on affiche que un tableau de 10 ça corrige le bug mdr
 
 	int colonne;
 
