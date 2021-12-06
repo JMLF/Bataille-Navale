@@ -76,44 +76,11 @@ int main(int argc, char* argv[])
             //mettre a jour la map de l'ennemi avec les coordonné CoordonneTemp + lettre
             grille.serialisation(x, y, messageEnnemi, lettre);
      
-            if (lettre == CGrille::resultat::F)
-            {
-               
-                Case = grille.getCase(x, y);
-                
-                if (Case == CGrille::Case::BATEAU)
-                {
-                    grille.XGrilleJoueur(x, y);
-                    lettreAenvouyer = CGrille::resultat::T;
-
-                }
-                if (Case == CGrille::Case::VIDE)
-                {
-                    grille.TildGrilleJoueur(x, y);
-                    lettreAenvouyer = CGrille::resultat::L;
-
-                }
-            }
-              
             if (lettre == CGrille::resultat::T)
             {
                 grille.XGrilleEnnemie(xTemp, yTemp);
                 std::cout << "valeur xtzmp et y temp " << xTemp << " " << yTemp << std::endl;
                 system("pause");
-
-
-                Case = grille.getCase(x, y);
-                if (Case == CGrille::Case::BATEAU)
-                {
-                    grille.XGrilleJoueur(x, y);
-                    lettreAenvouyer = CGrille::resultat::T;
-                }
-                if (Case == CGrille::Case::VIDE)
-                {
-                    grille.TildGrilleJoueur(x, y);
-                    lettreAenvouyer = CGrille::resultat::L;
-                }
-
             }
               
             if (lettre == CGrille::resultat::L)
@@ -121,19 +88,6 @@ int main(int argc, char* argv[])
                 grille.TildGrilleEnnemie(xTemp, yTemp);
                 std::cout << "valeur xtzmp et y temp " << xTemp << yTemp << std::endl;
                 system("pause");
-
-
-                Case = grille.getCase(x, y);
-                if (Case == CGrille::Case::BATEAU)
-                {
-                    grille.XGrilleJoueur(x, y);
-                    lettreAenvouyer = CGrille::resultat::T;
-                }
-                if (Case == CGrille::Case::VIDE)
-                {
-                    grille.TildGrilleJoueur(x, y);
-                    lettreAenvouyer = CGrille::resultat::L;
-                }
             }
               
             if (lettre == CGrille::resultat::P)
@@ -141,6 +95,18 @@ int main(int argc, char* argv[])
                 //partie remporté 
                 std::cout << " Victoire";
                 return 0;
+            }
+
+            Case = grille.getCase(x, y); //analyse la case voir si on été touché
+            if (Case == CGrille::Case::BATEAU)
+            {
+                grille.XGrilleJoueur(x, y);
+                lettreAenvouyer = CGrille::resultat::T;
+            }
+            if (Case == CGrille::Case::VIDE)
+            {
+                grille.TildGrilleJoueur(x, y);
+                lettreAenvouyer = CGrille::resultat::L;
             }
               
             //fin analyse trame -------------------------------------------------------
@@ -427,64 +393,22 @@ int main(int argc, char* argv[])
             CGrille::Case Case;
             grille.serialisation(x, y, messageEnnemi, lettre);
              
-            //mettre a jour la map de l'ennemi avec les coordonné CoordonneTemp + lettre 
-
-         
-           
-            
-                if (lettre == CGrille::resultat::F)
-                {
-                    Case = grille.getCase(x, y); 
-                    
-               
-                    if (Case == CGrille::Case::BATEAU)
-                    {
-                        grille.XGrilleJoueur(x, y);
-                        lettreAenvouyer = CGrille::resultat::T;
-                    }
-                    if (Case == CGrille::Case::VIDE)
-                    {
-                        grille.TildGrilleJoueur(x, y);
-                        lettreAenvouyer = CGrille::resultat::L;
-                    }
-                }
+            //mettre a jour la map de l'ennemi avec les coordonné CoordonneTemp + lettre
+                
                 if (lettre == CGrille::resultat::T)
                 {
                     grille.XGrilleEnnemie(xTemp, yTemp);
                     std::cout << "valeur xtzmp et y temp " << xTemp << yTemp << std::endl;
                     system("pause");
-
-                    Case = grille.getCase(x, y);
-                    if (Case == CGrille::Case::BATEAU)
-                    {
-                        grille.XGrilleJoueur(x, y);
-                        lettreAenvouyer = CGrille::resultat::T;
-                    }
-                    if (Case == CGrille::Case::VIDE)
-                    {
-                        grille.TildGrilleJoueur(x, y);
-                        lettreAenvouyer = CGrille::resultat::L;
-                    }
-
                 }
+
                 if (lettre == CGrille::resultat::L)
                 {
                     grille.TildGrilleEnnemie(xTemp, yTemp);
                     std::cout << "valeur xtzmp et y temp " << xTemp << yTemp << std::endl;
                     system("pause");
-
-                    Case = grille.getCase(x, y);
-                    if (Case == CGrille::Case::BATEAU)
-                    {
-                        grille.XGrilleJoueur(x, y);
-                        lettreAenvouyer = CGrille::resultat::T;
-                    }
-                    if (Case == CGrille::Case::VIDE)
-                    {
-                        grille.TildGrilleJoueur(x, y);
-                        lettreAenvouyer = CGrille::resultat::L;
-                    }
                 }
+
                 if (lettre == CGrille::resultat::P)
                 {
                     //partie remporté 
@@ -492,21 +416,27 @@ int main(int argc, char* argv[])
                     return 0;
                 }
 
+                Case = grille.getCase(x, y);
+                if (Case == CGrille::Case::BATEAU)
+                {
+                    grille.XGrilleJoueur(x, y);
+                    lettreAenvouyer = CGrille::resultat::T;
+                }
+                if (Case == CGrille::Case::VIDE)
+                {
+                    grille.TildGrilleJoueur(x, y);
+                    lettreAenvouyer = CGrille::resultat::L;
+                }
+
                 //fin analyse trame -------------------------------------------------------
 
-                 //8
+                 
                 grille.afficherGrille();
 
-
-
             } while (true);
-
         }
 
-
-
-
-        return(0); //a verif
+        return(0); //si on ne reçoit aucun message du serveur
 }//main 
 
 
