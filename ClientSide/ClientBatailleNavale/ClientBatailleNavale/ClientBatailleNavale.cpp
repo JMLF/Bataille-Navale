@@ -157,7 +157,8 @@ int main(int argc, char* argv[])
               
             std::cout << "Ou voulez-vous envoyer un missile ?" << std::endl;
             std::cin >> discussion;
-            xTemp = std::stoi(std::to_string(discussion.at(0)));
+            xTemp =std::stoi(discussion.substr(0, 1)); //le bug 51
+          //  xTemp = std::stoi(std::to_string(discussion.at(0)));
               
             if (discussion.at(1) == 'A')
             {
@@ -250,8 +251,8 @@ int main(int argc, char* argv[])
             std::cout << "Ou voulez-vous envoyer un missile ?" << std::endl;
             std::cin >> discussion;
             std::cout << std::endl;
-             
-            xTemp = std::stoi(std::to_string(discussion.at(0)));
+            xTemp = std::stoi(discussion.substr(0, 1));//correction bug a tester
+           // xTemp = std::stoi(std::to_string(discussion.at(0)));
              
             if (discussion.at(1) == 'A')
             {
