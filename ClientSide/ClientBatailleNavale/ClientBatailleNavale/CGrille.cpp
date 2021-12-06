@@ -66,6 +66,7 @@ void CGrille::serialisation(int& x, int& y, std::string trame, resultat& lettre)
         }
 
         std::string temp = trame.substr(2, 2);
+        std::cout << "dasn serialisation temp: " + temp << std::endl;
 
         if (temp.at(1) == 'A')
         {
@@ -108,8 +109,10 @@ void CGrille::serialisation(int& x, int& y, std::string trame, resultat& lettre)
             y = 10;
         }
 
-        std::string xs = std::to_string(temp.at(0));
+        std::string xs = temp.substr(0, 1);
+        std::cout << "dans serialisation : xs = " + xs << std::endl;
         x = std::stoi(xs); //ça faut que ça marche 
+        system("pause");
 }
 
 

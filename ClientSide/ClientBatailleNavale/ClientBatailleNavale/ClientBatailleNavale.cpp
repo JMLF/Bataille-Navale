@@ -35,7 +35,7 @@ int main(int argc, char* argv[])
     std::cout << "Connection en cour " << std::endl;
     CGrille grille;
     std::string message;
-    
+
     message = connection.reception(); //reception de l'accusé de conenction
     std::cout << message << std::endl;
     message = connection.reception(); //reception du message qui dit qu'on doit placer les bateaux
@@ -45,17 +45,17 @@ int main(int argc, char* argv[])
     message = connection.reception(); //reception du message qui dit qu'on peux parler ou que l'autre joueur place ses bateau
     std::cout << message << std::endl;
 
-  //  enum class trame{AVOUS=0,FIRE,TOUCH,MISS,WIN=4}; //plus utilisé
+    //  enum class trame{AVOUS=0,FIRE,TOUCH,MISS,WIN=4}; //plus utilisé
     int erreurs(0);
 
     if (message == "Serveur: votre tour de jouer") //on previent le joueur 2 que l'on a fini de placer les bateaux 
     {
 
-        connection.envoi("joueur: J'ai ini de placer mes bateaux"); 
+        connection.envoi("joueur: J'ai ini de placer mes bateaux");
         std::string etats;
         int etat(0);
-        int xTemp;
-        int yTemp;
+        int xTemp = 0;
+        int yTemp = 0;
         do
         {
             std::cout << erreurs << std::endl; erreurs++; //0
@@ -63,40 +63,103 @@ int main(int argc, char* argv[])
             std::string messageEnnemi;
             std::cout << erreurs << std::endl; erreurs++; //1
             messageEnnemi = connection.reception();
-            std::cout <<  messageEnnemi << std::endl;
+            std::cout << messageEnnemi << std::endl;
             std::cout << erreurs << std::endl; erreurs++;
             //analyse de la trame recu ---------------------------------------------------          
             int x;
             int y;
             CGrille::resultat lettre;
-            CGrille::resultat lettreAenvouyer;
+            CGrille::resultat lettreAenvouyer = CGrille::resultat::F;
             CGrille::Case Case;
 
-            grille.serialisation(x,y,messageEnnemi,lettre);
+            grille.serialisation(x, y, messageEnnemi, lettre);
             std::cout << erreurs << std::endl; erreurs++; //2
             //mettre a jour la map de l'ennemi avec les coordonné CoordonneTemp + lettre 
            
+
+         
+            switch (lettre)
+            {
+            case CGrille::resultat::F:
+                std::cout << "lettre = F" << std::endl;
+
+                break;
+            case CGrille::resultat::T:
+                std::cout << "lettre = T"   << std::endl;
+
+                break;
+            case CGrille::resultat::L:
+                std::cout << "lettre = L" << std::endl;
+
+                break;
+            case CGrille::resultat::G:
+                std::cout << "lettre = G" << std::endl;
+
+                break;
+            case CGrille::resultat::P:
+                std::cout << "lettre = P" << std::endl;
+
+                break;
+            
+            }
+            system("pause");
+
+
+
+
             if (lettre == CGrille::resultat::F)
             {
+               std:: cout << "on est dans la boucle lettre = F  x = " << x << "y =" << y << std::endl;
                 Case = grille.getCase(x, y);
+                switch (Case) //pour du debug
+                {
+                case CGrille::Case::VIDE:
+                    std::cout << "Getcase : vide " << std::endl;
+                    break;
+                case CGrille::Case::BATEAU:
+                    std::cout << "Getcase : bateau " << std::endl;
+
+                    break;
+                case CGrille::Case::TOUCHEJ:
+                    std::cout << "Getcase : touchej " << std::endl;
+
+                    break;
+                case CGrille::Case::TOUCHEE:
+                    std::cout << "Getcase : touchee " << std::endl;
+
+                    break;
+                case CGrille::Case::EAUJ:
+                    std::cout << "Getcase : eauj " << std::endl;
+
+                    break;
+                case CGrille::Case::EAUE:
+                    std::cout << "Getcase : eaue " << std::endl;
+
+                    break;
+                case CGrille::Case::ERREUR:
+                    std::cout << "Getcase : erreur " << std::endl;
+
+                    break;
+                } //fin debug
+                 system("pause");
                 if (Case == CGrille::Case::BATEAU)
                 {
                     grille.bateauToucherAllier(x, y);
                     lettreAenvouyer = CGrille::resultat::T;
-                    
+
                 }
                 if (Case == CGrille::Case::VIDE)
                 {
                     grille.tirLoupeEnnemi(x, y);
                     lettreAenvouyer = CGrille::resultat::L;
-                    
+
                 }
             }
             std::cout << erreurs << std::endl; erreurs++; //3
             if (lettre == CGrille::resultat::T)
             {
                 grille.bateauToucherEnnemi(xTemp, yTemp);
-                
+
 
                 Case = grille.getCase(x, y);
                 if (Case == CGrille::Case::BATEAU)
@@ -132,11 +195,11 @@ int main(int argc, char* argv[])
             if (lettre == CGrille::resultat::P)
             {
                 //partie remporté 
-                std::cout<< " Victoire";
+                std::cout << " Victoire";
                 return 0;
             }
             std::cout << erreurs << std::endl; erreurs++; //6
-           
+
 
             //fin analyse trame -------------------------------------------------------
             discussion = connection.reception();
@@ -207,7 +270,7 @@ int main(int argc, char* argv[])
             case CGrille::resultat::P:
                 discussion = "F:" + discussion;
                 break;
-            
+
             }
             std::cout << erreurs << std::endl; erreurs++; //10
             std::cout << discussion << std::endl;
@@ -216,7 +279,7 @@ int main(int argc, char* argv[])
             grille.afficherGrille();
             std::cout << erreurs << std::endl; erreurs++; //12
 
-          
+
 
         } while (true);
     }
@@ -224,8 +287,8 @@ int main(int argc, char* argv[])
     {
         std::string etats;
         int etat(0);
-        int xTemp;
-        int yTemp;
+        int xTemp = 0;
+        int yTemp = 0;
         CGrille::resultat lettreAenvouyer;
         lettreAenvouyer = CGrille::resultat::F;
         do
@@ -319,76 +382,138 @@ int main(int argc, char* argv[])
             std::cout << erreurs << std::endl; erreurs++;//7
             //mettre a jour la map de l'ennemi avec les coordonné CoordonneTemp + lettre 
 
-            if (lettre == CGrille::resultat::F)
+         
+            switch (lettre)
             {
-                Case = grille.getCase(x, y);
-                if (Case == CGrille::Case::BATEAU)
-                {
-                    grille.bateauToucherAllier(x, y);
-                    lettreAenvouyer = CGrille::resultat::T;
-                }
-                if (Case == CGrille::Case::VIDE)
-                {
-                    grille.tirLoupeEnnemi(x, y);
-                    lettreAenvouyer = CGrille::resultat::L;
-                }
-            }
+            case CGrille::resultat::F:
+                std::cout << "lettre = F" << std::endl;
 
-            if (lettre == CGrille::resultat::T)
-            {
-                grille.bateauToucherEnnemi(xTemp, yTemp);
+                break;
+            case CGrille::resultat::T:
+                std::cout << "lettre = T" << std::endl;
 
-                Case = grille.getCase(x, y);
-                if (Case == CGrille::Case::BATEAU)
-                {
-                    grille.bateauToucherAllier(x, y);
-                    lettreAenvouyer = CGrille::resultat::T;
-                }
-                if (Case == CGrille::Case::VIDE)
-                {
-                    grille.tirLoupeEnnemi(x, y);
-                    lettreAenvouyer = CGrille::resultat::L;
-                }
+                break;
+            case CGrille::resultat::L:
+                std::cout << "lettre = L" << std::endl;
+
+                break;
+            case CGrille::resultat::G:
+                std::cout << "lettre = G" << std::endl;
+
+                break;
+            case CGrille::resultat::P:
+                std::cout << "lettre = P" << std::endl;
+
+                break;
 
             }
-            if (lettre == CGrille::resultat::L)
-            {
-                grille.tirLoupeJoueur(xTemp, yTemp);
-
-                Case = grille.getCase(x, y);
-                if (Case == CGrille::Case::BATEAU)
+            system("pause");
+            
+                if (lettre == CGrille::resultat::F)
                 {
-                    grille.bateauToucherAllier(x, y);
-                    lettreAenvouyer = CGrille::resultat::T;
-                }
-                if (Case == CGrille::Case::VIDE)
+                    Case = grille.getCase(x, y); 
+                    
+                switch (Case) //pour du debug
                 {
-                    grille.tirLoupeEnnemi(x, y);
-                    lettreAenvouyer = CGrille::resultat::L;
+                case CGrille::Case::VIDE:
+                    std::cout << "Getcase : vide " << std::endl;
+                    break;
+                case CGrille::Case::BATEAU:
+                    std::cout << "Getcase : bateau " << std::endl;
+
+                    break;
+                case CGrille::Case::TOUCHEJ:
+                    std::cout << "Getcase : touchej " << std::endl;
+                   
+
+                    break;
+                case CGrille::Case::TOUCHEE:
+                    std::cout << "Getcase : touchee " << std::endl;
+
+                    break;
+                case CGrille::Case::EAUJ:
+                    std::cout << "Getcase : eauj " << std::endl;
+
+                    break;
+                case CGrille::Case::EAUE:
+                    std::cout << "Getcase : eaue " << std::endl;
+
+                    break;
+                case CGrille::Case::ERREUR:
+                    std::cout << "Getcase : erreur " << std::endl;
+
+                    break;
+                } //fin debug
+                 system("pause");
+                    if (Case == CGrille::Case::BATEAU)
+                    {
+                        grille.bateauToucherAllier(x, y);
+                        lettreAenvouyer = CGrille::resultat::T;
+                    }
+                    if (Case == CGrille::Case::VIDE)
+                    {
+                        grille.tirLoupeEnnemi(x, y);
+                        lettreAenvouyer = CGrille::resultat::L;
+                    }
                 }
-            }
-            if (lettre == CGrille::resultat::P)
-            {
-                //partie remporté 
-                std::cout << " Victoire";
-                return 0;
-            }
+                if (lettre == CGrille::resultat::T)
+                {
+                    grille.bateauToucherEnnemi(xTemp, yTemp);
 
-            //fin analyse trame -------------------------------------------------------
+                    Case = grille.getCase(x, y);
+                    if (Case == CGrille::Case::BATEAU)
+                    {
+                        grille.bateauToucherAllier(x, y);
+                        lettreAenvouyer = CGrille::resultat::T;
+                    }
+                    if (Case == CGrille::Case::VIDE)
+                    {
+                        grille.tirLoupeEnnemi(x, y);
+                        lettreAenvouyer = CGrille::resultat::L;
+                    }
 
-            std::cout << erreurs << std::endl; erreurs++;//8
-            grille.afficherGrille();
+                }
+                if (lettre == CGrille::resultat::L)
+                {
+                    grille.tirLoupeJoueur(xTemp, yTemp);
 
-           
+                    Case = grille.getCase(x, y);
+                    if (Case == CGrille::Case::BATEAU)
+                    {
+                        grille.bateauToucherAllier(x, y);
+                        lettreAenvouyer = CGrille::resultat::T;
+                    }
+                    if (Case == CGrille::Case::VIDE)
+                    {
+                        grille.tirLoupeEnnemi(x, y);
+                        lettreAenvouyer = CGrille::resultat::L;
+                    }
+                }
+                if (lettre == CGrille::resultat::P)
+                {
+                    //partie remporté 
+                    std::cout << " Victoire";
+                    return 0;
+                }
 
-        } while (true);
+                //fin analyse trame -------------------------------------------------------
 
-    }
+                std::cout << erreurs << std::endl; erreurs++;//8
+                grille.afficherGrille();
 
-    
-  
 
-    return(0);
-}
+
+            } while (true);
+
+        }
+
+
+
+
+        return(0); //a verif
+}//main 
+
+
+
 
 
