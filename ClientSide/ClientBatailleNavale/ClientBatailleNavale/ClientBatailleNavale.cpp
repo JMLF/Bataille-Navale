@@ -446,6 +446,7 @@ int main(int argc, char* argv[])
             }
             system("pause");
             // fin debug ----------------------------------------------------------------------    
+
                 if (lettre == CGrille::resultat::T)
                 {
                     grille.XGrilleEnnemie(xTemp, yTemp);
