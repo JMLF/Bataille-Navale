@@ -13,8 +13,8 @@ CGrille::CGrille()
     nbCroiseur = 1;
     nbTorpilleur = 0;
     nbSousMarin = 0;
-    colonne = 10;
-    ligne = 10;
+    colonne = TAILLEGRILLE - 1;
+    ligne = TAILLEGRILLE - 1;
     //grille[9][9] = Case::VIDE;
     for (int i = 0; i < ligne ; i++) {
         for (int f = 0; f < colonne ; f++) {
