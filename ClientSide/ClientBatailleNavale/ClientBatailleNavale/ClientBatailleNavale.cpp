@@ -63,13 +63,13 @@ int main(int argc, char* argv[])
             messageEnnemi = connection.reception();
             std::cout << messageEnnemi << std::endl;
              
-            //analyse de la trame recu ---------------------------------------------------          
+            // declaration --------------------------------------
             int x;
             int y;
             CGrille::resultat lettre;
             CGrille::resultat lettreAenvouyer = CGrille::resultat::F;
             CGrille::Case Case;
-
+            //  --------------------------------------
 
 
             
@@ -77,7 +77,7 @@ int main(int argc, char* argv[])
 
 
 
-
+            //analyse de la trame recu ---------------------------------------------------  
             grille.serialisation(x, y, messageEnnemi, lettre);
               
             //mettre a jour la map de l'ennemi avec les coordonné CoordonneTemp + lettre 
@@ -100,10 +100,12 @@ int main(int argc, char* argv[])
 
                 }
             }
-              //3
+              
             if (lettre == CGrille::resultat::T)
             {
                 grille.XGrilleEnnemie(xTemp, yTemp);
+                std::cout << "valeur xtzmp et y temp " << xTemp << yTemp << std::endl;
+                system("pause");
 
 
                 Case = grille.getCase(x, y);
@@ -123,6 +125,9 @@ int main(int argc, char* argv[])
             if (lettre == CGrille::resultat::L)
             {
                 grille.TildGrilleEnnemie(xTemp, yTemp);
+                std::cout << "valeur xtzmp et y temp " << xTemp << yTemp << std::endl;
+                system("pause");
+
 
                 Case = grille.getCase(x, y);
                 if (Case == CGrille::Case::BATEAU)
@@ -347,6 +352,8 @@ int main(int argc, char* argv[])
                 if (lettre == CGrille::resultat::T)
                 {
                     grille.XGrilleEnnemie(xTemp, yTemp);
+                    std::cout << "valeur xtzmp et y temp " << xTemp << yTemp << std::endl;
+                    system("pause");
 
                     Case = grille.getCase(x, y);
                     if (Case == CGrille::Case::BATEAU)
@@ -364,6 +371,8 @@ int main(int argc, char* argv[])
                 if (lettre == CGrille::resultat::L)
                 {
                     grille.TildGrilleEnnemie(xTemp, yTemp);
+                    std::cout << "valeur xtzmp et y temp " << xTemp << yTemp << std::endl;
+                    system("pause");
 
                     Case = grille.getCase(x, y);
                     if (Case == CGrille::Case::BATEAU)

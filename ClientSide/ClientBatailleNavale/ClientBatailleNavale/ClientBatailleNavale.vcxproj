@@ -142,7 +142,6 @@
     <ClCompile Include="CConnectionServeur.cpp" />
     <ClCompile Include="CGrille.cpp" />
     <ClCompile Include="ClientBatailleNavale.cpp" />
-    <ClCompile Include="Sourcetest.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CConnectionServeur.h" />
