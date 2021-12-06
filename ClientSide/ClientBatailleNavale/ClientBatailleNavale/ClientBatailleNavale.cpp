@@ -162,11 +162,11 @@ int main(int argc, char* argv[])
            
             if (taille > 2)
             {
-                xTemp = std::stoi(discussion.substr(0, 1)); 
+                xTemp = std::stoi(discussion.substr(0, 2)); 
             }
             else
             {
-                xTemp = std::stoi(discussion.substr(0, 2)); 
+                xTemp = std::stoi(discussion.substr(0, 1)); 
             }
 
 
@@ -270,11 +270,11 @@ int main(int argc, char* argv[])
 
             if (taille > 2)
             {
-                xTemp = std::stoi(discussion.substr(0, 1));
+                xTemp = std::stoi(discussion.substr(0, 2));
             }
             else
             {
-                xTemp = std::stoi(discussion.substr(0, 2));
+                xTemp = std::stoi(discussion.substr(0, 1));
             }
 
        //     xTemp = std::stoi(discussion.substr(0, 1));//correction bug a tester

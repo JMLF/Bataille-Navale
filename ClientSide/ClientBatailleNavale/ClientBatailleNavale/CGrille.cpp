@@ -66,7 +66,9 @@ void CGrille::serialisation(int& x, int& y, std::string trame, resultat& lettre)
         }
 
         int taille = trame.size(); //si la trame est sup a 4 x fait 2 chiffres
-        std::string temp;
+        std::string temp; // = trame.substr(2, 2);
+        
+        //std::string temp;
         if (taille > 4)
         {
          temp = trame.substr(2, 3);
@@ -124,6 +126,10 @@ void CGrille::serialisation(int& x, int& y, std::string trame, resultat& lettre)
         {
             y = 10;
         }
+
+        //std::string xs = temp.substr(0, 1);
+        //x = std::stoi(xs); //fonctionne quand x < 10
+       
 
         
         
