@@ -64,7 +64,7 @@ public :
 	
 
 private:
-	static int const TAILLEGRILLE = 11;
+	static int const TAILLEGRILLE = 11; //essayer avec 10 
 
 	int colonne;
 
