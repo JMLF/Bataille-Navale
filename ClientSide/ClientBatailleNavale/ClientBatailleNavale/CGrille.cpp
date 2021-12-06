@@ -261,9 +261,9 @@ void CGrille::afficherGrille()
 
     La ligne des caractere ne doit pas etre prise en compte dans le jeu , donc on y ajoute une ligne (ligne+1) pour avoir 11 lignes.
     */
-    for (int i = 0; i < (ligne+1) * 2 + 1 ; i++) {  
+    for (int i = 0; i < (ligne) * 2 + 1 ; i++) {  
         if (valeurOuLigne == true) { //Si on est sur une ligne séparatrice ...
-            for (int f = 0; f < colonne+1; f++) {
+            for (int f = 0; f < colonne; f++) {
                 std::cout << "+---";
             }
             std::cout << "+" << std::endl; // on fini le tableau par un caratère '+' et un retour a la ligne
@@ -271,7 +271,7 @@ void CGrille::afficherGrille()
         }
         else { //Si on est sur une ligne de valeur...
             k++; // on incrémente les nombres du coté du tableau a chaque ligne de valeurs.
-            for (int f = 0; f < colonne+1; f++) { // on s'occupe maintenant du tableau dans sa largeur, en fonction du nombre de colonnes. +1 pour decaler les valeurs en raison de la case 0,0
+            for (int f = 0; f < colonne; f++) { // on s'occupe maintenant du tableau dans sa largeur, en fonction du nombre de colonnes. +1 pour decaler les valeurs en raison de la case 0,0
           
                 if (i < 2 && f > 0) { // si on est sur la premiere ligne et que on se trouve pas sur la case 0,0 on affiche lettre par lettre dans chaque case
 
@@ -366,9 +366,9 @@ void CGrille::afficherGrille()
     valeurOuLigne = true;
     k = 0;
     SetConsoleTextAttribute(hConsole, 4);
-    for (int i = 0; i < (ligne + 1) * 2 + 1; i++) {
+    for (int i = 0; i < (ligne) * 2 + 1; i++) {
         if (valeurOuLigne == true) { //Si on est sur une ligne séparatrice ...
-            for (int f = 0; f < colonne + 1; f++) {
+            for (int f = 0; f < colonne; f++) {
                 std::cout << "+---";
             }
             std::cout << "+" << std::endl; // on fini le tableau par un caratère '+' et un retour a la ligne
@@ -376,7 +376,7 @@ void CGrille::afficherGrille()
         }
         else { //Si on est sur une ligne de valeur...
             k++; // on incrémente les nombres du coté du tableau a chaque ligne de valeurs.
-            for (int f = 0; f < colonne + 1; f++) { // on s'occupe maintenant du tableau dans sa largeur, en fonction du nombre de colonnes. +1 pour decaler les valeurs en raison de la case 0,0
+            for (int f = 0; f < colonne; f++) { // on s'occupe maintenant du tableau dans sa largeur, en fonction du nombre de colonnes. +1 pour decaler les valeurs en raison de la case 0,0
 
                 if (i < 2 && f > 0) { // si on est sur la premiere ligne et que on se trouve pas sur la case 0,0 on affiche lettre par lettre dans chaque case
 
