@@ -752,28 +752,28 @@ std::string CGrille::placerBateau()
     
 }
 
-void CGrille::XGrilleEnnemie(int ligne, int colonne)
+void CGrille::bateauToucherEnnemi(int ligne, int colonne)
 {
     setCase(ligne, colonne, Case::TOUCHEE);
     system("CLS");
     afficherGrille();
 }
 
-void CGrille::XGrilleJoueur(int ligne, int colonne)
+void CGrille::bateauToucherAllier(int ligne, int colonne)
 {
     setCase(ligne, colonne, Case::TOUCHEJ);
     system("CLS");
     afficherGrille();
 }
 
-void CGrille::TildGrilleEnnemie(int ligne, int colonne)
+void CGrille::tirLoupeJoueur(int ligne, int colonne)
 {
     setCase(ligne, colonne, Case::EAUE);
     system("CLS");
     afficherGrille();
 }
 
-void CGrille::TildGrilleJoueur(int ligne, int colonne)
+void CGrille::tirLoupeEnnemi(int ligne, int colonne)
 {
     setCase(ligne, colonne, Case::EAUJ);
     system("CLS");

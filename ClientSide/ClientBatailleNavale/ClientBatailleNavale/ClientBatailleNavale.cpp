@@ -14,8 +14,6 @@
 ///\brief fonction main, prend des argument en ligne de commande 
 int main(int argc, char* argv[])
 {
-
-
     system("mode con LINES=70 COLS=100");
     //Verif des arguments -----------------------------------------------------------------------------------------
 
@@ -72,6 +70,14 @@ int main(int argc, char* argv[])
             CGrille::resultat lettreAenvouyer = CGrille::resultat::F;
             CGrille::Case Case;
 
+
+
+            
+
+
+
+
+
             grille.serialisation(x, y, messageEnnemi, lettre);
               
             //mettre a jour la map de l'ennemi avec les coordonné CoordonneTemp + lettre 
@@ -83,13 +89,13 @@ int main(int argc, char* argv[])
                 
                 if (Case == CGrille::Case::BATEAU)
                 {
-                    grille.bateauToucherAllier(x, y);
+                    grille.XGrilleJoueur(x, y);
                     lettreAenvouyer = CGrille::resultat::T;
 
                 }
                 if (Case == CGrille::Case::VIDE)
                 {
-                    grille.tirLoupeEnnemi(x, y);
+                    grille.TildGrilleJoueur(x, y);
                     lettreAenvouyer = CGrille::resultat::L;
 
                 }
@@ -97,18 +103,18 @@ int main(int argc, char* argv[])
               //3
             if (lettre == CGrille::resultat::T)
             {
-                grille.bateauToucherEnnemi(xTemp, yTemp);
+                grille.XGrilleEnnemie(xTemp, yTemp);
 
 
                 Case = grille.getCase(x, y);
                 if (Case == CGrille::Case::BATEAU)
                 {
-                    grille.bateauToucherAllier(x, y);
+                    grille.XGrilleJoueur(x, y);
                     lettreAenvouyer = CGrille::resultat::T;
                 }
                 if (Case == CGrille::Case::VIDE)
                 {
-                    grille.tirLoupeEnnemi(x, y);
+                    grille.TildGrilleJoueur(x, y);
                     lettreAenvouyer = CGrille::resultat::L;
                 }
 
@@ -116,17 +122,17 @@ int main(int argc, char* argv[])
               
             if (lettre == CGrille::resultat::L)
             {
-                grille.tirLoupeJoueur(xTemp, yTemp);
+                grille.TildGrilleEnnemie(xTemp, yTemp);
 
                 Case = grille.getCase(x, y);
                 if (Case == CGrille::Case::BATEAU)
                 {
-                    grille.bateauToucherAllier(x, y);
+                    grille.XGrilleJoueur(x, y);
                     lettreAenvouyer = CGrille::resultat::T;
                 }
                 if (Case == CGrille::Case::VIDE)
                 {
-                    grille.tirLoupeEnnemi(x, y);
+                    grille.TildGrilleJoueur(x, y);
                     lettreAenvouyer = CGrille::resultat::L;
                 }
             }
@@ -329,45 +335,45 @@ int main(int argc, char* argv[])
                
                     if (Case == CGrille::Case::BATEAU)
                     {
-                        grille.bateauToucherAllier(x, y);
+                        grille.XGrilleJoueur(x, y);
                         lettreAenvouyer = CGrille::resultat::T;
                     }
                     if (Case == CGrille::Case::VIDE)
                     {
-                        grille.tirLoupeEnnemi(x, y);
+                        grille.TildGrilleJoueur(x, y);
                         lettreAenvouyer = CGrille::resultat::L;
                     }
                 }
                 if (lettre == CGrille::resultat::T)
                 {
-                    grille.bateauToucherEnnemi(xTemp, yTemp);
+                    grille.XGrilleEnnemie(xTemp, yTemp);
 
                     Case = grille.getCase(x, y);
                     if (Case == CGrille::Case::BATEAU)
                     {
-                        grille.bateauToucherAllier(x, y);
+                        grille.XGrilleJoueur(x, y);
                         lettreAenvouyer = CGrille::resultat::T;
                     }
                     if (Case == CGrille::Case::VIDE)
                     {
-                        grille.tirLoupeEnnemi(x, y);
+                        grille.TildGrilleJoueur(x, y);
                         lettreAenvouyer = CGrille::resultat::L;
                     }
 
                 }
                 if (lettre == CGrille::resultat::L)
                 {
-                    grille.tirLoupeJoueur(xTemp, yTemp);
+                    grille.TildGrilleEnnemie(xTemp, yTemp);
 
                     Case = grille.getCase(x, y);
                     if (Case == CGrille::Case::BATEAU)
                     {
-                        grille.bateauToucherAllier(x, y);
+                        grille.XGrilleJoueur(x, y);
                         lettreAenvouyer = CGrille::resultat::T;
                     }
                     if (Case == CGrille::Case::VIDE)
                     {
-                        grille.tirLoupeEnnemi(x, y);
+                        grille.TildGrilleJoueur(x, y);
                         lettreAenvouyer = CGrille::resultat::L;
                     }
                 }

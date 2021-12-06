@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{7566d2b8-233c-47f9-b25d-cebcfe9a7695}</ProjectGuid>
-    <RootNamespace>ClientBatailleNavale</RootNamespace>
+    <ProjectGuid>{fd941337-e6b4-47d3-884f-1435ac1908c8}</ProjectGuid>
+    <RootNamespace>testcgrille</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -139,17 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="CConnectionServeur.cpp" />
     <ClCompile Include="CGrille.cpp" />
-    <ClCompile Include="ClientBatailleNavale.cpp" />
-    <ClCompile Include="Sourcetest.cpp" />
+    <ClCompile Include="testcgrille.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="CConnectionServeur.h" />
     <ClInclude Include="CGrille.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="note.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -49,13 +49,13 @@ public :
 	std::string placerBateau();
 
 	
-	void XGrilleEnnemie(int ligne, int colonne);
+	void bateauToucherEnnemi(int ligne, int colonne);
 	
-	void XGrilleJoueur(int ligne, int colonne);
+	void bateauToucherAllier(int ligne, int colonne);
 	
-	void TildGrilleEnnemie(int ligne, int colonne);
+	void tirLoupeJoueur(int ligne, int colonne);
 	
-	void TildGrilleJoueur(int ligne, int colonne);
+	void tirLoupeEnnemi(int ligne, int colonne);
 	
 	void InitGrille();
 
