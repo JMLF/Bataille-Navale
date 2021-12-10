@@ -62,7 +62,7 @@ public :
 
 	void serialisation(int& x, int& y, std::string trame, resultat& lettre);
 
-	void setnbDeCaseBateau(int nbDeCaseBateau);
+	void setnbDeCaseBateau();
 
 
 	
