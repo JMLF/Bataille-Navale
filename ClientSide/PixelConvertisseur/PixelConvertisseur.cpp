@@ -16,7 +16,9 @@ int main()
 		for (int i = 0; i < mes.size(); i++) {
 		
 			if (mes.at(i) != ' ') {
-				if (mes.at(i)=='.')resulta += " ";
+				if (mes.at(i)==',' | mes.at(i) == '.')resulta += " ";
+				
+
 				else {
 					resulta += "\\xDB";
 				}
