@@ -13,30 +13,21 @@ int main(int argc, char* argv[])
 {
 	system("mode con LINES=70 COLS=100");
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
-
 	//Verif des arguments -----------------------------------------------------------------------------------------
+
 	if (argc != 3) //different de 3 car exe vaut pour 1
 	{
 		std::cout << " manque 1 argument ( IP / Port ) " << std::endl;
 		return 0;
 	}
+
 	std::string IP_SERVEUR = argv[1];
 	std::string port = argv[2];
 	//--------------------------------------------------------------------------------------------------------------
 
-	CConnectionServeur connection(IP_SERVEUR, port); //problème içi, renvoi des exception mais comment les gerer ? 
-
-	try //pour la gestion des exception lors de la connection
-	{
+	CConnectionServeur connection(IP_SERVEUR, port);
 	connection.initConnec();
 	connection.connection(); //on se connecte içi 
-	}
-	catch (std::string &e)
-	{
-		std::cout << e << std::endl;
-		return 0;
-	}
-	
 	std::cout << "Connection en cours... " << std::endl;
 	CGrille grille;
 	std::string message;
@@ -57,7 +48,8 @@ int main(int argc, char* argv[])
 	{
 
 		connection.envoi("joueur: J'ai fini de placer mes bateaux");
-		
+		std::string etats; //a verif mais je pense que ça sert plus 
+		int etat(0); //ça non plus 
 		int xTemp = 0;
 		int yTemp = 0;
 		do
@@ -294,7 +286,7 @@ int main(int argc, char* argv[])
 	if (message == "joueur: J'ai fini de placer mes bateaux") //si on reçoit le message que le joueur 2 a fini on peux envoyer une trame puisque c'est notre tour coté serveur
 	{
 
-		
+		int etat(0); //a verifier pas sur que ce soit utile 
 		int xTemp = 0;
 		int yTemp = 0;
 		CGrille::resultat lettreAenvouyer;

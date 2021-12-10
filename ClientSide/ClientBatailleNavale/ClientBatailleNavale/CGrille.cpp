@@ -6,14 +6,14 @@
 CGrille::CGrille()
 {
 
-    nbPorteAvion = 1; //nombre de porte avion que l'on veut sur la partie
+    nbPorteAvion = 1;
     nbCroiseur = 1;
     nbTorpilleur = 0;
     nbSousMarin = 0;
-    nbDeCaseBateau = (nbPorteAvion * 5 + nbCroiseur * 4 + nbTorpilleur * 3 + nbSousMarin * 2); // la défaite est calculer en fonction du nombre de case bateau restante sur la grille
+    nbDeCaseBateau = (nbPorteAvion * 5 + nbCroiseur * 4 + nbTorpilleur * 3 + nbSousMarin * 2);
     colonne = TAILLEGRILLE ; 
     ligne = TAILLEGRILLE ;
-    for (int i = 0; i < ligne ; i++) { //on initialise toute les cases des grilles à 0 (ennemie et joueur)
+    for (int i = 0; i < ligne ; i++) { //on initialise toute les cases des grilles a 0
         for (int f = 0; f < colonne ; f++) {
             grille[i][f] = Case::VIDE;
             grilleE[i][f] = Case::VIDE;
@@ -215,7 +215,7 @@ void CGrille::serialisation(int& x, int& y, std::string trame, resultat& lettre)
 
 void CGrille::setnbDeCaseBateau()
 {
-    this->nbDeCaseBateau-=1; //si le batteau a été toucher on supprime une case bateau du compteur
+    this->nbDeCaseBateau-=1;
 }
 
 
@@ -263,7 +263,7 @@ void CGrille::afficherGrille()
     On remarque que la création des lignes du tableau fini par une ligne de valeur, pour que cela soit plus propre , on y ajoute une ligne
     séparatrice d'ou le +1 apres la multiplication.
 
-    
+    La ligne des caractere ne doit pas etre prise en compte dans le jeu , donc on y ajoute une ligne (ligne+1) pour avoir 11 lignes.
     */
     for (int i = 0; i < (ligne) * 2 + 1 ; i++) {  
         if (valeurOuLigne == true) { //Si on est sur une ligne séparatrice ...
@@ -275,7 +275,7 @@ void CGrille::afficherGrille()
         }
         else { //Si on est sur une ligne de valeur...
             k++; // on incrémente les nombres du coté du tableau a chaque ligne de valeurs.
-            for (int f = 0; f < colonne; f++) { 
+            for (int f = 0; f < colonne; f++) { // on s'occupe maintenant du tableau dans sa largeur, en fonction du nombre de colonnes. +1 pour decaler les valeurs en raison de la case 0,0
           
                 if (i < 2 && f > 0) { // si on est sur la premiere ligne et que on se trouve pas sur la case 0,0 on affiche lettre par lettre dans chaque case
 
@@ -289,7 +289,7 @@ void CGrille::afficherGrille()
                     if (f == 0) { // si on est sur la premiere colonne :
                        
 
-                        if (k < 11) { // on verifie le format du nombre a afficher dans le tableau pour eviter un décalage quand on a deux chiffres 
+                        if (k < 11) { // on verifie que le format du nombre a afficher dans le tableau pour eviter un décalage quand on a deux chiffres 
                             if (k == 1) { // si c'est la zone 0.0 :
                                 std::cout << "| ";
                                 SetConsoleTextAttribute(hConsole, 15);
@@ -303,18 +303,22 @@ void CGrille::afficherGrille()
                                 SetConsoleTextAttribute(hConsole, 9);
                             }
                         }
-                        else { //si le format du nombre est a deux chiffre , on prend soin d'enlever un espace dans la nottation pour eviter un décallage sur le tableau
+                        else { //si le format du nombre est a deuyx chiffre , on prend soin d'enlever un espace dans la nottation pour eviter un décallage sur le tableau
                             std::cout << "|";
                             SetConsoleTextAttribute(hConsole, 15);
                             std::cout << k-1 << " ";
                             SetConsoleTextAttribute(hConsole, 9);
                         }
                     }
-                    else { //si on ne se trouve pas sur la premiere colonne , on fait une case de jeu : 
+                    else { //si on ne se trouve pas sur la premiere colonne , on fait une case vide : 
                         std::cout << "| ";
+
+
                      /*-------------------------------
                         // GESTION DES CASES SUR LA GRILLE JOUEUR
                      -------------------------------*/
+
+
 
                         Case etat = getCase(k-1, f);
 
