@@ -89,7 +89,7 @@ void CFonctionServer::communication(uint ids_connect, uint ids_connect1)
     send(ids_connect, placervosbateaux.c_str(), placervosbateaux.size() + 1, 0);
     send(ids_connect1, placervosbateaux.c_str(), placervosbateaux.size() + 1, 0);
 
-    std::string Avous = "Serveur: votre tour de jouer";
+    std::string Avous = "Serveur: communication";
 
     //echange client serveur peroquet sauf pour BYE
     do
