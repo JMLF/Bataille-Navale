@@ -14,8 +14,7 @@ void CFonctionServer::creaSockEcoute()
 {
 	if ((ids_ecoute = socket(AF_INET, SOCK_STREAM, 0)) == INVALID_SOCKET)
 	{
-		std::cout << "Echec creation Socket ! " << std::endl;
-		//remplacer par throw
+		throw("Echec creation Socket");
 		exit(1);
 	}
 }
@@ -33,8 +32,7 @@ void CFonctionServer::binding()
 	if (bind(ids_ecoute, (struct sockaddr*)&adr_serveur,
 		sizeof(adr_serveur)) == SOCKET_ERROR)
 	{
-		std::cout << "Echec Attachement Socket ! " << std::endl;
-		//throw
+		throw("Echec Attachement Socket");
 		exit(1);
 	}
 }
@@ -43,8 +41,7 @@ void CFonctionServer::listening()
 {
 	if (listen(ids_ecoute, 2) == SOCKET_ERROR)
 	{
-		std::cout << "Echec Lecture ! " << std::endl;
-		//throw
+		throw("Echec Lecture");
 		exit(1);
 	}
 	std::cout << "Serveur en ecoute " << std::endl; //pour le debug 
@@ -60,7 +57,6 @@ uint CFonctionServer::accepting()
 
 	ids_connect = accept(ids_ecoute, (struct sockaddr*)&adr_client, &addr_len);
 	return ids_connect;
-	std::cout << "Client accepté " << std::endl; //pour le debug 
 }
 
 void CFonctionServer::communication(uint ids_connect, uint ids_connect1)

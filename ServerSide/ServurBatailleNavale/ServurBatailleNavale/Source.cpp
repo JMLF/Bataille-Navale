@@ -6,11 +6,19 @@ int main()
 
 
 	CFonctionServer serveur;
+	try
+	{
+		serveur.initWinsock();
+		serveur.creaSockEcoute();
+		serveur.binding();
+		serveur.listening();
+	}
+	catch (const std::string&e)
+	{
+		std::cout << "Exception: " << e << std::endl;
+		return 0;
+	}
 
-	serveur.initWinsock();
-	serveur.creaSockEcoute();
-	serveur.binding();
-	serveur.listening();
 
 	while (true)
 	{
