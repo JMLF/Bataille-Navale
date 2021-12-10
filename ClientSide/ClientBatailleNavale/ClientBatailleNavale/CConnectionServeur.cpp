@@ -11,14 +11,16 @@ CConnectionServeur::CConnectionServeur(std::string IP_SERVEUR, std::string port)
     }
     catch (...)
     {
-        //au moindre probleme de conversions on renvoi une exception 
-        throw ("Problème sur ip ou le port");
+        std::cout << " Mauvais format du port " << std::endl;
+        //throw 
+        
     }
 
     if (NUM_PORT <= 0)
     {
-        //gestion de l'erreur avec un throw
-        throw ("Port invalide");
+        std::cout << " format invalide du port " << std::endl;
+        //throw
+        //throw ("Port inferieu")
     }
 
 }
@@ -31,7 +33,8 @@ void CConnectionServeur::initConnec()
     // Création du socket client
     if ((ids_client = socket(AF_INET, SOCK_STREAM, 0)) == INVALID_SOCKET)
     {
-        throw("Echec creation Socket");
+        std::cout << "Echec creation Socket ! " << std::endl;
+        //throw 
         exit(1);
     }
 
@@ -46,7 +49,8 @@ void CConnectionServeur::connection()
 {
     if (connect(ids_client, (struct sockaddr*)&adr_serveur, sizeof(adr_serveur)) < 0)
     {
-        throw("Echec connexion");
+        std::cout << "Echec connexion ! " << std::endl;
+        //throw
         exit(1);
     }
 }
