@@ -16,7 +16,7 @@ CGrille::CGrille()
     for (int i = 0; i < ligne ; i++) {
         for (int f = 0; f < colonne ; f++) {
             grille[i][f] = Case::VIDE;
-     
+            grilleE[i][f] = Case::VIDE;
         }
     }
    
@@ -218,9 +218,18 @@ CGrille::Case CGrille::getCase(int ligne, int colonne)
     return grille[ligne][colonne];
 }
 
+CGrille::Case CGrille::getCaseE(int ligne, int colonne)
+{
+    return grilleE[ligne][colonne];
+}
+
 void CGrille::setCase(int ligne, int colonne, Case type)
 {
     grille[ligne][colonne] = type;
+}
+void CGrille::setCaseE(int ligne, int colonne, Case type)
+{
+    grilleE[ligne][colonne] = type;
 }
 
 void CGrille::afficherGrille()
@@ -408,7 +417,7 @@ void CGrille::afficherGrille()
                      -------------------------------*/
 
                         std::cout << "| ";
-                        Case etat = getCase(k - 1, f); // on affiche les cases ou le joueur a tirer
+                        Case etat = getCaseE(k - 1, f); // on affiche les cases ou le joueur a tirer
 
                         switch (etat) {
                         case Case::TOUCHEE: //si le joueur a toucher un bateau
@@ -766,7 +775,7 @@ std::string CGrille::placerBateau()
 
 void CGrille::XGrilleEnnemie(int ligne, int colonne)
 {
-    setCase(ligne, colonne, Case::TOUCHEE);
+    setCaseE(ligne, colonne, Case::TOUCHEE);
     system("CLS");
     afficherGrille();
 }
@@ -780,7 +789,7 @@ void CGrille::XGrilleJoueur(int ligne, int colonne)
 
 void CGrille::TildGrilleEnnemie(int ligne, int colonne)
 {
-    setCase(ligne, colonne, Case::EAUE);
+    setCaseE(ligne, colonne, Case::EAUE);
     system("CLS");
     afficherGrille();
 }

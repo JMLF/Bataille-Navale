@@ -30,13 +30,14 @@ public :
 	///\param ligne : int, colonne : int
 	///\return Case : enum  
 	Case getCase(int ligne, int colonne);
+	Case getCaseE(int ligne, int colonne);
 	
 	///\fn setCase
 	///\brief met une case a un etat 
 	///\param ligne : int, colonne : int, type : Case (enum)
 	///\return void
 	void setCase(int ligne, int colonne, Case type);
-	
+	void setCaseE(int ligne, int colonne, Case type);
 	///\fn afficherGrille
 	///\brief affiche la grille mise a jour 
 	///\return void
@@ -71,6 +72,7 @@ private:
 	int ligne;
 
 	Case grille[TAILLEGRILLE][TAILLEGRILLE];
+	Case grilleE[TAILLEGRILLE][TAILLEGRILLE];
 
 	int nbPorteAvion;
 

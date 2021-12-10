@@ -124,8 +124,21 @@ int main(int argc, char* argv[])
                 return 0;
             }
 
-            Case = grille.getCase(x, y); //analyse la case voir si on été touché
+
+            Case = grille.getCase(x, y);
+
+
+         
+
+
+
+            
             if (Case == CGrille::Case::BATEAU)
+            {
+                grille.XGrilleJoueur(x, y);
+                lettreAenvouyer = CGrille::resultat::T;
+            }
+            if (Case == CGrille::Case::TOUCHEJ)
             {
                 grille.XGrilleJoueur(x, y);
                 lettreAenvouyer = CGrille::resultat::T;
@@ -135,12 +148,29 @@ int main(int argc, char* argv[])
                 grille.TildGrilleJoueur(x, y);
                 lettreAenvouyer = CGrille::resultat::L;
             }
+            if (Case == CGrille::Case::EAUJ)
+            {
+                grille.TildGrilleJoueur(x, y);
+                lettreAenvouyer = CGrille::resultat::L;
+            }
+            
+
+
+
+
+          
               
             //fin analyse trame -------------------------------------------------------
             
             discussion = connection.reception();
             std::cout << discussion << std::endl;
               
+
+
+            
+
+
+
             std::cout << "Ou voulez-vous envoyer un missile ?" << std::endl;
             std::cin >> discussion;
 
@@ -284,6 +314,7 @@ int main(int argc, char* argv[])
             discussion = connection.reception();
              
             std::cout << discussion << std::endl;
+           
 
             std::cout << "Ou voulez-vous envoyer un missile ?" << std::endl;
             std::cin >> discussion;
@@ -472,7 +503,17 @@ int main(int argc, char* argv[])
                     grille.XGrilleJoueur(x, y);
                     lettreAenvouyer = CGrille::resultat::T;
                 }
+                if (Case == CGrille::Case::TOUCHEJ)
+                {
+                    grille.XGrilleJoueur(x, y);
+                    lettreAenvouyer = CGrille::resultat::T;
+                }
                 if (Case == CGrille::Case::VIDE)
+                {
+                    grille.TildGrilleJoueur(x, y);
+                    lettreAenvouyer = CGrille::resultat::L;
+                }
+                if (Case == CGrille::Case::EAUJ)
                 {
                     grille.TildGrilleJoueur(x, y);
                     lettreAenvouyer = CGrille::resultat::L;
