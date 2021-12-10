@@ -248,7 +248,7 @@ int main(int argc, char* argv[])
 
 
 			std::cout << std::endl;
-			std::cout << discussion << std::endl;
+			//std::cout << discussion << std::endl; re affiche le cin
 
 
 			switch (lettreAenvouyer) //suivant le résultat du tir ennemi sur notre grille on ajoute le résultat devant les coordonnées que l'on renvoi
@@ -271,7 +271,7 @@ int main(int argc, char* argv[])
 
 			}
 
-			std::cout << discussion << std::endl;
+			//std::cout << discussion << std::endl; affiche la trame qui va etre envoyé 
 			connection.envoi(discussion);
 
 			if (discussion.at(0) == 'P') //on verifie si l'autre client a gagné
@@ -408,7 +408,7 @@ int main(int argc, char* argv[])
 			}
 
 			std::cout << std::endl;
-			std::cout << discussion << std::endl;
+			//std::cout << discussion << std::endl; on reaffiche le cin
 
 			switch (lettreAenvouyer) //suivant le résultat du tir ennemi sur notre grille on ajoute le résultat devant les coordonnées que l'on renvoi
 			{
