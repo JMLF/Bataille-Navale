@@ -1,6 +1,6 @@
 #pragma once
 
-#define _CRT_SECURE_NO_WARNINGS
+#define _CRT_SECURE_NO_WARNINGS 
 
 #include <winsock2.h>
 #include <time.h>
@@ -66,10 +66,13 @@ public:
     // sera utilisé pour l'émission et la réception des caractères (etape 5)
     uint accepting();
 
+    //met en boucle deux ids_connect et transmet les trames entre l'un et l'autre 
     void communication(uint ids_connect, uint ids_connect1);
 
+    //permet d'envoyer une trame vers un ids_connect (bloquant)
     void sending(uint ids_connect, std::string message);
 
+    // ??
     void reciving(uint ids_connect, uint ids_connect1, std::string& message);
 
     // fermeture du socket d'écoute
