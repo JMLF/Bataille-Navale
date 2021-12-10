@@ -3,9 +3,6 @@
 ///\file ClientBatailleNavale.cpp
 ///\brief Fichier main du client, utilise les classes CGrille et CConnectionServeur
 
-
-
-
 #include "CConnectionServeur.h"
 #include "CGrille.h"
 #include <iostream>
@@ -46,12 +43,12 @@ int main(int argc, char* argv[])
    
    
 
-    if (message == "Serveur: votre tour de jouer") //on previent le joueur 2 que l'on a fini de placer les bateaux 
+    if (message == "Serveur: communication") //on previent le joueur 2 que l'on a fini de placer les bateaux 
     {
 
-        connection.envoi("joueur: J'ai ini de placer mes bateaux");
-        std::string etats;
-        int etat(0);
+        connection.envoi("joueur: J'ai fini de placer mes bateaux");
+        std::string etats; //a verif mais je pense que ça sert plus 
+        int etat(0); //ça non plus 
         int xTemp = 0;
         int yTemp = 0;
         do
@@ -63,19 +60,21 @@ int main(int argc, char* argv[])
             messageEnnemi = connection.reception();
             std::cout << messageEnnemi << std::endl;
              
+            //pour optimiser le code la partie ci dessous dois etre sortie de la boucle do while
             // declaration --------------------------------------------------------------
             int x;
             int y;
             CGrille::resultat lettre;
-            CGrille::resultat lettreAenvouyer = CGrille::resultat::F;
+            CGrille::resultat lettreAenvouyer = CGrille::resultat::F; //valeur par defaut
             CGrille::Case Case;
             // ---------------------------------------------------------------------------
 
 
-            //analyse de la trame recu ---------------------------------------------------  
-            //mettre a jour la map de l'ennemi avec les coordonné CoordonneTemp + lettre
-            grille.serialisation(x, y, messageEnnemi, lettre);
-            //debug ----------------------------------------------------------------------
+            //analyse de la trame recu --------------------------------------------------- debut  
+            
+            grille.serialisation(x, y, messageEnnemi, lettre); //en faite c'est plus de la déserialisation 
+
+            //debug ---------------------------------------------------------------------- a supprimer
             std::cout << "serialisation,  x et y " << x << " " << y << std::endl;
             switch (lettre)
             {
@@ -102,21 +101,19 @@ int main(int argc, char* argv[])
 
             }
             system("pause");
-            // fin debug ---------------------------------------------------------------------- 
+            // fin debug ---------------------------------------------------------------------- jusque la
            
-            
+            //pour optimiser on pourrais remplacer par un switch avec un default qui ne fait rien 
             if (lettre == CGrille::resultat::T)
             {
                 grille.XGrilleEnnemie(xTemp, yTemp);
                 
-            }
-              
+            }  
             if (lettre == CGrille::resultat::L)
             {
                 grille.TildGrilleEnnemie(xTemp, yTemp);
           
-            }
-              
+            } 
             if (lettre == CGrille::resultat::P)
             {
                 //partie remporté 
@@ -126,13 +123,7 @@ int main(int argc, char* argv[])
 
 
             Case = grille.getCase(x, y);
-
-
-         
-
-
-
-            
+            // a remplacer par un switch également 
             if (Case == CGrille::Case::BATEAU)
             {
                 grille.XGrilleJoueur(x, y);
@@ -153,23 +144,12 @@ int main(int argc, char* argv[])
                 grille.TildGrilleJoueur(x, y);
                 lettreAenvouyer = CGrille::resultat::L;
             }
-            
-
-
-
-
-          
-              
+               
             //fin analyse trame -------------------------------------------------------
             
-            discussion = connection.reception();
+            discussion = connection.reception(); //on attend que le serveur envoi une trame qui nous indique que c'est notre tour de parler
             std::cout << discussion << std::endl;
               
-
-
-            
-
-
 
             std::cout << "Ou voulez-vous envoyer un missile ?" << std::endl;
             std::cin >> discussion;
@@ -273,7 +253,7 @@ int main(int argc, char* argv[])
             std::cout << discussion << std::endl;
             
             
-            switch (lettreAenvouyer)
+            switch (lettreAenvouyer) //suivant le résultat du tir ennemi sur notre grille on ajoute le résultat devant les coordonnées que l'on renvoi
             {
             case CGrille::resultat::F:
                 discussion = "F:" + discussion;
@@ -299,19 +279,19 @@ int main(int argc, char* argv[])
         } while (true);
     }
 
-    if (message == "joueur: J'ai ini de placer mes bateaux") //si on reçoit le message que le joueur 2 a fini on peux envoyer une trame puisque c'est notre tour coté serveur
+    if (message == "joueur: J'ai fini de placer mes bateaux") //si on reçoit le message que le joueur 2 a fini on peux envoyer une trame puisque c'est notre tour coté serveur
     {
       
-        int etat(0);
+        int etat(0); //a verifier pas sur que ce soit utile 
         int xTemp = 0;
         int yTemp = 0;
         CGrille::resultat lettreAenvouyer;
-        lettreAenvouyer = CGrille::resultat::F;
+        lettreAenvouyer = CGrille::resultat::F; //valeur par défaut
         do
         {
               
-            std::string discussion;
-            discussion = connection.reception();
+            std::string discussion; //on pourrait le sortir de la boucle pour opti mais bien penser a verif que ça marche encore
+            discussion = connection.reception(); //on attend la trame du serveur qui dit que c'est a notre tour de jouer 
              
             std::cout << discussion << std::endl;
            
@@ -416,7 +396,7 @@ int main(int argc, char* argv[])
             std::cout << std::endl;
             std::cout << discussion << std::endl;
           
-            switch (lettreAenvouyer)
+            switch (lettreAenvouyer) //suivant le résultat du tir ennemi sur notre grille on ajoute le résultat devant les coordonnées que l'on renvoi
             {
             case CGrille::resultat::F:
                 discussion = "F:" + discussion;
@@ -442,14 +422,14 @@ int main(int argc, char* argv[])
             std::cout << messageEnnemi << std::endl;
              
             
-            //analyse de la trame recu ---------------------------------------------------          
+            //analyse de la trame recu --------------------------------------------------- debut         
             int x;
             int y;
             CGrille::resultat lettre;
             CGrille::Case Case;
             grille.serialisation(x, y, messageEnnemi, lettre);
            
-            //debug ----------------------------------------------------------------------
+            //debug ---------------------------------------------------------------------- a supprimer
             std::cout << "serialisation,  x et y " << x << " " << y << std::endl;
             switch (lettre)
             {
@@ -476,7 +456,7 @@ int main(int argc, char* argv[])
 
             }
             system("pause");
-            // fin debug ----------------------------------------------------------------------    
+            // fin debug ---------------------------------------------------------------------- jusque la   
 
                 if (lettre == CGrille::resultat::T)
                 {
