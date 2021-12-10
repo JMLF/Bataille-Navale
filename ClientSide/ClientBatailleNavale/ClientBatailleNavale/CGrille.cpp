@@ -22,7 +22,8 @@ CGrille::CGrille()
    
 }
 
-void CGrille::InitGrille() {
+void CGrille::InitGrille() 
+{
 
    
 }
