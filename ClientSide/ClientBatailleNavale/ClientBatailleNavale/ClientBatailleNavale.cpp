@@ -273,7 +273,7 @@ int main(int argc, char* argv[])
                 discussion = "G:" + discussion;
                 break;
             case CGrille::resultat::P:
-                discussion = "F:" + discussion;
+                discussion = "P:" + discussion;
                 break;
 
             }
@@ -416,7 +416,7 @@ int main(int argc, char* argv[])
                 discussion = "G:" + discussion;
                 break;
             case CGrille::resultat::P:
-                discussion = "F:" + discussion;
+                discussion = "P:" + discussion;
                 break;
 
             }
