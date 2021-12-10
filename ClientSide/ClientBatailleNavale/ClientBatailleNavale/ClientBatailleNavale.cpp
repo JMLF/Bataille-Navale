@@ -11,6 +11,7 @@
 ///\brief fonction main, prend des argument en ligne de commande 
 int main(int argc, char* argv[])
 {
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE); //declare hconsole
 	system("mode con LINES=70 COLS=100");
 	//Verif des arguments -----------------------------------------------------------------------------------------
 
