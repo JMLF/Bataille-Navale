@@ -7,18 +7,10 @@ int main()
 
 	CFonctionServer serveur;
 
-	try
-	{
-		serveur.initWinsock();
-		serveur.creaSockEcoute();
-		serveur.binding();
-		serveur.listening();
-	}
-	catch (std::string&e)
-	{
-		std::cout << e << std::endl;
-	}
-
+	serveur.initWinsock();
+	serveur.creaSockEcoute();
+	serveur.binding();
+	serveur.listening();
 
 	while (true)
 	{

@@ -2,22 +2,26 @@
 
 CFonctionServer::CFonctionServer()
 {
+	// nbconnec = 0;
+	//const ushort PORT_NUM = 12345;
+	//const ushort DIMMAX = 150;
 
 }
 
 void CFonctionServer::initWinsock()
 {
-	WSAStartup(nVersion, &donneeWS); 
+	WSAStartup(nVersion, &donneeWS);
+	std::cout << "Init de winsock " << std::endl; //pour le debug 
 }
 
 void CFonctionServer::creaSockEcoute()
 {
 	if ((ids_ecoute = socket(AF_INET, SOCK_STREAM, 0)) == INVALID_SOCKET)
 	{
-		throw ("Echec creation Socket");
+		std::cout << "Echec creation Socket ! " << std::endl;
 		exit(1);
 	}
-	
+	std::cout << "creation socket ecoute " << std::endl; //pour le debug 
 }
 
 void CFonctionServer::binding()
@@ -33,10 +37,10 @@ void CFonctionServer::binding()
 	if (bind(ids_ecoute, (struct sockaddr*)&adr_serveur,
 		sizeof(adr_serveur)) == SOCKET_ERROR)
 	{
-		throw ("Echec Attachement Socket");
+		std::cout << "Echec Attachement Socket ! " << std::endl;
 		exit(1);
 	}
-	
+	std::cout << "bind socket ecoute sur le port : " << std::to_string(PORT_NUM) << std::endl; //pour le debug 
 }
 
 void CFonctionServer::listening()
@@ -136,7 +140,8 @@ void CFonctionServer::reciving(uint ids_connect, uint ids_connect1, std::string&
 
 void CFonctionServer::FermeturWinSock()
 {
-	WSACleanup(); 
+	WSACleanup();
+	std::cout << "fermeture de winsock " << std::endl; //pour le debug 
 }
 
 void CFonctionServer::fermetureSockEcoute()
