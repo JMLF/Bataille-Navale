@@ -19,7 +19,7 @@ typedef unsigned char uchar;
 class CConnectionServeur
 {
 
-private: 
+private:
 
 	const ushort DIMMAX = 150; // Taille max des tableaux
 
@@ -37,7 +37,7 @@ private:
 	struct sockaddr_in  adr_serveur; // @ internet du serveur
 
 	uint  ids_client;   // id du socket client                  
-	
+
 
 
 public:
@@ -53,7 +53,7 @@ public:
 
 	//bloquant : attend une trame et renvoi cette trame en string 
 	std::string reception();
-	
+
 	//bloquant : envoi un string au serveur 
 	void envoi(std::string);
 
