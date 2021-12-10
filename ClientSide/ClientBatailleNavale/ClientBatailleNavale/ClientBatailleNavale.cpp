@@ -24,10 +24,20 @@ int main(int argc, char* argv[])
 	std::string IP_SERVEUR = argv[1];
 	std::string port = argv[2];
 	//--------------------------------------------------------------------------------------------------------------
-
+	
+	
 	CConnectionServeur connection(IP_SERVEUR, port);
-	connection.initConnec();
-	connection.connection(); //on se connecte içi 
+	try
+	{
+		connection.initConnec();
+		connection.connection(); //on se connecte içi
+	}
+	catch (const std::string&e)
+	{
+		std::cout << "Exception: " << e << std::endl;
+		return 0;
+	}
+ 
 	std::cout << "Connection en cours... " << std::endl;
 	CGrille grille;
 	std::string message;
