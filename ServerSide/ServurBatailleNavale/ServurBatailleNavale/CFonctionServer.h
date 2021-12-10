@@ -20,66 +20,66 @@ typedef unsigned char uchar;
 class CFonctionServer
 {
 
-private: 
+private:
 
 	const ushort PORT_NUM = 12345;;
 	const ushort DIMMAX = 150; // Taille max des tableaux
 
-    WORD nVersion = MAKEWORD(2, 2);
-    WSADATA donneeWS;
+	WORD nVersion = MAKEWORD(2, 2);
+	WSADATA donneeWS;
 
-    struct sockaddr_in   adr_serveur;       // @ internet du serveur
-    struct sockaddr_in   adr_client;        // @ internet du client
+	struct sockaddr_in   adr_serveur;       // @ internet du serveur
+	struct sockaddr_in   adr_client;        // @ internet du client
 
-    uint ids_ecoute;        // id du socket d'écoute du serveur
-    uint ids_connect;       // id du socket de connection
-    uint ids_connect1;
-    uint nb_car_emis;       // nb car émis par send
-
-
-    int  addr_len;          // taille de l'@ internet 
-
-    uint n = 0, noctets;
-
-   // int nbconnec; //on compte le nombre de connection 
+	uint ids_ecoute;        // id du socket d'écoute du serveur
+	uint ids_connect;       // id du socket de connection
+	uint ids_connect1;
+	uint nb_car_emis;       // nb car émis par send
 
 
+	int  addr_len;          // taille de l'@ internet 
 
-public: 
+	uint n = 0, noctets;
 
-    //constructeur de la classe
-    CFonctionServer();
+	// int nbconnec; //on compte le nombre de connection 
 
-    // initialisation du winsock (etape 1)
-    void initWinsock(); 
 
-    // Création du socket d'écoute (etape 2)
-    void creaSockEcoute(); 
 
-    //Bind du socket (etape 3)
-    void binding();
+public:
 
-    //écoute du socket (etape 4)
-    void listening();
+	//constructeur de la classe
+	CFonctionServer();
 
-    // Acceptation d'une connexion cliente, création d'un nouveau socket qui 
-    // sera utilisé pour l'émission et la réception des caractères (etape 5)
-    uint accepting();
+	// initialisation du winsock (etape 1)
+	void initWinsock();
 
-    //met en boucle deux ids_connect et transmet les trames entre l'un et l'autre 
-    void communication(uint ids_connect, uint ids_connect1);
+	// Création du socket d'écoute (etape 2)
+	void creaSockEcoute();
 
-    //permet d'envoyer une trame vers un ids_connect (bloquant)
-    void sending(uint ids_connect, std::string message);
+	//Bind du socket (etape 3)
+	void binding();
 
-    // ??
-    void reciving(uint ids_connect, uint ids_connect1, std::string& message);
+	//écoute du socket (etape 4)
+	void listening();
 
-    // fermeture du socket d'écoute
-    void fermetureSockEcoute();
+	// Acceptation d'une connexion cliente, création d'un nouveau socket qui 
+	// sera utilisé pour l'émission et la réception des caractères (etape 5)
+	uint accepting();
 
-    // Fermeture de winsock
-    void FermeturWinSock();
+	//met en boucle deux ids_connect et transmet les trames entre l'un et l'autre 
+	void communication(uint ids_connect, uint ids_connect1);
+
+	//permet d'envoyer une trame vers un ids_connect (bloquant)
+	void sending(uint ids_connect, std::string message);
+
+	// ??
+	void reciving(uint ids_connect, uint ids_connect1, std::string& message);
+
+	// fermeture du socket d'écoute
+	void fermetureSockEcoute();
+
+	// Fermeture de winsock
+	void FermeturWinSock();
 
 };
 

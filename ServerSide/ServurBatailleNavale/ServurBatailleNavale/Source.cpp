@@ -1,9 +1,9 @@
 #include "CFonctionServer.h"
 
-int main() 
+int main()
 {
-	int nbconnection=0;
-	
+	int nbconnection = 0;
+
 
 	CFonctionServer serveur;
 
@@ -14,7 +14,7 @@ int main()
 
 	while (true)
 	{
-		
+
 		uint adr_1;
 		uint adr_2;
 		adr_2 = serveur.accepting();
