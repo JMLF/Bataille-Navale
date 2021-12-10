@@ -89,7 +89,17 @@ int main(int argc, char* argv[])
 			if (lettre == CGrille::resultat::P)
 			{
 				//partie remporté 
-				std::cout << " Victoire";
+				SetConsoleTextAttribute(hConsole, 14);
+				std::cout << " Victoire" << std::endl;
+				std::cout<<"             \xDB\xDB\xDB\xDB             "<<std::endl;
+				std::cout<<"  \xDB\xDB\xDB         \xDB\xDB          \xDB\xDB\xDB "<<std::endl;
+				std::cout<<"  \xDB\xDB         \xDB\xDB\xDB\xDB         \xDB   "<<std::endl;
+				std::cout<<"     \xDB\xDB     \xDB\xDB\xDB\xDB\xDB\xDB     \xDB\xDB\xDB    "<<std::endl;
+				std::cout<<"      \xDB\xDB\xDB\xDB \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB \xDB\xDB\xDB\xDB\xDB     "<<std::endl;
+				std::cout<<"      \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB      "<<std::endl;
+				std::cout << "       \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB       " << std::endl << std::endl;
+				std::cout<<"       \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB       "<<std::endl;
+
 				return 0;
 			}
 
@@ -255,7 +265,16 @@ int main(int argc, char* argv[])
 
 			if (discussion.at(0) == 'P') //on verifie si l'autre client a gagné
 			{
+				SetConsoleTextAttribute(hConsole, 4);
 				std::cout << "Vous avez perdu" << std::endl;
+				std::cout<<"     \xDB\xDB\xDB\xDB\xDB           \xDB\xDB\xDB\xDB\xDB    "<<std::endl;
+				std::cout<<"       \xDB\xDB\xDB\xDB\xDB       \xDB\xDB\xDB\xDB\xDB      "<<std::endl;
+				std::cout<<"         \xDB\xDB\xDB\xDB\xDB\xDB \xDB\xDB\xDB\xDB\xDB         "<<std::endl;
+				std::cout<<"            \xDB\xDB\xDB\xDB\xDB\xDB\xDB           "<<std::endl;
+				std::cout<<"           \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB          "<<std::endl;
+				std::cout<<"         \xDB\xDB\xDB\xDB\xDB   \xDB\xDB\xDB\xDB\xDB        "<<std::endl;
+				std::cout<<"      \xDB\xDB\xDB\xDB\xDB        \xDB\xDB\xDB\xDB\xDB      "<<std::endl;
+				std::cout<<"      \xDB\xDB\xDB             \xDB\xDB\xDB     "<<std::endl;
 				return 0;
 			}
 
@@ -404,7 +423,16 @@ int main(int argc, char* argv[])
 
 			if (discussion.at(0) == 'P') //on verifie si l'autre client a gagné
 			{
+				SetConsoleTextAttribute(hConsole, 4);
 				std::cout << "Vous avez perdu" << std::endl;
+				std::cout<<"     \xDB\xDB\xDB\xDB\xDB           \xDB\xDB\xDB\xDB\xDB    "<<std::endl;
+				std::cout<<"       \xDB\xDB\xDB\xDB\xDB       \xDB\xDB\xDB\xDB\xDB      "<<std::endl;
+				std::cout<<"         \xDB\xDB\xDB\xDB\xDB\xDB \xDB\xDB\xDB\xDB\xDB         "<<std::endl;
+				std::cout<<"            \xDB\xDB\xDB\xDB\xDB\xDB\xDB           "<<std::endl;
+				std::cout<<"           \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB          "<<std::endl;
+				std::cout<<"         \xDB\xDB\xDB\xDB\xDB   \xDB\xDB\xDB\xDB\xDB        "<<std::endl;
+				std::cout<<"      \xDB\xDB\xDB\xDB\xDB        \xDB\xDB\xDB\xDB\xDB      "<<std::endl;
+				std::cout<<"      \xDB\xDB\xDB             \xDB\xDB\xDB     "<<std::endl;
 				return 0;
 			}
 
@@ -435,7 +463,16 @@ int main(int argc, char* argv[])
 			if (lettre == CGrille::resultat::P)
 			{
 				//partie remporté 
-				std::cout << " Victoire";
+				SetConsoleTextAttribute(hConsole, 14);
+				std::cout << " Victoire" << std::endl;
+				std::cout<<"             \xDB\xDB\xDB\xDB             "<<std::endl;
+				std::cout<<"  \xDB\xDB\xDB         \xDB\xDB          \xDB\xDB\xDB "<<std::endl;
+				std::cout<<"  \xDB\xDB         \xDB\xDB\xDB\xDB         \xDB   "<<std::endl;
+				std::cout<<"     \xDB\xDB     \xDB\xDB\xDB\xDB\xDB\xDB     \xDB\xDB\xDB    "<<std::endl;
+				std::cout<<"      \xDB\xDB\xDB\xDB \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB \xDB\xDB\xDB\xDB\xDB     "<<std::endl;
+				std::cout<<"      \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB      "<<std::endl;
+				std::cout << "       \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB       " << std::endl << std::endl;
+				std::cout<<"       \xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB\xDB       "<<std::endl;
 				return 0;
 			}
 
