@@ -12,6 +12,7 @@
 int main(int argc, char* argv[])
 {
 	system("mode con LINES=70 COLS=100");
+	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE);
 	//Verif des arguments -----------------------------------------------------------------------------------------
 
 	if (argc != 3) //different de 3 car exe vaut pour 1
@@ -90,7 +91,7 @@ int main(int argc, char* argv[])
 			{
 				//partie remporté 
 				SetConsoleTextAttribute(hConsole, 14);
-				std::cout << " Victoire" << std::endl;
+				std::cout << " Victoire" << std::endl; //affichage d'une couronne de couleur jaune si victoire'
 				std::cout<<"             \xDB\xDB\xDB\xDB             "<<std::endl;
 				std::cout<<"  \xDB\xDB\xDB         \xDB\xDB          \xDB\xDB\xDB "<<std::endl;
 				std::cout<<"  \xDB\xDB         \xDB\xDB\xDB\xDB         \xDB   "<<std::endl;
@@ -266,7 +267,7 @@ int main(int argc, char* argv[])
 			if (discussion.at(0) == 'P') //on verifie si l'autre client a gagné
 			{
 				SetConsoleTextAttribute(hConsole, 4);
-				std::cout << "Vous avez perdu" << std::endl;
+				std::cout << "Vous avez perdu" << std::endl; //afichage couleur rouge si echec
 				std::cout<<"     \xDB\xDB\xDB\xDB\xDB           \xDB\xDB\xDB\xDB\xDB    "<<std::endl;
 				std::cout<<"       \xDB\xDB\xDB\xDB\xDB       \xDB\xDB\xDB\xDB\xDB      "<<std::endl;
 				std::cout<<"         \xDB\xDB\xDB\xDB\xDB\xDB \xDB\xDB\xDB\xDB\xDB         "<<std::endl;
