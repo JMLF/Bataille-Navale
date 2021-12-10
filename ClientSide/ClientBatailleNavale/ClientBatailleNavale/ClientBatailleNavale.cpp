@@ -280,7 +280,14 @@ int main(int argc, char* argv[])
               
             std::cout << discussion << std::endl;
             connection.envoi(discussion); 
-              
+
+            if (discussion.at(0)=='P') //on verifie si l'autre client a gagné
+            {
+                std::cout << "Vous avez perdu" << std::endl;
+                return 0;
+            }
+
+
         } while (true);
     }
 
@@ -423,6 +430,12 @@ int main(int argc, char* argv[])
 
             connection.envoi(discussion);
              
+            if (discussion.at(0) == 'P') //on verifie si l'autre client a gagné
+            {
+                std::cout << "Vous avez perdu" << std::endl;
+                return 0;
+            }
+
             std::string messageEnnemi = connection.reception();
             std::cout << messageEnnemi << std::endl;
              
