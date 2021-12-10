@@ -128,6 +128,11 @@ int main(int argc, char* argv[])
             {
                 grille.XGrilleJoueur(x, y);
                 lettreAenvouyer = CGrille::resultat::T;
+                grille.setnbDeCaseBateau();
+                bool perdu=grille.partiePerdue();
+                if (perdu == true) {
+                lettreAenvouyer = CGrille::resultat::P;
+                }
             }
             if (Case == CGrille::Case::TOUCHEJ)
             {
@@ -482,6 +487,11 @@ int main(int argc, char* argv[])
                 {
                     grille.XGrilleJoueur(x, y);
                     lettreAenvouyer = CGrille::resultat::T;
+                    grille.setnbDeCaseBateau();
+                    bool perdu = grille.partiePerdue();
+                    if (perdu == true) {
+                        lettreAenvouyer = CGrille::resultat::P;
+                    }
                 }
                 if (Case == CGrille::Case::TOUCHEJ)
                 {

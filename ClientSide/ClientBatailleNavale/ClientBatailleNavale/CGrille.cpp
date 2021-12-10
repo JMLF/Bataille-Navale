@@ -213,9 +213,9 @@ void CGrille::serialisation(int& x, int& y, std::string trame, resultat& lettre)
         
 }
 
-void CGrille::setnbDeCaseBateau(int nbDeCaseBateau)
+void CGrille::setnbDeCaseBateau()
 {
-    this->nbDeCaseBateau = nbDeCaseBateau;
+    this->nbDeCaseBateau-=1;
 }
 
 
