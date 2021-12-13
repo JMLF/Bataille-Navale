@@ -6,11 +6,13 @@
 #include "CConnectionServeur.h"
 #include "CGrille.h"
 #include <iostream>
+#include <ctype.h>
 
 ///\fn main
 ///\brief fonction main, prend des argument en ligne de commande 
 int main(int argc, char* argv[])
 {
+	bool tour = true;
 	HANDLE hConsole = GetStdHandle(STD_OUTPUT_HANDLE); //declare hconsole
 	system("mode con LINES=70 COLS=100");
 	//Verif des arguments -----------------------------------------------------------------------------------------
@@ -149,8 +151,21 @@ int main(int argc, char* argv[])
 			std::cout << discussion << std::endl;
 
 
-			std::cout << "Ou voulez-vous envoyer un missile ? ( ex : 1A ) " << std::endl;
-			std::cin >> discussion;
+			tour = true;
+			while (tour == true) {
+				std::cout << "Ou voulez-vous envoyer un missile ? ( ex : 1A ) " << std::endl;
+				std::cin >> discussion;
+				if (isalpha(discussion.at(0)) != 0) {
+					std::cout << "Donnees entrees sous la mauvaise forme ( ex : 1A ) " << std::endl;
+					system("pause");
+					system("CLS");
+					grille.afficherGrille();
+				}
+				else
+				{
+					tour = false;
+				}
+			}
 
 			int taille = discussion.size(); //si la trame est sup a 2, x fait 2 chiffres
 
@@ -309,9 +324,23 @@ int main(int argc, char* argv[])
 
 			std::cout << discussion << std::endl;
 
+			tour = true;
+			while (tour == true) {
+				std::cout << "Ou voulez-vous envoyer un missile ? ( ex : 1A ) " << std::endl;
+				std::cin >> discussion;
+				if (isalpha(discussion.at(0)) != 0) {
+					std::cout << "Donnees entrees sous la mauvaise forme ( ex : 1A ) " << std::endl;
+					system("pause");
+					system("CLS");
+					grille.afficherGrille();
+				}
+				else
+				{
+					tour = false;
+				}
+			}
 
-			std::cout << "Ou voulez-vous envoyer un missile ? ( ex : 1A ) " << std::endl;
-			std::cin >> discussion;
+
 			std::cout << std::endl;
 
 			int taille = discussion.size(); //si la trame est sup a 2, x fait 2 chiffres
