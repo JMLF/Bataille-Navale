@@ -310,7 +310,7 @@ int main(int argc, char* argv[])
 			std::cout << discussion << std::endl;
 
 
-			std::cout << "Ou voulez-vous envoyer un missile ?" << std::endl;
+			std::cout << "Ou voulez-vous envoyer un missile ? ( ex : 1A ) " << std::endl;
 			std::cin >> discussion;
 			std::cout << std::endl;
 
