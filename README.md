@@ -1,10 +1,5 @@
 # Bataille-Navale
 Jeu en réseau de bataille navale.
-## Réalisation 
-+ Socket winsock
-+ Class c++
-## Sérialisation
-+ OK = le client ennemie a bien pris en compte l'information qu'on lui a passé. 
-+ Dimension de la grille choisie. 
-+ Coordonée entrée par l'émmeteur.
-+ Nb de bateaux restant.
+## How to use it ?
++ in the server folder, compile the code, launch the server 
++ In the client folder, compile the code, in two command prompt launch the client with IP and PORT as parameter 
