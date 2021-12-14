@@ -6,7 +6,6 @@
 #include <string>
 #include <vector>
 #include <sstream>
-#include <regex> 
 
 
 #pragma comment(lib, "ws2_32.lib") //pour ajouter la lib manquante 
