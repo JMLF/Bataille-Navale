@@ -22,7 +22,7 @@ class CFonctionServer
 
 private:
 
-	const ushort PORT_NUM = 12345;;
+	const ushort PORT_NUM = 12345;
 	const ushort DIMMAX = 150; // Taille max des tableaux
 
 	WORD nVersion = MAKEWORD(2, 2);
